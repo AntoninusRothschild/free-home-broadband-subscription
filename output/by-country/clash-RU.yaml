@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+- name: Github RU 01 ATSRSD
   type: vless
   server: 45.9.15.206
   port: 443
@@ -17,8 +17,15 @@ proxies:
   ws-opts:
     path: /websocket
     headers:
-      Host: 45.9.15.206
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+      Host: ru05.abvpn.ru
+- name: Github RU 02 ATSRSD
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
+  udp: true
+- name: Github RU 03 ATSRSD
   type: vless
   server: ru05.abvpn.ru
   port: 443
@@ -32,48 +39,14 @@ proxies:
     path: /websocket
     headers:
       Host: ru05.abvpn.ru
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: vless
-  server: 45.131.209.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime04.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  type: vless
-  server: 172.67.220.34
-  port: 443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: INDEX.Arcane509.Workers.DEV
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: index.arcane509.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+- name: Github RU 04 ATSRSD
   type: ss
   server: 138.124.68.88
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: Y2ZlN
   udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+- name: Github RU 05 ATSRSD
   type: vless
   server: 45.9.15.206
   port: 443
@@ -86,30 +59,26 @@ proxies:
   ws-opts:
     path: /websocket
     headers:
-      Host: ru05.abvpn.ru
+      Host: 45.9.15.206
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES

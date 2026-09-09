@@ -6,16 +6,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇭 CH 01 - xiaohe",
-        "🇨🇭 CH 02 - xiaohe"
+        "Github CH 01 ATSRSD",
+        "Github CH 02 ATSRSD",
+        "Github CH 03 ATSRSD",
+        "Github CH 04 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇭 CH 01 - xiaohe",
-        "🇨🇭 CH 02 - xiaohe"
+        "Github CH 01 ATSRSD",
+        "Github CH 02 ATSRSD",
+        "Github CH 03 ATSRSD",
+        "Github CH 04 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

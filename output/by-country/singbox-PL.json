@@ -6,26 +6,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 PL 01 - xiaohe",
-        "🇵🇱 PL 02 - xiaohe",
-        "🇵🇱 PL 03 - xiaohe",
-        "🇵🇱 PL 04 - xiaohe",
-        "🇵🇱 PL 05 - xiaohe",
-        "🇵🇱 PL 06 - xiaohe",
-        "🇵🇱 PL 07 - xiaohe"
+        "Github PL 01 ATSRSD",
+        "Github PL 02 ATSRSD",
+        "Github PL 03 ATSRSD",
+        "Github PL 04 ATSRSD",
+        "Github PL 05 ATSRSD",
+        "Github PL 06 ATSRSD",
+        "Github PL 07 ATSRSD",
+        "Github PL 08 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 PL 01 - xiaohe",
-        "🇵🇱 PL 02 - xiaohe",
-        "🇵🇱 PL 03 - xiaohe",
-        "🇵🇱 PL 04 - xiaohe",
-        "🇵🇱 PL 05 - xiaohe",
-        "🇵🇱 PL 06 - xiaohe",
-        "🇵🇱 PL 07 - xiaohe"
+        "Github PL 01 ATSRSD",
+        "Github PL 02 ATSRSD",
+        "Github PL 03 ATSRSD",
+        "Github PL 04 ATSRSD",
+        "Github PL 05 ATSRSD",
+        "Github PL 06 ATSRSD",
+        "Github PL 07 ATSRSD",
+        "Github PL 08 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

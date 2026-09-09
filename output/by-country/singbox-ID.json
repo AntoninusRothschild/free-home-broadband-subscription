@@ -6,16 +6,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇩 ID 01 - xiaohe",
-        "🇮🇩 ID 02 - xiaohe"
+        "Github ID 01 ATSRSD",
+        "Github ID 02 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇩 ID 01 - xiaohe",
-        "🇮🇩 ID 02 - xiaohe"
+        "Github ID 01 ATSRSD",
+        "Github ID 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

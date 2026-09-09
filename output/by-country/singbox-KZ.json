@@ -6,22 +6,20 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 KZ 01 - xiaohe",
-        "🇰🇿 KZ 02 - xiaohe",
-        "🇰🇿 KZ 03 - xiaohe",
-        "🇰🇿 KZ 04 - xiaohe",
-        "🇰🇿 KZ 05 - xiaohe"
+        "Github KZ 01 ATSRSD",
+        "Github KZ 02 ATSRSD",
+        "Github KZ 03 ATSRSD",
+        "Github KZ 04 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 KZ 01 - xiaohe",
-        "🇰🇿 KZ 02 - xiaohe",
-        "🇰🇿 KZ 03 - xiaohe",
-        "🇰🇿 KZ 04 - xiaohe",
-        "🇰🇿 KZ 05 - xiaohe"
+        "Github KZ 01 ATSRSD",
+        "Github KZ 02 ATSRSD",
+        "Github KZ 03 ATSRSD",
+        "Github KZ 04 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

@@ -6,22 +6,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇺 澳大利亚 (Australia) 01 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 02 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 03 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 04 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 05 - xiaohe"
+        "Github AU 01 ATSRSD",
+        "Github AU 02 ATSRSD",
+        "Github AU 03 ATSRSD",
+        "Github AU 04 ATSRSD",
+        "Github AU 05 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇺 澳大利亚 (Australia) 01 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 02 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 03 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 04 - xiaohe",
-        "🇦🇺 澳大利亚 (Australia) 05 - xiaohe"
+        "Github AU 01 ATSRSD",
+        "Github AU 02 ATSRSD",
+        "Github AU 03 ATSRSD",
+        "Github AU 04 ATSRSD",
+        "Github AU 05 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

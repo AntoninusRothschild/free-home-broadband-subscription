@@ -4,14 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇴 NO 01 - xiaohe
+- name: Github NO 01 ATSRSD
   type: ss
   server: 185.213.23.63
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇳🇴 NO 02 - xiaohe
+- name: Github NO 02 ATSRSD
+  type: vless
+  server: 151.242.168.125
+  port: 390
+  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
+  servername: bowandbead.com
+  client-fingerprint: qq
+- name: Github NO 03 ATSRSD
   type: vless
   server: 151.242.168.125
   port: 390
@@ -23,56 +35,44 @@ proxies:
     public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
   servername: bowandbead.com
   client-fingerprint: ios
-- name: 🇳🇴 NO 03 - xiaohe
+- name: Github NO 04 ATSRSD
+  type: vless
+  server: 151.242.168.125
+  port: 390
+  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
+  servername: bowandbead.com
+  client-fingerprint: qq
+- name: Github NO 05 ATSRSD
   type: ss
   server: 185.213.23.63
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇳🇴 NO 04 - xiaohe
-  type: vless
-  server: 151.242.168.125
-  port: 390
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-  servername: bowandbead.com
-  client-fingerprint: qq
-- name: 🇳🇴 NO 05 - xiaohe
-  type: vless
-  server: 151.242.168.125
-  port: 390
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-  servername: bowandbead.com
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇴 NO 01 - xiaohe
-  - 🇳🇴 NO 02 - xiaohe
-  - 🇳🇴 NO 03 - xiaohe
-  - 🇳🇴 NO 04 - xiaohe
-  - 🇳🇴 NO 05 - xiaohe
+  - Github NO 01 ATSRSD
+  - Github NO 02 ATSRSD
+  - Github NO 03 ATSRSD
+  - Github NO 04 ATSRSD
+  - Github NO 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇴 NO 01 - xiaohe
-  - 🇳🇴 NO 02 - xiaohe
-  - 🇳🇴 NO 03 - xiaohe
-  - 🇳🇴 NO 04 - xiaohe
-  - 🇳🇴 NO 05 - xiaohe
+  - Github NO 01 ATSRSD
+  - Github NO 02 ATSRSD
+  - Github NO 03 ATSRSD
+  - Github NO 04 ATSRSD
+  - Github NO 05 ATSRSD
 rules:
 - MATCH,PROXIES

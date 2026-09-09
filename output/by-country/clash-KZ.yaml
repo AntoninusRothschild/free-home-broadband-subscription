@@ -4,31 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇿 KZ 01 - xiaohe
-  type: vless
-  server: 77.73.232.61
-  port: 19747
-  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇰🇿 KZ 02 - xiaohe
-  type: vless
-  server: 77.73.232.61
-  port: 19747
-  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇰🇿 KZ 03 - xiaohe
+- name: Github KZ 01 ATSRSD
   type: vless
   server: 83.222.23.81
   port: 38065
@@ -40,20 +16,7 @@ proxies:
     public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇰🇿 KZ 04 - xiaohe
-  type: vless
-  server: 185.176.26.50
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime06.workers.dev
-- name: 🇰🇿 KZ 05 - xiaohe
+- name: Github KZ 02 ATSRSD
   type: vless
   server: 178.236.16.98
   port: 35728
@@ -65,25 +28,47 @@ proxies:
     public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
   servername: yahoo.com
   client-fingerprint: chrome
+- name: Github KZ 03 ATSRSD
+  type: vless
+  server: 77.73.232.61
+  port: 19747
+  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: Github KZ 04 ATSRSD
+  type: vless
+  server: 77.73.232.61
+  port: 19747
+  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇿 KZ 01 - xiaohe
-  - 🇰🇿 KZ 02 - xiaohe
-  - 🇰🇿 KZ 03 - xiaohe
-  - 🇰🇿 KZ 04 - xiaohe
-  - 🇰🇿 KZ 05 - xiaohe
+  - Github KZ 01 ATSRSD
+  - Github KZ 02 ATSRSD
+  - Github KZ 03 ATSRSD
+  - Github KZ 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿 KZ 01 - xiaohe
-  - 🇰🇿 KZ 02 - xiaohe
-  - 🇰🇿 KZ 03 - xiaohe
-  - 🇰🇿 KZ 04 - xiaohe
-  - 🇰🇿 KZ 05 - xiaohe
+  - Github KZ 01 ATSRSD
+  - Github KZ 02 ATSRSD
+  - Github KZ 03 ATSRSD
+  - Github KZ 04 ATSRSD
 rules:
 - MATCH,PROXIES

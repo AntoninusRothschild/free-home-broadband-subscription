@@ -6,16 +6,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇨 SC 01 - xiaohe",
-        "🇸🇨 SC 02 - xiaohe"
+        "Github SC 01 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇨 SC 01 - xiaohe",
-        "🇸🇨 SC 02 - xiaohe"
+        "Github SC 01 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

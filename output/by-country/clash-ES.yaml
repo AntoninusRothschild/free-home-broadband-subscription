@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 - xiaohe
+- name: Github ES 01 ATSRSD
   type: vless
   server: 212.227.235.66
   port: 2053
@@ -16,35 +16,35 @@ proxies:
     public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇪🇸 西班牙 (Spain) 02 - xiaohe
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
-  udp: true
-- name: 🇪🇸 西班牙 (Spain) 03 - xiaohe
+- name: Github ES 02 ATSRSD
   type: ss
   server: 140.174.184.5
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
   udp: true
+- name: Github ES 03 ATSRSD
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 02 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 03 - xiaohe
+  - Github ES 01 ATSRSD
+  - Github ES 02 ATSRSD
+  - Github ES 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 02 - xiaohe
-  - 🇪🇸 西班牙 (Spain) 03 - xiaohe
+  - Github ES 01 ATSRSD
+  - Github ES 02 ATSRSD
+  - Github ES 03 ATSRSD
 rules:
 - MATCH,PROXIES

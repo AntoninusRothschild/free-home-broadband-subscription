@@ -4,29 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+- name: Github HK 01 (家宽) ATSRSD
   type: vless
   server: 58.153.148.126
   port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+  uuid: 5dc6fa05-a601-aba6-7761-ecde22d2b0fc
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - Github HK 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - Github HK 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

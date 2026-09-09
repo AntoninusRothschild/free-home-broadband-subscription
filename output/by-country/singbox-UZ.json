@@ -6,14 +6,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇿 UZ 01 - xiaohe"
+        "Github UZ 01 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇿 UZ 01 - xiaohe"
+        "Github UZ 01 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

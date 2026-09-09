@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇬 BG 01 - xiaohe
+- name: Github BG 01 ATSRSD
   type: vless
   server: 94.156.155.27
   port: 443
@@ -16,7 +16,7 @@ proxies:
     public-key: bY0-zlTOPCaEWDMw_BTzuzJW513tl6Hc61n4Z-q1cHE
   servername: www.telekom.de
   client-fingerprint: firefox
-- name: 🇧🇬 BG 02 - xiaohe
+- name: Github BG 02 ATSRSD
   type: vless
   server: 192.145.31.5
   port: 8443
@@ -30,14 +30,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇧🇬 BG 01 - xiaohe
-  - 🇧🇬 BG 02 - xiaohe
+  - Github BG 01 ATSRSD
+  - Github BG 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇬 BG 01 - xiaohe
-  - 🇧🇬 BG 02 - xiaohe
+  - Github BG 01 ATSRSD
+  - Github BG 02 ATSRSD
 rules:
 - MATCH,PROXIES
