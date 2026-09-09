@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+  udp: true
+- name: Github ES 02 ATSRSD
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+  udp: true
+- name: Github ES 03 ATSRSD
   type: vless
   server: 212.227.235.66
   port: 2053
@@ -15,20 +29,20 @@ proxies:
   reality-opts:
     public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github ES 02 ATSRSD
-  type: ss
-  server: 140.174.184.5
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
-  udp: true
-- name: Github ES 03 ATSRSD
+  client-fingerprint: random
+- name: Github ES 04 ATSRSD
   type: ss
   server: 108.181.121.226
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: WSyL4XTwNsdv
+  udp: true
+- name: Github ES 05 ATSRSD
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -38,6 +52,8 @@ proxy-groups:
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
+  - Github ES 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +62,7 @@ proxy-groups:
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
+  - Github ES 05 ATSRSD
 rules:
 - MATCH,PROXIES

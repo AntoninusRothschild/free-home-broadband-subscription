@@ -7,10 +7,7 @@
       "outbounds": [
         "auto",
         "Github AU 01 ATSRSD",
-        "Github AU 02 ATSRSD",
-        "Github AU 03 ATSRSD",
-        "Github AU 04 ATSRSD",
-        "Github AU 05 ATSRSD"
+        "Github AU 02 ATSRSD"
       ]
     },
     {
@@ -18,10 +15,7 @@
       "tag": "auto",
       "outbounds": [
         "Github AU 01 ATSRSD",
-        "Github AU 02 ATSRSD",
-        "Github AU 03 ATSRSD",
-        "Github AU 04 ATSRSD",
-        "Github AU 05 ATSRSD"
+        "Github AU 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

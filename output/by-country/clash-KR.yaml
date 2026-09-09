@@ -7,63 +7,11 @@ proxies:
 - name: Github KR 01 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 9090
+  port: 8119
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  password: cdBIDV42DCwnfIN
   udp: true
 - name: Github KR 02 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 03 ATSRSD
-  type: vless
-  server: nexusmods.com
-  port: 443
-  uuid: 49b5c5d1-8fb0-4fd2-8129-01bd2178e8d1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gy-cffc2-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-  network: ws
-  ws-opts:
-    path: /playlist/go.html/source/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-    headers:
-      Host: gy-cffc2-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-- name: Github KR 04 ATSRSD
-  type: vless
-  server: 104.18.81.218
-  port: 443
-  uuid: 49b5c5d1-8fb0-4fd2-8129-01bd2178e8d1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gy-cffc3-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-  network: ws
-  ws-opts:
-    path: /images/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-    headers:
-      Host: gy-cffc3-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-- name: Github KR 05 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8888
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: Github KR 06 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 7002
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github KR 07 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -75,47 +23,14 @@ proxies:
     public-key: k9narlSK7fUqy94_p0rrqKl52W35QLNsp3W8xaGq_Go
   servername: www.apple.com
   client-fingerprint: random
-- name: Github KR 08 ATSRSD
-  type: vless
-  server: 104.18.47.164
-  port: 443
-  uuid: 49b5c5d1-8fb0-4fd2-8129-01bd2178e8d1
+- name: Github KR 03 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 6697
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-  network: ws
-  ws-opts:
-    path: /download/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-    headers:
-      Host: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-- name: Github KR 09 ATSRSD
-  type: vless
-  server: 172.66.170.53
-  port: 8880
-  uuid: 38ede46b-d237-4c76-9de1-a10738642adc
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: summer-hat-ba5c.430.workers.dev
-- name: Github KR 10 ATSRSD
-  type: vless
-  server: 172.64.88.251
-  port: 8880
-  uuid: 7e3cd2f1-0de5-4717-9002-64d8597bc577
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: dry-credit-fc26.203-d8c.workers.dev
-- name: Github KR 11 ATSRSD
+- name: Github KR 04 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -127,12 +42,67 @@ proxies:
     public-key: k9narlSK7fUqy94_p0rrqKl52W35QLNsp3W8xaGq_Go
   servername: www.apple.com
   client-fingerprint: firefox
+- name: Github KR 05 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 7002
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: Github KR 06 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github KR 07 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 6679
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+  udp: true
+- name: Github KR 08 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 5498
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  udp: true
+- name: Github KR 09 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+  udp: true
+- name: Github KR 10 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9101
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+  udp: true
+- name: Github KR 11 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github KR 12 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 6697
+  port: 9090
   cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
+  password: Y6R9pAtvxxzmGC
   udp: true
 - name: Github KR 13 ATSRSD
   type: vmess
@@ -145,115 +115,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github KR 14 ATSRSD
-  type: vless
-  server: 104.18.111.238
-  port: 443
-  uuid: 49b5c5d1-8fb0-4fd2-8129-01bd2178e8d1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-  network: ws
-  ws-opts:
-    path: /index/document/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-    headers:
-      Host: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-- name: Github KR 15 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 6679
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  udp: true
-- name: Github KR 16 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 9090
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: Github KR 17 ATSRSD
-  type: vless
-  server: 104.19.7.50
-  port: 443
-  uuid: 49b5c5d1-8fb0-4fd2-8129-01bd2178e8d1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-  network: ws
-  ws-opts:
-    path: /share/team/api/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-    headers:
-      Host: gy-cffc5-node-31z7yxejlog9qfu0.lancelot.dpdns.org
-- name: Github KR 18 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 19 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8119
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: Github KR 20 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 21 ATSRSD
-  type: vless
-  server: 172.64.88.251
-  port: 8880
-  uuid: 87a5d3eb-afd4-4193-9787-c54ef7c26c8c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: patient-cake-39c7.44-e7a.workers.dev
-- name: Github KR 22 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8091
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: Github KR 23 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: Github KR 24 ATSRSD
-  type: vless
-  server: 130.94.29.111
-  port: 2087
-  uuid: 84da6391-1539-4583-a3d9-d6efd796b4d6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /e17586a75123
-    headers:
-      Host: 130.94.29.111
-- name: Github KR 25 ATSRSD
   type: vless
   server: 130.94.29.111
   port: 2087
@@ -285,17 +146,6 @@ proxy-groups:
   - Github KR 12 ATSRSD
   - Github KR 13 ATSRSD
   - Github KR 14 ATSRSD
-  - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
-  - Github KR 17 ATSRSD
-  - Github KR 18 ATSRSD
-  - Github KR 19 ATSRSD
-  - Github KR 20 ATSRSD
-  - Github KR 21 ATSRSD
-  - Github KR 22 ATSRSD
-  - Github KR 23 ATSRSD
-  - Github KR 24 ATSRSD
-  - Github KR 25 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -315,16 +165,5 @@ proxy-groups:
   - Github KR 12 ATSRSD
   - Github KR 13 ATSRSD
   - Github KR 14 ATSRSD
-  - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
-  - Github KR 17 ATSRSD
-  - Github KR 18 ATSRSD
-  - Github KR 19 ATSRSD
-  - Github KR 20 ATSRSD
-  - Github KR 21 ATSRSD
-  - Github KR 22 ATSRSD
-  - Github KR 23 ATSRSD
-  - Github KR 24 ATSRSD
-  - Github KR 25 ATSRSD
 rules:
 - MATCH,PROXIES

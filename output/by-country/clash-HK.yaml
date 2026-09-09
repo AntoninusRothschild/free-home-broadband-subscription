@@ -6,33 +6,33 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vless
-  server: 26a9920c-tla000-tyt0e8-1mh67.hk3.hyhuawei.com
+  server: a95a660c-tla000-tpw4i4-1pckg.hk3.hyhuawei.com
   port: 443
-  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
+  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
 - name: Github HK 02 ATSRSD
   type: vless
   server: 58.153.148.126
   port: 443
-  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: Github HK 03 ATSRSD
   type: vless
-  server: 0deecae9-tl4g00-tls5or-6gn6.hk3.hyhuawei.com
+  server: 58.153.148.126
   port: 443
-  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -41,82 +41,24 @@ proxies:
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
 - name: Github HK 04 ATSRSD
-  type: vless
-  server: 7306ab60-tla000-tlvr2y-1imi4.hk3.hyhuawei.com
+  type: vmess
+  server: i2psm3knof5qjjix.v.3dns.vip
   port: 443
-  uuid: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 05 ATSRSD
-  type: vless
-  server: 172.64.155.209
-  port: 8443
-  uuid: 4ff70740-8c80-48ae-985f-2afe4924e908
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: pubb.clnahanpnln.workers.dev
+  servername: I2PSm3Knof5qjjix.v.3dns.vip
   network: ws
   ws-opts:
-    path: /sync
+    path: /ws-vmess
     headers:
-      Host: pubb.clnahanpnln.workers.dev
-- name: Github HK 06 ATSRSD
+      Host: I2PSm3Knof5qjjix.v.3dns.vip
+- name: Github HK 05 ATSRSD
   type: vless
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
-  port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 07 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 08 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 09 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 10 ATSRSD
-  type: vless
-  server: 5c8575f4-tl4g00-u1vxv2-v3c2.hk3.hyhuawei.com
+  server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
   port: 443
   uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
   udp: true
@@ -125,8 +67,8 @@ proxies:
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: safari
-- name: Github HK 11 ATSRSD
+  client-fingerprint: qq
+- name: Github HK 06 ATSRSD
   type: vless
   server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
   port: 443
@@ -138,139 +80,7 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: qq
-- name: Github HK 12 ATSRSD
-  type: vless
-  server: 5fca3221-tl4g00-tpkh0c-1r7od.hk3.hyhuawei.com
-  port: 443
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: safari
-- name: Github HK 13 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 14 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 91df5a86-fcdd-11ef-94aa-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 15 ATSRSD
-  type: vless
-  server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
-  port: 443
-  uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 16 ATSRSD
-  type: vless
-  server: 5fca3221-tl4g00-tpkh0c-1r7od.hk3.hyhuawei.com
-  port: 443
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-- name: Github HK 17 ATSRSD
-  type: vless
-  server: a95a660c-tla000-tpw4i4-1pckg.hk3.hyhuawei.com
-  port: 443
-  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 18 ATSRSD
-  type: vless
-  server: bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com
-  port: 443
-  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
-- name: Github HK 19 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-- name: Github HK 20 ATSRSD
-  type: vless
-  server: a95a660c-tla000-tpw4i4-1pckg.hk3.hyhuawei.com
-  port: 443
-  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 21 ATSRSD
-  type: vless
-  server: bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com
-  port: 443
-  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 22 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-- name: Github HK 23 ATSRSD
+- name: Github HK 07 ATSRSD
   type: vless
   server: fae6ca7a-tla000-tpkh0c-1r7od.hk3.hyhuawei.com
   port: 443
@@ -281,12 +91,216 @@ proxies:
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 24 ATSRSD
+  client-fingerprint: edge
+- name: Github HK 08 ATSRSD
+  type: vless
+  server: bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com
+  port: 443
+  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 09 ATSRSD
   type: vless
   server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
   port: 443
   uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 10 ATSRSD
+  type: vless
+  server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
+  port: 443
+  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: safari
+- name: Github HK 11 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 12 ATSRSD
+  type: vless
+  server: 26a9920c-tla000-tyt0e8-1mh67.hk3.hyhuawei.com
+  port: 443
+  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 13 ATSRSD
+  type: vless
+  server: 7306ab60-tla000-tlvr2y-1imi4.hk3.hyhuawei.com
+  port: 443
+  uuid: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 14 ATSRSD
+  type: vless
+  server: 6342844e-tla000-tlpfci-1jdha.hk3.hyhuawei.com
+  port: 443
+  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 15 ATSRSD
+  type: vmess
+  server: u2frxj0g13vdi0wo.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: ''
+- name: Github HK 16 ATSRSD
+  type: vless
+  server: 5c8575f4-tl4g00-u1vxv2-v3c2.hk3.hyhuawei.com
+  port: 443
+  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: qq
+- name: Github HK 17 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 18 ATSRSD
+  type: vmess
+  server: m01c7b2z26dtqgee.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: M01c7B2z26DtQGEe.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: M01c7B2z26DtQGEe.v.3dns.vip
+- name: Github HK 19 ATSRSD
+  type: vmess
+  server: u2frxj0g13vdi0wo.v.3dns.vip
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: U2FRxj0G13vDI0Wo.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: U2FRxj0G13vDI0Wo.v.3dns.vip
+- name: Github HK 20 ATSRSD
+  type: vless
+  server: bdd23461-tla000-tvvhcz-tl32.hk3.hyhuawei.com
+  port: 443
+  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: qq
+- name: Github HK 21 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 22 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: chrome
+- name: Github HK 23 ATSRSD
+  type: vless
+  server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
+  port: 443
+  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: safari
+- name: Github HK 24 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
@@ -308,7 +322,7 @@ proxies:
   client-fingerprint: chrome
 - name: Github HK 26 ATSRSD
   type: vmess
-  server: drbkg16egf3fzlm3.v.3dns.vip
+  server: nycqg19zkwacpm1b.v.3dns.vip
   port: 443
   uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
@@ -316,25 +330,41 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: drbkg16egf3fzlm3.v.3dns.vip
+  servername: NYcQg19zkwaCPM1B.v.3dns.vip
   network: ws
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: drbkg16egf3fzlm3.v.3dns.vip
+      Host: NYcQg19zkwaCPM1B.v.3dns.vip
 - name: Github HK 27 ATSRSD
   type: vless
-  server: 47.238.210.5
-  port: 13779
-  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  server: 58.153.148.126
+  port: 443
+  uuid: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
-  servername: tesla.com
-  client-fingerprint: chrome
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: firefox
 - name: Github HK 28 ATSRSD
+  type: vmess
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: ''
+- name: Github HK 29 ATSRSD
   type: vless
   server: 5c8575f4-tl4g00-u1vxv2-v3c2.hk3.hyhuawei.com
   port: 443
@@ -345,60 +375,50 @@ proxies:
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 29 ATSRSD
-  type: vless
-  server: 172.64.80.1
-  port: 443
-  uuid: a5b1d1ec-327c-f1c5-5856-b34600000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ez-541f9d.ezaccess1d3db24.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: ez-541f9d.ezaccess1d3db24.workers.dev
+  client-fingerprint: safari
 - name: Github HK 30 ATSRSD
   type: vless
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
+  server: 5fca3221-tl4g00-tpkh0c-1r7od.hk3.hyhuawei.com
   port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: Github HK 31 ATSRSD
   type: vless
-  server: 6342844e-tla000-tlpfci-1jdha.hk3.hyhuawei.com
+  server: 58.153.148.126
   port: 443
-  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
+  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: qq
+  client-fingerprint: firefox
 - name: Github HK 32 ATSRSD
-  type: vless
-  server: 6342844e-tla000-tlpfci-1jdha.hk3.hyhuawei.com
+  type: vmess
+  server: www.shopify.com
   port: 443
-  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
+  uuid: d187a23a-76a9-4d55-84e3-ea3b8b222cbf
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  servername: dimensional-regularly-buildings-keys.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: /d187a23a-76a9-4d55-84e3-ea3b8b222cbf-vm
+    headers:
+      Host: dimensional-regularly-buildings-keys.trycloudflare.com
 - name: Github HK 33 ATSRSD
   type: vless
-  server: 5c8575f4-tl4g00-u1vxv2-v3c2.hk3.hyhuawei.com
+  server: 58.153.148.126
   port: 443
   uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
   udp: true
@@ -409,22 +429,26 @@ proxies:
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
 - name: Github HK 34 ATSRSD
+  type: vmess
+  server: 47.83.19.148
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: Github HK 35 ATSRSD
   type: vless
   server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
   port: 443
   uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 35 ATSRSD
-  type: vless
-  server: 58.153.148.126
-  port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -436,7 +460,7 @@ proxies:
   type: vless
   server: 58.153.148.126
   port: 443
-  uuid: 91df5a86-fcdd-11ef-94aa-f23c913c8d2b
+  uuid: 5dc6fa05-a601-aba6-7761-ecde22d2b0fc
   udp: true
   tls: true
   skip-cert-verify: true
@@ -445,17 +469,20 @@ proxies:
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
 - name: Github HK 37 ATSRSD
-  type: vless
-  server: 826ff98e-tla000-tuklme-ueq.hk3.hyhuawei.com
-  port: 443
-  uuid: 91df5a86-fcdd-11ef-94aa-f23c913c8d2b
+  type: vmess
+  server: 47.244.120.197
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /arki?ed=2048
+    headers:
+      Host: ''
 - name: Github HK 38 ATSRSD
   type: vless
   server: c302b802-tla000-u10a65-1os43.hk3.hyhuawei.com
@@ -467,7 +494,7 @@ proxies:
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: Github HK 39 ATSRSD
   type: vless
   server: 58.153.148.126
@@ -482,6 +509,30 @@ proxies:
   client-fingerprint: chrome
 - name: Github HK 40 ATSRSD
   type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: firefox
+- name: Github HK 41 ATSRSD
+  type: vless
+  server: 58.153.148.126
+  port: 443
+  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: firefox
+- name: Github HK 42 ATSRSD
+  type: vless
   server: 5fca3221-tl4g00-tpkh0c-1r7od.hk3.hyhuawei.com
   port: 443
   uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
@@ -492,23 +543,11 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: ios
-- name: Github HK 41 ATSRSD
+- name: Github HK 43 ATSRSD
   type: vless
-  server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
+  server: 0deecae9-tl4g00-tls5or-6gn6.hk3.hyhuawei.com
   port: 443
-  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: safari
-- name: Github HK 42 ATSRSD
-  type: vless
-  server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
-  port: 443
-  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -516,23 +555,11 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
-- name: Github HK 43 ATSRSD
-  type: vless
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
-  port: 443
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: edge
 - name: Github HK 44 ATSRSD
   type: vless
   server: 58.153.148.126
   port: 443
-  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -544,7 +571,19 @@ proxies:
   type: vless
   server: 58.153.148.126
   port: 443
-  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: firefox
+- name: Github HK 46 ATSRSD
+  type: vless
+  server: 6d91ade4-tla000-tw2fdz-1s824.hk3.hyhuawei.com
+  port: 443
+  uuid: 6d4abac0-86e6-11ef-83cc-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
@@ -552,7 +591,39 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
-- name: Github HK 46 ATSRSD
+- name: Github HK 47 ATSRSD
+  type: vmess
+  server: wwafj5lhl6bi8au9.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: wwafj5lhl6bi8au9.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: wwafj5lhl6bi8au9.v.3dns.vip
+- name: Github HK 48 ATSRSD
+  type: vmess
+  server: vah4urdzl3jdx5r2.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vah4urdzl3jdx5r2.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: vah4urdzl3jdx5r2.v.3dns.vip
+- name: Github HK 49 ATSRSD
   type: vless
   server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
   port: 443
@@ -564,23 +635,23 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: qq
-- name: Github HK 47 ATSRSD
+- name: Github HK 50 ATSRSD
   type: vless
-  server: 58.153.148.126
+  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
   port: 443
-  uuid: 96c798f6-4645-11ee-b8a1-f23c9164ca5d
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-- name: Github HK 48 ATSRSD
+  client-fingerprint: edge
+- name: Github HK 51 ATSRSD
   type: vless
-  server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
+  server: a95a660c-tla000-tpw4i4-1pckg.hk3.hyhuawei.com
   port: 443
-  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
+  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
   udp: true
   tls: true
   skip-cert-verify: true
@@ -588,31 +659,7 @@ proxies:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
   client-fingerprint: chrome
-- name: Github HK 49 ATSRSD
-  type: vless
-  server: 5c8575f4-tl4g00-u1vxv2-v3c2.hk3.hyhuawei.com
-  port: 443
-  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: firefox
-- name: Github HK 50 ATSRSD
-  type: vless
-  server: 26a9920c-tla000-tyt0e8-1mh67.hk3.hyhuawei.com
-  port: 443
-  uuid: e1c7fbbc-96b6-11ef-8563-f23c913c8d2b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  servername: updates.cdn-apple.com
-  client-fingerprint: qq
-- name: Github HK 51 ATSRSD
+- name: Github HK 52 ATSRSD
   type: vless
   server: c302b802-tla000-u10a65-1os43.hk3.hyhuawei.com
   port: 443
@@ -623,7 +670,19 @@ proxies:
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
+- name: Github HK 53 ATSRSD
+  type: vless
+  server: ac35c80b-tla000-tpmc23-1s3lb.hk3.hyhuawei.com
+  port: 443
+  uuid: fbf91120-50ba-11ef-a203-f23c91cfbbc9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  servername: updates.cdn-apple.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -680,6 +739,8 @@ proxy-groups:
   - Github HK 49 ATSRSD
   - Github HK 50 ATSRSD
   - Github HK 51 ATSRSD
+  - Github HK 52 ATSRSD
+  - Github HK 53 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -736,5 +797,7 @@ proxy-groups:
   - Github HK 49 ATSRSD
   - Github HK 50 ATSRSD
   - Github HK 51 ATSRSD
+  - Github HK 52 ATSRSD
+  - Github HK 53 ATSRSD
 rules:
 - MATCH,PROXIES
