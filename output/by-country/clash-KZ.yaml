@@ -6,24 +6,17 @@ log-level: info
 proxies:
 - name: Github KZ 01 ATSRSD
   type: vless
-  server: 178.236.16.98
-  port: 35728
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  server: 77.73.232.61
+  port: 19747
+  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
   servername: yahoo.com
   client-fingerprint: chrome
 - name: Github KZ 02 ATSRSD
-  type: ss
-  server: 94.198.220.183
-  port: 64674
-  cipher: chacha20-ietf-poly1305
-  password: s8LbJCgUiGXeCKVc63tHJP
-  udp: true
-- name: Github KZ 03 ATSRSD
   type: vless
   server: 83.222.23.81
   port: 38065
@@ -35,6 +28,45 @@ proxies:
     public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
   servername: yahoo.com
   client-fingerprint: chrome
+- name: Github KZ 03 ATSRSD
+  type: vmess
+  server: 3h-kazakhstan1.09vpn.com
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: ''
+- name: Github KZ 04 ATSRSD
+  type: vless
+  server: 77.73.232.61
+  port: 19747
+  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: Github KZ 05 ATSRSD
+  type: vless
+  server: 109.248.170.119
+  port: 13447
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,6 +75,8 @@ proxy-groups:
   - Github KZ 01 ATSRSD
   - Github KZ 02 ATSRSD
   - Github KZ 03 ATSRSD
+  - Github KZ 04 ATSRSD
+  - Github KZ 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -51,5 +85,7 @@ proxy-groups:
   - Github KZ 01 ATSRSD
   - Github KZ 02 ATSRSD
   - Github KZ 03 ATSRSD
+  - Github KZ 04 ATSRSD
+  - Github KZ 05 ATSRSD
 rules:
 - MATCH,PROXIES

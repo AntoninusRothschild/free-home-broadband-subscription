@@ -1,0 +1,63 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github EG 01 ATSRSD
+  type: vless
+  server: 38.54.59.209
+  port: 2087
+  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /d1000b16fe76
+    headers:
+      Host: telegram-leviko_v2ray
+- name: Github EG 02 ATSRSD
+  type: vless
+  server: 38.54.59.209
+  port: 2087
+  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /d1000b16fe76
+    headers:
+      Host: 38.54.59.209
+- name: Github EG 03 ATSRSD
+  type: vless
+  server: 38.54.59.209
+  port: 2087
+  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /d1000b16fe76
+    headers:
+      Host: 38.54.59.209
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github EG 01 ATSRSD
+  - Github EG 02 ATSRSD
+  - Github EG 03 ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github EG 01 ATSRSD
+  - Github EG 02 ATSRSD
+  - Github EG 03 ATSRSD
+rules:
+- MATCH,PROXIES

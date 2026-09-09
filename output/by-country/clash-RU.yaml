@@ -5,12 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
+  type: vless
+  server: 45.9.15.206
+  port: 443
+  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ru05.abvpn.ru
+  network: ws
+  ws-opts:
+    path: /websocket
+    headers:
+      Host: ru05.abvpn.ru
 - name: Github RU 02 ATSRSD
   type: vless
   server: 45.9.15.206
@@ -26,19 +33,24 @@ proxies:
     headers:
       Host: 45.9.15.206
 - name: Github RU 03 ATSRSD
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
+  udp: true
+- name: Github RU 04 ATSRSD
   type: vless
-  server: 45.9.15.206
-  port: 443
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  server: 45.12.75.242
+  port: 26424
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ru05.abvpn.ru
-  network: ws
-  ws-opts:
-    path: /websocket
-    headers:
-      Host: ru05.abvpn.ru
+  reality-opts:
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+  servername: ya.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,6 +59,7 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -55,5 +68,6 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES
