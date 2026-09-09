@@ -29,7 +29,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 89.36.161.222
+      Host: laoye.in-gect.fun
 - name: Github LV 03 ATSRSD
   type: vless
   server: 89.36.161.222
@@ -42,7 +42,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: laoye.in-gect.fun
+      Host: 89.36.161.222
 - name: Github LV 04 ATSRSD
   type: vless
   server: 89.36.161.222

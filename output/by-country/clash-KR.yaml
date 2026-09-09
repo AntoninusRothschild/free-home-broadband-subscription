@@ -7,49 +7,35 @@ proxies:
 - name: Github KR 01 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 8119
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: Github KR 02 ATSRSD
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: 579ac5bd-a43d-49d4-b83e-a9e3ddd1f706
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k9narlSK7fUqy94_p0rrqKl52W35QLNsp3W8xaGq_Go
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github KR 03 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 6697
+  port: 6679
   cipher: aes-256-gcm
   password: TEzjfAYq2IjtuoS
   udp: true
-- name: Github KR 04 ATSRSD
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: 579ac5bd-a43d-49d4-b83e-a9e3ddd1f706
+- name: Github KR 02 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: k9narlSK7fUqy94_p0rrqKl52W35QLNsp3W8xaGq_Go
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: Github KR 05 ATSRSD
+- name: Github KR 03 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: Github KR 04 ATSRSD
   type: ss
   server: 141.164.45.187
   port: 7002
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
   udp: true
-- name: Github KR 06 ATSRSD
+- name: Github KR 05 ATSRSD
   type: vmess
   server: 140.238.2.250
   port: 443
@@ -59,62 +45,37 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github KR 07 ATSRSD
+- name: Github KR 06 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 6679
+  port: 6697
   cipher: aes-256-gcm
   password: TEzjfAYq2IjtuoS
   udp: true
+- name: Github KR 07 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github KR 08 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 5498
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
+  type: vless
+  server: 130.94.29.111
+  port: 2087
+  uuid: 84da6391-1539-4583-a3d9-d6efd796b4d6
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /e17586a75123
+    headers:
+      Host: 130.94.29.111
 - name: Github KR 09 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8091
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: Github KR 10 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 9101
-  cipher: aes-256-gcm
-  password: e4FCWrgpkji3QY
-  udp: true
-- name: Github KR 11 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 12 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 9090
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: Github KR 13 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 14 ATSRSD
   type: vless
   server: 130.94.29.111
   port: 2087
@@ -141,11 +102,6 @@ proxy-groups:
   - Github KR 07 ATSRSD
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
-  - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
-  - Github KR 13 ATSRSD
-  - Github KR 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -160,10 +116,5 @@ proxy-groups:
   - Github KR 07 ATSRSD
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
-  - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
-  - Github KR 13 ATSRSD
-  - Github KR 14 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: Github HK 01 (家宽) ATSRSD
   type: vless
-  server: 6342844e-tla000-tlpfci-1jdha.hk3.hyhuawei.com
+  server: e283de09-tla000-u1vxv2-v3c2.hk3.hyhuawei.com
   port: 443
-  uuid: de629d50-1711-11ed-bd7c-f23c913c8d2b
+  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true

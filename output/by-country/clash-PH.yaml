@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github BG 01 ATSRSD
+- name: Github PH 01 ATSRSD
   type: vless
-  server: 94.156.155.27
-  port: 443
-  uuid: 218fd696-e3a2-4c33-b397-a5f13a82969e
+  server: 149.104.109.17
+  port: 2087
+  uuid: 9ed3dcb3-b71a-4ae1-8210-95e33615d7e6
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: bY0-zlTOPCaEWDMw_BTzuzJW513tl6Hc61n4Z-q1cHE
-  servername: www.telekom.de
-  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /04461917b179
+    headers:
+      Host: 149.104.109.17
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github BG 01 ATSRSD
+  - Github PH 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github BG 01 ATSRSD
+  - Github PH 01 ATSRSD
 rules:
 - MATCH,PROXIES
