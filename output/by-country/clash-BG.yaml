@@ -7,12 +7,16 @@ proxies:
 - name: Github BG 01 ATSRSD
   type: vless
   server: 192.145.31.5
-  port: 8443
+  port: 443
   uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: 192.145.31.5
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: neth9.lunariai.ru
 - name: Github BG 02 ATSRSD
   type: vless
   server: 192.145.31.5
@@ -38,15 +42,6 @@ proxies:
 - name: Github BG 04 ATSRSD
   type: vless
   server: 192.145.31.5
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 192.145.31.5
-- name: Github BG 05 ATSRSD
-  type: vless
-  server: 192.145.31.5
   port: 443
   uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
@@ -56,7 +51,16 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: neth9.lunariai.ru
+      Host: 192.145.31.5
+- name: Github BG 05 ATSRSD
+  type: vless
+  server: 192.145.31.5
+  port: 8443
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 192.145.31.5
 - name: Github BG 06 ATSRSD
   type: vless
   server: 192.145.31.5
@@ -82,17 +86,22 @@ proxies:
 - name: Github BG 08 ATSRSD
   type: vless
   server: 192.145.31.5
-  port: 443
+  port: 8443
   uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 192.145.31.5
+  servername: neth9.lunariai.ru
 - name: Github BG 09 ATSRSD
+  type: vless
+  server: 192.145.31.5
+  port: 8443
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 192.145.31.5
+- name: Github BG 10 ATSRSD
   type: vless
   server: 192.145.31.5
   port: 8443
@@ -115,6 +124,7 @@ proxy-groups:
   - Github BG 07 ATSRSD
   - Github BG 08 ATSRSD
   - Github BG 09 ATSRSD
+  - Github BG 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -129,5 +139,6 @@ proxy-groups:
   - Github BG 07 ATSRSD
   - Github BG 08 ATSRSD
   - Github BG 09 ATSRSD
+  - Github BG 10 ATSRSD
 rules:
 - MATCH,PROXIES

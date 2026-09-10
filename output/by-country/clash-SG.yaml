@@ -6,39 +6,43 @@ log-level: info
 proxies:
 - name: Github SG 01 ATSRSD
   type: vless
-  server: 142.91.102.35
-  port: 443
-  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
+  server: 104.17.71.206
+  port: 8443
+  uuid: 542fd687-5160-4f80-9223-56678567dd29
   udp: true
   tls: true
   skip-cert-verify: true
   servername: 8.sahanwickramasinghe.me
-- name: Github SG 02 ATSRSD
-  type: vless
-  server: 162.159.156.214
-  port: 8880
-  uuid: 8991a496-1baa-486f-9948-ffe44e68c072
-  udp: true
-  tls: false
-  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
+    path: /
     headers:
-      Host: soft-band-8da6.426.workers.dev
-- name: Github SG 03 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+      Host: 8.sahanwickramasinghe.me
+- name: Github SG 02 ATSRSD
+  type: vless
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github SG 03 ATSRSD
+  type: vless
+  server: 104.17.73.206
+  port: 8443
+  uuid: 542fd687-5160-4f80-9223-56678567dd29
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 8.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8.sahanwickramasinghe.me
 - name: Github SG 04 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: 149.88.23.202
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -57,6 +61,42 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github SG 06 ATSRSD
+  type: ss
+  server: 176.97.64.144
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: TFElG2FVqyqG
+  udp: true
+- name: Github SG 07 ATSRSD
+  type: vless
+  server: 142.91.102.35
+  port: 443
+  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 8.sahanwickramasinghe.me
+- name: Github SG 08 ATSRSD
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: Github SG 09 ATSRSD
+  type: ss
+  server: 167.150.100.115
+  port: 27755
+  cipher: 2022-blake3-aes-256-gcm
+  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
+  udp: true
+- name: Github SG 10 ATSRSD
   type: vmess
   server: 149.88.23.202
   port: 18000
@@ -66,44 +106,14 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 07 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 08 ATSRSD
-  type: ss
-  server: 167.150.100.115
-  port: 27755
-  cipher: 2022-blake3-aes-256-gcm
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
-  udp: true
-- name: Github SG 09 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 10 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github SG 11 ATSRSD
+  type: ss
+  server: 139.180.220.175
+  port: 8388
+  cipher: aes-256-gcm
+  password: qpSevKaUXYQKvSjp
+  udp: true
+- name: Github SG 12 ATSRSD
   type: vless
   server: 142.91.102.35
   port: 443
@@ -112,7 +122,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 8.sahanwickramasinghe.me
-- name: Github SG 12 ATSRSD
+- name: Github SG 13 ATSRSD
   type: vless
   server: 134.122.154.210
   port: 443
@@ -120,25 +130,15 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 13 ATSRSD
+- name: Github SG 14 ATSRSD
   type: vless
-  server: 47.129.195.98
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  server: 142.91.102.35
+  port: 443
+  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github SG 14 ATSRSD
-  type: ss
-  server: 176.97.64.144
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: TFElG2FVqyqG
-  udp: true
+  servername: www.tiktok.com
 - name: Github SG 15 ATSRSD
   type: vmess
   server: 149.88.23.202
@@ -151,23 +151,23 @@ proxies:
   skip-cert-verify: true
 - name: Github SG 16 ATSRSD
   type: vless
-  server: 47.129.195.98
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  server: 8.sahanwickramasinghe.me
+  port: 443
+  uuid: 54a9c202-cfe9-4bb8-826c-653a52a96c6d
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: A3NXnUIT-W0m1Y_leRnv5so2IeCvk9FCFgL31PulfTw
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: zoom.us
 - name: Github SG 17 ATSRSD
-  type: ss
-  server: 176.97.64.144
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: TFElG2FVqyqG
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github SG 18 ATSRSD
   type: vmess
   server: 149.88.23.207
@@ -180,19 +180,20 @@ proxies:
   skip-cert-verify: true
 - name: Github SG 19 ATSRSD
   type: vless
-  server: 104.17.73.206
-  port: 8443
-  uuid: 542fd687-5160-4f80-9223-56678567dd29
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: 8.sahanwickramasinghe.me
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8.sahanwickramasinghe.me
 - name: Github SG 20 ATSRSD
+  type: ss
+  server: 176.97.64.144
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: TFElG2FVqyqG
+  udp: true
+- name: Github SG 21 ATSRSD
   type: vmess
   server: 149.88.23.202
   port: 18000
@@ -202,20 +203,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 21 ATSRSD
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nautica-cff.kloningstrife002.workers.dev
-  network: ws
-  ws-opts:
-    path: /138.2.74.219-28616
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
 - name: Github SG 22 ATSRSD
   type: vmess
   server: 149.88.23.207
@@ -227,37 +214,22 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github SG 23 ATSRSD
-  type: vless
-  server: 104.17.3.81
-  port: 443
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nautica-cff.kloningstrife002.workers.dev
-  network: ws
-  ws-opts:
-    path: /138.2.74.219-28616
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
-- name: Github SG 24 ATSRSD
-  type: vless
-  server: 172.66.214.247
-  port: 8880
-  uuid: e7f6f783-6754-4228-a5d0-aeed84b9949a
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: sweet-sun-c70f.317-ba5.workers.dev
-- name: Github SG 25 ATSRSD
-  type: vless
-  server: 134.122.154.210
-  port: 443
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+- name: Github SG 24 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
@@ -290,7 +262,6 @@ proxy-groups:
   - Github SG 22 ATSRSD
   - Github SG 23 ATSRSD
   - Github SG 24 ATSRSD
-  - Github SG 25 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -320,6 +291,5 @@ proxy-groups:
   - Github SG 22 ATSRSD
   - Github SG 23 ATSRSD
   - Github SG 24 ATSRSD
-  - Github SG 25 ATSRSD
 rules:
 - MATCH,PROXIES
