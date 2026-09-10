@@ -6,15 +6,15 @@ log-level: info
 proxies:
 - name: Github NO 01 ATSRSD
   type: vless
-  server: 46.29.238.88
-  port: 40443
-  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  server: 151.242.168.125
+  port: 390
+  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
-  servername: deepl.com
+    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
+  servername: bowandbead.com
   client-fingerprint: chrome
 - name: Github NO 02 ATSRSD
   type: vless
@@ -27,20 +27,8 @@ proxies:
   reality-opts:
     public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
   servername: deepl.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: Github NO 03 ATSRSD
-  type: vless
-  server: 151.242.168.125
-  port: 390
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-  servername: bowandbead.com
-  client-fingerprint: qq
-- name: Github NO 04 ATSRSD
   type: vless
   server: 46.29.238.88
   port: 40443
@@ -52,20 +40,34 @@ proxies:
     public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
   servername: deepl.com
   client-fingerprint: chrome
-- name: Github NO 05 ATSRSD
-  type: vless
-  server: 151.242.168.125
-  port: 390
-  uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
+- name: Github NO 04 ATSRSD
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
-  servername: bowandbead.com
-  client-fingerprint: qq
+- name: Github NO 05 ATSRSD
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  udp: true
 - name: Github NO 06 ATSRSD
   type: vless
+  server: 46.29.238.88
+  port: 40443
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: Github NO 07 ATSRSD
+  type: vless
   server: 151.242.168.125
   port: 390
   uuid: 7b363f9c-3df9-4b60-a789-9cd36be0bdfe
@@ -75,6 +77,18 @@ proxies:
   reality-opts:
     public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
   servername: bowandbead.com
+  client-fingerprint: edge
+- name: Github NO 08 ATSRSD
+  type: vless
+  server: 46.29.238.88
+  port: 40443
+  uuid: db320947-adfb-400d-b60b-383b8324bffe
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: aZOpodpnifoxDqTzWgxJRffgsiGnG9-h-EZd4SvOImc
+  servername: deepl.com
   client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
@@ -87,6 +101,8 @@ proxy-groups:
   - Github NO 04 ATSRSD
   - Github NO 05 ATSRSD
   - Github NO 06 ATSRSD
+  - Github NO 07 ATSRSD
+  - Github NO 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -98,5 +114,7 @@ proxy-groups:
   - Github NO 04 ATSRSD
   - Github NO 05 ATSRSD
   - Github NO 06 ATSRSD
+  - Github NO 07 ATSRSD
+  - Github NO 08 ATSRSD
 rules:
 - MATCH,PROXIES

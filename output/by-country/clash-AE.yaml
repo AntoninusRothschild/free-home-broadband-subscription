@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -17,48 +17,17 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: Github AE 02 ATSRSD
-  type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 03 ATSRSD
-  type: vless
-  server: 185.112.249.201
-  port: 8443
-  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: web-socket.tgdaosheng.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=bpb.yousef.isegaro.comfp=chrome
-    headers:
-      Host: web-socket.tgdaosheng.ggff.net
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github AE 01 ATSRSD
-  - Github AE 02 ATSRSD
-  - Github AE 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github AE 01 ATSRSD
-  - Github AE 02 ATSRSD
-  - Github AE 03 ATSRSD
 rules:
 - MATCH,PROXIES

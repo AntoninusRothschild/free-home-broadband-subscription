@@ -7,12 +7,16 @@ proxies:
 - name: Github EE 01 ATSRSD
   type: vless
   server: 94.183.170.135
-  port: 8443
+  port: 443
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.170.135
 - name: Github EE 02 ATSRSD
   type: vless
   server: 94.183.170.135
@@ -34,16 +38,12 @@ proxies:
 - name: Github EE 04 ATSRSD
   type: vless
   server: 94.183.170.135
-  port: 443
+  port: 8443
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.170.135
+  servername: estproxy4.lockdwn.com
 - name: Github EE 05 ATSRSD
   type: vless
   server: 94.183.170.135
@@ -66,15 +66,6 @@ proxies:
     path: /
     headers:
       Host: 94.183.170.135
-- name: Github EE 07 ATSRSD
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -86,7 +77,6 @@ proxy-groups:
   - Github EE 04 ATSRSD
   - Github EE 05 ATSRSD
   - Github EE 06 ATSRSD
-  - Github EE 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -98,6 +88,5 @@ proxy-groups:
   - Github EE 04 ATSRSD
   - Github EE 05 ATSRSD
   - Github EE 06 ATSRSD
-  - Github EE 07 ATSRSD
 rules:
 - MATCH,PROXIES
