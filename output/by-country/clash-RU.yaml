@@ -5,27 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: ss
-  server: 195.58.48.137
-  port: 20111
-  cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
-  udp: true
-- name: Github RU 02 ATSRSD
-  type: ss
-  server: 194.87.196.13
-  port: 20111
-  cipher: aes-256-gcm
-  password: 4938e975724d0ed1
-  udp: true
-- name: Github RU 03 ATSRSD
-  type: ss
-  server: 46.17.40.234
-  port: 2011
-  cipher: aes-256-gcm
-  password: bdb313adf74c2ede
-  udp: true
-- name: Github RU 04 ATSRSD
   type: vless
   server: 46.8.200.91
   port: 443
@@ -39,6 +18,34 @@ proxies:
     path: /casc
     headers:
       Host: cf3.rumedia-cdn.com
+- name: Github RU 02 ATSRSD
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
+  udp: true
+- name: Github RU 03 ATSRSD
+  type: ss
+  server: 195.133.23.200
+  port: 20111
+  cipher: aes-256-gcm
+  password: 81a20429165df87e
+  udp: true
+- name: Github RU 04 ATSRSD
+  type: ss
+  server: 46.17.42.166
+  port: 10661
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
+  udp: true
+- name: Github RU 05 ATSRSD
+  type: ss
+  server: 46.17.40.234
+  port: 2011
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -48,6 +55,7 @@ proxy-groups:
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -57,5 +65,6 @@ proxy-groups:
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES

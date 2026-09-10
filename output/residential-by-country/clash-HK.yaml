@@ -6,16 +6,16 @@ log-level: info
 proxies:
 - name: Github HK 01 (家宽) ATSRSD
   type: vless
-  server: a95a660c-tla000-tpw4i4-1pckg.hk3.hyhuawei.com
+  server: 58.152.211.194
   port: 443
-  uuid: 526a1128-7487-11ee-9bca-f23c913c8d2b
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
   servername: updates.cdn-apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
