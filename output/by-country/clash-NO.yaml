@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github NO 01 ATSRSD
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  udp: true
+- name: Github NO 02 ATSRSD
   type: vless
   server: 151.242.168.125
   port: 390
@@ -15,21 +22,7 @@ proxies:
   reality-opts:
     public-key: 5RCgAVjaT7hwdVIKAEULswXGqR127ZOZV6X17nEhYk8
   servername: bowandbead.com
-  client-fingerprint: chrome
-- name: Github NO 02 ATSRSD
-  type: ss
-  server: 185.213.23.63
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  udp: true
-- name: Github NO 03 ATSRSD
-  type: ss
-  server: 185.213.23.63
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  udp: true
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,7 +30,6 @@ proxy-groups:
   - AUTO
   - Github NO 01 ATSRSD
   - Github NO 02 ATSRSD
-  - Github NO 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -45,6 +37,5 @@ proxy-groups:
   proxies:
   - Github NO 01 ATSRSD
   - Github NO 02 ATSRSD
-  - Github NO 03 ATSRSD
 rules:
 - MATCH,PROXIES

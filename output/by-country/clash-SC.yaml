@@ -5,6 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: Github SC 01 ATSRSD
+  type: vless
+  server: 172.64.158.146
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github SC 02 ATSRSD
   type: vmess
   server: 156.226.183.181
   port: 54321
@@ -14,19 +27,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SC 02 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 - name: Github SC 03 ATSRSD
   type: vmess
   server: 156.226.183.181
