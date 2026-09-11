@@ -6,6 +6,39 @@ log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
   type: vless
+  server: 94.183.209.59
+  port: 443
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.59
+- name: Github PL 02 ATSRSD
+  type: vless
+  server: 94.183.209.59
+  port: 443
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.59
+- name: Github PL 03 ATSRSD
+  type: ss
+  server: 194.61.121.93
+  port: 7538
+  cipher: chacha20-ietf-poly1305
+  password: U9YAoqBgg5VyGBc6vQv1sN
+  udp: true
+- name: Github PL 04 ATSRSD
+  type: vless
   server: 94.183.209.58
   port: 443
   uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
@@ -16,34 +49,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 94.183.209.58
-- name: Github PL 02 ATSRSD
-  type: ss
-  server: 64.176.73.160
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: VJtsgllDDJfNmaTe
-  udp: true
-- name: Github PL 03 ATSRSD
-  type: ss
-  server: 194.61.121.93
-  port: 7538
-  cipher: chacha20-ietf-poly1305
-  password: U9YAoqBgg5VyGBc6vQv1sN
-  udp: true
-- name: Github PL 04 ATSRSD
-  type: vless
-  server: 178.95.170.115
-  port: 2087
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /4bc027a44532
-    headers:
-      Host: 178.95.170.115
+      Host: pl2.lckdwn.ru
 - name: Github PL 05 ATSRSD
   type: vless
   server: 94.183.209.58
@@ -59,9 +65,9 @@ proxies:
       Host: pl2.lckdwn.ru
 - name: Github PL 06 ATSRSD
   type: vless
-  server: 94.183.209.43
+  server: 94.183.209.59
   port: 443
-  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
   udp: true
   tls: false
   skip-cert-verify: true
@@ -69,85 +75,14 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 94.183.209.43
+      Host: 94.183.209.59
 - name: Github PL 07 ATSRSD
-  type: vless
-  server: 94.183.209.59
-  port: 443
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  type: ss
+  server: 64.176.73.160
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: VJtsgllDDJfNmaTe
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.59
-- name: Github PL 08 ATSRSD
-  type: vless
-  server: 94.183.209.59
-  port: 443
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.59
-- name: Github PL 09 ATSRSD
-  type: vless
-  server: 94.183.209.59
-  port: 443
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.59
-- name: Github PL 10 ATSRSD
-  type: vless
-  server: 94.183.209.43
-  port: 443
-  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 94.183.209.43
-- name: Github PL 11 ATSRSD
-  type: vless
-  server: 94.183.209.58
-  port: 443
-  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pl2.lckdwn.ru
-- name: Github PL 12 ATSRSD
-  type: vless
-  server: 94.183.209.58
-  port: 443
-  uuid: 78791f9e-fe09-4d4f-88ec-895764bae0d6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pl2.lckdwn.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -160,11 +95,6 @@ proxy-groups:
   - Github PL 05 ATSRSD
   - Github PL 06 ATSRSD
   - Github PL 07 ATSRSD
-  - Github PL 08 ATSRSD
-  - Github PL 09 ATSRSD
-  - Github PL 10 ATSRSD
-  - Github PL 11 ATSRSD
-  - Github PL 12 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -177,10 +107,5 @@ proxy-groups:
   - Github PL 05 ATSRSD
   - Github PL 06 ATSRSD
   - Github PL 07 ATSRSD
-  - Github PL 08 ATSRSD
-  - Github PL 09 ATSRSD
-  - Github PL 10 ATSRSD
-  - Github PL 11 ATSRSD
-  - Github PL 12 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -14,17 +14,88 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github SC 02 ATSRSD
+  type: vless
+  server: 45.130.125.96
+  port: 443
+  uuid: 28607fa7-db30-47d6-942a-f5744e4be9ad
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: dfsuporte.garena.com.ex33r.eu.cc
+  network: ws
+  ws-opts:
+    path: /id-pusat
+    headers:
+      Host: dfsuporte.garena.com.ex33r.eu.cc
+- name: Github SC 03 ATSRSD
+  type: vless
+  server: 45.130.125.201
+  port: 80
+  uuid: dc8a9493-c54a-459e-d060-81a700000001
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: nahan-core.netizo09.workers.dev
+- name: Github SC 04 ATSRSD
+  type: vless
+  server: 104.21.51.145
+  port: 8443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github SC 05 ATSRSD
+  type: vmess
+  server: 156.226.183.181
+  port: 54321
+  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SC 06 ATSRSD
+  type: vmess
+  server: 156.226.183.181
+  port: 54321
+  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github SC 01 ATSRSD
+  - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
+  - Github SC 04 ATSRSD
+  - Github SC 05 ATSRSD
+  - Github SC 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github SC 01 ATSRSD
+  - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
+  - Github SC 04 ATSRSD
+  - Github SC 05 ATSRSD
+  - Github SC 06 ATSRSD
 rules:
 - MATCH,PROXIES
