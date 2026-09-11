@@ -13,12 +13,19 @@ proxies:
   udp: true
 - name: Github ZA 02 ATSRSD
   type: ss
+  server: 20.87.212.20
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: IbtRX4cOSjfd8YoI
+  udp: true
+- name: Github ZA 03 ATSRSD
+  type: ss
   server: 102.37.156.224
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
   udp: true
-- name: Github ZA 03 ATSRSD
+- name: Github ZA 04 ATSRSD
   type: ss
   server: 139.84.247.164
   port: 8388
@@ -33,6 +40,7 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -41,5 +49,6 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
 rules:
 - MATCH,PROXIES

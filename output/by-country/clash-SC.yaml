@@ -14,17 +14,44 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github SC 02 ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: Github SC 03 ATSRSD
+  type: vmess
+  server: 156.226.183.181
+  port: 54321
+  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github SC 01 ATSRSD
+  - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github SC 01 ATSRSD
+  - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -5,45 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: vless
-  server: 108.162.198.178
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github RU 02 ATSRSD
-  type: ss
-  server: 195.133.23.200
-  port: 30111
-  cipher: aes-256-gcm
-  password: 81a20429165df87e
-  udp: true
-- name: Github RU 03 ATSRSD
-  type: ss
-  server: 195.58.48.137
-  port: 30111
-  cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
-  udp: true
-- name: Github RU 04 ATSRSD
   type: ss
   server: 130.49.189.158
   port: 43558
   cipher: chacha20-ietf-poly1305
   password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
   udp: true
-- name: Github RU 05 ATSRSD
+- name: Github RU 02 ATSRSD
   type: ss
-  server: 46.17.40.234
+  server: 195.133.23.200
   port: 30111
   cipher: aes-256-gcm
-  password: bdb313adf74c2ede
+  password: 81a20429165df87e
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -52,9 +25,6 @@ proxy-groups:
   - AUTO
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -62,8 +32,5 @@ proxy-groups:
   proxies:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES

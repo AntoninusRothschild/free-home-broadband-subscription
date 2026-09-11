@@ -6,12 +6,16 @@ log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
   type: vless
-  server: app.life-pro.ir
-  port: 8082
-  uuid: 79f98593-6a21-4783-a425-3d5609a79df1
+  server: 151.241.226.201
+  port: 2053
+  uuid: e691b034-dfc9-4f22-80aa-6d4f6404a4df
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: k5COjpopVNGzEuMb457zCrrZegSdBX-d8bg0G6HDsE4
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: Github TR 02 ATSRSD
   type: vless
   server: 195.162.69.203
@@ -21,6 +25,20 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 195-162-69-203.sslip.io
+- name: Github TR 03 ATSRSD
+  type: vless
+  server: sinavm.soft10.ir
+  port: 443
+  uuid: 69768555-bf07-4127-8ce5-eed7a0d0baba
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sinavm.soft10.ir
+  network: ws
+  ws-opts:
+    path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM
+    headers:
+      Host: sinavm.soft10.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -28,6 +46,7 @@ proxy-groups:
   - AUTO
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -35,5 +54,6 @@ proxy-groups:
   proxies:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 rules:
 - MATCH,PROXIES

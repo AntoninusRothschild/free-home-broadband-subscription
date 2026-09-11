@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github KR 01 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 8091
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: Github KR 02 ATSRSD
   type: vmess
   server: 140.238.2.250
   port: 443
@@ -21,6 +14,13 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github KR 02 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9101
+  cipher: aes-256-gcm
+  password: e4FCWrgpkji3QY
+  udp: true
 - name: Github KR 03 ATSRSD
   type: vmess
   server: 140.238.2.250
@@ -32,142 +32,60 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github KR 04 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 7002
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github KR 05 ATSRSD
-  type: vless
-  server: 172.64.94.251
-  port: 8880
-  uuid: 9f4b666c-ecf1-49e9-8ab8-9ae2c4f4c613
+  type: vmess
+  server: 146.56.112.110
+  port: 8888
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: withered-morning-aa51.64-c79.workers.dev
+- name: Github KR 05 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+  udp: true
 - name: Github KR 06 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 8888
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: Github KR 07 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github KR 08 ATSRSD
   type: ss
   server: 141.164.45.187
   port: 6679
   cipher: aes-256-gcm
   password: TEzjfAYq2IjtuoS
   udp: true
-- name: Github KR 07 ATSRSD
-  type: vless
-  server: www.visa.com.sg
-  port: 8880
-  uuid: 81d55675-8570-4b40-9a77-3125339a0f86
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: spring-sound-8d8e.36-9ff.workers.dev
-- name: Github KR 08 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github KR 09 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 2376
+  port: 7001
   cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
+  password: RexnBgU7EV5ADxG
   udp: true
 - name: Github KR 10 ATSRSD
-  type: vless
-  server: 172.64.94.251
-  port: 8880
-  uuid: 9f4b666c-ecf1-49e9-8ab8-9ae2c4f4c613
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: withered-morning-aa51.64-c79.workers.dev
-- name: Github KR 11 ATSRSD
   type: ss
   server: 141.164.45.187
   port: 5498
   cipher: aes-256-gcm
   password: lGqs95QkFHo2NV
   udp: true
-- name: Github KR 12 ATSRSD
-  type: vless
-  server: www.visa.com.sg
-  port: 8880
-  uuid: 81d55675-8570-4b40-9a77-3125339a0f86
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: spring-sound-8d8e.36-9ff.workers.dev
-- name: Github KR 13 ATSRSD
-  type: vless
-  server: 162.159.140.78
-  port: 8880
-  uuid: c18fd69e-92ba-446e-981b-213dbb551593
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: billowing-wind-5b29.133-323.workers.dev
-- name: Github KR 14 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 6697
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  udp: true
-- name: Github KR 15 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 5498
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  udp: true
-- name: Github KR 16 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 17 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -183,13 +101,6 @@ proxy-groups:
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
   - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
-  - Github KR 13 ATSRSD
-  - Github KR 14 ATSRSD
-  - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
-  - Github KR 17 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -205,12 +116,5 @@ proxy-groups:
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
   - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
-  - Github KR 13 ATSRSD
-  - Github KR 14 ATSRSD
-  - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
-  - Github KR 17 ATSRSD
 rules:
 - MATCH,PROXIES
