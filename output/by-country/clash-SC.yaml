@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: Github SC 01 ATSRSD
   type: vless
-  server: 172.64.158.146
-  port: 8880
+  server: 172.64.154.8
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -18,25 +18,18 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github SC 02 ATSRSD
-  type: vmess
-  server: 156.226.183.181
-  port: 54321
-  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 172.65.90.52
+  port: 8880
+  uuid: 30e4c878-15ca-4f53-ab32-04c60ecd3f31
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SC 03 ATSRSD
-  type: vmess
-  server: 156.226.183.181
-  port: 54321
-  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: blue-rice-7142.30-346.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +37,6 @@ proxy-groups:
   - AUTO
   - Github SC 01 ATSRSD
   - Github SC 02 ATSRSD
-  - Github SC 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -52,6 +44,5 @@ proxy-groups:
   proxies:
   - Github SC 01 ATSRSD
   - Github SC 02 ATSRSD
-  - Github SC 03 ATSRSD
 rules:
 - MATCH,PROXIES

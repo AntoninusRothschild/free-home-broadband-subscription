@@ -7,11 +7,7 @@
       "outbounds": [
         "auto",
         "Github ES 01 ATSRSD",
-        "Github ES 02 ATSRSD",
-        "Github ES 03 ATSRSD",
-        "Github ES 04 ATSRSD",
-        "Github ES 05 ATSRSD",
-        "Github ES 06 ATSRSD"
+        "Github ES 02 ATSRSD"
       ]
     },
     {
@@ -19,11 +15,7 @@
       "tag": "auto",
       "outbounds": [
         "Github ES 01 ATSRSD",
-        "Github ES 02 ATSRSD",
-        "Github ES 03 ATSRSD",
-        "Github ES 04 ATSRSD",
-        "Github ES 05 ATSRSD",
-        "Github ES 06 ATSRSD"
+        "Github ES 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

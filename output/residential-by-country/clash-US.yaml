@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: Github US 01 (家宽) ATSRSD
   type: vless
-  server: 108.162.198.178
-  port: 2082
+  server: 104.18.34.14
+  port: 2095
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false

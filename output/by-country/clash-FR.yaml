@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: Github FR 01 ATSRSD
   type: vless
+  server: 104.17.148.22
+  port: 443
+  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0?ed=2560
+    headers:
+      Host: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+- name: Github FR 02 ATSRSD
+  type: vless
   server: 149.202.58.99
   port: 443
   uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
@@ -18,53 +32,47 @@ proxies:
     path: /vws/
     headers:
       Host: 149.202.58.99
-- name: Github FR 02 ATSRSD
+- name: Github FR 03 ATSRSD
   type: ss
   server: 51.255.13.232
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: BqnqToih0PbU
   udp: true
-- name: Github FR 03 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
 - name: Github FR 04 ATSRSD
   type: ss
-  server: 51.83.192.80
+  server: 51.255.13.232
   port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
+  cipher: chacha20-ietf-poly1305
+  password: BqnqToih0PbU
   udp: true
 - name: Github FR 05 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 149.202.58.99
+  port: 443
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: bab-6.site
+  network: ws
+  ws-opts:
+    path: /vws/
+    headers:
+      Host: 149.202.58.99
 - name: Github FR 06 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 45.144.28.39
+  port: 2096
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: ''
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: usejh2.neobo-tooth.ru
 - name: Github FR 07 ATSRSD
   type: vless
   server: 45.144.28.39
@@ -79,32 +87,25 @@ proxies:
     headers:
       Host: 45.144.28.39
 - name: Github FR 08 ATSRSD
+  type: ss
+  server: 51.83.192.80
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+  udp: true
+- name: Github FR 09 ATSRSD
   type: vless
-  server: 45.144.28.39
-  port: 2096
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  server: 152.228.162.19
+  port: 80
+  uuid: 5ce84688-f535-46ad-a512-37b17becf6ea
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless/
     headers:
-      Host: usejh2.neobo-tooth.ru
-- name: Github FR 09 ATSRSD
-  type: vless
-  server: 149.202.58.99
-  port: 443
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: bab-6.site
-  network: ws
-  ws-opts:
-    path: /vws/
-    headers:
-      Host: 149.202.58.99
+      Host: akamaized.net
 - name: Github FR 10 ATSRSD
   type: vmess
   server: 162.19.204.71
@@ -117,6 +118,13 @@ proxies:
   skip-cert-verify: true
   servername: ''
 - name: Github FR 11 ATSRSD
+  type: ss
+  server: 51.83.192.80
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+  udp: true
+- name: Github FR 12 ATSRSD
   type: vless
   server: 149.202.58.99
   port: 443
@@ -130,14 +138,14 @@ proxies:
     path: /vws/
     headers:
       Host: bab-6.site
-- name: Github FR 12 ATSRSD
-  type: ss
-  server: 51.83.192.80
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
 - name: Github FR 13 ATSRSD
+  type: ss
+  server: 83.171.225.55
+  port: 1443
+  cipher: chacha20-ietf-poly1305
+  password: ZjAxZ
+  udp: true
+- name: Github FR 14 ATSRSD
   type: vless
   server: 45.144.28.39
   port: 2096
@@ -150,17 +158,6 @@ proxies:
     path: /
     headers:
       Host: 45.144.28.39
-- name: Github FR 14 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
 - name: Github FR 15 ATSRSD
   type: vless
   server: 51.38.82.1
@@ -173,46 +170,6 @@ proxies:
     public-key: YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M
   servername: play.google.com
   client-fingerprint: chrome
-- name: Github FR 16 ATSRSD
-  type: ss
-  server: 51.255.13.232
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: BqnqToih0PbU
-  udp: true
-- name: Github FR 17 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 18 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 19 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -233,10 +190,6 @@ proxy-groups:
   - Github FR 13 ATSRSD
   - Github FR 14 ATSRSD
   - Github FR 15 ATSRSD
-  - Github FR 16 ATSRSD
-  - Github FR 17 ATSRSD
-  - Github FR 18 ATSRSD
-  - Github FR 19 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -257,9 +210,5 @@ proxy-groups:
   - Github FR 13 ATSRSD
   - Github FR 14 ATSRSD
   - Github FR 15 ATSRSD
-  - Github FR 16 ATSRSD
-  - Github FR 17 ATSRSD
-  - Github FR 18 ATSRSD
-  - Github FR 19 ATSRSD
 rules:
 - MATCH,PROXIES
