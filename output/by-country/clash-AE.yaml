@@ -6,22 +6,9 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 02 ATSRSD
-  type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: 7dc78e93-9c9f-4a38-823b-13df709a1d16
+  uuid: ab3a17ae-4d4f-45ff-a05f-4d27b7f97838
   udp: true
   tls: true
   skip-cert-verify: true
@@ -35,13 +22,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github AE 01 ATSRSD
-  - Github AE 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github AE 01 ATSRSD
-  - Github AE 02 ATSRSD
 rules:
 - MATCH,PROXIES
