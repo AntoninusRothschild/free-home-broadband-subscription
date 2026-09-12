@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: 198.12.145.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
   tls: false
   skip-cert-verify: true
@@ -16,7 +16,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: vms.lifetime61.workers.dev
+      Host: uae.unixzone.us
 - name: Github AE 02 ATSRSD
   type: ss
   server: 188.208.110.58
@@ -24,6 +24,18 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: tunnel-astrovpn_official
   udp: true
+- name: Github AE 03 ATSRSD
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +43,7 @@ proxy-groups:
   - AUTO
   - Github AE 01 ATSRSD
   - Github AE 02 ATSRSD
+  - Github AE 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -38,5 +51,6 @@ proxy-groups:
   proxies:
   - Github AE 01 ATSRSD
   - Github AE 02 ATSRSD
+  - Github AE 03 ATSRSD
 rules:
 - MATCH,PROXIES
