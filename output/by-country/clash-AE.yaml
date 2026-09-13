@@ -19,7 +19,7 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 02 ATSRSD
   type: vless
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -44,7 +44,7 @@ proxies:
   client-fingerprint: chrome
 - name: Github AE 04 ATSRSD
   type: vless
-  server: uae.unixzone.us
+  server: 84.235.244.108
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -57,30 +57,52 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 05 ATSRSD
   type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 31.58.181.88
+  port: 8443
+  uuid: 863ce48d-6b5e-4682-b5d7-0c9b43895841
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
 - name: Github AE 06 ATSRSD
   type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 31.58.181.88
+  port: 8443
+  uuid: e177b819-cfc2-4c59-bd37-e9cf15bc3bc3
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
+- name: Github AE 07 ATSRSD
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: af674f24-71f7-4683-9e8e-370ec70cffc4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
+- name: Github AE 08 ATSRSD
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: c4783cc5-aeec-4473-855b-1c98965949dd
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,6 +114,8 @@ proxy-groups:
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
   - Github AE 06 ATSRSD
+  - Github AE 07 ATSRSD
+  - Github AE 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -103,5 +127,7 @@ proxy-groups:
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
   - Github AE 06 ATSRSD
+  - Github AE 07 ATSRSD
+  - Github AE 08 ATSRSD
 rules:
 - MATCH,PROXIES

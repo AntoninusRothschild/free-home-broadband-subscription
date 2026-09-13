@@ -14,19 +14,12 @@ proxies:
   skip-cert-verify: true
   servername: connect3.nyxserver.ir
 - name: Github TR 02 ATSRSD
-  type: vless
-  server: shop.neexbyte.ir
-  port: 8443
-  uuid: 464bc502-f963-45b6-81e3-e33d18427506
+  type: ss
+  server: 188.132.174.236
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shop.neexbyte.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shop.neexbyte.ir
 - name: Github TR 03 ATSRSD
   type: vless
   server: connect3.nyxserver.ir
@@ -36,6 +29,13 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: connect3.nyxserver.ir
+- name: Github TR 04 ATSRSD
+  type: ss
+  server: 185.39.204.3
+  port: 8098
+  cipher: chacha20-ietf-poly1305
+  password: PluSKSrbtxTvlVv7BOUwn4
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,6 +44,7 @@ proxy-groups:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
   - Github TR 03 ATSRSD
+  - Github TR 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -52,5 +53,6 @@ proxy-groups:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
   - Github TR 03 ATSRSD
+  - Github TR 04 ATSRSD
 rules:
 - MATCH,PROXIES
