@@ -6,6 +6,30 @@ log-level: info
 proxies:
 - name: Github CY 01 ATSRSD
   type: vless
+  server: 194.76.154.31
+  port: 40443
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: Github CY 02 ATSRSD
+  type: vless
+  server: 194.76.154.31
+  port: 40443
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+  servername: deepl.com
+  client-fingerprint: qq
+- name: Github CY 03 ATSRSD
+  type: vless
   server: 45.9.2.171
   port: 8443
   uuid: 167610e4-bcaf-4074-bc2d-0c08dc4ea294
@@ -13,19 +37,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: torr.wlrus.cfd
-- name: Github CY 02 ATSRSD
-  type: vless
-  server: cassiopeia.yokkastars.com
-  port: 40443
-  uuid: e4371581-c418-4770-b09a-d630f18290a6
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
-  servername: deepl.com
-  client-fingerprint: chrome
-- name: Github CY 03 ATSRSD
+- name: Github CY 04 ATSRSD
   type: vless
   server: cassiopeia.yokkastars.com
   port: 40443
@@ -37,18 +49,6 @@ proxies:
     public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
   servername: deepl.com
   client-fingerprint: qq
-- name: Github CY 04 ATSRSD
-  type: vless
-  server: 194.76.154.31
-  port: 40443
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-  servername: deepl.com
-  client-fingerprint: chrome
 - name: Github CY 05 ATSRSD
   type: vless
   server: cassiopeia.yokkastars.com
@@ -72,7 +72,7 @@ proxies:
   reality-opts:
     public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
   servername: deepl.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: Github CY 07 ATSRSD
   type: vless
   server: 194.76.154.31
@@ -87,40 +87,16 @@ proxies:
   client-fingerprint: qq
 - name: Github CY 08 ATSRSD
   type: vless
-  server: 194.76.154.31
+  server: cassiopeia.yokkastars.com
   port: 40443
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  uuid: e4371581-c418-4770-b09a-d630f18290a6
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-  servername: deepl.com
-  client-fingerprint: qq
-- name: Github CY 09 ATSRSD
-  type: vless
-  server: 194.76.154.31
-  port: 40443
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+    public-key: WFvn-RRJzpt2qV4xwj_R93gDr6dduIjkQKO3De3Y2Hc
   servername: deepl.com
   client-fingerprint: chrome
-- name: Github CY 10 ATSRSD
-  type: vless
-  server: 194.76.154.31
-  port: 40443
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-  servername: deepl.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -134,8 +110,6 @@ proxy-groups:
   - Github CY 06 ATSRSD
   - Github CY 07 ATSRSD
   - Github CY 08 ATSRSD
-  - Github CY 09 ATSRSD
-  - Github CY 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -149,7 +123,5 @@ proxy-groups:
   - Github CY 06 ATSRSD
   - Github CY 07 ATSRSD
   - Github CY 08 ATSRSD
-  - Github CY 09 ATSRSD
-  - Github CY 10 ATSRSD
 rules:
 - MATCH,PROXIES

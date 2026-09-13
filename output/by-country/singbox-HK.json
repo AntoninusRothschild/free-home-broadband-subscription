@@ -8,8 +8,7 @@
         "auto",
         "Github HK 01 ATSRSD",
         "Github HK 02 ATSRSD",
-        "Github HK 03 ATSRSD",
-        "Github HK 04 ATSRSD"
+        "Github HK 03 ATSRSD"
       ]
     },
     {
@@ -18,8 +17,7 @@
       "outbounds": [
         "Github HK 01 ATSRSD",
         "Github HK 02 ATSRSD",
-        "Github HK 03 ATSRSD",
-        "Github HK 04 ATSRSD"
+        "Github HK 03 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

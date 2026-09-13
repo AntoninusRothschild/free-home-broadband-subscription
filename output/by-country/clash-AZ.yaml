@@ -1,0 +1,28 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github AZ 01 ATSRSD
+  type: vless
+  server: basalam.horqen.ir
+  port: 21289
+  uuid: c12db015-a63c-43e5-a744-6398a90373b5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github AZ 01 ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github AZ 01 ATSRSD
+rules:
+- MATCH,PROXIES

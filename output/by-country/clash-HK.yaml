@@ -6,39 +6,7 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vmess
-  server: ejomsxptp19apygl.v.3dns.vip
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ejomsxptp19apygl.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: ejomsxptp19apygl.v.3dns.vip
-- name: Github HK 02 ATSRSD
-  type: vmess
-  server: ex1ogt73nzpqkac2.v.3dns.vip
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ex1ogt73nzpqkac2.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: ex1ogt73nzpqkac2.v.3dns.vip
-- name: Github HK 03 ATSRSD
-  type: vmess
-  server: i2psm3knof5qjjix.v.3dns.vip
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
   port: 443
   uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
@@ -52,22 +20,36 @@ proxies:
     path: /ws-vmess
     headers:
       Host: ''
-- name: Github HK 04 ATSRSD
+- name: Github HK 02 ATSRSD
   type: vmess
-  server: lcv8v9l7oyamxxfz.v.3dns.vip
+  server: 47.83.19.148
   port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lcv8v9l7OyamxxfZ.v.3dns.vip
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
   network: ws
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: lcv8v9l7OyamxxfZ.v.3dns.vip
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: Github HK 03 ATSRSD
+  type: vless
+  server: 156.224.76.205
+  port: 443
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vp10.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vp10.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,7 +58,6 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
-  - Github HK 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -85,6 +66,5 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
-  - Github HK 04 ATSRSD
 rules:
 - MATCH,PROXIES
