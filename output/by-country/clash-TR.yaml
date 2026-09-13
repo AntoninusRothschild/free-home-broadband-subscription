@@ -5,31 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
-  type: vless
-  server: connect3.nyxserver.ir
-  port: 8444
-  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: connect3.nyxserver.ir
-- name: Github TR 02 ATSRSD
   type: ss
   server: 188.132.174.236
   port: 1080
   cipher: chacha20-ietf-poly1305
   password: rSeYcig_XBy8q3k33NpK3A
   udp: true
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: connect3.nyxserver.ir
-  port: 8444
-  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: connect3.nyxserver.ir
-- name: Github TR 04 ATSRSD
+- name: Github TR 02 ATSRSD
   type: ss
   server: 185.39.204.3
   port: 8098
@@ -43,8 +25,6 @@ proxy-groups:
   - AUTO
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -52,7 +32,5 @@ proxy-groups:
   proxies:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 rules:
 - MATCH,PROXIES
