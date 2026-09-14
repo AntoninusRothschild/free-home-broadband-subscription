@@ -5,12 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
-  type: vmess
-  server: 188.132.174.236
-  port: 2086
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: shop.neexbyte.ir
+  port: 8443
+  uuid: 464bc502-f963-45b6-81e3-e33d18427506
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: shop.neexbyte.ir
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shop.neexbyte.ir
+- name: Github TR 02 ATSRSD
+  type: vless
+  server: 188.132.237.20
+  port: 2095
+  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
   udp: true
   tls: false
   skip-cert-verify: true
@@ -20,11 +32,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github TR 01 ATSRSD
+  - Github TR 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TR 01 ATSRSD
+  - Github TR 02 ATSRSD
 rules:
 - MATCH,PROXIES
