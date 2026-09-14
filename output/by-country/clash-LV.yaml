@@ -1,0 +1,45 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github LV 01 ATSRSD
+  type: vless
+  server: uycneynsieuocxniseunciusecmsepiock.novexgroup.ir
+  port: 2096
+  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: uycneynsieuocxniseunciusecmsepiock.novexgroup.ir
+- name: Github LV 02 ATSRSD
+  type: vless
+  server: 104.24.30.89
+  port: 443
+  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.nastaran.dpdns.org
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github LV 01 ATSRSD
+  - Github LV 02 ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github LV 01 ATSRSD
+  - Github LV 02 ATSRSD
+rules:
+- MATCH,PROXIES

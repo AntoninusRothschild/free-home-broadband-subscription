@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "Github IQ 01 ATSRSD",
+        "Github IQ 02 ATSRSD",
+        "Github IQ 03 ATSRSD"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "Github IQ 01 ATSRSD",
+        "Github IQ 02 ATSRSD",
+        "Github IQ 03 ATSRSD"
+      ],
+      "url": "https://www.google.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

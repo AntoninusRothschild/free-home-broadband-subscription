@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
-  type: ss
-  server: 65.109.215.118
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: rSeYcig_XBy8q3k33NpK3A
-  udp: true
-- name: Github FI 02 ATSRSD
   type: vless
   server: 188.132.237.20
   port: 2095
@@ -19,6 +12,25 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github FI 02 ATSRSD
+  type: ss
+  server: 65.109.215.118
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
+  udp: true
+- name: Github FI 03 ATSRSD
+  type: vless
+  server: 185.79.138.71
+  port: 448
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+  servername: www.samsung.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -26,6 +38,7 @@ proxy-groups:
   - AUTO
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -33,5 +46,6 @@ proxy-groups:
   proxies:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
 rules:
 - MATCH,PROXIES
