@@ -7,7 +7,9 @@
       "outbounds": [
         "auto",
         "Github KR 01 (家宽) ATSRSD",
-        "Github KR 02 (家宽) ATSRSD"
+        "Github KR 02 (家宽) ATSRSD",
+        "Github KR 03 (家宽) ATSRSD",
+        "Github KR 04 (家宽) ATSRSD"
       ]
     },
     {
@@ -15,7 +17,9 @@
       "tag": "auto",
       "outbounds": [
         "Github KR 01 (家宽) ATSRSD",
-        "Github KR 02 (家宽) ATSRSD"
+        "Github KR 02 (家宽) ATSRSD",
+        "Github KR 03 (家宽) ATSRSD",
+        "Github KR 04 (家宽) ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

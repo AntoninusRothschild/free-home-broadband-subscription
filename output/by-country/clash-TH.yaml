@@ -5,34 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TH 01 ATSRSD
-  type: vless
-  server: 43.133.110.81
-  port: 443
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  type: vmess
+  server: 119.46.51.45
+  port: 37515
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
 - name: Github TH 02 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: v2ray.simspeedup.com
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: Github TH 03 ATSRSD
   type: vmess
   server: 118.193.57.167
   port: 49667
@@ -54,7 +36,6 @@ proxy-groups:
   - AUTO
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -62,6 +43,5 @@ proxy-groups:
   proxies:
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
 rules:
 - MATCH,PROXIES
