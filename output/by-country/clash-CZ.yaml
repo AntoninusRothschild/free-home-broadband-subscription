@@ -4,30 +4,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github UZ 01 ATSRSD
-  type: vless
-  server: 189.74.97.43
-  port: 2087
-  uuid: 10f7eb2d-d96d-4778-9d36-aff11e9d6629
+- name: Github CZ 01 ATSRSD
+  type: vmess
+  server: 195.85.23.225
+  port: 443
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: renderer-stream-2-62.mirra.now
   network: ws
   ws-opts:
-    path: /73b6faea2d00
+    path: /api/v1/gpu-stream/socket
     headers:
-      Host: 189.74.97.43
+      Host: renderer-stream-2-62.mirra.now
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github UZ 01 ATSRSD
+  - Github CZ 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github UZ 01 ATSRSD
+  - Github CZ 01 ATSRSD
 rules:
 - MATCH,PROXIES

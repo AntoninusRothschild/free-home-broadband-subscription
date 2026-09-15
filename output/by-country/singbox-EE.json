@@ -7,12 +7,7 @@
       "outbounds": [
         "auto",
         "Github EE 01 ATSRSD",
-        "Github EE 02 ATSRSD",
-        "Github EE 03 ATSRSD",
-        "Github EE 04 ATSRSD",
-        "Github EE 05 ATSRSD",
-        "Github EE 06 ATSRSD",
-        "Github EE 07 ATSRSD"
+        "Github EE 02 ATSRSD"
       ]
     },
     {
@@ -20,12 +15,7 @@
       "tag": "auto",
       "outbounds": [
         "Github EE 01 ATSRSD",
-        "Github EE 02 ATSRSD",
-        "Github EE 03 ATSRSD",
-        "Github EE 04 ATSRSD",
-        "Github EE 05 ATSRSD",
-        "Github EE 06 ATSRSD",
-        "Github EE 07 ATSRSD"
+        "Github EE 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
