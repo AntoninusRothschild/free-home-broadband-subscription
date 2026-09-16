@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: Github CZ 01 ATSRSD
   type: vless
-  server: cz1.zuoai.cf
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  server: 104.21.51.145
+  port: 8443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
+  servername: INDEX.Arcane509.Workers.DEV
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
-      Host: nb.lovecf.ggff.net
+      Host: index.arcane509.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

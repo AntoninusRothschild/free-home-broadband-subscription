@@ -20,16 +20,6 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
 - name: Github TH 02 ATSRSD
   type: vmess
-  server: 119.46.51.45
-  port: 37515
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github TH 03 ATSRSD
-  type: vmess
   server: 118.193.57.167
   port: 49667
   uuid: d46bf492-45f4-4c33-82d1-ea2a1cb54eb6
@@ -43,7 +33,7 @@ proxies:
     path: /d46bf492
     headers:
       Host: ''
-- name: Github TH 04 ATSRSD
+- name: Github TH 03 ATSRSD
   type: vmess
   server: 118.193.57.167
   port: 49667
@@ -66,7 +56,6 @@ proxy-groups:
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
   - Github TH 03 ATSRSD
-  - Github TH 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -75,6 +64,5 @@ proxy-groups:
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
   - Github TH 03 ATSRSD
-  - Github TH 04 ATSRSD
 rules:
 - MATCH,PROXIES

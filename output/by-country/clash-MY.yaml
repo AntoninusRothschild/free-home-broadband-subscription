@@ -14,17 +14,33 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github MY 02 ATSRSD
+  type: vless
+  server: 166.88.194.248
+  port: 443
+  uuid: b940be1b-3998-45d2-bf7b-06e7b6c4987a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: kkkk-xcd.pages.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: kkkk-xcd.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github MY 01 ATSRSD
+  - Github MY 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github MY 01 ATSRSD
+  - Github MY 02 ATSRSD
 rules:
 - MATCH,PROXIES

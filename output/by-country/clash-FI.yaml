@@ -5,41 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
-  type: vless
-  server: k2.cloud--vpn.site
-  port: 443
-  uuid: f570779f-bbf7-4ef9-e657-8ebbdef2609b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: Github FI 02 ATSRSD
-  type: vless
-  server: fi1.zuoai.cf
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github FI 03 ATSRSD
   type: ss
   server: 65.109.215.118
   port: 1080
   cipher: chacha20-ietf-poly1305
   password: rSeYcig_XBy8q3k33NpK3A
   udp: true
-- name: Github FI 04 ATSRSD
+- name: Github FI 02 ATSRSD
   type: vless
   server: 151.101.56.6
   port: 443
@@ -53,20 +25,48 @@ proxies:
     path: //---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI
     headers:
       Host: c12.com
-- name: Github FI 05 ATSRSD
+- name: Github FI 03 ATSRSD
   type: vless
-  server: 172.64.52.175
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: k2.cloud--vpn.site
+  port: 443
+  uuid: f570779f-bbf7-4ef9-e657-8ebbdef2609b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: ssl.fastly.com
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+      Host: c12.com
+- name: Github FI 04 ATSRSD
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: f570779f-bbf7-4ef9-e657-8ebbdef2609b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c12.com
+- name: Github FI 05 ATSRSD
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: d7282b41-1f2a-47bb-8593-f464fd6b6d78
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: global.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: kayko.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
