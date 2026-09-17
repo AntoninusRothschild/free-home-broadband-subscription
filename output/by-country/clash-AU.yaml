@@ -6,28 +6,18 @@ log-level: info
 proxies:
 - name: Github AU 01 ATSRSD
   type: vless
-  server: 172.105.169.70
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  server: 103.169.142.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: 172.105.169.70
-- name: Github AU 02 ATSRSD
-  type: vless
-  server: 129.151.64.169
-  port: 31867
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /files
+    path: /
     headers:
-      Host: cdn8848.776676.xyz
-- name: Github AU 03 ATSRSD
+      Host: vms.lifetime38.workers.dev
+- name: Github AU 02 ATSRSD
   type: vless
   server: 103.75.119.126
   port: 2087
@@ -40,7 +30,7 @@ proxies:
     path: /7586c69d3dc9
     headers:
       Host: 103.75.119.126
-- name: Github AU 04 ATSRSD
+- name: Github AU 03 ATSRSD
   type: vless
   server: 103.75.119.126
   port: 2087
@@ -61,7 +51,6 @@ proxy-groups:
   - Github AU 01 ATSRSD
   - Github AU 02 ATSRSD
   - Github AU 03 ATSRSD
-  - Github AU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -70,6 +59,5 @@ proxy-groups:
   - Github AU 01 ATSRSD
   - Github AU 02 ATSRSD
   - Github AU 03 ATSRSD
-  - Github AU 04 ATSRSD
 rules:
 - MATCH,PROXIES

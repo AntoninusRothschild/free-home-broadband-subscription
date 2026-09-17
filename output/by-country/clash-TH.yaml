@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: Github TH 01 ATSRSD
   type: vless
+  server: 43.133.110.81
+  port: 443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: Github TH 02 ATSRSD
+  type: vless
   server: 103.86.49.57
   port: 80
   uuid: 3c52e091-6714-4915-949f-2149fe69951b
@@ -17,7 +31,62 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
-- name: Github TH 02 ATSRSD
+- name: Github TH 03 ATSRSD
+  type: vless
+  server: 45.202.247.152
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /jump.html/star?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: Github TH 04 ATSRSD
+  type: vless
+  server: 104.24.152.211
+  port: 8880
+  uuid: a7b8b48e-1000-46f5-a974-f6606d94f3b4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: misty-hill-4b94.146-c18.workers.dev
+- name: Github TH 05 ATSRSD
+  type: vless
+  server: 103.137.22.71
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /register?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: Github TH 06 ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: v2ray.simspeedup.com
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: v2ray.simspeedup.com
+- name: Github TH 07 ATSRSD
   type: vmess
   server: 118.193.57.167
   port: 49667
@@ -39,6 +108,11 @@ proxy-groups:
   - AUTO
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
+  - Github TH 03 ATSRSD
+  - Github TH 04 ATSRSD
+  - Github TH 05 ATSRSD
+  - Github TH 06 ATSRSD
+  - Github TH 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +120,10 @@ proxy-groups:
   proxies:
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
+  - Github TH 03 ATSRSD
+  - Github TH 04 ATSRSD
+  - Github TH 05 ATSRSD
+  - Github TH 06 ATSRSD
+  - Github TH 07 ATSRSD
 rules:
 - MATCH,PROXIES

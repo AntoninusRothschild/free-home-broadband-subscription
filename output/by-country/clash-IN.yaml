@@ -5,25 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github IN 01 ATSRSD
-  type: ss
-  server: 172.105.39.124
-  port: 7002
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github IN 02 ATSRSD
-  type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github IN 03 ATSRSD
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -35,6 +16,57 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
   client-fingerprint: firefox
+- name: Github IN 02 ATSRSD
+  type: vless
+  server: 198.12.145.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime61.workers.dev
+- name: Github IN 03 ATSRSD
+  type: ss
+  server: 172.105.39.124
+  port: 7002
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: Github IN 04 ATSRSD
+  type: ss
+  server: 139.84.166.47
+  port: 8388
+  cipher: aes-256-gcm
+  password: GEdoeeqLZtkJRgSa
+  udp: true
+- name: Github IN 05 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github IN 06 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,6 +75,9 @@ proxy-groups:
   - Github IN 01 ATSRSD
   - Github IN 02 ATSRSD
   - Github IN 03 ATSRSD
+  - Github IN 04 ATSRSD
+  - Github IN 05 ATSRSD
+  - Github IN 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -51,5 +86,8 @@ proxy-groups:
   - Github IN 01 ATSRSD
   - Github IN 02 ATSRSD
   - Github IN 03 ATSRSD
+  - Github IN 04 ATSRSD
+  - Github IN 05 ATSRSD
+  - Github IN 06 ATSRSD
 rules:
 - MATCH,PROXIES
