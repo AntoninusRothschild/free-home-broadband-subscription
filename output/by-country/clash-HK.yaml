@@ -20,21 +20,19 @@ proxies:
     headers:
       Host: ''
 - name: Github HK 02 ATSRSD
-  type: vmess
-  server: 47.83.19.148
+  type: vless
+  server: 104.16.60.10
   port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+  servername: hk1.69lover.my
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /api/v2/e2fe4e52a165854d/stream
     headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+      Host: hk1.69lover.my
 proxy-groups:
 - name: PROXIES
   type: select
