@@ -6,30 +6,27 @@ log-level: info
 proxies:
 - name: Github BG 01 ATSRSD
   type: vless
-  server: 160.153.138.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 129.151.64.169
+  port: 31867
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /files
     headers:
-      Host: vms.lifetime04.workers.dev
+      Host: cdn8848.776676.xyz
 - name: Github BG 02 ATSRSD
   type: vless
-  server: 50.62.195.50
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 192.145.31.5
+  port: 8443
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime38.workers.dev
+  servername: neth9.lunariai.ru
 - name: Github BG 03 ATSRSD
   type: vless
   server: 192.145.31.5
@@ -48,15 +45,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: neth9.lunariai.ru
-- name: Github BG 05 ATSRSD
-  type: vless
-  server: 192.145.31.5
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: neth9.lunariai.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +54,6 @@ proxy-groups:
   - Github BG 02 ATSRSD
   - Github BG 03 ATSRSD
   - Github BG 04 ATSRSD
-  - Github BG 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,6 +63,5 @@ proxy-groups:
   - Github BG 02 ATSRSD
   - Github BG 03 ATSRSD
   - Github BG 04 ATSRSD
-  - Github BG 05 ATSRSD
 rules:
 - MATCH,PROXIES

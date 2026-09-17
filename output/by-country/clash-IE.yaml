@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github RU 01 ATSRSD
+- name: Github IE 01 ATSRSD
   type: ss
-  server: 130.49.189.158
-  port: 43558
+  server: 94.245.88.26
+  port: 443
   cipher: chacha20-ietf-poly1305
-  password: /QFycb02d87cByC9+5ZRSygI1avHiPXkgYG2yc+TnGA=
+  password: p20Y6AFEN1pS7LJX
   udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github RU 01 ATSRSD
+  - Github IE 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github RU 01 ATSRSD
+  - Github IE 01 ATSRSD
 rules:
 - MATCH,PROXIES

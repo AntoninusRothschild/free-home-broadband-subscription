@@ -6,14 +6,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github SA 01 ATSRSD"
+        "Github SA 01 ATSRSD",
+        "Github SA 02 ATSRSD",
+        "Github SA 03 ATSRSD",
+        "Github SA 04 ATSRSD",
+        "Github SA 05 ATSRSD",
+        "Github SA 06 ATSRSD",
+        "Github SA 07 ATSRSD",
+        "Github SA 08 ATSRSD",
+        "Github SA 09 ATSRSD",
+        "Github SA 10 ATSRSD",
+        "Github SA 11 ATSRSD",
+        "Github SA 12 ATSRSD",
+        "Github SA 13 ATSRSD",
+        "Github SA 14 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github SA 01 ATSRSD"
+        "Github SA 01 ATSRSD",
+        "Github SA 02 ATSRSD",
+        "Github SA 03 ATSRSD",
+        "Github SA 04 ATSRSD",
+        "Github SA 05 ATSRSD",
+        "Github SA 06 ATSRSD",
+        "Github SA 07 ATSRSD",
+        "Github SA 08 ATSRSD",
+        "Github SA 09 ATSRSD",
+        "Github SA 10 ATSRSD",
+        "Github SA 11 ATSRSD",
+        "Github SA 12 ATSRSD",
+        "Github SA 13 ATSRSD",
+        "Github SA 14 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
