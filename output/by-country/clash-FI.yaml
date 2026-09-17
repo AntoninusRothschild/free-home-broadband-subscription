@@ -6,21 +6,21 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: vless
-  server: 212.104.128.139
+  server: a2.arshia-nova.ir
   port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
+  uuid: cc3ec459-8d76-4066-ab4b-2614608f1afb
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
+  servername: ssl.fastly.com
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
-      Host: xi.tbv.ccwu.cc
+      Host: c12.com
 - name: Github FI 02 ATSRSD
   type: vless
-  server: 212.104.128.0
+  server: 212.104.128.139
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -34,55 +34,15 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github FI 03 ATSRSD
   type: vless
-  server: 212.104.128.45
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github FI 04 ATSRSD
-  type: vless
-  server: 212.104.128.68
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github FI 05 ATSRSD
-  type: vless
-  server: 185.79.138.71
-  port: 448
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: Github FI 06 ATSRSD
-  type: vless
-  server: 185.79.138.71
-  port: 448
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
-  servername: www.samsung.com
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+  servername: www.google.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -92,9 +52,6 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
-  - Github FI 05 ATSRSD
-  - Github FI 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -103,8 +60,5 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
-  - Github FI 05 ATSRSD
-  - Github FI 06 ATSRSD
 rules:
 - MATCH,PROXIES

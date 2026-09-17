@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
+  type: ss
+  server: 181.215.18.196
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: manm1wouaeic9db3
+  udp: true
+- name: Github HK 02 ATSRSD
   type: vmess
   server: 156.245.232.239
   port: 35043
@@ -19,20 +26,18 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: Github HK 02 ATSRSD
+- name: Github HK 03 ATSRSD
   type: vless
-  server: 104.16.60.10
-  port: 443
-  uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
+  server: 47.238.210.5
+  port: 13779
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: hk1.69lover.my
-  network: ws
-  ws-opts:
-    path: /api/v2/e2fe4e52a165854d/stream
-    headers:
-      Host: hk1.69lover.my
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+  servername: tesla.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,6 +45,7 @@ proxy-groups:
   - AUTO
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
+  - Github HK 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -47,5 +53,6 @@ proxy-groups:
   proxies:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
+  - Github HK 03 ATSRSD
 rules:
 - MATCH,PROXIES
