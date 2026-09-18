@@ -47,14 +47,14 @@ proxies:
   type: vless
   server: 89.125.147.199
   port: 443
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
   servername: maps.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: Github AE 05 ATSRSD
   type: vless
   server: uae.unixzone.us
@@ -70,16 +70,18 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 06 ATSRSD
   type: vless
-  server: 89.125.147.199
+  server: 188.72.103.4
   port: 443
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  uuid: 1f959100-a98b-47fb-84fa-359246dc458a
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-  servername: maps.apple.com
-  client-fingerprint: firefox
+  servername: apicdn.4subnodes.com
+  network: ws
+  ws-opts:
+    path: /apiv1/esa1-asda2jcvnbpseflkn-kjweksad
+    headers:
+      Host: apicdn.4subnodes.com
 proxy-groups:
 - name: PROXIES
   type: select

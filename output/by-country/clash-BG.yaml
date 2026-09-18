@@ -25,6 +25,19 @@ proxies:
 - name: Github BG 03 ATSRSD
   type: vless
   server: 192.145.31.5
+  port: 443
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 192.145.31.5
+- name: Github BG 04 ATSRSD
+  type: vless
+  server: 192.145.31.5
   port: 8443
   uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
   udp: true
@@ -39,6 +52,7 @@ proxy-groups:
   - Github BG 01 ATSRSD
   - Github BG 02 ATSRSD
   - Github BG 03 ATSRSD
+  - Github BG 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -47,5 +61,6 @@ proxy-groups:
   - Github BG 01 ATSRSD
   - Github BG 02 ATSRSD
   - Github BG 03 ATSRSD
+  - Github BG 04 ATSRSD
 rules:
 - MATCH,PROXIES
