@@ -6,21 +6,62 @@ log-level: info
 proxies:
 - name: Github SC 01 ATSRSD
   type: vless
-  server: 172.64.32.103
-  port: 2052
+  server: 172.67.187.219
+  port: 8880
+  uuid: d6c595c9-bff4-4510-893a-dfa3c87fa0cd
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucky-cell-d20c.78-107.workers.dev
+- name: Github SC 02 ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls+
+    path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SC 02 ATSRSD
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: Github SC 03 ATSRSD
+  type: vless
+  server: 154.194.0.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: notls.lukongtou.eu.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: Github SC 04 ATSRSD
+  type: vless
+  server: 154.211.8.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: notls.lukongtou.eu.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: Github SC 05 ATSRSD
   type: vless
   server: 162.159.48.32
-  port: 2086
+  port: 2082
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -30,6 +71,46 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github SC 06 ATSRSD
+  type: vless
+  server: 162.159.39.218
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github SC 07 ATSRSD
+  type: vless
+  server: 104.18.34.14
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github SC 08 ATSRSD
+  type: vless
+  server: 45.194.53.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: notls.lukongtou.eu.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: notls.lukongtou.eu.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +118,12 @@ proxy-groups:
   - AUTO
   - Github SC 01 ATSRSD
   - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
+  - Github SC 04 ATSRSD
+  - Github SC 05 ATSRSD
+  - Github SC 06 ATSRSD
+  - Github SC 07 ATSRSD
+  - Github SC 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +131,11 @@ proxy-groups:
   proxies:
   - Github SC 01 ATSRSD
   - Github SC 02 ATSRSD
+  - Github SC 03 ATSRSD
+  - Github SC 04 ATSRSD
+  - Github SC 05 ATSRSD
+  - Github SC 06 ATSRSD
+  - Github SC 07 ATSRSD
+  - Github SC 08 ATSRSD
 rules:
 - MATCH,PROXIES

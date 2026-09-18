@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: Github EE 01 ATSRSD
   type: vless
+  server: 45.80.108.123
+  port: 443
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: notls.lukongtou.eu.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: notls.lukongtou.eu.org
+- name: Github EE 02 ATSRSD
+  type: vless
   server: 94.183.170.135
   port: 8443
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
@@ -19,11 +33,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github EE 01 ATSRSD
+  - Github EE 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github EE 01 ATSRSD
+  - Github EE 02 ATSRSD
 rules:
 - MATCH,PROXIES
