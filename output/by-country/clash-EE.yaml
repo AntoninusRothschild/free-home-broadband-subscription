@@ -5,31 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: Github EE 01 ATSRSD
-  type: ss
+  type: vless
   server: 212.87.190.124
-  port: 99
-  cipher: chacha20-ietf-poly1305
-  password: 6nQnSKAxCLJSZbg7KA94QA
+  port: 3
+  uuid: 6049e972-419e-43bc-932c-4032be6d1b5b
   udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github EE 02 ATSRSD
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
-- name: Github EE 03 ATSRSD
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
-- name: Github EE 04 ATSRSD
   type: vless
   server: 94.183.170.135
   port: 443
@@ -42,6 +25,24 @@ proxies:
     path: /
     headers:
       Host: 94.183.170.135
+- name: Github EE 03 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: estproxy4.lockdwn.com
+- name: Github EE 04 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: estproxy4.lockdwn.com
 proxy-groups:
 - name: PROXIES
   type: select
