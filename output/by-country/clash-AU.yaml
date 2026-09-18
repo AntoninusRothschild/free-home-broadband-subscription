@@ -6,29 +6,6 @@ log-level: info
 proxies:
 - name: Github AU 01 ATSRSD
   type: vless
-  server: 172.105.169.70
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 172.105.169.70
-- name: Github AU 02 ATSRSD
-  type: vless
-  server: 192.65.217.123
-  port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: notls.lukongtou.eu.org
-- name: Github AU 03 ATSRSD
-  type: vless
   server: 103.75.119.126
   port: 2087
   uuid: 731f177e-00aa-480c-b935-661456139a32
@@ -46,15 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github AU 01 ATSRSD
-  - Github AU 02 ATSRSD
-  - Github AU 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github AU 01 ATSRSD
-  - Github AU 02 ATSRSD
-  - Github AU 03 ATSRSD
 rules:
 - MATCH,PROXIES

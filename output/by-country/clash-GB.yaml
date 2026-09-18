@@ -18,64 +18,40 @@ proxies:
   client-fingerprint: random
 - name: Github GB 02 ATSRSD
   type: ss
-  server: 149.102.132.184
-  port: 443
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
+  server: 129.151.83.15
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 4HcH2eAbURZ4IN8H4EAgnOWL2suzf7iTJTogK+3MB1o=
   udp: true
 - name: Github GB 03 ATSRSD
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 04 ATSRSD
   type: vless
-  server: 185.170.166.123
+  server: 91.193.58.117
   port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
+  servername: jamph131-1228.pages.dev
   network: ws
   ws-opts:
-    path: /
+    path: Telegram-WangCai2🇨🇳
     headers:
-      Host: notls.lukongtou.eu.org
+      Host: jamph131-1228.pages.dev
+- name: Github GB 04 ATSRSD
+  type: vless
+  server: 129.121.95.159
+  port: 443
+  uuid: f6190ff2-864c-46cf-ac16-93908c069b75
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 129.121.95.159
+  network: ws
+  ws-opts:
+    path: /connect
+    headers:
+      Host: 129.121.95.159
 - name: Github GB 05 ATSRSD
-  type: ss
-  server: 129.151.92.18
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 4YIk2BAV2AExvYDsQrw4ELlQJP/b4poEXjzFbSXwMao=
-  udp: true
-- name: Github GB 06 ATSRSD
-  type: ss
-  server: 144.24.225.111
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
-  udp: true
-- name: Github GB 07 ATSRSD
-  type: ss
-  server: 129.151.74.18
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: aCeLrNSmYv7M5d0iQTHHhbKVY6Gymx+Tl40NWmuBpEI=
-  udp: true
-- name: Github GB 08 ATSRSD
-  type: ss
-  server: 134.65.61.47
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: sDhEhHHvZ8tSUziGGDt1rQuh7bgTpUccfw5JnGsAvB4=
-  udp: true
-- name: Github GB 09 ATSRSD
   type: vless
   server: 46.250.250.149
   port: 2053
@@ -87,56 +63,197 @@ proxies:
     public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
   servername: www.apple.com
   client-fingerprint: firefox
+- name: Github GB 06 ATSRSD
+  type: ss
+  server: 149.102.149.207
+  port: 443
+  cipher: aes-256-gcm
+  password: LXchLsIwtCeUAUgu
+  udp: true
+- name: Github GB 07 ATSRSD
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github GB 08 ATSRSD
+  type: ss
+  server: 134.65.61.47
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: sDhEhHHvZ8tSUziGGDt1rQuh7bgTpUccfw5JnGsAvB4=
+  udp: true
+- name: Github GB 09 ATSRSD
+  type: vless
+  server: 91.193.58.195
+  port: 443
+  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jamph131-1228.pages.dev
+  network: ws
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳
+    headers:
+      Host: jamph131-1228.pages.dev
 - name: Github GB 10 ATSRSD
+  type: ss
+  server: 158.173.221.214
+  port: 11001
+  cipher: chacha20-ietf-poly1305
+  password: c58d16e593d44f42
+  udp: true
+- name: Github GB 11 ATSRSD
+  type: ss
+  server: 129.151.73.188
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: XXq8087l/F/17nlKDoxF5yHMha+CZIJKCj0UwWf0wRA=
+  udp: true
+- name: Github GB 12 ATSRSD
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 13 ATSRSD
+  type: ss
+  server: 149.102.149.207
+  port: 80
+  cipher: aes-256-gcm
+  password: LXchLsIwtCeUAUgu
+  udp: true
+- name: Github GB 14 ATSRSD
+  type: vless
+  server: 172.67.140.37
+  port: 443
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+    headers:
+      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+- name: Github GB 15 ATSRSD
+  type: ss
+  server: 51.77.225.200
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: zRZNBszYyWo5
+  udp: true
+- name: Github GB 16 ATSRSD
+  type: ss
+  server: 144.24.225.111
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
+  udp: true
+- name: Github GB 17 ATSRSD
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 18 ATSRSD
+  type: vless
+  server: 91.193.58.141
+  port: 443
+  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jamph131-1228.pages.dev
+  network: ws
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳
+    headers:
+      Host: jamph131-1228.pages.dev
+- name: Github GB 19 ATSRSD
+  type: vless
+  server: 91.193.58.93
+  port: 443
+  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jamph131-1228.pages.dev
+  network: ws
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳
+    headers:
+      Host: jamph131-1228.pages.dev
+- name: Github GB 20 ATSRSD
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 21 ATSRSD
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 22 ATSRSD
+  type: ss
+  server: 129.151.74.18
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: aCeLrNSmYv7M5d0iQTHHhbKVY6Gymx+Tl40NWmuBpEI=
+  udp: true
+- name: Github GB 23 ATSRSD
+  type: ss
+  server: 149.102.132.184
+  port: 443
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 24 ATSRSD
   type: ss
   server: 149.102.132.184
   port: 80
   cipher: aes-256-gcm
   password: g5h5jleTRSyO3Rk4
   udp: true
-- name: Github GB 11 ATSRSD
-  type: vless
-  server: 91.193.59.191
-  port: 2087
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+- name: Github GB 25 ATSRSD
+  type: ss
+  server: 144.24.226.249
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vlso5.1d.mom
-  network: ws
-  ws-opts:
-    path: /socks5=888:888@hkip.1d.mom:1080
-    headers:
-      Host: vlso5.1d.mom
-- name: Github GB 12 ATSRSD
-  type: vless
-  server: 185.193.28.123
-  port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+- name: Github GB 26 ATSRSD
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: notls.lukongtou.eu.org
-- name: Github GB 13 ATSRSD
-  type: vless
-  server: 185.193.29.123
-  port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
-  network: ws
-  ws-opts:
-    path: Telegram-WangCai2🇨🇳
-    headers:
-      Host: notls.lukongtou.eu.org
-- name: Github GB 14 ATSRSD
+- name: Github GB 27 ATSRSD
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -151,116 +268,6 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: Github GB 15 ATSRSD
-  type: ss
-  server: 129.151.91.115
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: ktsunSg4AnlcqH3JiVv7JWSHpbDjDfTvldDgDpApNHw=
-  udp: true
-- name: Github GB 16 ATSRSD
-  type: ss
-  server: 149.102.149.207
-  port: 80
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: Github GB 17 ATSRSD
-  type: ss
-  server: 158.173.221.214
-  port: 11001
-  cipher: chacha20-ietf-poly1305
-  password: c58d16e593d44f42
-  udp: true
-- name: Github GB 18 ATSRSD
-  type: vless
-  server: 109.176.239.123
-  port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: notls.lukongtou.eu.org
-- name: Github GB 19 ATSRSD
-  type: ss
-  server: 129.151.75.102
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: my66u+JIEnQPAHXgaWDetuCsLnXPfyJPGAfDVMfKUtY=
-  udp: true
-- name: Github GB 20 ATSRSD
-  type: ss
-  server: 149.102.149.207
-  port: 443
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: Github GB 21 ATSRSD
-  type: vless
-  server: 129.121.95.159
-  port: 443
-  uuid: f6190ff2-864c-46cf-ac16-93908c069b75
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 129.121.95.159
-  network: ws
-  ws-opts:
-    path: /connect#TELEGRAM-MUSICLOVERS85?ed=512
-    headers:
-      Host: 129.121.95.159
-- name: Github GB 22 ATSRSD
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 23 ATSRSD
-  type: ss
-  server: 51.38.71.51
-  port: 2083
-  cipher: 2022-blake3-aes-256-gcm
-  password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho=
-  udp: true
-- name: Github GB 24 ATSRSD
-  type: vless
-  server: 186.190.211.188
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 186.190.211.188
-- name: Github GB 25 ATSRSD
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github GB 26 ATSRSD
-  type: vless
-  server: 91.193.58.141
-  port: 443
-  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jamph131-1228.pages.dev
-  network: ws
-  ws-opts:
-    path: Telegram-WangCai2🇨🇳
-    headers:
-      Host: jamph131-1228.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -292,6 +299,7 @@ proxy-groups:
   - Github GB 24 ATSRSD
   - Github GB 25 ATSRSD
   - Github GB 26 ATSRSD
+  - Github GB 27 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -323,5 +331,6 @@ proxy-groups:
   - Github GB 24 ATSRSD
   - Github GB 25 ATSRSD
   - Github GB 26 ATSRSD
+  - Github GB 27 ATSRSD
 rules:
 - MATCH,PROXIES

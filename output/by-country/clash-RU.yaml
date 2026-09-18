@@ -5,66 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: vless
-  server: 172.67.131.112
-  port: 443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: 5dLyPJpSV+QyXFRj+S0dt6xFKHxtcXEkRO/TzJGzryU=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: INDEX.Arcane509.Workers.DEV
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: index.arcane509.workers.dev
 - name: Github RU 02 ATSRSD
   type: vless
-  server: 172.64.229.170
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls+
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 108.162.198.178
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github RU 04 ATSRSD
-  type: ss
-  server: 176.32.35.44
-  port: 50111
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
-  udp: true
-- name: Github RU 05 ATSRSD
-  type: vless
-  server: 104.21.51.145
-  port: 8443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  server: 46.8.200.91
+  port: 443
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: INDEX.Arcane509.Workers.DEV
+  servername: cf3.rumedia-cdn.com
   network: ws
   ws-opts:
-    path: /
+    path: /cdn/v3/live
     headers:
-      Host: index.arcane509.workers.dev
+      Host: cf3.rumedia-cdn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,9 +32,6 @@ proxy-groups:
   - AUTO
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -82,8 +39,5 @@ proxy-groups:
   proxies:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES
