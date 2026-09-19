@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github GB 01 ATSRSD
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github GB 02 ATSRSD
   type: vless
   server: 129.121.95.159
   port: 443
@@ -18,31 +25,13 @@ proxies:
     path: /connect
     headers:
       Host: 129.121.95.159
-- name: Github GB 02 ATSRSD
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github GB 03 ATSRSD
-  type: vmess
-  server: 57.129.132.223
-  port: 80
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
-  alterId: 0
-  cipher: auto
+  type: ss
+  server: 134.65.63.122
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 9UzSnfj0gy1JNUBD2L3JgpLLlQieW6AfOJ9vptz0iks=
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: viber.com
 - name: Github GB 04 ATSRSD
   type: vmess
   server: 66.163.117.58
@@ -54,61 +43,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github GB 05 ATSRSD
-  type: vless
-  server: 129.151.64.169
-  port: 31867
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: /files
-    headers:
-      Host: cdn8848.776676.xyz
-- name: Github GB 06 ATSRSD
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github GB 07 ATSRSD
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 08 ATSRSD
-  type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github GB 09 ATSRSD
-  type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: Github GB 10 ATSRSD
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -123,19 +57,19 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: Github GB 11 ATSRSD
+- name: Github GB 06 ATSRSD
   type: vless
-  server: comte.farxmode.ir
-  port: 8080
-  uuid: 23ddda0f-6333-493a-839d-f9c8e561f7e4
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: 3WnHdv9A0tNParChTLxPnDteRD841h8thOGR7MBgAhY
-  servername: play-apps-features.googleusercontent.com
-  client-fingerprint: ios
-- name: Github GB 12 ATSRSD
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github GB 07 ATSRSD
   type: vmess
   server: 66.163.117.58
   port: 22324
@@ -145,29 +79,19 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github GB 13 ATSRSD
-  type: ss
-  server: 129.151.68.65
-  port: 61312
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 0N1dYtQFmHnwBeKv53o5MJDkRzbGYY1KkLXnaNkWo3o=
-  udp: true
-- name: Github GB 14 ATSRSD
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 15 ATSRSD
+- name: Github GB 08 ATSRSD
   type: ss
   server: 51.77.225.200
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: zRZNBszYyWo5
+  udp: true
+- name: Github GB 09 ATSRSD
+  type: ss
+  server: 129.151.68.65
+  port: 61312
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 0N1dYtQFmHnwBeKv53o5MJDkRzbGYY1KkLXnaNkWo3o=
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -183,12 +107,6 @@ proxy-groups:
   - Github GB 07 ATSRSD
   - Github GB 08 ATSRSD
   - Github GB 09 ATSRSD
-  - Github GB 10 ATSRSD
-  - Github GB 11 ATSRSD
-  - Github GB 12 ATSRSD
-  - Github GB 13 ATSRSD
-  - Github GB 14 ATSRSD
-  - Github GB 15 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -203,11 +121,5 @@ proxy-groups:
   - Github GB 07 ATSRSD
   - Github GB 08 ATSRSD
   - Github GB 09 ATSRSD
-  - Github GB 10 ATSRSD
-  - Github GB 11 ATSRSD
-  - Github GB 12 ATSRSD
-  - Github GB 13 ATSRSD
-  - Github GB 14 ATSRSD
-  - Github GB 15 ATSRSD
 rules:
 - MATCH,PROXIES

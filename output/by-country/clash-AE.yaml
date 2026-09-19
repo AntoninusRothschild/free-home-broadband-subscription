@@ -6,47 +6,35 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 188.72.103.4
+  port: 443
+  uuid: 1f959100-a98b-47fb-84fa-359246dc458a
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: apicdn.4subnodes.com
   network: ws
   ws-opts:
-    path: /
+    path: /apiv1/esa1-asda2jcvnbpseflkn-kjweksad
     headers:
-      Host: uae.unixzone.us
+      Host: apicdn.4subnodes.com
 - name: Github AE 02 ATSRSD
   type: vless
   server: 89.125.147.199
   port: 443
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
   servername: maps.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: Github AE 03 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 04 ATSRSD
   type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: 4a64b0c2-de7e-4e32-b931-247be6dc4488
+  uuid: f6329ba3-3326-4f25-95f0-91d48fd45fcf
   udp: true
   tls: true
   skip-cert-verify: true
@@ -54,19 +42,44 @@ proxies:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   servername: tradingview.com
   client-fingerprint: firefox
-- name: Github AE 05 ATSRSD
+- name: Github AE 04 ATSRSD
   type: vless
-  server: cdn.snobvpn.online
-  port: 80
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /snob-ws
+    path: /
     headers:
-      Host: cdn.snobvpn.online
+      Host: uae.unixzone.us
+- name: Github AE 05 ATSRSD
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: 382bd1ec-1ba8-44fd-8df4-53e251c467c7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
+- name: Github AE 06 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,6 +90,7 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
+  - Github AE 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -87,5 +101,6 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
+  - Github AE 06 ATSRSD
 rules:
 - MATCH,PROXIES
