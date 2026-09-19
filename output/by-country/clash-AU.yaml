@@ -15,19 +15,16 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: Github AU 02 ATSRSD
   type: vless
-  server: 34.87.244.111
+  server: 172.105.169.70
   port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: qq
+  servername: 172.105.169.70
 - name: Github AU 03 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -39,17 +36,8 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
 - name: Github AU 04 ATSRSD
-  type: vless
-  server: 172.105.169.70
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 172.105.169.70
-- name: Github AU 05 ATSRSD
   type: vless
   server: 103.75.119.126
   port: 2087
@@ -62,18 +50,6 @@ proxies:
     path: /7586c69d3dc9
     headers:
       Host: 103.75.119.126
-- name: Github AU 06 ATSRSD
-  type: vless
-  server: 34.87.244.111
-  port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -83,8 +59,6 @@ proxy-groups:
   - Github AU 02 ATSRSD
   - Github AU 03 ATSRSD
   - Github AU 04 ATSRSD
-  - Github AU 05 ATSRSD
-  - Github AU 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -94,7 +68,5 @@ proxy-groups:
   - Github AU 02 ATSRSD
   - Github AU 03 ATSRSD
   - Github AU 04 ATSRSD
-  - Github AU 05 ATSRSD
-  - Github AU 06 ATSRSD
 rules:
 - MATCH,PROXIES

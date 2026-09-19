@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github CZ 01 ATSRSD
   type: vless
-  server: 195.85.23.29
+  server: 195.85.23.219
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 02 ATSRSD
   type: vless
-  server: 195.85.23.45
+  server: 195.85.23.47
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -34,7 +34,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 03 ATSRSD
   type: vless
-  server: 195.85.23.47
+  server: 195.85.23.75
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -46,62 +46,6 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: Github CZ 04 ATSRSD
-  type: vless
-  server: 195.85.23.111
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: Github CZ 05 ATSRSD
-  type: vless
-  server: 195.85.23.248
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: Github CZ 06 ATSRSD
-  type: vless
-  server: 195.85.23.29
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: Github CZ 07 ATSRSD
-  type: vless
-  server: 64.227.67.161
-  port: 2083
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: /members/detail/gif
-    headers:
-      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -110,10 +54,6 @@ proxy-groups:
   - Github CZ 01 ATSRSD
   - Github CZ 02 ATSRSD
   - Github CZ 03 ATSRSD
-  - Github CZ 04 ATSRSD
-  - Github CZ 05 ATSRSD
-  - Github CZ 06 ATSRSD
-  - Github CZ 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -122,9 +62,5 @@ proxy-groups:
   - Github CZ 01 ATSRSD
   - Github CZ 02 ATSRSD
   - Github CZ 03 ATSRSD
-  - Github CZ 04 ATSRSD
-  - Github CZ 05 ATSRSD
-  - Github CZ 06 ATSRSD
-  - Github CZ 07 ATSRSD
 rules:
 - MATCH,PROXIES

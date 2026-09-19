@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github CA 01 ATSRSD
-  type: ss
-  server: 51.79.85.185
-  port: 8118
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-  udp: true
-- name: Github CA 02 ATSRSD
   type: vless
   server: 66.70.179.198
   port: 2053
@@ -22,19 +15,21 @@ proxies:
   reality-opts:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github CA 03 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
   client-fingerprint: firefox
+- name: Github CA 02 ATSRSD
+  type: ss
+  server: 149.22.95.183
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github CA 03 ATSRSD
+  type: ss
+  server: yyz-ca-01.blncvpn4u.cc
+  port: 9443
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+  udp: true
 - name: Github CA 04 ATSRSD
   type: vless
   server: 66.70.179.198
@@ -59,36 +54,12 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 06 ATSRSD
   type: ss
-  server: yyz-ca-01.blncvpn4u.cc
-  port: 9443
+  server: 51.222.12.127
+  port: 445
   cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+  password: zDNVedRFPQexG9v
   udp: true
 - name: Github CA 07 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github CA 08 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github CA 09 ATSRSD
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -98,23 +69,17 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 10 ATSRSD
-  type: ss
-  server: 149.22.95.183
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: Github CA 08 ATSRSD
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-- name: Github CA 11 ATSRSD
-  type: vless
-  server: 184.107.106.68
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: lizca2.footballfantasyforum.com
-- name: Github CA 12 ATSRSD
+- name: Github CA 09 ATSRSD
   type: vless
   server: 66.70.179.198
   port: 2053
@@ -126,7 +91,7 @@ proxies:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github CA 13 ATSRSD
+- name: Github CA 10 ATSRSD
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -136,9 +101,35 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github CA 11 ATSRSD
+  type: vless
+  server: 184.107.106.68
+  port: 443
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lizca2.footballfantasyforum.com
+- name: Github CA 12 ATSRSD
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 13 ATSRSD
+  type: ss
+  server: 51.79.49.116
+  port: 8882
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  udp: true
 - name: Github CA 14 ATSRSD
   type: vless
-  server: lizca2.footballfantasyforum.com
+  server: 184.107.106.68
   port: 443
   uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
   udp: true
@@ -157,7 +148,7 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 16 ATSRSD
   type: vmess
-  server: 134.195.196.211
+  server: 23.162.200.198
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -187,49 +178,6 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 19 ATSRSD
   type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 20 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: Github CA 21 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
-  client-fingerprint: qq
-- name: Github CA 22 ATSRSD
-  type: vless
-  server: 184.107.106.68
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lizca2.footballfantasyforum.com
-- name: Github CA 23 ATSRSD
-  type: vmess
   server: 134.195.196.211
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
@@ -238,53 +186,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 24 ATSRSD
-  type: vless
-  server: 34.95.28.161
-  port: 443
-  uuid: 448b76ac-c636-4303-bec1-0b2c22afee0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l4tGdE5Zn8ABfBQns3pRBcxy6CckHTLSIsw5JaBumTk
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github CA 25 ATSRSD
-  type: vmess
-  server: 23.162.200.227
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: ''
-- name: Github CA 26 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github CA 27 ATSRSD
-  type: ss
-  server: 51.79.49.116
-  port: 8882
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -309,14 +210,6 @@ proxy-groups:
   - Github CA 17 ATSRSD
   - Github CA 18 ATSRSD
   - Github CA 19 ATSRSD
-  - Github CA 20 ATSRSD
-  - Github CA 21 ATSRSD
-  - Github CA 22 ATSRSD
-  - Github CA 23 ATSRSD
-  - Github CA 24 ATSRSD
-  - Github CA 25 ATSRSD
-  - Github CA 26 ATSRSD
-  - Github CA 27 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -341,13 +234,5 @@ proxy-groups:
   - Github CA 17 ATSRSD
   - Github CA 18 ATSRSD
   - Github CA 19 ATSRSD
-  - Github CA 20 ATSRSD
-  - Github CA 21 ATSRSD
-  - Github CA 22 ATSRSD
-  - Github CA 23 ATSRSD
-  - Github CA 24 ATSRSD
-  - Github CA 25 ATSRSD
-  - Github CA 26 ATSRSD
-  - Github CA 27 ATSRSD
 rules:
 - MATCH,PROXIES
