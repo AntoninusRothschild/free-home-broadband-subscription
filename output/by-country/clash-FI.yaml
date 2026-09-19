@@ -5,15 +5,50 @@ mode: rule
 log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
-  type: ss
-  server: 82.47.186.18
-  port: 19290
-  cipher: aes-128-gcm
-  password: o2rw2hICwu1blrr_gZAl2Q
+  type: vless
+  server: 212.104.128.106
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
 - name: Github FI 02 ATSRSD
   type: vless
-  server: 172.64.53.42
+  server: 212.104.128.139
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 03 ATSRSD
+  type: vless
+  server: 212.104.128.152
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 04 ATSRSD
+  type: vless
+  server: 104.18.38.47
   port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
@@ -25,6 +60,83 @@ proxies:
     path: ?ed=2560
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: Github FI 05 ATSRSD
+  type: ss
+  server: 82.47.186.18
+  port: 19290
+  cipher: aes-128-gcm
+  password: o2rw2hICwu1blrr_gZAl2Q
+  udp: true
+- name: Github FI 06 ATSRSD
+  type: vless
+  server: 212.104.128.244
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 07 ATSRSD
+  type: vless
+  server: 212.104.128.27
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 08 ATSRSD
+  type: vless
+  server: 212.104.128.106
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 09 ATSRSD
+  type: vless
+  server: 212.104.128.152
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github FI 10 ATSRSD
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: 029fc301-ac31-4aae-9fd8-5d0bff6ec5c0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c12.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -32,6 +144,14 @@ proxy-groups:
   - AUTO
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
+  - Github FI 05 ATSRSD
+  - Github FI 06 ATSRSD
+  - Github FI 07 ATSRSD
+  - Github FI 08 ATSRSD
+  - Github FI 09 ATSRSD
+  - Github FI 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -39,5 +159,13 @@ proxy-groups:
   proxies:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
+  - Github FI 05 ATSRSD
+  - Github FI 06 ATSRSD
+  - Github FI 07 ATSRSD
+  - Github FI 08 ATSRSD
+  - Github FI 09 ATSRSD
+  - Github FI 10 ATSRSD
 rules:
 - MATCH,PROXIES
