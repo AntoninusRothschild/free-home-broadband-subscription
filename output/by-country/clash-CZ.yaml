@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github CZ 01 ATSRSD
   type: vless
-  server: 195.85.23.47
+  server: 195.85.23.217
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 02 ATSRSD
   type: vless
-  server: 195.85.23.88
+  server: 195.85.23.29
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -34,7 +34,34 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 03 ATSRSD
   type: vless
-  server: 195.85.23.252
+  server: 104.21.70.21
+  port: 8080
+  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
+    headers:
+      Host: fornewiran.ade-1000.workers.dev
+- name: Github CZ 04 ATSRSD
+  type: vless
+  server: 188.114.97.8
+  port: 8443
+  uuid: d4d2d3f3-9dec-4e8f-8daf-145ecac96e66
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: crimson-leaf-7e45.hzhduuebfjdcb.workers.dev
+- name: Github CZ 05 ATSRSD
+  type: vless
+  server: 195.85.23.248
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -46,20 +73,62 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: Github CZ 04 ATSRSD
+- name: Github CZ 06 ATSRSD
   type: vless
-  server: 129.151.64.169
-  port: 31867
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  server: 195.85.23.111
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: cdn8848.776676.xyz
+  servername: nb.lovecf.ggff.net
   network: ws
   ws-opts:
-    path: /files
+    path: /proxyip=us.xiabibi.cf
     headers:
-      Host: cdn8848.776676.xyz
+      Host: nb.lovecf.ggff.net
+- name: Github CZ 07 ATSRSD
+  type: vless
+  server: 195.85.23.29
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nb.lovecf.ggff.net
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: Github CZ 08 ATSRSD
+  type: vless
+  server: 172.67.145.21
+  port: 443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github CZ 09 ATSRSD
+  type: vless
+  server: 172.67.155.231
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -69,6 +138,11 @@ proxy-groups:
   - Github CZ 02 ATSRSD
   - Github CZ 03 ATSRSD
   - Github CZ 04 ATSRSD
+  - Github CZ 05 ATSRSD
+  - Github CZ 06 ATSRSD
+  - Github CZ 07 ATSRSD
+  - Github CZ 08 ATSRSD
+  - Github CZ 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -78,5 +152,10 @@ proxy-groups:
   - Github CZ 02 ATSRSD
   - Github CZ 03 ATSRSD
   - Github CZ 04 ATSRSD
+  - Github CZ 05 ATSRSD
+  - Github CZ 06 ATSRSD
+  - Github CZ 07 ATSRSD
+  - Github CZ 08 ATSRSD
+  - Github CZ 09 ATSRSD
 rules:
 - MATCH,PROXIES

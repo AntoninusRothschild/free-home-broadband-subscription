@@ -1,0 +1,130 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github BE 01 ATSRSD
+  type: vless
+  server: 34.38.82.200
+  port: 443
+  uuid: 6d341f6e-7b9d-4ae3-999b-00333de7bdfb
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: v6QpErcVOVKIYLm53R3bAP8zIKCFr4HAJWW0VwBKtws
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+- name: Github BE 02 ATSRSD
+  type: vless
+  server: 35.195.122.169
+  port: 443
+  uuid: e3fb56fe-bdbc-4f0e-b1ed-de2f7c85f254
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: i_UbRo65YEpOFuKkNVa0GEMl7xLDx9B1nmeyeNWyJQs
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github BE 03 ATSRSD
+  type: vless
+  server: 35.195.122.169
+  port: 443
+  uuid: e3fb56fe-bdbc-4f0e-b1ed-de2f7c85f254
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: i_UbRo65YEpOFuKkNVa0GEMl7xLDx9B1nmeyeNWyJQs
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github BE 04 ATSRSD
+  type: vless
+  server: 35.195.122.169
+  port: 443
+  uuid: e3fb56fe-bdbc-4f0e-b1ed-de2f7c85f254
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: i_UbRo65YEpOFuKkNVa0GEMl7xLDx9B1nmeyeNWyJQs
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+- name: Github BE 05 ATSRSD
+  type: vless
+  server: 207.175.190.56
+  port: 443
+  uuid: 51e493d4-b275-45e0-a714-e014f40b3c32
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: nTLhc6e5HMgO-hpD8RUMp0cd2t6p2_RqHLHM0P39_xA
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github BE 06 ATSRSD
+  type: vless
+  server: 34.38.82.200
+  port: 443
+  uuid: 6d341f6e-7b9d-4ae3-999b-00333de7bdfb
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: v6QpErcVOVKIYLm53R3bAP8zIKCFr4HAJWW0VwBKtws
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: Github BE 07 ATSRSD
+  type: vless
+  server: 35.195.122.169
+  port: 443
+  uuid: e3fb56fe-bdbc-4f0e-b1ed-de2f7c85f254
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: i_UbRo65YEpOFuKkNVa0GEMl7xLDx9B1nmeyeNWyJQs
+  servername: www.cloudflare.com
+  client-fingerprint: safari
+- name: Github BE 08 ATSRSD
+  type: vless
+  server: 207.175.190.56
+  port: 443
+  uuid: 51e493d4-b275-45e0-a714-e014f40b3c32
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: nTLhc6e5HMgO-hpD8RUMp0cd2t6p2_RqHLHM0P39_xA
+  servername: www.cloudflare.com
+  client-fingerprint: qq
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github BE 01 ATSRSD
+  - Github BE 02 ATSRSD
+  - Github BE 03 ATSRSD
+  - Github BE 04 ATSRSD
+  - Github BE 05 ATSRSD
+  - Github BE 06 ATSRSD
+  - Github BE 07 ATSRSD
+  - Github BE 08 ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github BE 01 ATSRSD
+  - Github BE 02 ATSRSD
+  - Github BE 03 ATSRSD
+  - Github BE 04 ATSRSD
+  - Github BE 05 ATSRSD
+  - Github BE 06 ATSRSD
+  - Github BE 07 ATSRSD
+  - Github BE 08 ATSRSD
+rules:
+- MATCH,PROXIES

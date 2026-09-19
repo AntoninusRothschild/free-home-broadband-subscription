@@ -6,12 +6,73 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: ss
-  server: 195.58.48.137
+  server: 195.133.5.102
   port: 10900
   cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
+  password: 895b4b796a357570
   udp: true
 - name: Github RU 02 ATSRSD
+  type: vless
+  server: 108.162.198.178
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github RU 03 ATSRSD
+  type: vless
+  server: 172.67.137.223
+  port: 443
+  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: curly-night-6928.ggdhchjk.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: curly-night-6928.ggdhchjk.workers.dev
+- name: Github RU 04 ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: 142d1453-9cfe-4045-8e54-f3fb33342185
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lively-scene-744f.107-47a.workers.dev
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: lively-scene-744f.107-47a.workers.dev
+- name: Github RU 05 ATSRSD
+  type: vless
+  server: 162.159.43.187
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls+
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github RU 06 ATSRSD
+  type: ss
+  server: 134.0.112.71
+  port: 17517
+  cipher: aes-256-gcm
+  password: 64Kms+G+nD6FlGJjZJfeUNJIGbX/EKrk2o/MH04zApw=
+  udp: true
+- name: Github RU 07 ATSRSD
   type: vless
   server: 46.8.200.91
   port: 443
@@ -32,6 +93,11 @@ proxy-groups:
   - AUTO
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -39,5 +105,10 @@ proxy-groups:
   proxies:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
 rules:
 - MATCH,PROXIES

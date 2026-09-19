@@ -6,31 +6,42 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 89.125.147.199
+  port: 443
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+  servername: maps.apple.com
+  client-fingerprint: firefox
 - name: Github AE 02 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 89.125.147.199
+  port: 443
+  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+  servername: maps.apple.com
+  client-fingerprint: random
+- name: Github AE 03 ATSRSD
+  type: vless
+  server: 45.130.125.201
+  port: 80
+  uuid: dc8a9493-c54a-459e-d060-81a700000001
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /sync
     headers:
-      Host: uae.unixzone.us
-- name: Github AE 03 ATSRSD
+      Host: nahan-core.netizo09.workers.dev
+- name: Github AE 04 ATSRSD
   type: vless
   server: 84.235.244.108
   port: 22573
@@ -43,18 +54,6 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: Github AE 04 ATSRSD
-  type: vless
-  server: 89.125.147.199
-  port: 443
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-  servername: maps.apple.com
-  client-fingerprint: firefox
 - name: Github AE 05 ATSRSD
   type: vless
   server: uae.unixzone.us
@@ -68,20 +67,6 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: Github AE 06 ATSRSD
-  type: vless
-  server: 188.72.103.4
-  port: 443
-  uuid: 1f959100-a98b-47fb-84fa-359246dc458a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: apicdn.4subnodes.com
-  network: ws
-  ws-opts:
-    path: /apiv1/esa1-asda2jcvnbpseflkn-kjweksad
-    headers:
-      Host: apicdn.4subnodes.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,7 +77,6 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
-  - Github AE 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -103,6 +87,5 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
-  - Github AE 06 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -6,25 +6,6 @@ log-level: info
 proxies:
 - name: Github FR 01 ATSRSD
   type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github FR 02 ATSRSD
-  type: ss
-  server: 51.255.13.232
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: BqnqToih0PbU
-  udp: true
-- name: Github FR 03 ATSRSD
-  type: vless
   server: 149.202.58.99
   port: 443
   uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
@@ -37,7 +18,80 @@ proxies:
     path: /vws/
     headers:
       Host: bab-6.site
+- name: Github FR 02 ATSRSD
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: Github FR 03 ATSRSD
+  type: vless
+  server: 34.155.54.237
+  port: 443
+  uuid: 069a2bbd-3fc9-470f-a251-c836a96ed04a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: SVT2WeXMIrumlh5VG1lbHN6YbqL7-u2iRkv1js8XEU4
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 - name: Github FR 04 ATSRSD
+  type: vless
+  server: 54.37.136.194
+  port: 2053
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github FR 05 ATSRSD
+  type: ss
+  server: 51.255.13.232
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: BqnqToih0PbU
+  udp: true
+- name: Github FR 06 ATSRSD
+  type: vless
+  server: 34.155.10.226
+  port: 443
+  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github FR 07 ATSRSD
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: Github FR 08 ATSRSD
   type: vless
   server: 149.202.58.99
   port: 443
@@ -51,6 +105,83 @@ proxies:
     path: /vws/
     headers:
       Host: 149.202.58.99
+- name: Github FR 09 ATSRSD
+  type: vless
+  server: 149.202.58.99
+  port: 443
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: bab-6.site
+  network: ws
+  ws-opts:
+    path: /vws/
+    headers:
+      Host: 149.202.58.99
+- name: Github FR 10 ATSRSD
+  type: vless
+  server: 34.155.10.226
+  port: 443
+  uuid: d619964d-26d6-452d-9860-6f058f03ba8e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github FR 11 ATSRSD
+  type: vless
+  server: 104.18.31.37
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-5bc7860646e4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: qzz0a4eou1ms.mlm-792d0942.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/5bc7860646e4
+    headers:
+      Host: qzz0a4eou1ms.mlm-792d0942.workers.dev
+- name: Github FR 12 ATSRSD
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-6
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: Github FR 13 ATSRSD
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github FR 14 ATSRSD
+  type: vmess
+  server: 141.95.65.9
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -60,6 +191,16 @@ proxy-groups:
   - Github FR 02 ATSRSD
   - Github FR 03 ATSRSD
   - Github FR 04 ATSRSD
+  - Github FR 05 ATSRSD
+  - Github FR 06 ATSRSD
+  - Github FR 07 ATSRSD
+  - Github FR 08 ATSRSD
+  - Github FR 09 ATSRSD
+  - Github FR 10 ATSRSD
+  - Github FR 11 ATSRSD
+  - Github FR 12 ATSRSD
+  - Github FR 13 ATSRSD
+  - Github FR 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -69,5 +210,15 @@ proxy-groups:
   - Github FR 02 ATSRSD
   - Github FR 03 ATSRSD
   - Github FR 04 ATSRSD
+  - Github FR 05 ATSRSD
+  - Github FR 06 ATSRSD
+  - Github FR 07 ATSRSD
+  - Github FR 08 ATSRSD
+  - Github FR 09 ATSRSD
+  - Github FR 10 ATSRSD
+  - Github FR 11 ATSRSD
+  - Github FR 12 ATSRSD
+  - Github FR 13 ATSRSD
+  - Github FR 14 ATSRSD
 rules:
 - MATCH,PROXIES

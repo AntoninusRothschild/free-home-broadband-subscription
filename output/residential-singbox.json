@@ -7,10 +7,13 @@
       "outbounds": [
         "auto",
         "Github US 01 (家宽) ATSRSD",
-        "Github US 02 (家宽) ATSRSD",
+        "Github TW 02 (家宽) ATSRSD",
         "Github KR 03 (家宽) ATSRSD",
         "Github TW 04 (家宽) ATSRSD",
-        "Github TW 05 (家宽) ATSRSD"
+        "Github US 05 (家宽) ATSRSD",
+        "Github KR 06 (家宽) ATSRSD",
+        "Github TW 07 (家宽) ATSRSD",
+        "Github KR 08 (家宽) ATSRSD"
       ]
     },
     {
@@ -18,10 +21,13 @@
       "tag": "auto",
       "outbounds": [
         "Github US 01 (家宽) ATSRSD",
-        "Github US 02 (家宽) ATSRSD",
+        "Github TW 02 (家宽) ATSRSD",
         "Github KR 03 (家宽) ATSRSD",
         "Github TW 04 (家宽) ATSRSD",
-        "Github TW 05 (家宽) ATSRSD"
+        "Github US 05 (家宽) ATSRSD",
+        "Github KR 06 (家宽) ATSRSD",
+        "Github TW 07 (家宽) ATSRSD",
+        "Github KR 08 (家宽) ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
