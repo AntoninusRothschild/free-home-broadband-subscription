@@ -7,7 +7,10 @@
       "outbounds": [
         "auto",
         "Github UZ 01 ATSRSD",
-        "Github UZ 02 ATSRSD"
+        "Github UZ 02 ATSRSD",
+        "Github UZ 03 ATSRSD",
+        "Github UZ 04 ATSRSD",
+        "Github UZ 05 ATSRSD"
       ]
     },
     {
@@ -15,7 +18,10 @@
       "tag": "auto",
       "outbounds": [
         "Github UZ 01 ATSRSD",
-        "Github UZ 02 ATSRSD"
+        "Github UZ 02 ATSRSD",
+        "Github UZ 03 ATSRSD",
+        "Github UZ 04 ATSRSD",
+        "Github UZ 05 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
