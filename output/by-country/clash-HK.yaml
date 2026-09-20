@@ -17,21 +17,14 @@ proxies:
   servername: tesla.com
   client-fingerprint: chrome
 - name: Github HK 02 ATSRSD
-  type: vmess
-  server: 47.83.19.148
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+  servername: 195.58.144.56
 - name: Github HK 03 ATSRSD
   type: vless
   server: 195.58.144.56
@@ -42,6 +35,27 @@ proxies:
   skip-cert-verify: true
   servername: 195.58.144.56
 - name: Github HK 04 ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hk1.69lover.my
+  network: ws
+  ws-opts:
+    path: /api/v2/e2fe4e52a165854d/stream
+    headers:
+      Host: hk1.69lover.my
+- name: Github HK 05 ATSRSD
+  type: ss
+  server: sth.free-outline.giize.com
+  port: 1081
+  cipher: chacha20-ietf-poly1305
+  password: r6tptrwvddxap6al
+  udp: true
+- name: Github HK 06 ATSRSD
   type: vless
   server: 104.16.60.10
   port: 443
@@ -55,37 +69,32 @@ proxies:
     path: /api/v2/e2fe4e52a165854d/stream
     headers:
       Host: hk1.69lover.my
-- name: Github HK 05 ATSRSD
-  type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github HK 06 ATSRSD
-  type: vmess
-  server: 47.83.19.148
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+- name: Github HK 07 ATSRSD
+  type: vless
+  server: 47.238.210.5
+  port: 13779
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+  servername: tesla.com
+  client-fingerprint: chrome
+- name: Github HK 08 ATSRSD
+  type: ss
+  server: sth.free-outline.giize.com
+  port: 1081
+  cipher: chacha20-ietf-poly1305
+  password: wwj19enpp68px8t7
+  udp: true
+- name: Github HK 09 ATSRSD
+  type: ss
+  server: 103.136.150.119
+  port: 10081
+  cipher: aes-256-gcm
+  password: 72553320ae6bcc8f
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -97,6 +106,9 @@ proxy-groups:
   - Github HK 04 ATSRSD
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
+  - Github HK 07 ATSRSD
+  - Github HK 08 ATSRSD
+  - Github HK 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -108,5 +120,8 @@ proxy-groups:
   - Github HK 04 ATSRSD
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
+  - Github HK 07 ATSRSD
+  - Github HK 08 ATSRSD
+  - Github HK 09 ATSRSD
 rules:
 - MATCH,PROXIES
