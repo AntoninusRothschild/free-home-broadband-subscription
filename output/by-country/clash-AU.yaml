@@ -39,17 +39,17 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: Github AU 04 ATSRSD
   type: vless
-  server: 34.87.229.148
+  server: 34.87.244.111
   port: 443
-  uuid: 4f865f35-cf47-4e7f-a7e6-8882511a1b36
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: Github AU 05 ATSRSD
@@ -63,7 +63,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
 - name: Github AU 06 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -75,7 +75,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: qq
+  client-fingerprint: ios
 - name: Github AU 07 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -87,20 +87,8 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: Github AU 08 ATSRSD
-  type: vless
-  server: 34.87.244.111
-  port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: Github AU 09 ATSRSD
   type: vless
   server: 34.87.244.111
   port: 443
@@ -125,7 +113,6 @@ proxy-groups:
   - Github AU 06 ATSRSD
   - Github AU 07 ATSRSD
   - Github AU 08 ATSRSD
-  - Github AU 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -139,6 +126,5 @@ proxy-groups:
   - Github AU 06 ATSRSD
   - Github AU 07 ATSRSD
   - Github AU 08 ATSRSD
-  - Github AU 09 ATSRSD
 rules:
 - MATCH,PROXIES
