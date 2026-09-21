@@ -6,38 +6,19 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: vless
-  server: 104.18.34.14
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 157.173.125.214
+  port: 2087
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: '%2Fredirect%2Fchina%2Fview%3Fed%3D2560'
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: cdn8848.776676.xyz
 - name: Github RU 02 ATSRSD
-  type: ss
-  server: 62.113.41.228
-  port: 2055
-  cipher: chacha20-ietf-poly1305
-  password: 7nzDcoQQxUYU35N5ngbSAg
-  udp: true
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 172.64.154.8
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github RU 04 ATSRSD
   type: vless
   server: 46.8.200.91
   port: 443
@@ -51,20 +32,20 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf3.rumedia-cdn.com
-- name: Github RU 05 ATSRSD
+- name: Github RU 03 ATSRSD
   type: vless
-  server: 172.66.47.45
-  port: 2083
+  server: 157.228.142.148
+  port: 8443
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: wk1.f1w.de5.net
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /
+    path: '%2Fact%2Frank%2Flang%3Fed%3D2560'
     headers:
-      Host: wk1.f1w.de5.net
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,8 +54,6 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -83,7 +62,5 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
-  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES
