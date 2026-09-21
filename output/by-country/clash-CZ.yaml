@@ -15,12 +15,12 @@ proxies:
   servername: nb.lovecf.ggff.net
   network: ws
   ws-opts:
-    path: /
+    path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 02 ATSRSD
   type: vless
-  server: 195.85.23.217
+  server: 195.85.23.29
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -29,7 +29,7 @@ proxies:
   servername: nb.lovecf.ggff.net
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 03 ATSRSD
@@ -48,7 +48,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 04 ATSRSD
   type: vless
-  server: 195.85.23.219
+  server: 195.85.23.75
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -62,7 +62,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 05 ATSRSD
   type: vless
-  server: 195.85.23.111
+  server: 195.85.23.248
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -76,7 +76,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 06 ATSRSD
   type: vless
-  server: cz1.zuoai.cf
+  server: 195.85.23.219
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -90,21 +90,7 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 07 ATSRSD
   type: vless
-  server: 195.85.23.29
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: Github CZ 08 ATSRSD
-  type: vless
-  server: 195.85.23.219
+  server: 195.85.23.252
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -116,7 +102,7 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: Github CZ 09 ATSRSD
+- name: Github CZ 08 ATSRSD
   type: vless
   server: 195.85.23.88
   port: 443
@@ -130,21 +116,7 @@ proxies:
     path: /
     headers:
       Host: nb.lovecf.ggff.net
-- name: Github CZ 10 ATSRSD
-  type: vless
-  server: 195.85.23.248
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nb.lovecf.ggff.net
-- name: Github CZ 11 ATSRSD
+- name: Github CZ 09 ATSRSD
   type: vless
   server: 195.85.23.217
   port: 443
@@ -158,9 +130,37 @@ proxies:
     path: /
     headers:
       Host: nb.lovecf.ggff.net
-- name: Github CZ 12 ATSRSD
+- name: Github CZ 10 ATSRSD
   type: vless
   server: 195.85.23.45
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nb.lovecf.ggff.net
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: Github CZ 11 ATSRSD
+  type: vless
+  server: 195.85.23.47
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nb.lovecf.ggff.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: Github CZ 12 ATSRSD
+  type: vless
+  server: 195.85.23.111
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -174,7 +174,21 @@ proxies:
       Host: nb.lovecf.ggff.net
 - name: Github CZ 13 ATSRSD
   type: vless
-  server: 195.85.23.75
+  server: 195.85.23.217
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nb.lovecf.ggff.net
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: Github CZ 14 ATSRSD
+  type: vless
+  server: 195.85.23.45
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
   udp: true
@@ -204,6 +218,7 @@ proxy-groups:
   - Github CZ 11 ATSRSD
   - Github CZ 12 ATSRSD
   - Github CZ 13 ATSRSD
+  - Github CZ 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -222,5 +237,6 @@ proxy-groups:
   - Github CZ 11 ATSRSD
   - Github CZ 12 ATSRSD
   - Github CZ 13 ATSRSD
+  - Github CZ 14 ATSRSD
 rules:
 - MATCH,PROXIES
