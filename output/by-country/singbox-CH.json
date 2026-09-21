@@ -6,14 +6,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github IQ 01 ATSRSD"
+        "Github CH 01 ATSRSD",
+        "Github CH 02 ATSRSD",
+        "Github CH 03 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github IQ 01 ATSRSD"
+        "Github CH 01 ATSRSD",
+        "Github CH 02 ATSRSD",
+        "Github CH 03 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

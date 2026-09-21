@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github CY 01 ATSRSD
   type: vless
-  server: 195.26.229.148
+  server: 195.26.229.127
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -19,15 +19,22 @@ proxies:
     headers:
       Host: xi.tbv.ccwu.cc
 - name: Github CY 02 ATSRSD
-  type: ss
-  server: 132.243.255.3
-  port: 10081
-  cipher: aes-256-gcm
-  password: 78235e7dc55e9ad1
+  type: vless
+  server: 195.26.229.32
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
 - name: Github CY 03 ATSRSD
   type: vless
-  server: 195.26.229.131
+  server: 195.26.229.156
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -41,75 +48,17 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github CY 04 ATSRSD
   type: vless
-  server: 195.26.229.32
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
+  server: 194.76.154.31
+  port: 40443
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: xi.tbv.ccwu.cc
+  reality-opts:
+    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
+  servername: deepl.com
+  client-fingerprint: firefox
 - name: Github CY 05 ATSRSD
-  type: vless
-  server: 195.26.229.120
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 06 ATSRSD
-  type: vless
-  server: 195.26.229.156
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 07 ATSRSD
-  type: vless
-  server: 195.26.229.157
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 08 ATSRSD
-  type: vless
-  server: 195.26.229.222
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 09 ATSRSD
   type: vless
   server: 195.26.229.131
   port: 443
@@ -123,35 +72,7 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Github CY 10 ATSRSD
-  type: vless
-  server: 195.26.229.235
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 11 ATSRSD
-  type: vless
-  server: 195.26.229.127
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 12 ATSRSD
+- name: Github CY 06 ATSRSD
   type: vless
   server: 195.26.229.157
   port: 443
@@ -162,38 +83,10 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 13 ATSRSD
-  type: vless
-  server: 195.26.229.156
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github CY 14 ATSRSD
-  type: vless
-  server: 195.26.229.235
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
     path: /proxyip
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Github CY 15 ATSRSD
+- name: Github CY 07 ATSRSD
   type: vless
   server: 195.26.229.32
   port: 443
@@ -207,7 +100,21 @@ proxies:
     path: /proxyip
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Github CY 16 ATSRSD
+- name: Github CY 08 ATSRSD
+  type: vless
+  server: 195.26.229.157
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 09 ATSRSD
   type: vless
   server: 195.26.229.222
   port: 443
@@ -221,9 +128,79 @@ proxies:
     path: /proxyip
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Github CY 17 ATSRSD
+- name: Github CY 10 ATSRSD
   type: vless
   server: 195.26.229.86
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 11 ATSRSD
+  type: vless
+  server: 195.26.229.148
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 12 ATSRSD
+  type: vless
+  server: 195.26.229.235
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 13 ATSRSD
+  type: vless
+  server: 195.26.229.235
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 14 ATSRSD
+  type: vless
+  server: 195.26.229.120
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github CY 15 ATSRSD
+  type: vless
+  server: 195.26.229.131
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -255,8 +232,6 @@ proxy-groups:
   - Github CY 13 ATSRSD
   - Github CY 14 ATSRSD
   - Github CY 15 ATSRSD
-  - Github CY 16 ATSRSD
-  - Github CY 17 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -277,7 +252,5 @@ proxy-groups:
   - Github CY 13 ATSRSD
   - Github CY 14 ATSRSD
   - Github CY 15 ATSRSD
-  - Github CY 16 ATSRSD
-  - Github CY 17 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -6,14 +6,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github CL 01 ATSRSD"
+        "Github CL 01 ATSRSD",
+        "Github CL 02 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github CL 01 ATSRSD"
+        "Github CL 01 ATSRSD",
+        "Github CL 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
