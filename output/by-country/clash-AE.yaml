@@ -6,20 +6,19 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 31.58.181.88
+  port: 8443
+  uuid: 0817a3bb-c8fb-4ddf-a05e-321565b39cd8
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
 - name: Github AE 02 ATSRSD
   type: vless
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -32,45 +31,6 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 03 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 04 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 05 ATSRSD
-  type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 06 ATSRSD
-  type: vless
   server: 89.125.147.199
   port: 443
   uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
@@ -81,20 +41,33 @@ proxies:
     public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
   servername: maps.apple.com
   client-fingerprint: firefox
-- name: Github AE 07 ATSRSD
+- name: Github AE 04 ATSRSD
   type: vless
-  server: cdn.snobvpn.online
-  port: 80
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  server: 157.228.142.148
+  port: 8443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /snob-ws
+    path: '%2Fact%2Frank%2Flang%3Fed%3D2560'
     headers:
-      Host: cdn.snobvpn.online
-- name: Github AE 08 ATSRSD
+      Host: cdn8848.776676.xyz
+- name: Github AE 05 ATSRSD
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: a7ab9b00-42a1-4943-abba-096590d1edd0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
+- name: Github AE 06 ATSRSD
   type: vless
   server: 84.235.244.108
   port: 22573
@@ -107,6 +80,43 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: Github AE 07 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 08 ATSRSD
+  type: vless
+  server: 89.125.147.199
+  port: 443
+  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+  servername: maps.apple.com
+  client-fingerprint: chrome
+- name: Github AE 09 ATSRSD
+  type: vless
+  server: 89.125.147.199
+  port: 443
+  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+  servername: maps.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -120,6 +130,7 @@ proxy-groups:
   - Github AE 06 ATSRSD
   - Github AE 07 ATSRSD
   - Github AE 08 ATSRSD
+  - Github AE 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -133,5 +144,6 @@ proxy-groups:
   - Github AE 06 ATSRSD
   - Github AE 07 ATSRSD
   - Github AE 08 ATSRSD
+  - Github AE 09 ATSRSD
 rules:
 - MATCH,PROXIES

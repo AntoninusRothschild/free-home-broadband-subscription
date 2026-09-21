@@ -8,7 +8,8 @@
         "auto",
         "Github CL 01 ATSRSD",
         "Github CL 02 ATSRSD",
-        "Github CL 03 ATSRSD"
+        "Github CL 03 ATSRSD",
+        "Github CL 04 ATSRSD"
       ]
     },
     {
@@ -17,7 +18,8 @@
       "outbounds": [
         "Github CL 01 ATSRSD",
         "Github CL 02 ATSRSD",
-        "Github CL 03 ATSRSD"
+        "Github CL 03 ATSRSD",
+        "Github CL 04 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

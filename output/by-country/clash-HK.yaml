@@ -20,6 +20,20 @@ proxies:
       Host: hk1.69lover.my
 - name: Github HK 02 ATSRSD
   type: vless
+  server: 43.159.4.80
+  port: 443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn8848.776676.xyz
+  network: ws
+  ws-opts:
+    path: /episode/files?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+- name: Github HK 03 ATSRSD
+  type: vless
   server: 104.16.60.10
   port: 443
   uuid: cdf5205e-897f-46a7-8d7f-21a61a80b466
@@ -32,7 +46,7 @@ proxies:
     path: /api/v2/e2fe4e52a165854d/stream
     headers:
       Host: hk1.69lover.my
-- name: Github HK 03 ATSRSD
+- name: Github HK 04 ATSRSD
   type: vmess
   server: 156.245.232.239
   port: 35043
@@ -47,6 +61,31 @@ proxies:
     path: /
     headers:
       Host: ''
+- name: Github HK 05 ATSRSD
+  type: vmess
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: Github HK 06 ATSRSD
+  type: vmess
+  server: 89.223.95.77
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +94,9 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
+  - Github HK 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -63,5 +105,8 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
+  - Github HK 06 ATSRSD
 rules:
 - MATCH,PROXIES

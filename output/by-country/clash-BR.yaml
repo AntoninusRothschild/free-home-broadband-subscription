@@ -6,34 +6,6 @@ log-level: info
 proxies:
 - name: Github BR 01 ATSRSD
   type: vless
-  server: 103.251.167.112
-  port: 8443
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: /library/lang
-    headers:
-      Host: cdn8848.776676.xyz
-- name: Github BR 02 ATSRSD
-  type: vless
-  server: 185.113.223.183
-  port: 8443
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: Github BR 03 ATSRSD
-  type: vless
   server: 157.151.4.93
   port: 443
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
@@ -46,37 +18,17 @@ proxies:
     path: /fp=chrome
     headers:
       Host: shuma.ccwu.cc
-- name: Github BR 04 ATSRSD
-  type: vless
-  server: 217.12.206.160
-  port: 81
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn8848.776676.xyz
-  network: ws
-  ws-opts:
-    path: '%2Fmembers%2Fplaylist%3Fed%3D2560'
-    headers:
-      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github BR 01 ATSRSD
-  - Github BR 02 ATSRSD
-  - Github BR 03 ATSRSD
-  - Github BR 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github BR 01 ATSRSD
-  - Github BR 02 ATSRSD
-  - Github BR 03 ATSRSD
-  - Github BR 04 ATSRSD
 rules:
 - MATCH,PROXIES

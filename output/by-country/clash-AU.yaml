@@ -6,16 +6,13 @@ log-level: info
 proxies:
 - name: Github AU 01 ATSRSD
   type: vless
-  server: 34.87.244.111
+  server: 172.105.169.70
   port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: 172.105.169.70
 - name: Github AU 02 ATSRSD
   type: vless
   server: 34.87.229.148
@@ -39,7 +36,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: Github AU 04 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -51,20 +48,8 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: qq
 - name: Github AU 05 ATSRSD
-  type: vless
-  server: 34.87.244.111
-  port: 443
-  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: Github AU 06 ATSRSD
   type: vless
   server: 34.87.229.148
   port: 443
@@ -76,15 +61,30 @@ proxies:
     public-key: OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github AU 07 ATSRSD
+- name: Github AU 06 ATSRSD
   type: vless
-  server: 172.105.169.70
+  server: 34.87.244.111
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 172.105.169.70
+  reality-opts:
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github AU 07 ATSRSD
+  type: vless
+  server: 34.87.244.111
+  port: 443
+  uuid: 325bc1be-0cb7-4cf7-bd35-a79ded91bbbd
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github AU 08 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -108,7 +108,7 @@ proxies:
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
 - name: Github AU 10 ATSRSD
   type: vless
   server: 34.87.244.111
@@ -119,6 +119,18 @@ proxies:
   skip-cert-verify: true
   reality-opts:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github AU 11 ATSRSD
+  type: vless
+  server: 34.87.229.148
+  port: 443
+  uuid: 4f865f35-cf47-4e7f-a7e6-8882511a1b36
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: OgTkmAQdLjipA9oLloxbU5BAX3hPjzbvkEGHF4aZ8z4
   servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
@@ -136,6 +148,7 @@ proxy-groups:
   - Github AU 08 ATSRSD
   - Github AU 09 ATSRSD
   - Github AU 10 ATSRSD
+  - Github AU 11 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -151,5 +164,6 @@ proxy-groups:
   - Github AU 08 ATSRSD
   - Github AU 09 ATSRSD
   - Github AU 10 ATSRSD
+  - Github AU 11 ATSRSD
 rules:
 - MATCH,PROXIES
