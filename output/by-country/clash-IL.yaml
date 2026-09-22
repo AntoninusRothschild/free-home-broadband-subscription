@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IE 01 ATSRSD
+- name: Github IL 01 ATSRSD
   type: vless
-  server: 162.159.160.139
-  port: 2083
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  server: 154.197.75.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: cfvvv-ev1.pages.dev
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: cfvvv-ev1.pages.dev
+      Host: vms.lifetime37.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IE 01 ATSRSD
+  - Github IL 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IE 01 ATSRSD
+  - Github IL 01 ATSRSD
 rules:
 - MATCH,PROXIES
