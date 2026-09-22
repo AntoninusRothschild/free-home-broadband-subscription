@@ -6,22 +6,35 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: vless
-  server: 66.81.247.155
-  port: 2083
-  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
+  server: 5.129.238.144
+  port: 8443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: testmikonim.hydrymhmdamyn7.workers.dev
+  servername: xinnusvpn.duckdns.org
   network: ws
   ws-opts:
-    path: /OAZko425kNFF0PpQ
+    path: /wsnl
     headers:
-      Host: testmikonim.hydrymhmdamyn7.workers.dev
+      Host: xinnusvpn.duckdns.org
 - name: Github RU 02 ATSRSD
   type: vless
-  server: 188.114.97.6
-  port: 2086
+  server: 108.162.198.178
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github RU 03 ATSRSD
+  type: vless
+  server: 162.159.48.32
+  port: 2082
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -30,24 +43,10 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 104.21.90.36
-  port: 443
-  uuid: 4908acbe-485f-4e1c-bb11-5dd04b9f7e88
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: restless-base-fe24.alirezahabibi20009.workers.dev
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: restless-base-fe24.alirezahabibi20009.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github RU 04 ATSRSD
   type: vless
-  server: 104.21.70.21
+  server: 172.64.52.6
   port: 8080
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -58,6 +57,46 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github RU 05 ATSRSD
+  type: vless
+  server: 46.8.200.91
+  port: 443
+  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cf3.rumedia-cdn.com
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: cf3.rumedia-cdn.com
+- name: Github RU 06 ATSRSD
+  type: vless
+  server: 162.159.38.127
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github RU 07 ATSRSD
+  type: vless
+  server: 154.197.75.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime37.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +106,9 @@ proxy-groups:
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,5 +118,8 @@ proxy-groups:
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
 rules:
 - MATCH,PROXIES

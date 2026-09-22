@@ -6,24 +6,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github KR 01 (家宽) ATSRSD",
+        "Github HK 01 (家宽) ATSRSD",
         "Github KR 02 (家宽) ATSRSD",
         "Github TW 03 (家宽) ATSRSD",
         "Github KR 04 (家宽) ATSRSD",
-        "Github TW 05 (家宽) ATSRSD",
-        "Github HK 06 (家宽) ATSRSD"
+        "Github TW 05 (家宽) ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github KR 01 (家宽) ATSRSD",
+        "Github HK 01 (家宽) ATSRSD",
         "Github KR 02 (家宽) ATSRSD",
         "Github TW 03 (家宽) ATSRSD",
         "Github KR 04 (家宽) ATSRSD",
-        "Github TW 05 (家宽) ATSRSD",
-        "Github HK 06 (家宽) ATSRSD"
+        "Github TW 05 (家宽) ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
