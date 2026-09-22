@@ -4,21 +4,22 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github PL 01 ATSRSD
+- name: Github MD 01 ATSRSD
   type: vless
-  server: 34.118.70.195
-  port: 443
-  uuid: d518b4e2-bd6e-4d4e-a26e-238154d8d60c
+  server: 143.246.219.51
+  port: 8081
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github PL 02 ATSRSD
+  network: ws
+  ws-opts:
+    path: /vless-test
+    headers:
+      Host: 143.246.219.51
+- name: Github MD 02 ATSRSD
   type: vless
-  server: 103.167.234.26
+  server: 185.153.198.86
   port: 443
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
   udp: true
@@ -30,9 +31,23 @@ proxies:
     path: /
     headers:
       Host: shuma.ccwu.cc
-- name: Github PL 03 ATSRSD
+- name: Github MD 03 ATSRSD
   type: vless
-  server: 103.167.234.26
+  server: 185.153.198.86
+  port: 443
+  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: shuma.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shuma.ccwu.cc
+- name: Github MD 04 ATSRSD
+  type: vless
+  server: 185.153.198.86
   port: 443
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
   udp: true
@@ -49,16 +64,18 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github PL 01 ATSRSD
-  - Github PL 02 ATSRSD
-  - Github PL 03 ATSRSD
+  - Github MD 01 ATSRSD
+  - Github MD 02 ATSRSD
+  - Github MD 03 ATSRSD
+  - Github MD 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github PL 01 ATSRSD
-  - Github PL 02 ATSRSD
-  - Github PL 03 ATSRSD
+  - Github MD 01 ATSRSD
+  - Github MD 02 ATSRSD
+  - Github MD 03 ATSRSD
+  - Github MD 04 ATSRSD
 rules:
 - MATCH,PROXIES
