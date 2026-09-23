@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: Github SC 01 ATSRSD
   type: vless
-  server: 154.211.8.227
-  port: 2087
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: proxy-34l.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: proxy-34l.pages.dev
-- name: Github SC 02 ATSRSD
-  type: vless
   server: 154.218.15.250
   port: 2083
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
@@ -38,13 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github SC 01 ATSRSD
-  - Github SC 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github SC 01 ATSRSD
-  - Github SC 02 ATSRSD
 rules:
 - MATCH,PROXIES
