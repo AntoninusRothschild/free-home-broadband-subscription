@@ -15,8 +15,20 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: Github IN 02 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github IN 03 ATSRSD
   type: vless
   server: 34.47.245.203
   port: 443
@@ -28,21 +40,6 @@ proxies:
     public-key: dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github IN 03 ATSRSD
-  type: vmess
-  server: 152.67.8.205
-  port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
 - name: Github IN 04 ATSRSD
   type: vless
   server: 194.61.31.126
@@ -57,18 +54,16 @@ proxies:
   client-fingerprint: chrome
 - name: Github IN 05 ATSRSD
   type: vless
-  server: 13.200.106.232
-  port: 443
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: shuma.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: Github IN 06 ATSRSD
   type: vless
   server: 34.47.245.203
@@ -81,20 +76,6 @@ proxies:
     public-key: dB68n-Vyph0_KBtBIe45b5GCB4F1IqpBF_ohlN-KpkY
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: Github IN 07 ATSRSD
-  type: vless
-  server: 139.84.135.130
-  port: 443
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shuma.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -106,7 +87,6 @@ proxy-groups:
   - Github IN 04 ATSRSD
   - Github IN 05 ATSRSD
   - Github IN 06 ATSRSD
-  - Github IN 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -118,6 +98,5 @@ proxy-groups:
   - Github IN 04 ATSRSD
   - Github IN 05 ATSRSD
   - Github IN 06 ATSRSD
-  - Github IN 07 ATSRSD
 rules:
 - MATCH,PROXIES
