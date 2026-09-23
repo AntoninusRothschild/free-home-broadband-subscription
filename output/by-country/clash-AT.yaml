@@ -5,25 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github AT 01 ATSRSD
-  type: vless
-  server: 152.53.1.40
-  port: 443
-  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-  servername: at.quattro-tech.ru
-  client-fingerprint: qq
-- name: Github AT 02 ATSRSD
   type: ss
   server: 82.110.60.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github AT 03 ATSRSD
+- name: Github AT 02 ATSRSD
   type: vless
   server: 132.243.203.202
   port: 8443
@@ -37,58 +25,6 @@ proxies:
     path: /
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Github AT 04 ATSRSD
-  type: vless
-  server: 213.111.148.137
-  port: 443
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shuma.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
-- name: Github AT 05 ATSRSD
-  type: vless
-  server: 213.111.148.137
-  port: 443
-  uuid: c18b978e-1c4e-415c-8bea-07942b563a64
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shuma.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shuma.ccwu.cc
-- name: Github AT 06 ATSRSD
-  type: vless
-  server: 152.53.1.40
-  port: 443
-  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-  servername: at.quattro-tech.ru
-  client-fingerprint: chrome
-- name: Github AT 07 ATSRSD
-  type: vless
-  server: 152.53.1.40
-  port: 443
-  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-  servername: at.quattro-tech.ru
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -96,11 +32,6 @@ proxy-groups:
   - AUTO
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
-  - Github AT 03 ATSRSD
-  - Github AT 04 ATSRSD
-  - Github AT 05 ATSRSD
-  - Github AT 06 ATSRSD
-  - Github AT 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -108,10 +39,5 @@ proxy-groups:
   proxies:
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
-  - Github AT 03 ATSRSD
-  - Github AT 04 ATSRSD
-  - Github AT 05 ATSRSD
-  - Github AT 06 ATSRSD
-  - Github AT 07 ATSRSD
 rules:
 - MATCH,PROXIES

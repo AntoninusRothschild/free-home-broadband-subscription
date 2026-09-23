@@ -20,7 +20,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 02 ATSRSD
   type: vless
-  server: 31.43.179.109
+  server: 31.43.179.36
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -34,7 +34,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 03 ATSRSD
   type: vless
-  server: 31.43.179.36
+  server: 31.43.179.8
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -48,7 +48,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 04 ATSRSD
   type: vless
-  server: 31.43.179.200
+  server: 31.43.179.25
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -57,12 +57,12 @@ proxies:
   servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /
     headers:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 05 ATSRSD
   type: vless
-  server: 31.43.179.87
+  server: 31.43.179.109
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -76,7 +76,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 06 ATSRSD
   type: vless
-  server: 31.43.179.137
+  server: 31.43.179.200
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -90,7 +90,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 07 ATSRSD
   type: vless
-  server: 31.43.179.20
+  server: 31.43.179.200
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -118,7 +118,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 09 ATSRSD
   type: vless
-  server: 31.43.179.200
+  server: 31.43.179.137
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -132,7 +132,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 10 ATSRSD
   type: vless
-  server: 31.43.179.200
+  server: 31.43.179.87
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -146,7 +146,7 @@ proxies:
       Host: xi.tbv.ccwu.cc
 - name: Github KZ 11 ATSRSD
   type: vless
-  server: 31.43.179.25
+  server: 31.43.179.20
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -161,20 +161,6 @@ proxies:
 - name: Github KZ 12 ATSRSD
   type: vless
   server: 31.43.179.200
-  port: 443
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xi.tbv.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: Github KZ 13 ATSRSD
-  type: vless
-  server: 31.43.179.8
   port: 443
   uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
@@ -203,7 +189,6 @@ proxy-groups:
   - Github KZ 10 ATSRSD
   - Github KZ 11 ATSRSD
   - Github KZ 12 ATSRSD
-  - Github KZ 13 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -221,6 +206,5 @@ proxy-groups:
   - Github KZ 10 ATSRSD
   - Github KZ 11 ATSRSD
   - Github KZ 12 ATSRSD
-  - Github KZ 13 ATSRSD
 rules:
 - MATCH,PROXIES

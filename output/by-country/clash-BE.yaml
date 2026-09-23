@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github BE 01 ATSRSD
   type: vless
-  server: 141.227.186.38
+  server: 141.227.137.177
   port: 2053
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
   udp: true
@@ -20,7 +20,21 @@ proxies:
       Host: shuma.ccwu.cc
 - name: Github BE 02 ATSRSD
   type: vless
-  server: 141.227.137.177
+  server: 141.98.233.6
+  port: 443
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xi.tbv.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: Github BE 03 ATSRSD
+  type: vless
+  server: 141.227.186.38
   port: 2053
   uuid: c18b978e-1c4e-415c-8bea-07942b563a64
   udp: true
@@ -39,6 +53,7 @@ proxy-groups:
   - AUTO
   - Github BE 01 ATSRSD
   - Github BE 02 ATSRSD
+  - Github BE 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +61,6 @@ proxy-groups:
   proxies:
   - Github BE 01 ATSRSD
   - Github BE 02 ATSRSD
+  - Github BE 03 ATSRSD
 rules:
 - MATCH,PROXIES
