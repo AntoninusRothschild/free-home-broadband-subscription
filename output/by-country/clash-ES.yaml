@@ -5,24 +5,39 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github ES 02 ATSRSD
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+  udp: true
+- name: Github ES 03 ATSRSD
   type: ss
   server: 140.174.184.5
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
   udp: true
-- name: Github ES 02 ATSRSD
-  type: vless
-  server: 196.245.52.147
-  port: 25535
-  uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
+- name: Github ES 04 ATSRSD
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
-  servername: www.microsoft.com
-  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +45,8 @@ proxy-groups:
   - AUTO
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
+  - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -37,5 +54,7 @@ proxy-groups:
   proxies:
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
+  - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
 rules:
 - MATCH,PROXIES

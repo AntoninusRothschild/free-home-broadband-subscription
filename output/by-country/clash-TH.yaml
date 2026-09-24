@@ -6,126 +6,6 @@ log-level: info
 proxies:
 - name: Github TH 01 ATSRSD
   type: vless
-  server: 34.15.176.240
-  port: 443
-  uuid: 742dc674-a491-4a42-a551-b3ea6dd2f447
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Euq607wb-KZNjbuOMQ1h646C3dm_Q-ntd7yxZ52jj0U
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github TH 02 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github TH 03 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: qq
-- name: Github TH 04 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: edge
-- name: Github TH 05 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: Github TH 06 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: Github TH 07 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github TH 08 ATSRSD
-  type: vless
-  server: 34.15.176.240
-  port: 443
-  uuid: 742dc674-a491-4a42-a551-b3ea6dd2f447
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Euq607wb-KZNjbuOMQ1h646C3dm_Q-ntd7yxZ52jj0U
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github TH 09 ATSRSD
-  type: vless
-  server: 34.15.176.240
-  port: 443
-  uuid: 742dc674-a491-4a42-a551-b3ea6dd2f447
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Euq607wb-KZNjbuOMQ1h646C3dm_Q-ntd7yxZ52jj0U
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github TH 10 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github TH 11 ATSRSD
-  type: vless
   server: 103.86.49.57
   port: 80
   uuid: 3c52e091-6714-4915-949f-2149fe69951b
@@ -137,51 +17,17 @@ proxies:
     path: /ws
     headers:
       Host: aIs.SpEeDtEsT.nEt
-- name: Github TH 12 ATSRSD
-  type: vless
-  server: 34.15.162.1
-  port: 443
-  uuid: 2b1d0c2a-9c80-4b72-892e-93d0500b9210
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: LklWoqMQz_TWiuLCUNRwHAKX1adVRSGMhtbo98fbDxw
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github TH 01 ATSRSD
-  - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
-  - Github TH 04 ATSRSD
-  - Github TH 05 ATSRSD
-  - Github TH 06 ATSRSD
-  - Github TH 07 ATSRSD
-  - Github TH 08 ATSRSD
-  - Github TH 09 ATSRSD
-  - Github TH 10 ATSRSD
-  - Github TH 11 ATSRSD
-  - Github TH 12 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TH 01 ATSRSD
-  - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
-  - Github TH 04 ATSRSD
-  - Github TH 05 ATSRSD
-  - Github TH 06 ATSRSD
-  - Github TH 07 ATSRSD
-  - Github TH 08 ATSRSD
-  - Github TH 09 ATSRSD
-  - Github TH 10 ATSRSD
-  - Github TH 11 ATSRSD
-  - Github TH 12 ATSRSD
 rules:
 - MATCH,PROXIES

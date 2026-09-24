@@ -6,42 +6,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github AU 01 ATSRSD",
-        "Github AU 02 ATSRSD",
-        "Github AU 03 ATSRSD",
-        "Github AU 04 ATSRSD",
-        "Github AU 05 ATSRSD",
-        "Github AU 06 ATSRSD",
-        "Github AU 07 ATSRSD",
-        "Github AU 08 ATSRSD",
-        "Github AU 09 ATSRSD",
-        "Github AU 10 ATSRSD",
-        "Github AU 11 ATSRSD",
-        "Github AU 12 ATSRSD",
-        "Github AU 13 ATSRSD",
-        "Github AU 14 ATSRSD",
-        "Github AU 15 ATSRSD"
+        "Github AU 01 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github AU 01 ATSRSD",
-        "Github AU 02 ATSRSD",
-        "Github AU 03 ATSRSD",
-        "Github AU 04 ATSRSD",
-        "Github AU 05 ATSRSD",
-        "Github AU 06 ATSRSD",
-        "Github AU 07 ATSRSD",
-        "Github AU 08 ATSRSD",
-        "Github AU 09 ATSRSD",
-        "Github AU 10 ATSRSD",
-        "Github AU 11 ATSRSD",
-        "Github AU 12 ATSRSD",
-        "Github AU 13 ATSRSD",
-        "Github AU 14 ATSRSD",
-        "Github AU 15 ATSRSD"
+        "Github AU 01 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
