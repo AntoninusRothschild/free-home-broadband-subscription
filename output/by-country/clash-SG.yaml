@@ -29,63 +29,19 @@ proxies:
       Host: hhlfy.twiladaphne.ndjp.net
 - name: Github SG 03 ATSRSD
   type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  server: 43.160.241.174
+  port: 443
+  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github SG 04 ATSRSD
-  type: vless
-  server: 91.193.58.15
-  port: 2096
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: free-server.techsonic.dev
+  servername: mia11.pages.dev
   network: ws
   ws-opts:
-    path: /free-server.techsonic.dev
+    path: /TG:@MiaChatChannel
     headers:
-      Host: free-server.techsonic.dev
-- name: Github SG 05 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 06 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 07 ATSRSD
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github SG 08 ATSRSD
+      Host: mia11.pages.dev
+- name: Github SG 04 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -97,58 +53,7 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github SG 09 ATSRSD
-  type: vmess
-  server: 45.32.120.173
-  port: 443
-  uuid: XEXEVIL
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 10 ATSRSD
-  type: ss
-  server: 167.150.100.93
-  port: 29824
-  cipher: 2022-blake3-aes-256-gcm
-  password: 2PIuTAxZjzJxni4kxy/GQ36VWTbRrYzl1fjm0ufTR94=
-  udp: true
-- name: Github SG 11 ATSRSD
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: Github SG 12 ATSRSD
-  type: ss
-  server: 161.118.253.23
-  port: 56927
-  cipher: 2022-blake3-chacha20-poly1305
-  password: SF+Iu0fGL/k1+EqZCG7rUS7z5PeQiYzpz3HITaiLphM=
-  udp: true
-- name: Github SG 13 ATSRSD
-  type: vless
-  server: 149.118.48.187
-  port: 443
-  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mia4.pages.dev
-  network: ws
-  ws-opts:
-    path: /TG:@MiaChatChannel
-    headers:
-      Host: mia4.pages.dev
-- name: Github SG 14 ATSRSD
+- name: Github SG 05 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -160,74 +65,33 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: Github SG 15 ATSRSD
-  type: vless
-  server: 43.160.220.86
-  port: 443
-  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mia0.pages.dev
-  network: ws
-  ws-opts:
-    path: /TG:@MiaChatChannel
-    headers:
-      Host: mia0.pages.dev
-- name: Github SG 16 ATSRSD
-  type: vless
-  server: 134.122.154.210
-  port: 443
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 17 ATSRSD
-  type: vless
-  server: 27.50.49.154
-  port: 2083
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: proxy-34l.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: proxy-34l.pages.dev
-- name: Github SG 18 ATSRSD
-  type: vless
-  server: 43.160.203.174
-  port: 443
-  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mia0.pages.dev
-  network: ws
-  ws-opts:
-    path: /TG:@MiaChatChannel
-    headers:
-      Host: mia0.pages.dev
-- name: Github SG 19 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 20 ATSRSD
+- name: Github SG 06 ATSRSD
   type: ss
-  server: 167.150.100.115
-  port: 27755
-  cipher: 2022-blake3-aes-256-gcm
-  password: fnvo82p9y4AKykZXyIFtnodFy6fQmWnVlI2SvGleOB0=
+  server: 158.178.229.235
+  port: 56927
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 4nphreJpAUpxvkVQmO2l37kEup8qRu7pcSYU0JbJLVM=
   udp: true
-- name: Github SG 21 ATSRSD
+- name: Github SG 07 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: Github SG 08 ATSRSD
+  type: ss
+  server: ehwn62tnx5g8.cdn000.com
+  port: 30401
+  cipher: 2022-blake3-aes-128-gcm
+  password: Y2FkNzhhZWQ0MzA1NzlhZA==:NGMxZWEyZDMtZjBiMS00Yw==
+  udp: true
+- name: Github SG 09 ATSRSD
   type: vmess
   server: 149.88.23.207
   port: 18000
@@ -237,27 +101,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 22 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 23 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 24 ATSRSD
+- name: Github SG 10 ATSRSD
   type: vless
   server: 43.160.241.174
   port: 443
@@ -271,7 +115,87 @@ proxies:
     path: /TG:@MiaChatChannel
     headers:
       Host: mia11.pages.dev
-- name: Github SG 25 ATSRSD
+- name: Github SG 11 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github SG 12 ATSRSD
+  type: ss
+  server: 161.118.222.185
+  port: 56927
+  cipher: 2022-blake3-chacha20-poly1305
+  password: CCfsnvFZe4t1K0KIgQDv7syWOwYGtqCTS6zwlKWr+J8=
+  udp: true
+- name: Github SG 13 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 14 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 15 ATSRSD
+  type: vless
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 16 ATSRSD
+  type: ss
+  server: 134.185.94.195
+  port: 56927
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 1YhAjbJV6i0trZIzLbwZPAvUcxOuDwYr8rBmfSC/5+g=
+  udp: true
+- name: Github SG 17 ATSRSD
+  type: vless
+  server: 91.193.58.108
+  port: 2096
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free-server.techsonic.dev
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: Github SG 18 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github SG 19 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -283,59 +207,40 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github SG 26 ATSRSD
+- name: Github SG 20 ATSRSD
   type: vless
-  server: 172.67.130.159
+  server: 91.193.58.15
   port: 2096
-  uuid: 832c8f42-7fe1-4aa4-9171-eb9dddbf6fef
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: cdn-sg.skyvora.app
+  servername: free-server.techsonic.dev
   network: ws
   ws-opts:
-    path: /78bc8
+    path: /free-server.techsonic.dev
     headers:
-      Host: cdn-sg.skyvora.app
-- name: Github SG 27 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+      Host: free-server.techsonic.dev
+- name: Github SG 21 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: Github SG 28 ATSRSD
-  type: vless
-  server: 104.18.39.218
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+- name: Github SG 22 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 29 ATSRSD
-  type: vless
-  server: 108.162.198.178
-  port: 2086
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
@@ -363,13 +268,6 @@ proxy-groups:
   - Github SG 20 ATSRSD
   - Github SG 21 ATSRSD
   - Github SG 22 ATSRSD
-  - Github SG 23 ATSRSD
-  - Github SG 24 ATSRSD
-  - Github SG 25 ATSRSD
-  - Github SG 26 ATSRSD
-  - Github SG 27 ATSRSD
-  - Github SG 28 ATSRSD
-  - Github SG 29 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -397,12 +295,5 @@ proxy-groups:
   - Github SG 20 ATSRSD
   - Github SG 21 ATSRSD
   - Github SG 22 ATSRSD
-  - Github SG 23 ATSRSD
-  - Github SG 24 ATSRSD
-  - Github SG 25 ATSRSD
-  - Github SG 26 ATSRSD
-  - Github SG 27 ATSRSD
-  - Github SG 28 ATSRSD
-  - Github SG 29 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -4,21 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github TW 01 (家宽) ATSRSD
-  type: vless
-  server: 59.125.69.24
-  port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ty986gfazs.cainiaohub.xyz
-  network: ws
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-    headers:
-      Host: 59.125.69.24
-- name: Github CA 02 (家宽) ATSRSD
+- name: Github CA 01 (家宽) ATSRSD
   type: vless
   server: 188.114.97.6
   port: 8080
@@ -36,14 +22,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github TW 01 (家宽) ATSRSD
-  - Github CA 02 (家宽) ATSRSD
+  - Github CA 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github TW 01 (家宽) ATSRSD
-  - Github CA 02 (家宽) ATSRSD
+  - Github CA 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
