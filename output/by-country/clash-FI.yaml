@@ -5,13 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
-  type: ss
-  server: p1tun3.greewebservices.ir
-  port: 2070
-  cipher: chacha20-ietf-poly1305
-  password: LMnotcv4RdaEOBXT-LdtfA
+  type: vless
+  server: 151.101.56.7
+  port: 443
+  uuid: 8abb648a-b004-42a4-aa05-49cdc2f94d4e
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: global.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: kayko.global.ssl.fastly.net
 - name: Github FI 02 ATSRSD
+  type: vless
+  server: k2.cloud--vpn.site
+  port: 443
+  uuid: 622cd467-ae00-4afe-b7ee-15dca6b9649a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c12.com
+- name: Github FI 03 ATSRSD
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: 622cd467-ae00-4afe-b7ee-15dca6b9649a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPNfp=chrome
+    headers:
+      Host: c12.com
+- name: Github FI 04 ATSRSD
   type: vless
   server: 185.79.138.71
   port: 448
@@ -30,6 +65,8 @@ proxy-groups:
   - AUTO
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -37,5 +74,7 @@ proxy-groups:
   proxies:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
+  - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
 rules:
 - MATCH,PROXIES

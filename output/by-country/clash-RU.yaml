@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: vless
-  server: fbsv6.guardora.pro
+  server: 172.67.182.245
   port: 443
-  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  uuid: 96e341a7-3077-4613-b482-41bd9c90cc4d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fbsv6.guardora.pro
+  servername: eZaCCesS-proJEcT-4C7950.Ez-dC9bBB.WorKErs.dEV
   network: ws
   ws-opts:
-    path: /ws
+    path: /eyJqdW5rIjoiN2w4dDlRNVV5NkZ5NU1aeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
-      Host: fbsv6.guardora.pro
+      Host: ezaccess-project-4c7950.ez-dc9bbb.workers.dev
 - name: Github RU 02 ATSRSD
   type: vless
   server: 46.8.200.91
@@ -33,12 +33,33 @@ proxies:
     headers:
       Host: cf3.rumedia-cdn.com
 - name: Github RU 03 ATSRSD
-  type: ss
-  server: 62.113.41.165
-  port: 888
-  cipher: chacha20-ietf-poly1305
-  password: hF-qqin2wYhP7zS47SyR0Q
+  type: vless
+  server: 104.17.147.22
+  port: 443
+  uuid: 513beae3-56e7-4954-a17e-930e06237b27
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: CfOI-2FX16g3-8rY2kdXmCJ.WJeSv2ILA3rXbUhpC2NSugRAchGaWK.WOrkeRs.DEV
+  network: ws
+  ws-opts:
+    path: /vl/3wSAeuGJbrGHwJ45DA6ircvHC6
+    headers:
+      Host: cfoi-2fx16g3-8ry2kdxmcj.wjesv2ila3rxbuhpc2nsugrachgawk.workers.dev
+- name: Github RU 04 ATSRSD
+  type: vless
+  server: fbsv6.guardora.pro
+  port: 443
+  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fbsv6.guardora.pro
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: fbsv6.guardora.pro
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,6 +68,7 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -55,5 +77,6 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES

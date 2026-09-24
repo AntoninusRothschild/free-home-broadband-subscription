@@ -4,30 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github RO 01 ATSRSD
+- name: Github JP 01 (家宽) ATSRSD
   type: vless
-  server: 167.82.101.251
-  port: 80
-  uuid: 0e9f7d2a-2f92-475e-b484-e79568a8a1a2
+  server: 37.120.222.70
+  port: 8082
+  uuid: 59c3c1c7-62d0-4707-9d67-5ff9c008591c
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
   network: ws
   ws-opts:
-    path: /
+    path: /@Marisa_kristi
     headers:
-      Host: Mankiamtr.global.ssl.fastly.net
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github RO 01 ATSRSD
+  - Github JP 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github RO 01 ATSRSD
+  - Github JP 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
