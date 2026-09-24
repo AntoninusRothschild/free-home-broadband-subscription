@@ -7,8 +7,7 @@
       "outbounds": [
         "auto",
         "Github IE 01 ATSRSD",
-        "Github IE 02 ATSRSD",
-        "Github IE 03 ATSRSD"
+        "Github IE 02 ATSRSD"
       ]
     },
     {
@@ -16,8 +15,7 @@
       "tag": "auto",
       "outbounds": [
         "Github IE 01 ATSRSD",
-        "Github IE 02 ATSRSD",
-        "Github IE 03 ATSRSD"
+        "Github IE 02 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },

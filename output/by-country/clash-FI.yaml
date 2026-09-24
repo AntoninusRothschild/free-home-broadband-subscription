@@ -6,29 +6,6 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: vless
-  server: k2.cloud--vpn.site
-  port: 443
-  uuid: 64c2bc5c-7534-4359-9b1e-e1dce5a380cd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: Github FI 02 ATSRSD
-  type: vless
-  server: karo.rick313.dpdns.org
-  port: 2087
-  uuid: 2e4e6812-be87-415b-a2e8-b0e17e9f2da7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: karo.rick313.dpdns.org
-- name: Github FI 03 ATSRSD
-  type: vless
   server: a2.arshia-nova.ir
   port: 443
   uuid: 64c2bc5c-7534-4359-9b1e-e1dce5a380cd
@@ -41,14 +18,7 @@ proxies:
     path: /
     headers:
       Host: c12.com
-- name: Github FI 04 ATSRSD
-  type: ss
-  server: p1tun3.greewebservices.ir
-  port: 2070
-  cipher: chacha20-ietf-poly1305
-  password: cVvgP0Bz69hsErPBvqKbwQ
-  udp: true
-- name: Github FI 05 ATSRSD
+- name: Github FI 02 ATSRSD
   type: vless
   server: 151.101.56.6
   port: 443
@@ -69,9 +39,6 @@ proxy-groups:
   - AUTO
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
-  - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
-  - Github FI 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -79,8 +46,5 @@ proxy-groups:
   proxies:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
-  - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
-  - Github FI 05 ATSRSD
 rules:
 - MATCH,PROXIES
