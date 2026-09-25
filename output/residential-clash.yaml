@@ -17,37 +17,32 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.78
+      Host: ty986gfazs.cainiaohub.xyz
 - name: Github US 02 (家宽) ATSRSD
   type: vless
-  server: 162.159.91.222
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-723a643df685
+  server: 172.64.229.2
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: n3zaxce7u0es.crzl48eiuses.workers.dev
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/723a643df685/loc-0
+    path: /?ed=2560security=tls+
     headers:
-      Host: n3zaxce7u0es.crzl48eiuses.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github TW 03 (家宽) ATSRSD
-  type: vmess
-  server: 61.223.124.196
-  port: 443
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 118.167.230.191
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 24864168545164.oylfmxz.cn
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 24864168545164.oylfmxz.cn
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select

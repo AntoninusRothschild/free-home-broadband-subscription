@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github TH 01 ATSRSD
+- name: Github MD 01 ATSRSD
   type: vless
-  server: 103.86.49.57
-  port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  server: 143.246.219.51
+  port: 8081
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /ws
+    path: /vless-test
     headers:
-      Host: aIs.SpEeDtEsT.nEt
+      Host: 143.246.219.51
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github TH 01 ATSRSD
+  - Github MD 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github TH 01 ATSRSD
+  - Github MD 01 ATSRSD
 rules:
 - MATCH,PROXIES
