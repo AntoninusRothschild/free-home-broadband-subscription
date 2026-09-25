@@ -4,44 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github JP 01 (家宽) ATSRSD
-  type: vless
-  server: 89.22.224.146
-  port: 43788
-  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: Github TW 02 (家宽) ATSRSD
-  type: ss
-  server: 36.224.141.124
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-- name: Github TW 03 (家宽) ATSRSD
-  type: vmess
-  server: 24864168545164.oylfmxz.cn
-  port: 443
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github TW 04 (家宽) ATSRSD
+- name: Github TW 01 (家宽) ATSRSD
   type: vless
   server: 60.248.219.78
   port: 443
@@ -54,24 +17,52 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
+      Host: 60.248.219.78
+- name: Github US 02 (家宽) ATSRSD
+  type: vless
+  server: 162.159.91.222
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-723a643df685
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: n3zaxce7u0es.crzl48eiuses.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/723a643df685/loc-0
+    headers:
+      Host: n3zaxce7u0es.crzl48eiuses.workers.dev
+- name: Github TW 03 (家宽) ATSRSD
+  type: vmess
+  server: 61.223.124.196
+  port: 443
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 24864168545164.oylfmxz.cn
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 24864168545164.oylfmxz.cn
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github JP 01 (家宽) ATSRSD
-  - Github TW 02 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
+  - Github US 02 (家宽) ATSRSD
   - Github TW 03 (家宽) ATSRSD
-  - Github TW 04 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github JP 01 (家宽) ATSRSD
-  - Github TW 02 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
+  - Github US 02 (家宽) ATSRSD
   - Github TW 03 (家宽) ATSRSD
-  - Github TW 04 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

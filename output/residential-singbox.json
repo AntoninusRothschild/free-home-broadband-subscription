@@ -6,20 +6,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github JP 01 (家宽) ATSRSD",
-        "Github TW 02 (家宽) ATSRSD",
-        "Github TW 03 (家宽) ATSRSD",
-        "Github TW 04 (家宽) ATSRSD"
+        "Github TW 01 (家宽) ATSRSD",
+        "Github US 02 (家宽) ATSRSD",
+        "Github TW 03 (家宽) ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github JP 01 (家宽) ATSRSD",
-        "Github TW 02 (家宽) ATSRSD",
-        "Github TW 03 (家宽) ATSRSD",
-        "Github TW 04 (家宽) ATSRSD"
+        "Github TW 01 (家宽) ATSRSD",
+        "Github US 02 (家宽) ATSRSD",
+        "Github TW 03 (家宽) ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
