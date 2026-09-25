@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github ZA 01 ATSRSD
+- name: Github SE 01 ATSRSD
   type: ss
-  server: 139.84.247.164
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: tfAcRikawhNoZAhu
+  server: 51.170.190.140
+  port: 45819
+  cipher: 2022-blake3-chacha20-poly1305
+  password: yVKPB5WeYxyaTioROYKKNwo3BlzJLFfUpUbI7ue6zVk=
   udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github ZA 01 ATSRSD
+  - Github SE 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github ZA 01 ATSRSD
+  - Github SE 01 ATSRSD
 rules:
 - MATCH,PROXIES
