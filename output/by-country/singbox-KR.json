@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "Github KR 01 ATSRSD",
+        "Github KR 02 ATSRSD",
+        "Github KR 03 ATSRSD",
+        "Github KR 04 ATSRSD",
+        "Github KR 05 ATSRSD",
+        "Github KR 06 ATSRSD",
+        "Github KR 07 ATSRSD",
+        "Github KR 08 ATSRSD",
+        "Github KR 09 ATSRSD",
+        "Github KR 10 ATSRSD",
+        "Github KR 11 ATSRSD",
+        "Github KR 12 ATSRSD",
+        "Github KR 13 ATSRSD"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "Github KR 01 ATSRSD",
+        "Github KR 02 ATSRSD",
+        "Github KR 03 ATSRSD",
+        "Github KR 04 ATSRSD",
+        "Github KR 05 ATSRSD",
+        "Github KR 06 ATSRSD",
+        "Github KR 07 ATSRSD",
+        "Github KR 08 ATSRSD",
+        "Github KR 09 ATSRSD",
+        "Github KR 10 ATSRSD",
+        "Github KR 11 ATSRSD",
+        "Github KR 12 ATSRSD",
+        "Github KR 13 ATSRSD"
+      ],
+      "url": "https://www.google.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
