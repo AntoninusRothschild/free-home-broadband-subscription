@@ -5,13 +5,118 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ZA 01 ATSRSD
+  type: vless
+  server: platform106.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform106
+    headers:
+      Host: platform106.golnamakcert.top
+- name: Github ZA 02 ATSRSD
   type: ss
   server: 139.84.247.164
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: tfAcRikawhNoZAhu
   udp: true
-- name: Github ZA 02 ATSRSD
+- name: Github ZA 03 ATSRSD
+  type: vless
+  server: platform106.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform106
+    headers:
+      Host: platform106.halalkhor.info
+- name: Github ZA 04 ATSRSD
+  type: vless
+  server: platform109.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform109
+    headers:
+      Host: platform109.golnamakcert.top
+- name: Github ZA 05 ATSRSD
+  type: vless
+  server: platform107.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform107
+    headers:
+      Host: platform107.golnamakcert.top
+- name: Github ZA 06 ATSRSD
+  type: ss
+  server: 20.164.220.82
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: Qy7KyMo4epSCiluJ
+  udp: true
+- name: Github ZA 07 ATSRSD
+  type: vless
+  server: platform101.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform101
+    headers:
+      Host: platform101.halalkhor.info
+- name: Github ZA 08 ATSRSD
+  type: ss
+  server: 102.37.156.224
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: Github ZA 09 ATSRSD
+  type: vless
+  server: platform107.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform107
+    headers:
+      Host: platform107.halalkhor.info
+- name: Github ZA 10 ATSRSD
+  type: vless
+  server: platform108.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform108
+    headers:
+      Host: platform108.halalkhor.info
+- name: Github ZA 11 ATSRSD
   type: ss
   server: 20.164.220.82
   port: 443
@@ -25,6 +130,15 @@ proxy-groups:
   - AUTO
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
+  - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
+  - Github ZA 05 ATSRSD
+  - Github ZA 06 ATSRSD
+  - Github ZA 07 ATSRSD
+  - Github ZA 08 ATSRSD
+  - Github ZA 09 ATSRSD
+  - Github ZA 10 ATSRSD
+  - Github ZA 11 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -32,5 +146,14 @@ proxy-groups:
   proxies:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
+  - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
+  - Github ZA 05 ATSRSD
+  - Github ZA 06 ATSRSD
+  - Github ZA 07 ATSRSD
+  - Github ZA 08 ATSRSD
+  - Github ZA 09 ATSRSD
+  - Github ZA 10 ATSRSD
+  - Github ZA 11 ATSRSD
 rules:
 - MATCH,PROXIES
