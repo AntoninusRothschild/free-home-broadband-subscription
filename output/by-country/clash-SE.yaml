@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: Github SE 01 ATSRSD
+  type: vless
+  server: 103.177.249.40
+  port: 2083
+  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: yf.962456.xyz
+  network: ws
+  ws-opts:
+    path: /proxyip=kr.william.us.ci
+    headers:
+      Host: yf.962456.xyz
+- name: Github SE 02 ATSRSD
+  type: vless
+  server: 51.170.176.145
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SE 03 ATSRSD
   type: ss
   server: 70.34.212.124
   port: 8388
@@ -17,11 +39,15 @@ proxy-groups:
   proxies:
   - AUTO
   - Github SE 01 ATSRSD
+  - Github SE 02 ATSRSD
+  - Github SE 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github SE 01 ATSRSD
+  - Github SE 02 ATSRSD
+  - Github SE 03 ATSRSD
 rules:
 - MATCH,PROXIES
