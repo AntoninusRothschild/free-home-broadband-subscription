@@ -1,0 +1,36 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github RO 01 ATSRSD
+  type: ss
+  server: 80.97.27.106
+  port: 111
+  cipher: chacha20-ietf-poly1305
+  password: 9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj
+  udp: true
+- name: Github RO 02 ATSRSD
+  type: ss
+  server: 80.97.27.106
+  port: 112
+  cipher: chacha20-ietf-poly1305
+  password: 9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj
+  udp: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github RO 01 ATSRSD
+  - Github RO 02 ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github RO 01 ATSRSD
+  - Github RO 02 ATSRSD
+rules:
+- MATCH,PROXIES

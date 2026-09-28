@@ -12,8 +12,22 @@ proxies:
   password: tfAcRikawhNoZAhu
   udp: true
 - name: Github ZA 02 ATSRSD
+  type: ss
+  server: 20.164.220.189
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: UbkyrKvOtfSd2xQb
+  udp: true
+- name: Github ZA 03 ATSRSD
+  type: ss
+  server: 102.133.165.160
+  port: 16233
+  cipher: chacha20-ietf-poly1305
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  udp: true
+- name: Github ZA 04 ATSRSD
   type: vless
-  server: platform106.golnamakcert.top
+  server: platform107.golnamakcert.top
   port: 80
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
@@ -21,16 +35,22 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /platform106
+    path: /platform107
     headers:
-      Host: platform106.halalkhor.info
-- name: Github ZA 03 ATSRSD
-  type: ss
-  server: 20.164.220.189
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: UbkyrKvOtfSd2xQb
+      Host: platform107.golnamakcert.top
+- name: Github ZA 05 ATSRSD
+  type: vless
+  server: platform117.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +59,8 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
+  - Github ZA 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -47,5 +69,7 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
+  - Github ZA 04 ATSRSD
+  - Github ZA 05 ATSRSD
 rules:
 - MATCH,PROXIES

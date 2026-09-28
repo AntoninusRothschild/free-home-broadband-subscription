@@ -6,33 +6,6 @@ log-level: info
 proxies:
 - name: Github EE 01 ATSRSD
   type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
-- name: Github EE 02 ATSRSD
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
-- name: Github EE 03 ATSRSD
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
-- name: Github EE 04 ATSRSD
-  type: vless
   server: 94.183.170.65
   port: 8081
   uuid: e60bc99b-6630-4799-af84-f90ebdc643b6
@@ -44,7 +17,7 @@ proxies:
     path: /ws/generate
     headers:
       Host: hys2.arkonsoft.top
-- name: Github EE 05 ATSRSD
+- name: Github EE 02 ATSRSD
   type: vless
   server: 94.183.170.135
   port: 443
@@ -56,7 +29,14 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 94.183.170.135
+      Host: estproxy4.lockdwn.com
+- name: Github EE 03 ATSRSD
+  type: ss
+  server: 80.97.27.106
+  port: 114
+  cipher: chacha20-ietf-poly1305
+  password: 9binmVT58Wnr6vNzxu_JmpzEW6i-FgAj
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,8 +45,6 @@ proxy-groups:
   - Github EE 01 ATSRSD
   - Github EE 02 ATSRSD
   - Github EE 03 ATSRSD
-  - Github EE 04 ATSRSD
-  - Github EE 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -75,7 +53,5 @@ proxy-groups:
   - Github EE 01 ATSRSD
   - Github EE 02 ATSRSD
   - Github EE 03 ATSRSD
-  - Github EE 04 ATSRSD
-  - Github EE 05 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -18,17 +18,51 @@ proxies:
     path: /ws
     headers:
       Host: fbsv6.guardora.pro
+- name: Github RU 02 ATSRSD
+  type: vless
+  server: 172.67.216.233
+  port: 443
+  uuid: 23e34376-aa47-4c8d-97ea-02915e01fcca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: J3Bx1S9MK2syLW66yJ-hSk.TJsJrKk8GbHTS0Q5-0Os.wOrKeRS.DEv
+  network: ws
+  ws-opts:
+    path: /vl/uwojyr8LT2gMeHnQJVf2HntOGHsvRH3?ed=2560
+    headers:
+      Host: j3bx1s9mk2sylw66yj-hsk.tjsjrkk8gbhts0q5-0os.workers.dev
+- name: Github RU 03 ATSRSD
+  type: ss
+  server: 194.113.106.90
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: NFtKNLyoaWDnOI_Cc5S1vHjs-hBc8T28
+  udp: true
+- name: Github RU 04 ATSRSD
+  type: ss
+  server: 176.32.35.2
+  port: 10090
+  cipher: aes-256-gcm
+  password: 895b4b796a357570
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES

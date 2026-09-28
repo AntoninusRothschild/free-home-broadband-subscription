@@ -18,19 +18,54 @@ proxies:
   client-fingerprint: random
 - name: Github KR 02 ATSRSD
   type: vless
-  server: 144.31.243.120
-  port: 8443
-  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
+  server: 172.66.170.53
+  port: 8880
+  uuid: 38ede46b-d237-4c76-9de1-a10738642adc
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: summer-hat-ba5c.430.workers.dev
+- name: Github KR 03 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9090
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: Github KR 04 ATSRSD
+  type: vmess
+  server: 8ntzyr5knivfabat.v.3dns.vip
+  port: 443
+  uuid: f0b7bbd66aad458aaec0e9acaab768b6
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: yf.962456.xyz
+  servername: 8ntzyr5knivfabat.v.3dns.vip
   network: ws
   ws-opts:
-    path: /proxyip=kr.william.us.ci
+    path: /ws-vmess
     headers:
-      Host: yf.962456.xyz
-- name: Github KR 03 ATSRSD
+      Host: 8ntzyr5knivfabat.v.3dns.vip
+- name: Github KR 05 ATSRSD
+  type: vless
+  server: 172.64.88.251
+  port: 8880
+  uuid: 7e3cd2f1-0de5-4717-9002-64d8597bc577
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: dry-credit-fc26.203-d8c.workers.dev
+- name: Github KR 06 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -42,6 +77,44 @@ proxies:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- name: Github KR 07 ATSRSD
+  type: vless
+  server: 172.64.88.251
+  port: 8880
+  uuid: 87a5d3eb-afd4-4193-9787-c54ef7c26c8c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+    headers:
+      Host: patient-cake-39c7.44-e7a.workers.dev
+- name: Github KR 08 ATSRSD
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github KR 09 ATSRSD
+  type: vmess
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: None
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,6 +123,12 @@ proxy-groups:
   - Github KR 01 ATSRSD
   - Github KR 02 ATSRSD
   - Github KR 03 ATSRSD
+  - Github KR 04 ATSRSD
+  - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
+  - Github KR 07 ATSRSD
+  - Github KR 08 ATSRSD
+  - Github KR 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -58,5 +137,11 @@ proxy-groups:
   - Github KR 01 ATSRSD
   - Github KR 02 ATSRSD
   - Github KR 03 ATSRSD
+  - Github KR 04 ATSRSD
+  - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
+  - Github KR 07 ATSRSD
+  - Github KR 08 ATSRSD
+  - Github KR 09 ATSRSD
 rules:
 - MATCH,PROXIES

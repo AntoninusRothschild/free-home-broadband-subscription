@@ -19,6 +19,20 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 02 ATSRSD
   type: vless
+  server: micro-svc-44607f.staging-api-dd63ef.workers.dev
+  port: 2087
+  uuid: 83ce34d8-45d3-4b26-8cca-0931ee0d48d9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: micro-svc-44607f-mlm.staging-api-dd63ef.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: micro-svc-44607f-mlm.staging-api-dd63ef.workers.dev
+- name: Github AE 03 ATSRSD
+  type: vless
   server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
@@ -30,6 +44,32 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: Github AE 04 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 05 ATSRSD
+  type: vless
+  server: 45.130.125.201
+  port: 80
+  uuid: dc8a9493-c54a-459e-d060-81a700000001
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: nahan-core.netizo09.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +77,9 @@ proxy-groups:
   - AUTO
   - Github AE 01 ATSRSD
   - Github AE 02 ATSRSD
+  - Github AE 03 ATSRSD
+  - Github AE 04 ATSRSD
+  - Github AE 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +87,8 @@ proxy-groups:
   proxies:
   - Github AE 01 ATSRSD
   - Github AE 02 ATSRSD
+  - Github AE 03 ATSRSD
+  - Github AE 04 ATSRSD
+  - Github AE 05 ATSRSD
 rules:
 - MATCH,PROXIES
