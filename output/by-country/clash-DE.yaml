@@ -5,50 +5,61 @@ mode: rule
 log-level: info
 proxies:
 - name: Github DE 01 ATSRSD
-  type: ss
-  server: 130.61.45.32
-  port: 59924
-  cipher: 2022-blake3-chacha20-poly1305
-  password: YZxVc5sP8MqNhcA45ia3e1WiebiWSSePUk0K4UZF/UE=
-  udp: true
-- name: Github DE 02 ATSRSD
-  type: vmess
-  server: 185.177.229.129
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github DE 03 ATSRSD
-  type: ss
-  server: 130.61.38.201
-  port: 59924
-  cipher: 2022-blake3-chacha20-poly1305
-  password: cpfozXiC+kIkLtCqoXJ6jAIw0eQjqNjK1r5xBOelSPk=
-  udp: true
-- name: Github DE 04 ATSRSD
   type: vless
-  server: 2.26.30.216
+  server: 81.95.4.189
   port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: edgetunnel-4uw.pages.dev
+  servername: bab-6.site
   network: ws
   ws-opts:
-    path: /
+    path: /vws/
     headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: Github DE 05 ATSRSD
-  type: ss
-  server: 130.61.230.35
-  port: 59924
-  cipher: 2022-blake3-chacha20-poly1305
-  password: mwLTjp3dO0CH4TCkx6f+fEJ/zVbYaytGLfmnDRJBXmg=
+      Host: bab-6.site
+- name: Github DE 02 ATSRSD
+  type: vless
+  server: 57.129.41.216
+  port: 80
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: OV-Germany1.09vpn.com
+- name: Github DE 03 ATSRSD
+  type: vless
+  server: kvm1.avenone.ir
+  port: 8402
+  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github DE 04 ATSRSD
+  type: ss
+  server: 2.58.81.221
+  port: 443
+  cipher: aes-256-gcm
+  password: kKEd0rBrd56Furjz
+  udp: true
+- name: Github DE 05 ATSRSD
+  type: vless
+  server: rubifen.adaspoloandco.com
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: rubifen.adaspoloandco.com
+  network: ws
+  ws-opts:
+    path: /GOrbEh
+    headers:
+      Host: rubifen.adaspoloandco.com
 - name: Github DE 06 ATSRSD
   type: vless
   server: 37.148.204.142
@@ -65,95 +76,19 @@ proxies:
       Host: shephe.dpdns.org
 - name: Github DE 07 ATSRSD
   type: vless
-  server: 35.157.240.237
-  port: 443
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  server: 2.26.125.147
+  port: 2096
+  uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: bab-6.site
+  servername: stf94fd.rumedia-cdn.com
   network: ws
   ws-opts:
-    path: /vws/
+    path: /cdn/v3/live
     headers:
-      Host: bab-6.site
+      Host: stf94fd.rumedia-cdn.com
 - name: Github DE 08 ATSRSD
-  type: ss
-  server: 185.226.172.8
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: Github DE 09 ATSRSD
-  type: ss
-  server: 130.61.230.35
-  port: 59924
-  cipher: 2022-blake3-chacha20-poly1305
-  password: mwLTjp3dO0CH4TCkx6f+fEJ/zVbYaytGLfmnDRJBXmg=
-  udp: true
-- name: Github DE 10 ATSRSD
-  type: vless
-  server: smart.avenone.ir
-  port: 1085
-  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github DE 11 ATSRSD
-  type: vmess
-  server: 31.76.11.83
-  port: 23226
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github DE 12 ATSRSD
-  type: vless
-  server: 57.129.41.216
-  port: 80
-  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: OV-Germany1.09vpn.com
-- name: Github DE 13 ATSRSD
-  type: ss
-  server: 213.202.208.199
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github DE 14 ATSRSD
-  type: vmess
-  server: 31.77.8.97
-  port: 110
-  uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github DE 15 ATSRSD
-  type: vless
-  server: 81.95.4.189
-  port: 443
-  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: bab-6.site
-  network: ws
-  ws-opts:
-    path: /vws/
-    headers:
-      Host: bab-6.site
-- name: Github DE 16 ATSRSD
   type: vmess
   server: 193.108.117.54
   port: 443
@@ -169,7 +104,42 @@ proxies:
     path: /linkvws
     headers:
       Host: ''
-- name: Github DE 17 ATSRSD
+- name: Github DE 09 ATSRSD
+  type: vless
+  server: 81.95.4.189
+  port: 443
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: bab-6.site
+  network: ws
+  ws-opts:
+    path: /vws/
+    headers:
+      Host: bab-6.site
+- name: Github DE 10 ATSRSD
+  type: ss
+  server: 51.195.126.38
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 2YdE4lFOid5a
+  udp: true
+- name: Github DE 11 ATSRSD
+  type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  udp: true
+- name: Github DE 12 ATSRSD
+  type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: Github DE 13 ATSRSD
   type: vless
   server: 162.55.242.208
   port: 2053
@@ -181,43 +151,82 @@ proxies:
     public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github DE 18 ATSRSD
-  type: ss
-  server: 185.226.172.8
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: Github DE 19 ATSRSD
-  type: vless
-  server: kvm1.avenone.ir
-  port: 8402
-  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
+- name: Github DE 14 ATSRSD
+  type: vmess
+  server: 185.177.229.129
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github DE 20 ATSRSD
-  type: ss
-  server: 51.195.126.38
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 2YdE4lFOid5a
-  udp: true
-- name: Github DE 21 ATSRSD
+- name: Github DE 15 ATSRSD
   type: vless
-  server: rubifen.adaspoloandco.com
+  server: 163.8.195.241
+  port: 2087
+  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /29c8fed7ca22
+    headers:
+      Host: 163.8.195.241
+- name: Github DE 16 ATSRSD
+  type: ss
+  server: 130.61.45.32
+  port: 59924
+  cipher: 2022-blake3-chacha20-poly1305
+  password: YZxVc5sP8MqNhcA45ia3e1WiebiWSSePUk0K4UZF/UE=
+  udp: true
+- name: Github DE 17 ATSRSD
+  type: vmess
+  server: 185.177.229.129
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github DE 18 ATSRSD
+  type: vless
+  server: 2.26.30.216
   port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: rubifen.adaspoloandco.com
+  servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /GOrbEh
+    path: /
     headers:
-      Host: rubifen.adaspoloandco.com
-- name: Github DE 22 ATSRSD
+      Host: edgetunnel-4uw.pages.dev
+- name: Github DE 19 ATSRSD
+  type: vless
+  server: 35.157.240.237
+  port: 443
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: bab-6.site
+  network: ws
+  ws-opts:
+    path: /vws/
+    headers:
+      Host: bab-6.site
+- name: Github DE 20 ATSRSD
+  type: ss
+  server: 213.202.208.199
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: Github DE 21 ATSRSD
   type: vless
   server: 95.163.232.171
   port: 14443
@@ -231,7 +240,7 @@ proxies:
     path: /ws
     headers:
       Host: 95.163.232.171
-- name: Github DE 23 ATSRSD
+- name: Github DE 22 ATSRSD
   type: vless
   server: 95.163.232.171
   port: 14443
@@ -272,7 +281,6 @@ proxy-groups:
   - Github DE 20 ATSRSD
   - Github DE 21 ATSRSD
   - Github DE 22 ATSRSD
-  - Github DE 23 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -300,6 +308,5 @@ proxy-groups:
   - Github DE 20 ATSRSD
   - Github DE 21 ATSRSD
   - Github DE 22 ATSRSD
-  - Github DE 23 ATSRSD
 rules:
 - MATCH,PROXIES

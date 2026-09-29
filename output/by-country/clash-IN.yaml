@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: Github IN 01 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github IN 02 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -19,18 +31,6 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: Github IN 02 ATSRSD
-  type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: chrome
 - name: Github IN 03 ATSRSD
   type: vless
   server: 194.61.31.126
@@ -42,7 +42,7 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: Github IN 04 ATSRSD
   type: vless
   server: 194.61.31.126
