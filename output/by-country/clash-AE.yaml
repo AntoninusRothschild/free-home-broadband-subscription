@@ -6,17 +6,18 @@ log-level: info
 proxies:
 - name: Github AE 01 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 185.112.249.201
+  port: 2053
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: uae.unixzone.us
+      Host: edgetunnel-4uw.pages.dev
 - name: Github AE 02 ATSRSD
   type: vless
   server: 185.112.249.201
@@ -33,7 +34,19 @@ proxies:
       Host: edgetunnel-4uw.pages.dev
 - name: Github AE 03 ATSRSD
   type: vless
-  server: 84.235.244.108
+  server: 89.125.147.199
+  port: 443
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+  servername: maps.apple.com
+  client-fingerprint: chrome
+- name: Github AE 04 ATSRSD
+  type: vless
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -44,31 +57,19 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: Github AE 04 ATSRSD
-  type: vless
-  server: 89.125.147.199
-  port: 443
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-  servername: maps.apple.com
-  client-fingerprint: firefox
 - name: Github AE 05 ATSRSD
   type: vless
-  server: 45.130.125.201
-  port: 80
-  uuid: dc8a9493-c54a-459e-d060-81a700000001
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /sync
+    path: /
     headers:
-      Host: nahan-core.netizo09.workers.dev
+      Host: uae.unixzone.us
 - name: Github AE 06 ATSRSD
   type: vless
   server: 185.112.249.201
@@ -83,6 +84,85 @@ proxies:
     path: /
     headers:
       Host: edgetunnel-4uw.pages.dev
+- name: Github AE 07 ATSRSD
+  type: vless
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 08 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 09 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 10 ATSRSD
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: Github AE 11 ATSRSD
+  type: vless
+  server: 185.112.249.201
+  port: 8443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: edgetunnel-4uw.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- name: Github AE 12 ATSRSD
+  type: vless
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
 proxy-groups:
 - name: PROXIES
   type: select
@@ -94,6 +174,12 @@ proxy-groups:
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
   - Github AE 06 ATSRSD
+  - Github AE 07 ATSRSD
+  - Github AE 08 ATSRSD
+  - Github AE 09 ATSRSD
+  - Github AE 10 ATSRSD
+  - Github AE 11 ATSRSD
+  - Github AE 12 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -105,5 +191,11 @@ proxy-groups:
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
   - Github AE 06 ATSRSD
+  - Github AE 07 ATSRSD
+  - Github AE 08 ATSRSD
+  - Github AE 09 ATSRSD
+  - Github AE 10 ATSRSD
+  - Github AE 11 ATSRSD
+  - Github AE 12 ATSRSD
 rules:
 - MATCH,PROXIES

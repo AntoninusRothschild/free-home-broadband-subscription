@@ -4,24 +4,11 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github KR 01 (家宽) ATSRSD
+- name: Github TW 01 (家宽) ATSRSD
   type: vless
-  server: 172.67.179.98
-  port: 8880
-  uuid: d829cf8d-0a32-4e60-bcc3-a03fb4658ea4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shy-wind-a26f.182-104.workers.dev
-- name: Github TW 02 (家宽) ATSRSD
-  type: vless
-  server: 60.248.219.54
+  server: 60.248.219.78
   port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   udp: true
   tls: true
   skip-cert-verify: true
@@ -30,20 +17,41 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.54
+      Host: 60.248.219.78
+- name: Github TW 02 (家宽) ATSRSD
+  type: vless
+  server: hinet1.2yly.com
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: Github KR 03 (家宽) ATSRSD
+  type: ss
+  server: ce1fc2d8.krkt.hkssip.com
+  port: 49642
+  cipher: aes-256-gcm
+  password: ac9c0a7b
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github KR 01 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
+  - Github KR 03 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github KR 01 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
+  - Github KR 03 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

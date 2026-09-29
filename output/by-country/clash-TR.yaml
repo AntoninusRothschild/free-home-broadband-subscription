@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github CZ 01 ATSRSD
+- name: Github TR 01 ATSRSD
   type: vless
-  server: 45.130.125.126
+  server: 130.94.0.228
   port: 443
-  uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+  servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /
     headers:
-      Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+      Host: edgetunnel-4uw.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github CZ 01 ATSRSD
+  - Github TR 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github CZ 01 ATSRSD
+  - Github TR 01 ATSRSD
 rules:
 - MATCH,PROXIES
