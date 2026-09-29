@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github KR 01 (家宽) ATSRSD
+  type: vless
+  server: 172.67.179.98
+  port: 8880
+  uuid: d829cf8d-0a32-4e60-bcc3-a03fb4658ea4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shy-wind-a26f.182-104.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github KR 01 (家宽) ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github KR 01 (家宽) ATSRSD
+rules:
+- MATCH,PROXIES
