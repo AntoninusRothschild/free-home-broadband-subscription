@@ -5,25 +5,31 @@ mode: rule
 log-level: info
 proxies:
 - name: Github MY 01 ATSRSD
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.halalkhor.info
 - name: Github MY 02 ATSRSD
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.golnamakcert.top
 - name: Github MY 03 ATSRSD
   type: vless
   server: platform128.golnamakcert.top
@@ -38,15 +44,18 @@ proxies:
     headers:
       Host: platform128.halalkhor.info
 - name: Github MY 04 ATSRSD
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.halalkhor.info
 - name: Github MY 05 ATSRSD
   type: vless
   server: platform128.golnamakcert.top
@@ -60,6 +69,36 @@ proxies:
     path: /platform128
     headers:
       Host: platform128.golnamakcert.top
+- name: Github MY 06 ATSRSD
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github MY 07 ATSRSD
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github MY 08 ATSRSD
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -70,6 +109,9 @@ proxy-groups:
   - Github MY 03 ATSRSD
   - Github MY 04 ATSRSD
   - Github MY 05 ATSRSD
+  - Github MY 06 ATSRSD
+  - Github MY 07 ATSRSD
+  - Github MY 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -80,5 +122,8 @@ proxy-groups:
   - Github MY 03 ATSRSD
   - Github MY 04 ATSRSD
   - Github MY 05 ATSRSD
+  - Github MY 06 ATSRSD
+  - Github MY 07 ATSRSD
+  - Github MY 08 ATSRSD
 rules:
 - MATCH,PROXIES
