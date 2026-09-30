@@ -4,7 +4,20 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github TW 01 (家宽) ATSRSD
+- name: Github US 01 (家宽) ATSRSD
+  type: vless
+  server: 162.159.0.169
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github TW 02 (家宽) ATSRSD
   type: vless
   server: 60.248.219.78
   port: 443
@@ -17,18 +30,20 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
+      Host: 60.248.219.78
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github TW 01 (家宽) ATSRSD
+  - Github US 01 (家宽) ATSRSD
+  - Github TW 02 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github TW 01 (家宽) ATSRSD
+  - Github US 01 (家宽) ATSRSD
+  - Github TW 02 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
