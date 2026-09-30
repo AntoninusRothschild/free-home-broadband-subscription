@@ -6,7 +6,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github US 01 (家宽) ATSRSD",
+        "Github TW 01 (家宽) ATSRSD",
         "Github TW 02 (家宽) ATSRSD"
       ]
     },
@@ -14,7 +14,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github US 01 (家宽) ATSRSD",
+        "Github TW 01 (家宽) ATSRSD",
         "Github TW 02 (家宽) ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"

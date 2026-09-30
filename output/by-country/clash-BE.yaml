@@ -4,29 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github CY 01 ATSRSD
+- name: Github BE 01 ATSRSD
   type: vless
-  server: 194.76.154.31
-  port: 40443
-  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  server: 35.240.62.249
+  port: 443
+  uuid: 6d341f6e-7b9d-4ae3-999b-00333de7bdfb
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ
-  servername: deepl.com
+    public-key: v6QpErcVOVKIYLm53R3bAP8zIKCFr4HAJWW0VwBKtws
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github CY 01 ATSRSD
+  - Github BE 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github CY 01 ATSRSD
+  - Github BE 01 ATSRSD
 rules:
 - MATCH,PROXIES
