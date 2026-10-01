@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: Github IN 01 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: Github IN 02 ATSRSD
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -15,21 +30,7 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github IN 02 ATSRSD
-  type: vless
-  server: 139.84.150.190
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shephe.dpdns.org
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: shephe.dpdns.org
+  client-fingerprint: random
 - name: Github IN 03 ATSRSD
   type: vless
   server: 194.61.31.126
@@ -44,20 +45,6 @@ proxies:
   client-fingerprint: chrome
 - name: Github IN 04 ATSRSD
   type: vless
-  server: 20.219.46.208
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shephe.dpdns.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shephe.dpdns.org
-- name: Github IN 05 ATSRSD
-  type: vless
   server: 194.61.31.126
   port: 2053
   uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
@@ -67,8 +54,37 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: Github IN 05 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
 - name: Github IN 06 ATSRSD
+  type: vless
+  server: 139.84.150.190
+  port: 8443
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: shephe.dpdns.org
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: shephe.dpdns.org
+- name: Github IN 07 ATSRSD
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -80,7 +96,7 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
   client-fingerprint: firefox
-- name: Github IN 07 ATSRSD
+- name: Github IN 08 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -107,6 +123,7 @@ proxy-groups:
   - Github IN 05 ATSRSD
   - Github IN 06 ATSRSD
   - Github IN 07 ATSRSD
+  - Github IN 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -119,5 +136,6 @@ proxy-groups:
   - Github IN 05 ATSRSD
   - Github IN 06 ATSRSD
   - Github IN 07 ATSRSD
+  - Github IN 08 ATSRSD
 rules:
 - MATCH,PROXIES
