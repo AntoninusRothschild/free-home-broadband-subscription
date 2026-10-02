@@ -5,68 +5,58 @@ mode: rule
 log-level: info
 proxies:
 - name: Github SG 01 ATSRSD
-  type: vless
-  server: support.zoom.us
-  port: 80
-  uuid: 9b0025a3-3a36-4915-b4e1-89c5cd65c9cb
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /shalana
-    headers:
-      Host: onhit.shalana.shop
 - name: Github SG 02 ATSRSD
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: Github SG 03 ATSRSD
   type: vless
-  server: 5.223.41.95
-  port: 80
-  uuid: f29e9fce-1f37-4a83-9e6c-05a997123dfb
+  server: 45.80.111.45
+  port: 8880
+  uuid: 5ffd914e-9594-4198-8327-145f096f8e4c
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /cdn/assets/stream
     headers:
-      Host: 5.223.41.95
+      Host: cnd.singapure.mygold.stream
 - name: Github SG 04 ATSRSD
-  type: vless
-  server: 5.223.41.93
-  port: 80
-  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.93
 - name: Github SG 05 ATSRSD
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: Github SG 06 ATSRSD
   type: vless
   server: 217.217.254.126
@@ -81,7 +71,7 @@ proxies:
   client-fingerprint: firefox
 - name: Github SG 07 ATSRSD
   type: vmess
-  server: ww11.levikogjgfdd.ir
+  server: 149.88.23.207
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -90,29 +80,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github SG 08 ATSRSD
-  type: vless
-  server: 5.223.41.179
-  port: 80
-  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.179
-- name: Github SG 09 ATSRSD
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 10 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -124,7 +91,23 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github SG 11 ATSRSD
+- name: Github SG 09 ATSRSD
+  type: vmess
+  server: cf1.linkmesh.info
+  port: 443
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jkk.packetflow.info
+  network: ws
+  ws-opts:
+    path: /game/resources
+    headers:
+      Host: jkk.packetflow.info
+- name: Github SG 10 ATSRSD
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -134,20 +117,20 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 12 ATSRSD
+- name: Github SG 11 ATSRSD
   type: vless
-  server: 5.223.41.125
-  port: 80
-  uuid: 3b821031-d7d4-4368-918b-15f2312dba2b
+  server: 172.66.214.247
+  port: 8880
+  uuid: e7f6f783-6754-4228-a5d0-aeed84b9949a
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /pyip=ProxyIP.SG.CMLiussss.net
     headers:
-      Host: 5.223.41.125
-- name: Github SG 13 ATSRSD
+      Host: sweet-sun-c70f.317-ba5.workers.dev
+- name: Github SG 12 ATSRSD
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -157,6 +140,18 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github SG 13 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github SG 14 ATSRSD
   type: vmess
   server: ww11.levikogjgfdd.ir
@@ -168,62 +163,55 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github SG 15 ATSRSD
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: Github SG 16 ATSRSD
   type: vless
-  server: 5.223.41.164
-  port: 80
-  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  server: 172.64.229.2
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
-      Host: 5.223.41.164
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github SG 17 ATSRSD
-  type: vless
-  server: trackydev.site
-  port: 443
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: trackydev.site
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: trackydev.site
-- name: Github SG 18 ATSRSD
-  type: vless
-  server: 5.223.41.164
-  port: 80
-  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.164
+- name: Github SG 18 ATSRSD
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github SG 19 ATSRSD
-  type: vless
-  server: 134.122.154.210
-  port: 443
-  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
@@ -239,21 +227,20 @@ proxies:
   skip-cert-verify: true
 - name: Github SG 21 ATSRSD
   type: vless
-  server: 140.245.120.16
-  port: 443
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
+  server: 172.64.229.2
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: trackydev.site
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
-      Host: 140.245.120.16
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github SG 22 ATSRSD
   type: vmess
-  server: ww11.levikogjgfdd.ir
+  server: 149.88.23.202
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -272,8 +259,22 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github SG 24 ATSRSD
+  type: vless
+  server: 104.17.3.81
+  port: 443
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nautica-cff.kloningstrife002.workers.dev
+  network: ws
+  ws-opts:
+    path: /138.2.74.219-28616
+    headers:
+      Host: nautica-cff.kloningstrife002.workers.dev
+- name: Github SG 25 ATSRSD
   type: vmess
-  server: 149.88.23.202
+  server: 149.88.23.207
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -281,7 +282,28 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 25 ATSRSD
+- name: Github SG 26 ATSRSD
+  type: vless
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 27 ATSRSD
+  type: vless
+  server: 5.223.41.125
+  port: 80
+  uuid: 3b821031-d7d4-4368-918b-15f2312dba2b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.125
+- name: Github SG 28 ATSRSD
   type: vless
   server: 5.223.41.93
   port: 80
@@ -294,42 +316,9 @@ proxies:
     path: /
     headers:
       Host: 5.223.41.93
-- name: Github SG 26 ATSRSD
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 27 ATSRSD
-  type: vless
-  server: 5.223.41.138
-  port: 80
-  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.138
-- name: Github SG 28 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github SG 29 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -339,9 +328,9 @@ proxies:
   skip-cert-verify: true
 - name: Github SG 30 ATSRSD
   type: vless
-  server: 5.223.41.93
-  port: 80
-  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
+  server: 172.66.140.62
+  port: 8880
+  uuid: 160ca353-676d-4b7f-a041-0289e388b865
   udp: true
   tls: false
   skip-cert-verify: true
@@ -349,35 +338,26 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 5.223.41.93
+      Host: proud-cloud-7bdd.208-a52.workers.dev
 - name: Github SG 31 ATSRSD
   type: vless
-  server: 172.64.158.146
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 156.224.76.205
+  port: 443
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: vp10.pages.dev
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: vp10.pages.dev
 - name: Github SG 32 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 33 ATSRSD
   type: vless
-  server: 5.223.41.179
+  server: 5.223.41.121
   port: 80
-  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  uuid: 0f7996b1-3ef7-4274-b612-0310270d2a41
   udp: true
   tls: false
   skip-cert-verify: true
@@ -385,18 +365,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 5.223.41.179
-- name: Github SG 34 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 35 ATSRSD
+      Host: 5.223.41.121
+- name: Github SG 33 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -408,53 +378,7 @@ proxies:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github SG 36 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: Github SG 37 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 38 ATSRSD
-  type: vless
-  server: 104.18.46.234
-  port: 2086
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 39 ATSRSD
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 40 ATSRSD
+- name: Github SG 34 ATSRSD
   type: vless
   server: trackydev.site
   port: 443
@@ -468,50 +392,9 @@ proxies:
     path: /
     headers:
       Host: trackydev.site
-- name: Github SG 41 ATSRSD
-  type: vless
-  server: 139.162.51.49
-  port: 2096
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: free-server.techsonic.dev
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: Github SG 42 ATSRSD
-  type: vless
-  server: 91.193.58.255
-  port: 2096
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: free-server.techsonic.dev
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: Github SG 43 ATSRSD
-  type: vless
-  server: 5.223.41.121
-  port: 80
-  uuid: 0f7996b1-3ef7-4274-b612-0310270d2a41
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.121
-- name: Github SG 44 ATSRSD
+- name: Github SG 35 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -519,7 +402,20 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 45 ATSRSD
+- name: Github SG 36 ATSRSD
+  type: vless
+  server: support.zoom.us
+  port: 80
+  uuid: 9b0025a3-3a36-4915-b4e1-89c5cd65c9cb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: onhit.shalana.shop
+- name: Github SG 37 ATSRSD
   type: vless
   server: 5.223.41.93
   port: 80
@@ -532,7 +428,44 @@ proxies:
     path: /
     headers:
       Host: 5.223.41.93
-- name: Github SG 46 ATSRSD
+- name: Github SG 38 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github SG 39 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github SG 40 ATSRSD
+  type: vless
+  server: 5.223.41.93
+  port: 80
+  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.93
+- name: Github SG 41 ATSRSD
   type: vmess
   server: 149.88.23.207
   port: 18000
@@ -542,7 +475,54 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 47 ATSRSD
+- name: Github SG 42 ATSRSD
+  type: vless
+  server: 162.159.24.131
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: Github SG 43 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 44 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github SG 45 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github SG 46 ATSRSD
   type: vmess
   server: 149.88.23.202
   port: 18000
@@ -552,29 +532,48 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github SG 47 ATSRSD
+  type: vless
+  server: 104.18.46.46
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: Github SG 48 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 5.223.41.51
+  port: 80
+  uuid: 80c38933-9747-443d-9d87-15c80f8663ea
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.51
 - name: Github SG 49 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 5.223.41.51
+  port: 80
+  uuid: 80c38933-9747-443d-9d87-15c80f8663ea
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.51
 - name: Github SG 50 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -595,8 +594,21 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: Github SG 52 ATSRSD
+  type: vless
+  server: 5.223.41.164
+  port: 80
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.164
+- name: Github SG 53 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: ww11.levikogjgfdd.ir
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -604,10 +616,73 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 53 ATSRSD
+- name: Github SG 54 ATSRSD
   type: vless
-  server: 172.64.229.2
+  server: support.zoom.us
   port: 80
+  uuid: 9b0025a3-3a36-4915-b4e1-89c5cd65c9cb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: onhit.shalana.shop
+- name: Github SG 55 ATSRSD
+  type: vless
+  server: 116.251.217.65
+  port: 443
+  uuid: 2388e166-3890-33ae-f77e-efac00000002
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: netlivpn4813.ddhshhshs.workers.dev
+  network: ws
+  ws-opts:
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+    headers:
+      Host: netlivpn4813.ddhshhshs.workers.dev
+- name: Github SG 56 ATSRSD
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 57 ATSRSD
+  type: vless
+  server: 5.223.41.164
+  port: 80
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.164
+- name: Github SG 58 ATSRSD
+  type: vless
+  server: 5.223.41.164
+  port: 80
+  uuid: ef24e9b9-e7b2-4e01-b335-f289612d2d7a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.164
+- name: Github SG 59 ATSRSD
+  type: vless
+  server: 172.64.229.170
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -617,7 +692,227 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 54 ATSRSD
+- name: Github SG 60 ATSRSD
+  type: vless
+  server: 5.223.41.138
+  port: 80
+  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.138
+- name: Github SG 61 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 62 ATSRSD
+  type: vless
+  server: 5.223.41.95
+  port: 80
+  uuid: f29e9fce-1f37-4a83-9e6c-05a997123dfb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.95
+- name: Github SG 63 ATSRSD
+  type: vless
+  server: 5.223.41.95
+  port: 80
+  uuid: f29e9fce-1f37-4a83-9e6c-05a997123dfb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.95
+- name: Github SG 64 ATSRSD
+  type: vless
+  server: 5.223.41.82
+  port: 80
+  uuid: 22aa8dac-98b8-4f54-b36d-fb60ec3db6d7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.82
+- name: Github SG 65 ATSRSD
+  type: vless
+  server: 5.223.41.82
+  port: 80
+  uuid: 22aa8dac-98b8-4f54-b36d-fb60ec3db6d7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.82
+- name: Github SG 66 ATSRSD
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 67 ATSRSD
+  type: vless
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 68 ATSRSD
+  type: vless
+  server: 5.223.41.138
+  port: 80
+  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.138
+- name: Github SG 69 ATSRSD
+  type: vless
+  server: 5.223.41.93
+  port: 80
+  uuid: f2eada1b-fdec-48c6-8638-18ade32993d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.93
+- name: Github SG 70 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 71 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 72 ATSRSD
+  type: vless
+  server: 5.223.41.179
+  port: 80
+  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.179
+- name: Github SG 73 ATSRSD
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: Github SG 74 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 75 ATSRSD
+  type: vless
+  server: 5.223.41.125
+  port: 80
+  uuid: 3b821031-d7d4-4368-918b-15f2312dba2b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.125
+- name: Github SG 76 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 77 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 78 ATSRSD
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github SG 79 ATSRSD
   type: vmess
   server: mdk.mdmekjll.best
   port: 80
@@ -632,211 +927,7 @@ proxies:
     path: /game/resources
     headers:
       Host: mdk.mdmekjll.best
-- name: Github SG 55 ATSRSD
-  type: vless
-  server: 5.223.41.125
-  port: 80
-  uuid: 3b821031-d7d4-4368-918b-15f2312dba2b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.125
-- name: Github SG 56 ATSRSD
-  type: vless
-  server: trackydev.site
-  port: 443
-  uuid: 92d67828-4c56-4795-af5a-f387651380dc
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: trackydev.site
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: trackydev.site
-- name: Github SG 57 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 58 ATSRSD
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 59 ATSRSD
-  type: vless
-  server: 172.64.158.146
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 60 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 61 ATSRSD
-  type: vless
-  server: 162.159.38.127
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 62 ATSRSD
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github SG 63 ATSRSD
-  type: vless
-  server: 5.223.41.82
-  port: 80
-  uuid: 22aa8dac-98b8-4f54-b36d-fb60ec3db6d7
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.82
-- name: Github SG 64 ATSRSD
-  type: vless
-  server: 5.223.41.138
-  port: 80
-  uuid: ac8e1bf3-775a-44ee-b018-d553cce0201a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.138
-- name: Github SG 65 ATSRSD
-  type: vless
-  server: 5.223.41.95
-  port: 80
-  uuid: f29e9fce-1f37-4a83-9e6c-05a997123dfb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.95
-- name: Github SG 66 ATSRSD
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 67 ATSRSD
-  type: vless
-  server: 5.223.41.179
-  port: 80
-  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.179
-- name: Github SG 68 ATSRSD
-  type: vless
-  server: 172.64.154.8
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 69 ATSRSD
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 70 ATSRSD
-  type: vless
-  server: free-server.techsonic.dev
-  port: 2096
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: free-server.techsonic.dev
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: Github SG 71 ATSRSD
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github SG 72 ATSRSD
+- name: Github SG 80 ATSRSD
   type: vless
   server: 5.223.41.121
   port: 80
@@ -849,9 +940,9 @@ proxies:
     path: /
     headers:
       Host: 5.223.41.121
-- name: Github SG 73 ATSRSD
+- name: Github SG 81 ATSRSD
   type: vmess
-  server: 149.88.23.207
+  server: 149.88.23.202
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -859,33 +950,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 74 ATSRSD
-  type: vless
-  server: 5.223.41.51
-  port: 80
-  uuid: 80c38933-9747-443d-9d87-15c80f8663ea
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 5.223.41.51
-- name: Github SG 75 ATSRSD
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: Github SG 76 ATSRSD
+- name: Github SG 82 ATSRSD
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -895,7 +960,70 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github SG 77 ATSRSD
+- name: Github SG 83 ATSRSD
+  type: ss
+  server: 45.128.12.20
+  port: 14249
+  cipher: chacha20-ietf-poly1305
+  password: 9epp3o9ng8ej59uv
+  udp: true
+- name: Github SG 84 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 85 ATSRSD
+  type: vmess
+  server: 149.88.23.202
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 86 ATSRSD
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 87 ATSRSD
+  type: vless
+  server: 5.223.41.179
+  port: 80
+  uuid: ff642d7a-9a24-4078-a031-f8c656f4554e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 5.223.41.179
+- name: Github SG 88 ATSRSD
+  type: vless
+  server: 162.159.156.214
+  port: 8880
+  uuid: 8991a496-1baa-486f-9948-ffe44e68c072
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: soft-band-8da6.426.workers.dev
+- name: Github SG 89 ATSRSD
   type: vless
   server: 217.217.254.126
   port: 2053
@@ -906,300 +1034,57 @@ proxies:
   reality-opts:
     public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
   servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github SG 78 ATSRSD
-  type: vless
-  server: 108.162.198.178
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  client-fingerprint: chrome
+- name: Github SG 90 ATSRSD
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github SG 91 ATSRSD
+  type: vmess
+  server: 151.101.193.242
+  port: 80
+  uuid: bbea3e86-bd3a-4d77-8479-89eaedd65234
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls+
+    path: /techsonic.site
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github SG 79 ATSRSD
-  type: vless
-  server: 216.195.205.48
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 80 ATSRSD
-  type: vless
-  server: 216.195.203.181
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 81 ATSRSD
-  type: vless
-  server: 167.99.214.36
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 82 ATSRSD
-  type: vless
-  server: 178.62.38.224
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 83 ATSRSD
-  type: vless
-  server: 216.236.59.18
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 84 ATSRSD
-  type: vless
-  server: 194.156.163.191
-  port: 8462
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 85 ATSRSD
-  type: vless
-  server: 159.223.33.4
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 86 ATSRSD
-  type: vless
-  server: 216.195.203.181
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 87 ATSRSD
-  type: vless
-  server: 139.162.70.21
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 88 ATSRSD
-  type: vless
-  server: 216.195.205.48
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 89 ATSRSD
-  type: vless
-  server: 218.102.64.147
-  port: 5357
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 90 ATSRSD
-  type: vless
-  server: 139.162.70.21
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 91 ATSRSD
-  type: vless
-  server: 216.195.205.48
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
+      Host: techsonic.site
 - name: Github SG 92 ATSRSD
   type: vless
-  server: 216.195.205.48
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: Github SG 93 ATSRSD
   type: vless
-  server: 152.42.246.237
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  server: 172.65.90.53
+  port: 8880
+  uuid: 121c3728-2b6b-4b69-bac6-170b13658d74
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
   network: ws
   ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
+    path: /pyip=ProxyIP.SG.CMLiussss.net
     headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 94 ATSRSD
-  type: vless
-  server: 216.195.205.48
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 95 ATSRSD
-  type: vless
-  server: 152.42.246.237
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 96 ATSRSD
-  type: vless
-  server: 216.195.203.181
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 97 ATSRSD
-  type: vless
-  server: 159.223.33.4
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
-- name: Github SG 98 ATSRSD
-  type: vless
-  server: 216.195.203.181
-  port: 1891
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: qcswhj2.edge-cache.danfeng4.xyz
-  network: ws
-  ws-opts:
-    path: /danfeng-pw8lj2-nzliwt-h23l-978coeve
-    headers:
-      Host: qcswhj2.edge-cache.danfeng4.xyz
+      Host: falling-darkness-95ea.289.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -1298,11 +1183,6 @@ proxy-groups:
   - Github SG 91 ATSRSD
   - Github SG 92 ATSRSD
   - Github SG 93 ATSRSD
-  - Github SG 94 ATSRSD
-  - Github SG 95 ATSRSD
-  - Github SG 96 ATSRSD
-  - Github SG 97 ATSRSD
-  - Github SG 98 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -1401,10 +1281,5 @@ proxy-groups:
   - Github SG 91 ATSRSD
   - Github SG 92 ATSRSD
   - Github SG 93 ATSRSD
-  - Github SG 94 ATSRSD
-  - Github SG 95 ATSRSD
-  - Github SG 96 ATSRSD
-  - Github SG 97 ATSRSD
-  - Github SG 98 ATSRSD
 rules:
 - MATCH,PROXIES

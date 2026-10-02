@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
+  type: ss
+  server: 94.228.161.7
+  port: 4
+  cipher: chacha20-ietf-poly1305
+  password: MBiJEJ5VgZXVSj58CEEFZA
+  udp: true
+- name: Github PL 02 ATSRSD
   type: vless
   server: pl.srv.vbuste-bot.com
   port: 444
@@ -22,11 +29,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github PL 01 ATSRSD
+  - Github PL 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github PL 01 ATSRSD
+  - Github PL 02 ATSRSD
 rules:
 - MATCH,PROXIES
