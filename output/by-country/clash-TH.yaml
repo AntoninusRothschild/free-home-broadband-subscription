@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IS 01 ATSRSD
+- name: Github TH 01 ATSRSD
   type: vless
-  server: 185.146.234.242
-  port: 443
-  uuid: b1c31d36-c6b5-414b-88d2-9e24e7bfcca3
+  server: 103.86.49.57
+  port: 80
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: www.nihaoyun.top
   network: ws
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: www.nihaoyun.top
+      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IS 01 ATSRSD
+  - Github TH 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IS 01 ATSRSD
+  - Github TH 01 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -4,33 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github US 01 (家宽) ATSRSD
-  type: vless
-  server: 154.17.228.81
-  port: 59686
-  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 123.714541.xyz
-  network: ws
-  ws-opts:
-    path: /Ra-vl
-    headers:
-      Host: 123.714541.xyz
-- name: Github TW 02 (家宽) ATSRSD
-  type: vless
-  server: hinet1.2yly.com
-  port: 24215
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: Github TW 03 (家宽) ATSRSD
+- name: Github TW 01 (家宽) ATSRSD
   type: vless
   server: 60.248.219.78
   port: 443
@@ -44,7 +18,39 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: Github HK 04 (家宽) ATSRSD
+- name: Github KR 02 (家宽) ATSRSD
+  type: ss
+  server: 211.174.113.172
+  port: 49642
+  cipher: aes-256-gcm
+  password: ac9c0a7b
+  udp: true
+- name: Github CA 03 (家宽) ATSRSD
+  type: vless
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: Github TW 04 (家宽) ATSRSD
+  type: vless
+  server: 118.167.235.241
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
+- name: Github HK 05 (家宽) ATSRSD
   type: vless
   server: 103.180.20.108
   port: 8443
@@ -63,18 +69,20 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github US 01 (家宽) ATSRSD
-  - Github TW 02 (家宽) ATSRSD
-  - Github TW 03 (家宽) ATSRSD
-  - Github HK 04 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
+  - Github KR 02 (家宽) ATSRSD
+  - Github CA 03 (家宽) ATSRSD
+  - Github TW 04 (家宽) ATSRSD
+  - Github HK 05 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github US 01 (家宽) ATSRSD
-  - Github TW 02 (家宽) ATSRSD
-  - Github TW 03 (家宽) ATSRSD
-  - Github HK 04 (家宽) ATSRSD
+  - Github TW 01 (家宽) ATSRSD
+  - Github KR 02 (家宽) ATSRSD
+  - Github CA 03 (家宽) ATSRSD
+  - Github TW 04 (家宽) ATSRSD
+  - Github HK 05 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

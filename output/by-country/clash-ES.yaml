@@ -5,20 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
-  type: vless
-  server: 31.57.190.62
-  port: 443
-  uuid: b1c31d36-c6b5-414b-88d2-9e24e7bfcca3
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: www.nihaoyun.top
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: www.nihaoyun.top
 - name: Github ES 02 ATSRSD
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github ES 03 ATSRSD
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github ES 04 ATSRSD
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+  udp: true
+- name: Github ES 05 ATSRSD
   type: vmess
   server: mygptagent.org
   port: 443
@@ -34,26 +57,7 @@ proxies:
     path: /linkvws
     headers:
       Host: ''
-- name: Github ES 03 ATSRSD
-  type: vless
-  server: 34.175.44.113
-  port: 443
-  uuid: 0b4b1548-c7ca-45a5-9096-6c3cc4b1c43b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: iI9J--AfPKCXbVle3Om-WMn_g-3bO3SsVzUCNtwUkU0
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: Github ES 04 ATSRSD
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
-  udp: true
-- name: Github ES 05 ATSRSD
+- name: Github ES 06 ATSRSD
   type: vmess
   server: 66.163.118.73
   port: 22324
@@ -63,28 +67,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github ES 06 ATSRSD
-  type: vmess
-  server: mygptagent.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mygptagent.org
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: mygptagent.org
 - name: Github ES 07 ATSRSD
   type: ss
-  server: 140.174.184.5
+  server: 108.181.121.226
   port: 8388
   cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
+  password: WSyL4XTwNsdv
   udp: true
 - name: Github ES 08 ATSRSD
   type: vless
@@ -98,6 +86,18 @@ proxies:
     public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
   servername: www.apple.com
   client-fingerprint: chrome
+- name: Github ES 09 ATSRSD
+  type: vless
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+  servername: www.apple.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -111,6 +111,7 @@ proxy-groups:
   - Github ES 06 ATSRSD
   - Github ES 07 ATSRSD
   - Github ES 08 ATSRSD
+  - Github ES 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -124,5 +125,6 @@ proxy-groups:
   - Github ES 06 ATSRSD
   - Github ES 07 ATSRSD
   - Github ES 08 ATSRSD
+  - Github ES 09 ATSRSD
 rules:
 - MATCH,PROXIES

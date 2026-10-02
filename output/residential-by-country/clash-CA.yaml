@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github GE 01 ATSRSD
+- name: Github CA 01 (家宽) ATSRSD
   type: vless
-  server: geo.shkola112.site
-  port: 443
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: geo.shkola112.site
   network: ws
   ws-opts:
-    path: /api-vless
+    path: /
     headers:
-      Host: geo.shkola112.site
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github GE 01 ATSRSD
+  - Github CA 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github GE 01 ATSRSD
+  - Github CA 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
