@@ -5,6 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
+  type: vless
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 195.58.144.56
+- name: Github HK 02 ATSRSD
+  type: ss
+  server: telegram.khp25.com
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: pno0e2keji2gsfea
+  udp: true
+- name: Github HK 03 ATSRSD
   type: vmess
   server: 156.245.232.239
   port: 35043
@@ -18,35 +34,10 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 156.245.232.239
-- name: Github HK 02 ATSRSD
-  type: vmess
-  server: 194.99.79.26
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
       Host: ''
-- name: Github HK 03 ATSRSD
-  type: vless
-  server: 195.58.144.56
-  port: 11907
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 195.58.144.56
 - name: Github HK 04 ATSRSD
   type: vmess
-  server: 194.99.79.26
+  server: aksai.org
   port: 443
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
@@ -62,20 +53,20 @@ proxies:
       Host: aksai.org
 - name: Github HK 05 ATSRSD
   type: vmess
-  server: yg1.ygkkk.dpdns.org
+  server: 194.99.79.26
   port: 443
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jmp1.907737.xyz
+  servername: ''
   network: ws
   ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+    path: /linkvws
     headers:
-      Host: jmp1.907737.xyz
+      Host: ''
 - name: Github HK 06 ATSRSD
   type: vmess
   server: 194.99.79.26
@@ -94,42 +85,20 @@ proxies:
       Host: ''
 - name: Github HK 07 ATSRSD
   type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  server: 194.99.79.26
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github HK 08 ATSRSD
-  type: ss
-  server: telegram.khp25.com
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: pno0e2keji2gsfea
-  udp: true
-- name: Github HK 09 ATSRSD
-  type: ss
-  server: telegramx.khp25.com
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: m5nsedvdczx6x06e
-  udp: true
-- name: Github HK 10 ATSRSD
-  type: vless
-  server: 195.58.144.56
-  port: 11907
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  udp: true
   tls: true
   skip-cert-verify: true
-  servername: 195.58.144.56
+  servername: aksai.org
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: aksai.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -142,9 +111,6 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -157,8 +123,5 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
 rules:
 - MATCH,PROXIES
