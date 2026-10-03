@@ -5,73 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
-  type: ss
-  server: 140.174.184.5
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
-  udp: true
-- name: Github ES 02 ATSRSD
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
-  udp: true
-- name: Github ES 03 ATSRSD
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github ES 04 ATSRSD
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github ES 05 ATSRSD
-  type: vmess
-  server: mygptagent.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: ''
-- name: Github ES 06 ATSRSD
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
-  udp: true
-- name: Github ES 07 ATSRSD
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github ES 08 ATSRSD
   type: vmess
   server: mygptagent.org
   port: 443
@@ -87,6 +20,27 @@ proxies:
     path: /linkvws
     headers:
       Host: mygptagent.org
+- name: Github ES 02 ATSRSD
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+  udp: true
+- name: Github ES 03 ATSRSD
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+  udp: true
+- name: Github ES 04 ATSRSD
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -96,10 +50,6 @@ proxy-groups:
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
   - Github ES 04 ATSRSD
-  - Github ES 05 ATSRSD
-  - Github ES 06 ATSRSD
-  - Github ES 07 ATSRSD
-  - Github ES 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -109,9 +59,5 @@ proxy-groups:
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
   - Github ES 04 ATSRSD
-  - Github ES 05 ATSRSD
-  - Github ES 06 ATSRSD
-  - Github ES 07 ATSRSD
-  - Github ES 08 ATSRSD
 rules:
 - MATCH,PROXIES
