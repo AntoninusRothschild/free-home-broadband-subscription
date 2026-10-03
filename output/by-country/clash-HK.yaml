@@ -6,13 +6,29 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vless
-  server: 47.240.80.220
-  port: 5100
-  uuid: 71a7db14-1b6f-5aec-9e5d-9bd5f8beabab
+  server: 34.92.16.7
+  port: 443
+  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: Github HK 02 ATSRSD
+  type: vless
+  server: 34.96.188.243
+  port: 443
+  uuid: 75d38591-267e-4d89-98bc-164f25b50880
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: HV_4dmK3rwzqhWP1yOpC1L8BObd5lpZRYTzUflsi2x4
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github HK 03 ATSRSD
   type: vmess
   server: yg1.ygkkk.dpdns.org
   port: 443
@@ -28,19 +44,6 @@ proxies:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
-- name: Github HK 03 ATSRSD
-  type: vless
-  server: 216.38.170.8
-  port: 26506
-  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
-    headers:
-      Host: www.baidu.com
 - name: Github HK 04 ATSRSD
   type: ss
   server: sth.free-outline.giize.com
@@ -49,105 +52,22 @@ proxies:
   password: n7vuxdsmlqnrbxqe
   udp: true
 - name: Github HK 05 ATSRSD
-  type: vless
-  server: 216.38.170.8
-  port: 26506
-  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
-    headers:
-      Host: 216.38.170.8
-- name: Github HK 06 ATSRSD
-  type: ss
-  server: telegram.khp25.com
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: pno0e2keji2gsfea
-  udp: true
-- name: Github HK 07 ATSRSD
-  type: vless
-  server: 34.92.16.7
-  port: 443
-  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github HK 08 ATSRSD
-  type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github HK 09 ATSRSD
-  type: vless
-  server: 216.38.170.8
-  port: 26506
-  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
-    headers:
-      Host: www.baidu.com
-- name: Github HK 10 ATSRSD
   type: ss
   server: sth.free-outline.giize.com
   port: 1081
   cipher: chacha20-ietf-poly1305
   password: f8asl798zconw8rx
   udp: true
-- name: Github HK 11 ATSRSD
-  type: ss
-  server: telegramx.khp25.com
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: m5nsedvdczx6x06e
-  udp: true
-- name: Github HK 12 ATSRSD
+- name: Github HK 06 ATSRSD
   type: vless
-  server: 216.38.170.8
-  port: 26506
-  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
-    headers:
-      Host: www.baidu.com
-- name: Github HK 13 ATSRSD
-  type: vless
-  server: 34.96.188.243
-  port: 443
-  uuid: 75d38591-267e-4d89-98bc-164f25b50880
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: HV_4dmK3rwzqhWP1yOpC1L8BObd5lpZRYTzUflsi2x4
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github HK 14 ATSRSD
+  servername: 195.58.144.56
+- name: Github HK 07 ATSRSD
   type: vmess
   server: 194.99.79.26
   port: 443
@@ -175,13 +95,6 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
-  - Github HK 11 ATSRSD
-  - Github HK 12 ATSRSD
-  - Github HK 13 ATSRSD
-  - Github HK 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -194,12 +107,5 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
-  - Github HK 11 ATSRSD
-  - Github HK 12 ATSRSD
-  - Github HK 13 ATSRSD
-  - Github HK 14 ATSRSD
 rules:
 - MATCH,PROXIES
