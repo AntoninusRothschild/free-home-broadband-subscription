@@ -5,48 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: vless
-  server: 45.130.125.126
-  port: 443
-  uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: mhXYDvaSfHzHZXBswC/zo/o8VqdU3XSBpwWx050Y6MU=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
 - name: Github RU 02 ATSRSD
   type: vless
-  server: 172.67.162.201
-  port: 2053
-  uuid: dc1e9f00-c064-4870-9bfc-463db50257d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: RESTlESs-MoON-dD68RidaM-tOo-In-MAmLEkat.hGtghFF67tdFHUt3.WORkerS.DEV
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoicVkwaG9XUUQyUDhzRkZ5UiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: restless-moon-dd68ridam-too-in-mamlekat.hgtghff67tdfhut3.workers.dev
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 46.243.232.125
+  server: 62.152.58.90
   port: 443
-  uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+  uuid: 1bb2af63-4472-44ed-9c70-8f316258b68b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fbsv6.guardora.pro
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: fbsv6.guardora.pro
-- name: Github RU 04 ATSRSD
+  reality-opts:
+    public-key: JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k
+  servername: 360.yandex.ru
+  client-fingerprint: random
+- name: Github RU 03 ATSRSD
   type: vless
   server: fbsv6.guardora.pro
   port: 443
@@ -68,7 +45,6 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -77,6 +53,5 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES

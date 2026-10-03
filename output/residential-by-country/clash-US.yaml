@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github KR 01 (家宽) ATSRSD
+- name: Github US 01 (家宽) ATSRSD
   type: vless
-  server: deepl.com
-  port: 8880
-  uuid: b1b99d33-8df1-4c74-b140-28941b43a4d2
+  server: 108.162.198.178
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /
     headers:
-      Host: nameless-poetry-cc33.268-910.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github KR 01 (家宽) ATSRSD
+  - Github US 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github KR 01 (家宽) ATSRSD
+  - Github US 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
