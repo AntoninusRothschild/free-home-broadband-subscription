@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github TW 01 (家宽) ATSRSD
   type: vless
-  server: 104.20.36.205
+  server: argo6.5671234.xyz
   port: 443
   uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
   udp: true
@@ -20,9 +20,9 @@ proxies:
       Host: argo6.5671234.xyz
 - name: Github TW 02 (家宽) ATSRSD
   type: vless
-  server: 59.125.69.24
+  server: 60.248.219.78
   port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   udp: true
   tls: true
   skip-cert-verify: true
@@ -31,21 +31,8 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 59.125.69.24
-- name: Github US 03 (家宽) ATSRSD
-  type: vless
-  server: 172.64.42.85
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: Github TW 04 (家宽) ATSRSD
+      Host: ty986gfazs.cainiaohub.xyz
+- name: Github TW 03 (家宽) ATSRSD
   type: vless
   server: 118.167.235.241
   port: 24215
@@ -57,7 +44,7 @@ proxies:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
   client-fingerprint: firefox
-- name: Github HK 05 (家宽) ATSRSD
+- name: Github HK 04 (家宽) ATSRSD
   type: vless
   server: 103.180.20.108
   port: 8443
@@ -78,9 +65,8 @@ proxy-groups:
   - AUTO
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
-  - Github US 03 (家宽) ATSRSD
-  - Github TW 04 (家宽) ATSRSD
-  - Github HK 05 (家宽) ATSRSD
+  - Github TW 03 (家宽) ATSRSD
+  - Github HK 04 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -88,8 +74,7 @@ proxy-groups:
   proxies:
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
-  - Github US 03 (家宽) ATSRSD
-  - Github TW 04 (家宽) ATSRSD
-  - Github HK 05 (家宽) ATSRSD
+  - Github TW 03 (家宽) ATSRSD
+  - Github HK 04 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

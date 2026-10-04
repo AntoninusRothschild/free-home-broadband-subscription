@@ -6,10 +6,10 @@ log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
   type: ss
-  server: 140.174.184.5
+  server: 108.181.121.226
   port: 8388
   cipher: chacha20-ietf-poly1305
-  password: qItG8SueYQcP
+  password: WSyL4XTwNsdv
   udp: true
 - name: Github ES 02 ATSRSD
   type: ss
@@ -19,18 +19,12 @@ proxies:
   password: WSyL4XTwNsdv
   udp: true
 - name: Github ES 03 ATSRSD
-  type: vless
-  server: 172.64.32.108
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
