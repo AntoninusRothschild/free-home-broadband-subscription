@@ -12,43 +12,17 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github TR 02 ATSRSD
-  type: vless
-  server: 155.103.70.53
-  port: 30303
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wzs.echo.net.eu.org
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HAAQNCV1EClxZAgMWAlBZXRlKXU4aTV8WGRQRQkoXFgweUABdHg==fp=chrome
-    headers:
-      Host: wzs.echo.net.eu.org
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: tutaim.azad0namah.ir
-  port: 8080
-  uuid: fdc1206a-9d2e-42b7-b615-9ccea8cf70ee
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github TR 01 ATSRSD
-  - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TR 01 ATSRSD
-  - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
 rules:
 - MATCH,PROXIES

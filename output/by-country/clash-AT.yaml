@@ -4,24 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IL 01 ATSRSD
+- name: Github AT 01 ATSRSD
   type: ss
-  server: 45.144.172.123
-  port: 20998
+  server: 82.110.60.9
+  port: 19999
   cipher: aes-256-gcm
-  password: 78235e7dc55e9ad1
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IL 01 ATSRSD
+  - Github AT 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IL 01 ATSRSD
+  - Github AT 01 ATSRSD
 rules:
 - MATCH,PROXIES
