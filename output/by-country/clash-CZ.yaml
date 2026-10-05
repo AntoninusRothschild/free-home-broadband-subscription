@@ -6,19 +6,6 @@ log-level: info
 proxies:
 - name: Github CZ 01 ATSRSD
   type: vless
-  server: 89.116.180.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime09.workers.dev
-- name: Github CZ 02 ATSRSD
-  type: vless
   server: 95.182.95.178
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -28,7 +15,7 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 proxy-groups:
@@ -37,13 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github CZ 01 ATSRSD
-  - Github CZ 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github CZ 01 ATSRSD
-  - Github CZ 02 ATSRSD
 rules:
 - MATCH,PROXIES
