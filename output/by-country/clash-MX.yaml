@@ -6,13 +6,6 @@ log-level: info
 proxies:
 - name: Github MX 01 ATSRSD
   type: ss
-  server: 147.78.1.234
-  port: 16673
-  cipher: aes-128-gcm
-  password: 67c57ae584eecd70396fcd7ca7521130
-  udp: true
-- name: Github MX 02 ATSRSD
-  type: ss
   server: 64.177.90.30
   port: 8388
   cipher: aes-256-gcm
@@ -24,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github MX 01 ATSRSD
-  - Github MX 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github MX 01 ATSRSD
-  - Github MX 02 ATSRSD
 rules:
 - MATCH,PROXIES

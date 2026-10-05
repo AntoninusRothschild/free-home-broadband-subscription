@@ -6,17 +6,10 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: ss
-  server: 185.103.110.68
-  port: 18283
-  cipher: aes-128-gcm
-  password: f9300a9bf39ae0347c3a3bfbc4dd7754
-  udp: true
-- name: Github FI 02 ATSRSD
-  type: ss
-  server: 185.103.110.68
-  port: 18283
-  cipher: aes-128-gcm
-  password: f9300a9bf39ae0347c3a3bfbc4dd7754
+  server: 45.149.114.171
+  port: 777
+  cipher: chacha20-ietf-poly1305
+  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -24,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github FI 01 ATSRSD
-  - Github FI 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github FI 01 ATSRSD
-  - Github FI 02 ATSRSD
 rules:
 - MATCH,PROXIES

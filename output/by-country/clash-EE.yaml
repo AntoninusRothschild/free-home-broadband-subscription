@@ -7,12 +7,16 @@ proxies:
 - name: Github EE 01 ATSRSD
   type: vless
   server: 94.183.170.135
-  port: 8443
+  port: 443
   uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.170.135
 - name: Github EE 02 ATSRSD
   type: vless
   server: 77.72.85.247
@@ -38,21 +42,16 @@ proxies:
   servername: estproxy4.lockdwn.com
 - name: Github EE 04 ATSRSD
   type: vless
-  server: 141.0.187.16
-  port: 2083
-  uuid: fba73f98-777a-42a6-83c0-7d1f6f070e8d
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: crt.dodopanel.biz
-  network: ws
-  ws-opts:
-    path: /vless-ws
-    headers:
-      Host: 141.0.187.16
+  servername: estproxy4.lockdwn.com
 - name: Github EE 05 ATSRSD
   type: vless
-  server: 77.72.85.246
+  server: 77.72.85.247
   port: 8443
   uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
   udp: true
@@ -66,13 +65,18 @@ proxies:
       Host: fdghyt.com
 - name: Github EE 06 ATSRSD
   type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  server: 141.0.187.16
+  port: 2083
+  uuid: fba73f98-777a-42a6-83c0-7d1f6f070e8d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
+  servername: crt.dodopanel.biz
+  network: ws
+  ws-opts:
+    path: /vless-ws
+    headers:
+      Host: 141.0.187.16
 - name: Github EE 07 ATSRSD
   type: vless
   server: 77.72.85.246
@@ -87,6 +91,51 @@ proxies:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
+- name: Github EE 08 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: estproxy4.lockdwn.com
+- name: Github EE 09 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: estproxy4.lockdwn.com
+- name: Github EE 10 ATSRSD
+  type: vless
+  server: 77.72.85.246
+  port: 8443
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fdghyt.com
+  network: ws
+  ws-opts:
+    path: /vpn-wss/fluxor/59011/
+    headers:
+      Host: fdghyt.com
+- name: Github EE 11 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: estproxy4.lockdwn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -99,6 +148,10 @@ proxy-groups:
   - Github EE 05 ATSRSD
   - Github EE 06 ATSRSD
   - Github EE 07 ATSRSD
+  - Github EE 08 ATSRSD
+  - Github EE 09 ATSRSD
+  - Github EE 10 ATSRSD
+  - Github EE 11 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -111,5 +164,9 @@ proxy-groups:
   - Github EE 05 ATSRSD
   - Github EE 06 ATSRSD
   - Github EE 07 ATSRSD
+  - Github EE 08 ATSRSD
+  - Github EE 09 ATSRSD
+  - Github EE 10 ATSRSD
+  - Github EE 11 ATSRSD
 rules:
 - MATCH,PROXIES
