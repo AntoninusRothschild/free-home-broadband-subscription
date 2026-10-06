@@ -6,6 +6,22 @@ log-level: info
 proxies:
 - name: Github BR 01 ATSRSD
   type: vmess
+  server: aksai.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: ''
+- name: Github BR 02 ATSRSD
+  type: vmess
   server: 89.39.161.157
   port: 443
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -20,17 +36,37 @@ proxies:
     path: /linkvws
     headers:
       Host: aksai.org
+- name: Github BR 03 ATSRSD
+  type: vmess
+  server: 89.39.161.157
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github BR 01 ATSRSD
+  - Github BR 02 ATSRSD
+  - Github BR 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github BR 01 ATSRSD
+  - Github BR 02 ATSRSD
+  - Github BR 03 ATSRSD
 rules:
 - MATCH,PROXIES
