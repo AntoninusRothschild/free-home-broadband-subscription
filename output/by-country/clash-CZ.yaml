@@ -20,20 +20,6 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github CZ 02 ATSRSD
   type: vless
-  server: 162.159.152.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rayan-007.maxima.dpdns.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.maxima.dpdns.org
-- name: Github CZ 03 ATSRSD
-  type: vless
   server: 95.182.95.178
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -53,7 +39,6 @@ proxy-groups:
   - AUTO
   - Github CZ 01 ATSRSD
   - Github CZ 02 ATSRSD
-  - Github CZ 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -61,6 +46,5 @@ proxy-groups:
   proxies:
   - Github CZ 01 ATSRSD
   - Github CZ 02 ATSRSD
-  - Github CZ 03 ATSRSD
 rules:
 - MATCH,PROXIES
