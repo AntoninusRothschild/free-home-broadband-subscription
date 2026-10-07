@@ -45,72 +45,7 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 04 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 05 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 06 ATSRSD
-  type: vless
   server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 07 ATSRSD
-  type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 08 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 09 ATSRSD
-  type: vless
-  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -130,11 +65,6 @@ proxy-groups:
   - Github AE 02 ATSRSD
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
-  - Github AE 05 ATSRSD
-  - Github AE 06 ATSRSD
-  - Github AE 07 ATSRSD
-  - Github AE 08 ATSRSD
-  - Github AE 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -144,10 +74,5 @@ proxy-groups:
   - Github AE 02 ATSRSD
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
-  - Github AE 05 ATSRSD
-  - Github AE 06 ATSRSD
-  - Github AE 07 ATSRSD
-  - Github AE 08 ATSRSD
-  - Github AE 09 ATSRSD
 rules:
 - MATCH,PROXIES
