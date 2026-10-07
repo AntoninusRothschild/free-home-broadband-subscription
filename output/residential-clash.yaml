@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github TW 01 (家宽) ATSRSD
   type: vless
-  server: 172.66.152.4
+  server: argo6.5671234.xyz
   port: 443
   uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: argo6.5671234.xyz
 - name: Github TW 02 (家宽) ATSRSD
   type: vless
-  server: 60.248.219.78
+  server: 60.248.219.53
   port: 443
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   udp: true
@@ -31,8 +31,15 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.78
-- name: Github HK 03 (家宽) ATSRSD
+      Host: 60.248.219.53
+- name: Github KR 03 (家宽) ATSRSD
+  type: ss
+  server: 211.174.113.172
+  port: 49642
+  cipher: aes-256-gcm
+  password: ac9c0a7b
+  udp: true
+- name: Github HK 04 (家宽) ATSRSD
   type: vless
   server: 103.180.20.108
   port: 8443
@@ -53,7 +60,8 @@ proxy-groups:
   - AUTO
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
-  - Github HK 03 (家宽) ATSRSD
+  - Github KR 03 (家宽) ATSRSD
+  - Github HK 04 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -61,6 +69,7 @@ proxy-groups:
   proxies:
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
-  - Github HK 03 (家宽) ATSRSD
+  - Github KR 03 (家宽) ATSRSD
+  - Github HK 04 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
