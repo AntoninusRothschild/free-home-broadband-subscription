@@ -4,23 +4,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github MY 01 ATSRSD
+- name: Github SE 01 ATSRSD
   type: vless
-  server: 216.173.67.59
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github MY 02 ATSRSD
-  type: vless
-  server: 216.173.67.59
+  server: 77.110.97.245
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -37,14 +23,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github MY 01 ATSRSD
-  - Github MY 02 ATSRSD
+  - Github SE 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github MY 01 ATSRSD
-  - Github MY 02 ATSRSD
+  - Github SE 01 ATSRSD
 rules:
 - MATCH,PROXIES

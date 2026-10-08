@@ -24,16 +24,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github TH 03 ATSRSD
-  type: vmess
-  server: 119.46.51.45
-  port: 37515
-  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,7 +31,6 @@ proxy-groups:
   - AUTO
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -49,6 +38,5 @@ proxy-groups:
   proxies:
   - Github TH 01 ATSRSD
   - Github TH 02 ATSRSD
-  - Github TH 03 ATSRSD
 rules:
 - MATCH,PROXIES

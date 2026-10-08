@@ -5,20 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: Github IE 01 ATSRSD
-  type: vless
-  server: 23.95.225.10
-  port: 8443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  type: ss
+  server: 20.123.11.204
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: t1eiTbNnl7rpe1il
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
 - name: Github IE 02 ATSRSD
+  type: ss
+  server: 20.123.11.204
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: H0gtOZkrqraldrhM
+  udp: true
+- name: Github IE 03 ATSRSD
   type: vless
   server: 23.95.225.10
   port: 8443
@@ -39,6 +39,7 @@ proxy-groups:
   - AUTO
   - Github IE 01 ATSRSD
   - Github IE 02 ATSRSD
+  - Github IE 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +47,6 @@ proxy-groups:
   proxies:
   - Github IE 01 ATSRSD
   - Github IE 02 ATSRSD
+  - Github IE 03 ATSRSD
 rules:
 - MATCH,PROXIES
