@@ -15,32 +15,31 @@ proxies:
   servername: estproxy4.lockdwn.com
 - name: Github EE 02 ATSRSD
   type: vless
-  server: 141.0.187.16
-  port: 2083
-  uuid: fba73f98-777a-42a6-83c0-7d1f6f070e8d
+  server: 94.183.170.135
+  port: 443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: crt.dodopanel.biz
   network: ws
   ws-opts:
-    path: /vless-ws
+    path: /
     headers:
-      Host: 141.0.187.16
+      Host: estproxy4.lockdwn.com
 - name: Github EE 03 ATSRSD
   type: vless
-  server: 77.72.85.247
-  port: 8443
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  server: 153.56.171.216
+  port: 443
+  uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fdghyt.com
+  servername: x.m-90.xyz
   network: ws
   ws-opts:
-    path: /vpn-wss/fluxor/59011/
+    path: t.me/TEAMNETGRATISCOL
     headers:
-      Host: fdghyt.com
+      Host: x.m-90.xyz
 - name: Github EE 04 ATSRSD
   type: vless
   server: 94.183.170.135
@@ -53,7 +52,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: estproxy4.lockdwn.com
+      Host: 94.183.170.135
 - name: Github EE 05 ATSRSD
   type: vless
   server: 77.72.85.247
@@ -80,7 +79,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: estproxy4.lockdwn.com
+      Host: 94.183.170.135
 - name: Github EE 07 ATSRSD
   type: vless
   server: 77.72.85.246
@@ -97,16 +96,21 @@ proxies:
       Host: fdghyt.com
 - name: Github EE 08 ATSRSD
   type: vless
-  server: 94.183.170.135
+  server: 77.72.85.246
   port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: estproxy4.lockdwn.com
+  servername: fdghyt.com
+  network: ws
+  ws-opts:
+    path: /vpn-wss/fluxor/59011/
+    headers:
+      Host: fdghyt.com
 - name: Github EE 09 ATSRSD
   type: vless
-  server: 194.26.141.148
+  server: 77.72.85.246
   port: 8443
   uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
   udp: true
@@ -120,35 +124,29 @@ proxies:
       Host: fdghyt.com
 - name: Github EE 10 ATSRSD
   type: vless
-  server: 77.72.85.246
+  server: 94.183.170.135
   port: 8443
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fdghyt.com
-  network: ws
-  ws-opts:
-    path: /vpn-wss/fluxor/59011/
-    headers:
-      Host: fdghyt.com
+  servername: estproxy4.lockdwn.com
 - name: Github EE 11 ATSRSD
   type: vless
-  server: 77.72.85.246
-  port: 8443
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  server: 94.183.170.135
+  port: 443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: fdghyt.com
   network: ws
   ws-opts:
-    path: /vpn-wss/fluxor/59011/
+    path: /
     headers:
-      Host: fdghyt.com
+      Host: 94.183.170.135
 - name: Github EE 12 ATSRSD
   type: vless
-  server: 77.72.85.247
+  server: 77.72.85.246
   port: 8443
   uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
   udp: true
@@ -174,6 +172,42 @@ proxies:
     path: /vpn-wss/fluxor/59011/
     headers:
       Host: fdghyt.com
+- name: Github EE 14 ATSRSD
+  type: vless
+  server: 77.72.85.247
+  port: 8443
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fdghyt.com
+  network: ws
+  ws-opts:
+    path: /vpn-wss/fluxor/59011/
+    headers:
+      Host: fdghyt.com
+- name: Github EE 15 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.170.135
+- name: Github EE 16 ATSRSD
+  type: vless
+  server: 94.183.170.135
+  port: 8443
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: estproxy4.lockdwn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -192,6 +226,9 @@ proxy-groups:
   - Github EE 11 ATSRSD
   - Github EE 12 ATSRSD
   - Github EE 13 ATSRSD
+  - Github EE 14 ATSRSD
+  - Github EE 15 ATSRSD
+  - Github EE 16 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -210,5 +247,8 @@ proxy-groups:
   - Github EE 11 ATSRSD
   - Github EE 12 ATSRSD
   - Github EE 13 ATSRSD
+  - Github EE 14 ATSRSD
+  - Github EE 15 ATSRSD
+  - Github EE 16 ATSRSD
 rules:
 - MATCH,PROXIES
