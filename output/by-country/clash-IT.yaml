@@ -6,12 +6,16 @@ log-level: info
 proxies:
 - name: Github IT 01 ATSRSD
   type: vless
-  server: 204.216.216.23
-  port: 10086
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: random
 - name: Github IT 02 ATSRSD
   type: vless
   server: 57.131.38.163
@@ -23,19 +27,15 @@ proxies:
   reality-opts:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: edge
 - name: Github IT 03 ATSRSD
   type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  server: 204.216.216.23
+  port: 10086
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-  servername: www.apple.com
-  client-fingerprint: chrome
 - name: Github IT 04 ATSRSD
   type: ss
   server: 57.131.48.45
@@ -45,6 +45,22 @@ proxies:
   udp: true
 - name: Github IT 05 ATSRSD
   type: vless
+  server: 204.216.216.23
+  port: 10086
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github IT 06 ATSRSD
+  type: vless
+  server: 204.216.216.23
+  port: 10086
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github IT 07 ATSRSD
+  type: vless
   server: 57.131.38.163
   port: 2053
   uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
@@ -54,7 +70,19 @@ proxies:
   reality-opts:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: Github IT 08 ATSRSD
+  type: vless
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,6 +93,9 @@ proxy-groups:
   - Github IT 03 ATSRSD
   - Github IT 04 ATSRSD
   - Github IT 05 ATSRSD
+  - Github IT 06 ATSRSD
+  - Github IT 07 ATSRSD
+  - Github IT 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -75,5 +106,8 @@ proxy-groups:
   - Github IT 03 ATSRSD
   - Github IT 04 ATSRSD
   - Github IT 05 ATSRSD
+  - Github IT 06 ATSRSD
+  - Github IT 07 ATSRSD
+  - Github IT 08 ATSRSD
 rules:
 - MATCH,PROXIES

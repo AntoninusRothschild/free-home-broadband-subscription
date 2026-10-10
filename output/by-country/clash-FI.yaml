@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
+  type: vless
+  server: 65.109.188.155
+  port: 443
+  uuid: a95c18d0-1b39-4bc7-8521-b62b5ab3f3f7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: marz.zovip2.ir
+  network: ws
+  ws-opts:
+    path: /gropcdn
+    headers:
+      Host: marz.zovip2.ir
+- name: Github FI 02 ATSRSD
   type: ss
   server: 185.103.110.66
   port: 18280
@@ -17,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github FI 01 ATSRSD
+  - Github FI 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github FI 01 ATSRSD
+  - Github FI 02 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: Github CH 02 ATSRSD
   type: vless
   server: 208.69.78.217
@@ -28,6 +28,30 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
   client-fingerprint: chrome
+- name: Github CH 03 ATSRSD
+  type: vless
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github CH 04 ATSRSD
+  type: vless
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -35,6 +59,8 @@ proxy-groups:
   - AUTO
   - Github CH 01 ATSRSD
   - Github CH 02 ATSRSD
+  - Github CH 03 ATSRSD
+  - Github CH 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -42,5 +68,7 @@ proxy-groups:
   proxies:
   - Github CH 01 ATSRSD
   - Github CH 02 ATSRSD
+  - Github CH 03 ATSRSD
+  - Github CH 04 ATSRSD
 rules:
 - MATCH,PROXIES
