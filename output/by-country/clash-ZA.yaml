@@ -6,17 +6,17 @@ log-level: info
 proxies:
 - name: Github ZA 01 ATSRSD
   type: ss
-  server: 20.87.212.24
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: zlHMpI7N5dkZOHdH
-  udp: true
-- name: Github ZA 02 ATSRSD
-  type: ss
   server: 102.133.165.160
   port: 16233
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
+  udp: true
+- name: Github ZA 02 ATSRSD
+  type: ss
+  server: 20.87.212.24
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: zlHMpI7N5dkZOHdH
   udp: true
 - name: Github ZA 03 ATSRSD
   type: vless
@@ -32,17 +32,17 @@ proxies:
   client-fingerprint: chrome
 - name: Github ZA 04 ATSRSD
   type: ss
-  server: 20.87.212.24
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: zlHMpI7N5dkZOHdH
-  udp: true
-- name: Github ZA 05 ATSRSD
-  type: ss
   server: 102.37.156.224
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: Github ZA 05 ATSRSD
+  type: ss
+  server: 20.87.212.24
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: zlHMpI7N5dkZOHdH
   udp: true
 proxy-groups:
 - name: PROXIES

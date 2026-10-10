@@ -5,49 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki
-    headers:
-      Host: ''
-- name: Github HK 02 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki
-    headers:
-      Host: ''
-- name: Github HK 03 ATSRSD
   type: vless
-  server: 61.18.134.10
+  server: 34.92.19.135
   port: 443
-  uuid: e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
+  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: mswo-gy191m.zhiyuantech.cloud
+  reality-opts:
+    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+- name: Github HK 02 ATSRSD
+  type: vmess
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /e077d2c2-7dc5-4e6e-a44d-79c4e4d8b384
+    path: /
     headers:
-      Host: mswo-gy191m.zhiyuantech.cloud
+      Host: ''
+- name: Github HK 03 ATSRSD
+  type: vmess
+  server: 47.244.120.197
+  port: 23026
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
 - name: Github HK 04 ATSRSD
   type: vless
   server: 43.129.80.179
@@ -64,20 +62,19 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github HK 05 ATSRSD
   type: vmess
-  server: 47.243.153.153
-  port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: I2PSm3Knof5qjjix.v.3dns.vip
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /
     headers:
-      Host: I2PSm3Knof5qjjix.v.3dns.vip
+      Host: www.pubgmobile.com
 - name: Github HK 06 ATSRSD
   type: vmess
   server: 8.217.13.103
@@ -96,54 +93,18 @@ proxies:
       Host: qtkdr8jxe3wefxjm.v.3dns.vip
 - name: Github HK 07 ATSRSD
   type: vless
-  server: 34.92.19.135
+  server: 130.94.33.80
   port: 443
-  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
+  uuid: 365bebc8-894e-424f-95bf-7edbef311b23
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github HK 08 ATSRSD
-  type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
+  servername: hk.sepporated.com
   network: ws
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: ''
-- name: Github HK 09 ATSRSD
-  type: vmess
-  server: yg1.ygkkk.dpdns.org
-  port: 443
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jmp1.907737.xyz
-  network: ws
-  ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-    headers:
-      Host: jmp1.907737.xyz
-- name: Github HK 10 ATSRSD
-  type: ss
-  server: ruot.ayucloudservices.nl
-  port: 40004
-  cipher: aes-128-gcm
-  password: 70a5c510-d56d-43e7-b150-9c00c969bd50
-  udp: true
+      Host: hk.sepporated.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -156,9 +117,6 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -171,8 +129,5 @@ proxy-groups:
   - Github HK 05 ATSRSD
   - Github HK 06 ATSRSD
   - Github HK 07 ATSRSD
-  - Github HK 08 ATSRSD
-  - Github HK 09 ATSRSD
-  - Github HK 10 ATSRSD
 rules:
 - MATCH,PROXIES
