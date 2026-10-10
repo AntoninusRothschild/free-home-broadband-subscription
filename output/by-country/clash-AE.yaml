@@ -45,7 +45,7 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 04 ATSRSD
   type: vless
-  server: uae.unixzone.us
+  server: 84.235.244.108
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -69,6 +69,20 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: Github AE 06 ATSRSD
+  type: vless
+  server: 147.78.0.186
+  port: 2053
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.cndyw.ggff.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: PROXIES
   type: select
@@ -79,6 +93,7 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
+  - Github AE 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -89,5 +104,6 @@ proxy-groups:
   - Github AE 03 ATSRSD
   - Github AE 04 ATSRSD
   - Github AE 05 ATSRSD
+  - Github AE 06 ATSRSD
 rules:
 - MATCH,PROXIES

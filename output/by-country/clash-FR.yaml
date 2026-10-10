@@ -6,117 +6,7 @@ log-level: info
 proxies:
 - name: Github FR 01 ATSRSD
   type: vless
-  server: 51.77.217.70
-  port: 2053
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github FR 02 ATSRSD
-  type: vless
-  server: 51.77.217.70
-  port: 2053
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github FR 03 ATSRSD
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github FR 04 ATSRSD
-  type: vless
-  server: 104.21.60.29
-  port: 8443
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.large-files.info
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
-    headers:
-      Host: www.large-files.info
-- name: Github FR 05 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 06 ATSRSD
-  type: vless
-  server: 172.67.190.248
-  port: 8443
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: www.large-files.info
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
-    headers:
-      Host: www.large-files.info
-- name: Github FR 07 ATSRSD
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github FR 08 ATSRSD
-  type: vless
-  server: 51.77.217.70
-  port: 2053
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github FR 09 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 10 ATSRSD
-  type: vless
-  server: 104.21.84.30
+  server: 172.67.185.98
   port: 2053
   uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
   udp: true
@@ -128,7 +18,7 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-- name: Github FR 11 ATSRSD
+- name: Github FR 02 ATSRSD
   type: vmess
   server: 57.128.164.21
   port: 80
@@ -143,67 +33,7 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
-- name: Github FR 12 ATSRSD
-  type: vless
-  server: 82.126.161.49
-  port: 443
-  uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: x.m-90.xyz
-  network: ws
-  ws-opts:
-    path: t.me/TEAMNETGRATISCOL
-    headers:
-      Host: x.m-90.xyz
-- name: Github FR 13 ATSRSD
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github FR 14 ATSRSD
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github FR 15 ATSRSD
-  type: ss
-  server: 51.255.13.232
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: BqnqToih0PbU
-  udp: true
-- name: Github FR 16 ATSRSD
-  type: vmess
-  server: https.http.www.net.com.ramseyv2.ir.
-  port: 80
-  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-- name: Github FR 17 ATSRSD
+- name: Github FR 03 ATSRSD
   type: vless
   server: 8.47.69.0
   port: 2053
@@ -217,7 +47,44 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-- name: Github FR 18 ATSRSD
+- name: Github FR 04 ATSRSD
+  type: vless
+  server: 104.20.17.127
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: Github FR 05 ATSRSD
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github FR 06 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 07 ATSRSD
   type: vmess
   server: 57.128.164.21
   port: 80
@@ -232,33 +99,56 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
-- name: Github FR 19 ATSRSD
+- name: Github FR 08 ATSRSD
   type: vless
-  server: www.large-files.info
-  port: 8443
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  server: 104.21.72.47
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: www.large-files.info
+  servername: trex-panel-nubj0s.samifakor.workers.dev
   network: ws
   ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
+    path: /stream/TrexBridge/ef859652a80e
     headers:
-      Host: www.large-files.info
-- name: Github FR 20 ATSRSD
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: Github FR 09 ATSRSD
   type: vless
-  server: 54.37.136.194
+  server: 172.67.185.98
   port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github FR 21 ATSRSD
+  servername: fr.api-music-fa.com
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+- name: Github FR 10 ATSRSD
+  type: ss
+  server: 51.255.13.232
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: BqnqToih0PbU
+  udp: true
+- name: Github FR 11 ATSRSD
+  type: vless
+  server: 8.47.69.0
+  port: 2053
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vless.api-music-fa.com
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+- name: Github FR 12 ATSRSD
   type: vless
   server: 104.21.84.30
   port: 2053
@@ -272,7 +162,35 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-- name: Github FR 22 ATSRSD
+- name: Github FR 13 ATSRSD
+  type: vless
+  server: 104.21.60.29
+  port: 8443
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.large-files.info
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
+    headers:
+      Host: www.large-files.info
+- name: Github FR 14 ATSRSD
+  type: vless
+  server: 104.21.68.250
+  port: 443
+  uuid: 3cd23424-7182-4f37-9461-7701917791f6
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: NOde-562276409-eCe9Be.AcCouNT12.WORKERs.DeV
+  network: ws
+  ws-opts:
+    path: /vl/LoojiwDChctBr67OEQH2dfP05?ed=2560
+    headers:
+      Host: node-562276409-ece9be.account12.workers.dev
+- name: Github FR 15 ATSRSD
   type: vmess
   server: 57.128.164.21
   port: 80
@@ -287,6 +205,100 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
+- name: Github FR 16 ATSRSD
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github FR 17 ATSRSD
+  type: vless
+  server: www.large-files.info
+  port: 8443
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.large-files.info
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
+    headers:
+      Host: www.large-files.info
+- name: Github FR 18 ATSRSD
+  type: vless
+  server: 172.67.175.23
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
+- name: Github FR 19 ATSRSD
+  type: vless
+  server: 54.37.136.194
+  port: 2053
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github FR 20 ATSRSD
+  type: vless
+  server: 172.67.190.248
+  port: 8443
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: www.large-files.info
+  network: ws
+  ws-opts:
+    path: /var/www/html/video/preview/download/i8o0la
+    headers:
+      Host: www.large-files.info
+- name: Github FR 21 ATSRSD
+  type: vless
+  server: 172.67.185.98
+  port: 2053
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fr.api-music-fa.com
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+- name: Github FR 22 ATSRSD
+  type: vless
+  server: 172.67.193.182
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-ef859652a80e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: trex-panel-nubj0s.samifakor.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/ef859652a80e
+    headers:
+      Host: trex-panel-nubj0s.samifakor.workers.dev
 - name: Github FR 23 ATSRSD
   type: vmess
   server: 141.95.65.9
@@ -299,17 +311,6 @@ proxies:
   skip-cert-verify: true
   servername: ''
 - name: Github FR 24 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 25 ATSRSD
   type: vless
   server: 8.47.69.0
   port: 2053
@@ -352,7 +353,6 @@ proxy-groups:
   - Github FR 22 ATSRSD
   - Github FR 23 ATSRSD
   - Github FR 24 ATSRSD
-  - Github FR 25 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -382,6 +382,5 @@ proxy-groups:
   - Github FR 22 ATSRSD
   - Github FR 23 ATSRSD
   - Github FR 24 ATSRSD
-  - Github FR 25 ATSRSD
 rules:
 - MATCH,PROXIES

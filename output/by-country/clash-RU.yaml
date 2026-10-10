@@ -5,6 +5,60 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
+  type: vless
+  server: 79.174.92.222
+  port: 443
+  uuid: 03ca8c3f-e777-45b5-a1b1-592094ca99ee
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: _PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI
+  servername: m.vk.com
+  client-fingerprint: firefox
+- name: Github RU 02 ATSRSD
+  type: vless
+  server: 185.86.145.183
+  port: 443
+  uuid: 7ec9f26a-edec-4bf1-addd-700626df27c1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cosmo-pulse.ru
+  network: ws
+  ws-opts:
+    path: /nl7ws
+    headers:
+      Host: cosmo-pulse.ru
+- name: Github RU 03 ATSRSD
+  type: vless
+  server: 63.141.128.22
+  port: 443
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+- name: Github RU 04 ATSRSD
+  type: vless
+  server: 104.21.96.1
+  port: 443
+  uuid: 0836463b-214f-4af6-aa85-85a56a62388e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+- name: Github RU 05 ATSRSD
   type: ss
   server: 130.49.189.158
   port: 43558
@@ -17,11 +71,19 @@ proxy-groups:
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
+  - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -32,6 +32,13 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
+- name: Github TR 03 ATSRSD
+  type: ss
+  server: www.asamping.ir
+  port: 1468
+  cipher: aes-128-gcm
+  password: l2NidZbckMu4PnIHsJTYJg
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +46,7 @@ proxy-groups:
   - AUTO
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -46,5 +54,6 @@ proxy-groups:
   proxies:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 rules:
 - MATCH,PROXIES

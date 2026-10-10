@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: Github KR 01 (家宽) ATSRSD
+  type: vless
+  server: billowing-wind-5b29.133-323.workers.dev
+  port: 8880
+  uuid: c18fd69e-92ba-446e-981b-213dbb551593
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: billowing-wind-5b29.133-323.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - Github KR 01 (家宽) ATSRSD
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - Github KR 01 (家宽) ATSRSD
+rules:
+- MATCH,PROXIES
