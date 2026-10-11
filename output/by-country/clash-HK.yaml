@@ -6,49 +6,6 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vless
-  server: n2.whuiy.xyz
-  port: 443
-  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: n2.whuiy.xyz
-  network: ws
-  ws-opts:
-    path: /vless-cdn
-    headers:
-      Host: n2.whuiy.xyz
-- name: Github HK 02 ATSRSD
-  type: vless
-  server: n2.whuiy.xyz
-  port: 443
-  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: n2.whuiy.xyz
-  network: ws
-  ws-opts:
-    path: /vless-cdn
-    headers:
-      Host: n2.whuiy.xyz
-- name: Github HK 03 ATSRSD
-  type: vmess
-  server: 156.245.232.239
-  port: 35043
-  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github HK 04 ATSRSD
-  type: vless
   server: 34.92.19.135
   port: 443
   uuid: 90153538-ef08-4942-b8e1-41e7c523e659
@@ -58,22 +15,24 @@ proxies:
   reality-opts:
     public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
   servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: Github HK 05 ATSRSD
-  type: vless
-  server: n2.whuiy.xyz
+  client-fingerprint: chrome
+- name: Github HK 02 ATSRSD
+  type: vmess
+  server: 6JDvArazgU3qQR6Q.v.3dns.vip
   port: 443
-  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: n2.whuiy.xyz
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
   network: ws
   ws-opts:
-    path: /vless-cdn
+    path: /ws-vmess
     headers:
-      Host: n2.whuiy.xyz
-- name: Github HK 06 ATSRSD
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: Github HK 03 ATSRSD
   type: vmess
   server: 47.244.120.197
   port: 23026
@@ -88,51 +47,38 @@ proxies:
     path: /arki
     headers:
       Host: 47.244.120.197
-- name: Github HK 07 ATSRSD
+- name: Github HK 04 ATSRSD
   type: vmess
-  server: yg1.ygkkk.dpdns.org
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: Github HK 05 ATSRSD
+  type: vmess
+  server: 93ucrn4i0pffuabk.v.3dns.vip
   port: 443
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jmp1.907737.xyz
+  servername: 93ucrn4i0pffuabk.v.3dns.vip
   network: ws
   ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+    path: /ws-vmess
     headers:
-      Host: jmp1.907737.xyz
-- name: Github HK 08 ATSRSD
-  type: vless
-  server: n2.whuiy.xyz
-  port: 443
-  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: n2.whuiy.xyz
-  network: ws
-  ws-opts:
-    path: /vless-cdn
-    headers:
-      Host: n2.whuiy.xyz
-- name: Github HK 09 ATSRSD
-  type: vless
-  server: n2.whuiy.xyz
-  port: 443
-  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: n2.whuiy.xyz
-  network: ws
-  ws-opts:
-    path: /vless-cdn
-    headers:
-      Host: n2.whuiy.xyz
-- name: Github HK 10 ATSRSD
+      Host: 93ucrn4i0pffuabk.v.3dns.vip
+- name: Github HK 06 ATSRSD
   type: vless
   server: 34.92.19.135
   port: 443
@@ -143,10 +89,24 @@ proxies:
   reality-opts:
     public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
   servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github HK 11 ATSRSD
+  client-fingerprint: ios
+- name: Github HK 07 ATSRSD
+  type: vless
+  server: n2.whuiy.xyz
+  port: 443
+  uuid: edee8379-1a08-45c8-8401-338452d8ca9b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: n2.whuiy.xyz
+  network: ws
+  ws-opts:
+    path: /vless-cdn
+    headers:
+      Host: n2.whuiy.xyz
+- name: Github HK 08 ATSRSD
   type: vmess
-  server: nycqg19zkwacpm1b.v.3dns.vip
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
   port: 443
   uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
@@ -154,12 +114,84 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: NYcQg19zkwaCPM1B.v.3dns.vip
+  servername: qTKDR8jXE3wEFxJM.v.3dns.vip
   network: ws
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: NYcQg19zkwaCPM1B.v.3dns.vip
+      Host: qTKDR8jXE3wEFxJM.v.3dns.vip
+- name: Github HK 09 ATSRSD
+  type: vmess
+  server: 47.243.194.125
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+- name: Github HK 10 ATSRSD
+  type: vmess
+  server: 93ucrn4i0pffuabk.v.3dns.vip
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 93ucrn4i0pffuabk.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 93ucrn4i0pffuabk.v.3dns.vip
+- name: Github HK 11 ATSRSD
+  type: vmess
+  server: 47.243.194.125
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+- name: Github HK 12 ATSRSD
+  type: vless
+  server: 47.238.210.5
+  port: 13779
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+  servername: tesla.com
+  client-fingerprint: chrome
+- name: Github HK 13 ATSRSD
+  type: vless
+  server: 34.92.19.135
+  port: 443
+  uuid: 90153538-ef08-4942-b8e1-41e7c523e659
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: tSBJnEt6E1dy6UgX9gX5wUfvZ2KAXjGWVKsEq886OWM
+  servername: www.cloudflare.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -176,6 +208,8 @@ proxy-groups:
   - Github HK 09 ATSRSD
   - Github HK 10 ATSRSD
   - Github HK 11 ATSRSD
+  - Github HK 12 ATSRSD
+  - Github HK 13 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -192,5 +226,7 @@ proxy-groups:
   - Github HK 09 ATSRSD
   - Github HK 10 ATSRSD
   - Github HK 11 ATSRSD
+  - Github HK 12 ATSRSD
+  - Github HK 13 ATSRSD
 rules:
 - MATCH,PROXIES
