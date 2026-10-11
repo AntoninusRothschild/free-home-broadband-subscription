@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github ZA 01 ATSRSD
-  type: ss
-  server: 20.164.201.229
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: f0wxc3RUYwxIzKSf
-  udp: true
-- name: Github ZA 02 ATSRSD
   type: vless
   server: 34.35.189.111
   port: 443
@@ -23,6 +16,13 @@ proxies:
     public-key: dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4
   servername: www.cloudflare.com
   client-fingerprint: safari
+- name: Github ZA 02 ATSRSD
+  type: ss
+  server: 102.133.165.160
+  port: 16233
+  cipher: chacha20-ietf-poly1305
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  udp: true
 - name: Github ZA 03 ATSRSD
   type: ss
   server: 102.37.156.224
@@ -32,17 +32,29 @@ proxies:
   udp: true
 - name: Github ZA 04 ATSRSD
   type: ss
-  server: 102.37.103.137
+  server: 20.164.201.229
   port: 443
   cipher: chacha20-ietf-poly1305
   password: f0wxc3RUYwxIzKSf
   udp: true
 - name: Github ZA 05 ATSRSD
+  type: vless
+  server: 34.35.186.228
+  port: 443
+  uuid: 8d65c8a7-4876-4556-bb6a-feccfb46ee81
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bSN0cv0VMxmYZsNsMkkLndOTHZu74C1htJ2M71QMaVE
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github ZA 06 ATSRSD
   type: ss
-  server: 102.133.165.160
-  port: 16233
+  server: 102.37.103.137
+  port: 443
   cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  password: f0wxc3RUYwxIzKSf
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -54,6 +66,7 @@ proxy-groups:
   - Github ZA 03 ATSRSD
   - Github ZA 04 ATSRSD
   - Github ZA 05 ATSRSD
+  - Github ZA 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -64,5 +77,6 @@ proxy-groups:
   - Github ZA 03 ATSRSD
   - Github ZA 04 ATSRSD
   - Github ZA 05 ATSRSD
+  - Github ZA 06 ATSRSD
 rules:
 - MATCH,PROXIES

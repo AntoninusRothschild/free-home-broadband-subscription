@@ -6,18 +6,6 @@ log-level: info
 proxies:
 - name: Github FR 01 ATSRSD
   type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github FR 02 ATSRSD
-  type: vless
   server: 51.77.217.70
   port: 2053
   uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
@@ -28,21 +16,7 @@ proxies:
     public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
   servername: www.apple.com
   client-fingerprint: firefox
-- name: Github FR 03 ATSRSD
-  type: vless
-  server: 8.47.69.0
-  port: 2053
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vless.api-music-fa.com
-  network: ws
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
-- name: Github FR 04 ATSRSD
+- name: Github FR 02 ATSRSD
   type: vmess
   server: 145.239.55.210
   port: 80
@@ -57,17 +31,42 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: Github FR 05 ATSRSD
+- name: Github FR 03 ATSRSD
+  type: ss
+  server: pl140.vpnbook.com
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: e5c65ph
+  udp: true
+- name: Github FR 04 ATSRSD
   type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  server: 57.128.164.21
+  port: 80
+  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
   alterId: 0
   cipher: auto
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+- name: Github FR 05 ATSRSD
+  type: vless
+  server: 8.47.69.0
+  port: 2053
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: vless.api-music-fa.com
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
 - name: Github FR 06 ATSRSD
   type: vless
   server: 104.21.84.30
@@ -83,6 +82,29 @@ proxies:
     headers:
       Host: fr.api-music-fa.com
 - name: Github FR 07 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 08 ATSRSD
+  type: vless
+  server: best.valaiqm.ir
+  port: 3030
+  uuid: a1fb63f7-a942-4010-a830-bc395703a9a4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 7sQ48HLZKlTXobpwnmr28_esiMRwzjS3DppR9yC3i1U
+  servername: telewebion.ir
+  client-fingerprint: chrome
+- name: Github FR 09 ATSRSD
   type: vless
   server: 51.77.217.70
   port: 2053
@@ -94,40 +116,13 @@ proxies:
     public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
   servername: www.apple.com
   client-fingerprint: chrome
-- name: Github FR 08 ATSRSD
-  type: vmess
-  server: 57.128.164.21
-  port: 80
-  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-- name: Github FR 09 ATSRSD
+- name: Github FR 10 ATSRSD
   type: ss
   server: pl134.vpnbook.com
   port: 443
   cipher: chacha20-ietf-poly1305
   password: e5c65ph
   udp: true
-- name: Github FR 10 ATSRSD
-  type: vless
-  server: 79.174.92.222
-  port: 443
-  uuid: 03ca8c3f-e777-45b5-a1b1-592094ca99ee
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: _PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI
-  servername: m.vk.com
-  client-fingerprint: firefox
 - name: Github FR 11 ATSRSD
   type: vless
   server: 8.47.69.0
@@ -142,6 +137,36 @@ proxies:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
+- name: Github FR 12 ATSRSD
+  type: ss
+  server: 51.255.13.232
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: BqnqToih0PbU
+  udp: true
+- name: Github FR 13 ATSRSD
+  type: vless
+  server: 54.37.136.194
+  port: 2053
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github FR 14 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -158,6 +183,9 @@ proxy-groups:
   - Github FR 09 ATSRSD
   - Github FR 10 ATSRSD
   - Github FR 11 ATSRSD
+  - Github FR 12 ATSRSD
+  - Github FR 13 ATSRSD
+  - Github FR 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -174,5 +202,8 @@ proxy-groups:
   - Github FR 09 ATSRSD
   - Github FR 10 ATSRSD
   - Github FR 11 ATSRSD
+  - Github FR 12 ATSRSD
+  - Github FR 13 ATSRSD
+  - Github FR 14 ATSRSD
 rules:
 - MATCH,PROXIES
