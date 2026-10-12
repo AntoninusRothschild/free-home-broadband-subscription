@@ -6,13 +6,16 @@ log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
   type: vless
-  server: 2.26.225.89
-  port: 8443
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
+  server: 80.47.12.94
+  port: 443
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: pl.flen-vpn.xyz
+  reality-opts:
+    public-key: gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg
+  servername: pl-1-1.unturned-rust-dead.lol
+  client-fingerprint: random
 - name: Github PL 02 ATSRSD
   type: vless
   server: pl-1-1.unturned-rust-dead.lol
@@ -27,31 +30,14 @@ proxies:
   client-fingerprint: random
 - name: Github PL 03 ATSRSD
   type: vless
-  server: 91.215.43.248
-  port: 443
-  uuid: a5893c8b-28a2-4947-9a1c-708db25506c3
+  server: 2.26.225.89
+  port: 8443
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: my.kempekl.online
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/a64eb463966ba9c4bfd628f1de0362ae
-    headers:
-      Host: my.kempekl.online
+  servername: pl.flen-vpn.xyz
 - name: Github PL 04 ATSRSD
-  type: vless
-  server: 80.47.12.94
-  port: 443
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg
-  servername: pl-1-1.unturned-rust-dead.lol
-  client-fingerprint: random
-- name: Github PL 05 ATSRSD
   type: vless
   server: 2.26.225.89
   port: 8443
@@ -69,7 +55,6 @@ proxy-groups:
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
   - Github PL 04 ATSRSD
-  - Github PL 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -79,6 +64,5 @@ proxy-groups:
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
   - Github PL 04 ATSRSD
-  - Github PL 05 ATSRSD
 rules:
 - MATCH,PROXIES
