@@ -5,35 +5,209 @@ mode: rule
 log-level: info
 proxies:
 - name: Github DE 01 ATSRSD
-  type: ss
-  server: 57.129.113.16
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
+  type: vless
+  server: 104.21.61.141
+  port: 443
+  uuid: f85183cf-af02-4656-b1e9-3a61dced201f
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fReeWORLd.aliAicODe47649.woRKers.Dev
+  network: ws
+  ws-opts:
+    path: /vl/a6yBMrki2p7ptrchleFfb?ed=2560
+    headers:
+      Host: freeworld.aliaicode47649.workers.dev
 - name: Github DE 02 ATSRSD
-  type: ss
-  server: 51.195.126.38
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 2YdE4lFOid5a
+  type: vless
+  server: 209.38.238.229
+  port: 20202
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: wzs.echo.net.eu.org
+  network: ws
+  ws-opts:
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlZXSwcZUQABSgMNQRoaSVhfRhoOChkDDUs=fp=chrome
+    headers:
+      Host: wzs.echo.net.eu.org
 - name: Github DE 03 ATSRSD
+  type: vless
+  server: 162.159.152.4
+  port: 443
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: rayan-007.maxima.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: Github DE 04 ATSRSD
+  type: vless
+  server: 172.64.153.235
+  port: 8443
+  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: socks5.revil-time3.workers.dev
+  network: ws
+  ws-opts:
+    path: /socks5://128.140.46.169:13482
+    headers:
+      Host: socks5.revil-time3.workers.dev
+- name: Github DE 05 ATSRSD
+  type: vless
+  server: 37.120.222.70
+  port: 8082
+  uuid: 59c3c1c7-62d0-4707-9d67-5ff9c008591c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+- name: Github DE 06 ATSRSD
+  type: vless
+  server: 104.21.70.223
+  port: 443
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+    headers:
+      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+- name: Github DE 07 ATSRSD
   type: ss
   server: 185.226.172.8
   port: 8008
   cipher: aes-256-gcm
   password: XKFKl2rULjIp74
   udp: true
-- name: Github DE 04 ATSRSD
+- name: Github DE 08 ATSRSD
   type: vless
-  server: 46.225.2.249
-  port: 41400
-  uuid: 7474b6d6-d6d1-42d6-a0b1-a591a01ffedc
+  server: 172.67.215.39
+  port: 443
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-- name: Github DE 05 ATSRSD
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: Github DE 09 ATSRSD
+  type: vless
+  server: 63.141.128.22
+  port: 443
+  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
+- name: Github DE 10 ATSRSD
+  type: ss
+  server: 57.129.113.16
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: NcAXc0UZI6yQJE1p8QmOv8
+  udp: true
+- name: Github DE 11 ATSRSD
+  type: vless
+  server: 172.67.203.158
+  port: 443
+  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 12YGbaE0K3gN0z0f.mEhrsHADHaDdadI8.WorkerS.DEv
+  network: ws
+  ws-opts:
+    path: /vl/YCNmDFbqMu7cgTzgsfEWGtBD8kR
+    headers:
+      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+- name: Github DE 12 ATSRSD
+  type: vless
+  server: 104.21.31.137
+  port: 443
+  uuid: 59c70620-d2f3-4255-9d6f-f4c5103d64ce
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 59fssIBE-SDDrRs3qW83QQZz0H1NT-o.q7qwsxItB6BYi5nMTa4naAlz.woRkErs.deV
+  network: ws
+  ws-opts:
+    path: /vl/FpYFoMlg8sRpgV7SSaOaRYa3fagqGu?ed
+    headers:
+      Host: 59fssibe-sddrrs3qw83qqzz0h1nt-o.q7qwsxitb6byi5nmta4naalz.workers.dev
+- name: Github DE 13 ATSRSD
+  type: vless
+  server: 45.130.125.207
+  port: 8443
+  uuid: 31aa0950-eb19-45ff-94a2-af416deb3b90
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: SquarE-saLaD-EbDe.ZDFGVcCfgUUYgGG.wOrKeRS.DEV
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZm5INktPV0lGcHI1NjNSOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: square-salad-ebde.zdfgvccfguuyggg.workers.dev
+- name: Github DE 14 ATSRSD
+  type: ss
+  server: 51.195.126.38
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 2YdE4lFOid5a
+  udp: true
+- name: Github DE 15 ATSRSD
+  type: vless
+  server: 104.21.96.1
+  port: 443
+  uuid: 0836463b-214f-4af6-aa85-85a56a62388e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+- name: Github DE 16 ATSRSD
+  type: vless
+  server: 188.114.97.1
+  port: 2053
+  uuid: 0b3e7958-e5c4-498f-ab21-b49686f95d2d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: bold-term-4edd.mbigspot.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: bold-term-4edd.mbigspot.workers.dev
+- name: Github DE 17 ATSRSD
   type: vless
   server: 199.232.78.159
   port: 443
@@ -47,7 +221,143 @@ proxies:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: pannn1.global.ssl.fastly.net
-- name: Github DE 06 ATSRSD
+- name: Github DE 18 ATSRSD
+  type: vless
+  server: 162.159.153.4
+  port: 443
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: rayan-007.maxima.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rayan-007.maxima.dpdns.org
+- name: Github DE 19 ATSRSD
+  type: vless
+  server: 104.21.69.37
+  port: 443
+  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/uWq9DFRgj8BwQiSXmZ46
+    headers:
+      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+- name: Github DE 20 ATSRSD
+  type: vless
+  server: 172.67.214.25
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github DE 21 ATSRSD
+  type: vless
+  server: 104.21.53.160
+  port: 443
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: Github DE 22 ATSRSD
+  type: vless
+  server: 172.67.215.39
+  port: 443
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: Github DE 23 ATSRSD
+  type: vless
+  server: 172.66.44.124
+  port: 8443
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+- name: Github DE 24 ATSRSD
+  type: vless
+  server: 104.19.164.155
+  port: 2083
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: Github DE 25 ATSRSD
+  type: vmess
+  server: 31.76.11.83
+  port: 22266
+  uuid: 2d8f57bd-12b5-41ad-a806-6501753c264c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github DE 26 ATSRSD
+  type: vless
+  server: 104.21.16.109
+  port: 443
+  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/6871nrbnl9WsdAiOUInt
+    headers:
+      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+- name: Github DE 27 ATSRSD
+  type: vless
+  server: 172.67.140.37
+  port: 443
+  uuid: 527451fe-ee1f-4e6f-94ca-808f055f7c9b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/ERYN0G44hia16zhR
+    headers:
+      Host: 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev
+- name: Github DE 28 ATSRSD
   type: vless
   server: 31.77.126.2
   port: 443
@@ -61,63 +371,21 @@ proxies:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: lucasjow.us.ci
-- name: Github DE 07 ATSRSD
-  type: ss
-  server: 185.226.172.8
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: Github DE 08 ATSRSD
-  type: ss
-  server: 51.195.126.38
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 2YdE4lFOid5a
-  udp: true
-- name: Github DE 09 ATSRSD
-  type: ss
-  server: 2.58.81.221
-  port: 443
-  cipher: aes-256-gcm
-  password: kKEd0rBrd56Furjz
-  udp: true
-- name: Github DE 10 ATSRSD
-  type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-  udp: true
-- name: Github DE 11 ATSRSD
+- name: Github DE 29 ATSRSD
   type: vless
-  server: 157.230.101.36
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  server: 104.21.94.81
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: INDEX.Arcane509.Workers.DEV
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: ccc.010304.xyz
-- name: Github DE 12 ATSRSD
-  type: vless
-  server: 65.109.188.155
-  port: 443
-  uuid: 9f9b66ba-e964-4e0e-be38-293134868a67
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: gadfather.zovip2.ir
-  network: ws
-  ws-opts:
-    path: /gropcdn
-    headers:
-      Host: gadfather.zovip2.ir
-- name: Github DE 13 ATSRSD
+      Host: index.arcane509.workers.dev
+- name: Github DE 30 ATSRSD
   type: vless
   server: 199.232.78.159
   port: 443
@@ -131,49 +399,349 @@ proxies:
     path: /
     headers:
       Host: pannn1.global.ssl.fastly.net
-- name: Github DE 14 ATSRSD
+- name: Github DE 31 ATSRSD
   type: vless
-  server: gadfather.zovip2.ir
+  server: 172.64.155.209
   port: 443
-  uuid: 9f9b66ba-e964-4e0e-be38-293134868a67
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: gadfather.zovip2.ir
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
   network: ws
   ws-opts:
-    path: /gropcdn?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
-      Host: gadfather.zovip2.ir
-- name: Github DE 15 ATSRSD
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
+- name: Github DE 32 ATSRSD
   type: vless
-  server: 94.103.168.219
-  port: 2087
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  server: 172.67.131.112
+  port: 443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ops5.localip.ir
+  servername: INDEX.Arcane509.Workers.DEV
   network: ws
   ws-opts:
-    path: /hokm
+    path: /
     headers:
-      Host: 94.103.168.219
-- name: Github DE 16 ATSRSD
+      Host: index.arcane509.workers.dev
+- name: Github DE 33 ATSRSD
+  type: ss
+  server: 2.58.81.221
+  port: 443
+  cipher: aes-256-gcm
+  password: kKEd0rBrd56Furjz
+  udp: true
+- name: Github DE 34 ATSRSD
   type: vless
-  server: 94.103.168.219
-  port: 2087
-  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  server: 45.130.125.126
+  port: 443
+  uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ops5.localip.ir
+  servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
   network: ws
   ws-opts:
-    path: /hokm
+    path: /eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
-      Host: 94.103.168.219
-- name: Github DE 17 ATSRSD
+      Host: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+- name: Github DE 35 ATSRSD
+  type: vless
+  server: 172.67.173.89
+  port: 443
+  uuid: ffa431ab-a59b-4092-a418-905fcb1e4d5f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560
+    headers:
+      Host: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+- name: Github DE 36 ATSRSD
+  type: vless
+  server: 104.19.1.115
+  port: 443
+  uuid: e285fb9b-ce0a-45ea-84da-4ad64cacd216
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: apP-874a55-219AFC.rEigNsskY2.WORKerS.dev
+  network: ws
+  ws-opts:
+    path: /vl/dOH03263y00uTucKhyn?ed
+    headers:
+      Host: app-874a55-219afc.reignssky2.workers.dev
+- name: Github DE 37 ATSRSD
+  type: vless
+  server: 162.159.153.4
+  port: 443
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
+- name: Github DE 38 ATSRSD
+  type: vless
+  server: 172.67.155.231
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github DE 39 ATSRSD
+  type: vless
+  server: 172.67.220.34
+  port: 443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github DE 40 ATSRSD
+  type: vless
+  server: 80.93.202.147
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-b52a90ada6ab
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: trex-panel-ew6n46.zeus-e0oqfp.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/TrexBridge/b52a90ada6ab
+    headers:
+      Host: trex-panel-ew6n46.zeus-e0oqfp.workers.dev
+- name: Github DE 41 ATSRSD
+  type: vless
+  server: 104.21.12.63
+  port: 8443
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github DE 42 ATSRSD
+  type: vless
+  server: 46.101.253.244
+  port: 2083
+  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: edge.yzkvm.top
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: edge.yzkvm.top
+- name: Github DE 43 ATSRSD
+  type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: Github DE 44 ATSRSD
+  type: vless
+  server: 172.67.173.89
+  port: 443
+  uuid: ffa431ab-a59b-4092-a418-905fcb1e4d5f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/rYScQPG1EEjxXdswdMEU2b3rM4?ed=2560
+    headers:
+      Host: s0p42f8wwpdde5tf7m4l6l.ab1x-sn9o4y3n7ondkrd.workers.dev
+- name: Github DE 45 ATSRSD
+  type: ss
+  server: 51.195.126.38
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 2YdE4lFOid5a
+  udp: true
+- name: Github DE 46 ATSRSD
+  type: vless
+  server: 188.114.96.9
+  port: 443
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: Github DE 47 ATSRSD
+  type: vless
+  server: 188.114.97.8
+  port: 8443
+  uuid: d4d2d3f3-9dec-4e8f-8daf-145ecac96e66
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: crimson-leaf-7e45.hzhduuebfjdcb.workers.dev
+- name: Github DE 48 ATSRSD
+  type: vless
+  server: 57.129.41.216
+  port: 80
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: OV-Germany1.09vpn.com
+- name: Github DE 49 ATSRSD
+  type: vless
+  server: 8.47.69.9
+  port: 443
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
+- name: Github DE 50 ATSRSD
+  type: vless
+  server: 104.21.63.236
+  port: 443
+  uuid: 77702cd2-6a11-40f4-a817-1efeae6f6889
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: t4sy714oeyu0ntwavv62g6ua9o.ade-1001.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/Nmf5YfPITFhUjeHE8KfDU5T8H?ed=2560
+    headers:
+      Host: t4sy714oeyu0ntwavv62g6ua9o.ade-1001.workers.dev
+- name: Github DE 51 ATSRSD
+  type: vless
+  server: 172.67.170.140
+  port: 2053
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: INDEX.Arcane509.Workers.DEV
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: index.arcane509.workers.dev
+- name: Github DE 52 ATSRSD
+  type: vless
+  server: 172.67.167.77
+  port: 443
+  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  network: ws
+  ws-opts:
+    path: /vl/6871nrbnl9WsdAiOUInt
+    headers:
+      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+- name: Github DE 53 ATSRSD
+  type: vless
+  server: 167.172.165.106
+  port: 2083
+  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: edge.yzkvm.top
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: edge.yzkvm.top
+- name: Github DE 54 ATSRSD
+  type: vless
+  server: 104.18.35.86
+  port: 443
+  uuid: 1c7f675f-5923-463f-83fb-af4c898cecea
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZWhuWFFGNWRISXBjSmRGWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+    headers:
+      Host: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
+- name: Github DE 55 ATSRSD
+  type: vless
+  server: 104.18.34.21
+  port: 8443
+  uuid: 656bb400-3b7a-47e3-94b0-0362f3865072
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: socks5.revil-time3.workers.dev
+  network: ws
+  ws-opts:
+    path: /socks5://128.140.46.169:13482
+    headers:
+      Host: socks5.revil-time3.workers.dev
+- name: Github DE 56 ATSRSD
+  type: vless
+  server: 172.67.130.187
+  port: 2083
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fans.liverpool.qzz.io
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
+- name: Github DE 57 ATSRSD
   type: vless
   server: 31.77.148.89
   port: 45021
@@ -181,6 +749,90 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github DE 58 ATSRSD
+  type: vless
+  server: 157.230.101.36
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github DE 59 ATSRSD
+  type: vless
+  server: 172.67.147.209
+  port: 443
+  uuid: 38d6b629-64c2-4c31-a10d-26eb3a2a053d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
+  network: ws
+  ws-opts:
+    path: /vl/cxl8Wn1ylnsk63nJ0
+    headers:
+      Host: lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev
+- name: Github DE 60 ATSRSD
+  type: vless
+  server: 172.64.149.54
+  port: 443
+  uuid: fe34b5df-e634-4c83-a057-e53f41ce8e27
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lATE-LaB-d6A2.CIwodA8715.WoRKerS.DeV
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQ3dmV1d4OUFQdSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+    headers:
+      Host: late-lab-d6a2.ciwoda8715.workers.dev
+- name: Github DE 61 ATSRSD
+  type: vless
+  server: 94.103.168.219
+  port: 2087
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ops5.localip.ir
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: 94.103.168.219
+- name: Github DE 62 ATSRSD
+  type: vless
+  server: 94.103.168.219
+  port: 2087
+  uuid: a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ops5.localip.ir
+  network: ws
+  ws-opts:
+    path: /hokm
+    headers:
+      Host: 94.103.168.219
+- name: Github DE 63 ATSRSD
+  type: vless
+  server: 8.6.112.9
+  port: 443
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -203,6 +855,52 @@ proxy-groups:
   - Github DE 15 ATSRSD
   - Github DE 16 ATSRSD
   - Github DE 17 ATSRSD
+  - Github DE 18 ATSRSD
+  - Github DE 19 ATSRSD
+  - Github DE 20 ATSRSD
+  - Github DE 21 ATSRSD
+  - Github DE 22 ATSRSD
+  - Github DE 23 ATSRSD
+  - Github DE 24 ATSRSD
+  - Github DE 25 ATSRSD
+  - Github DE 26 ATSRSD
+  - Github DE 27 ATSRSD
+  - Github DE 28 ATSRSD
+  - Github DE 29 ATSRSD
+  - Github DE 30 ATSRSD
+  - Github DE 31 ATSRSD
+  - Github DE 32 ATSRSD
+  - Github DE 33 ATSRSD
+  - Github DE 34 ATSRSD
+  - Github DE 35 ATSRSD
+  - Github DE 36 ATSRSD
+  - Github DE 37 ATSRSD
+  - Github DE 38 ATSRSD
+  - Github DE 39 ATSRSD
+  - Github DE 40 ATSRSD
+  - Github DE 41 ATSRSD
+  - Github DE 42 ATSRSD
+  - Github DE 43 ATSRSD
+  - Github DE 44 ATSRSD
+  - Github DE 45 ATSRSD
+  - Github DE 46 ATSRSD
+  - Github DE 47 ATSRSD
+  - Github DE 48 ATSRSD
+  - Github DE 49 ATSRSD
+  - Github DE 50 ATSRSD
+  - Github DE 51 ATSRSD
+  - Github DE 52 ATSRSD
+  - Github DE 53 ATSRSD
+  - Github DE 54 ATSRSD
+  - Github DE 55 ATSRSD
+  - Github DE 56 ATSRSD
+  - Github DE 57 ATSRSD
+  - Github DE 58 ATSRSD
+  - Github DE 59 ATSRSD
+  - Github DE 60 ATSRSD
+  - Github DE 61 ATSRSD
+  - Github DE 62 ATSRSD
+  - Github DE 63 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -225,5 +923,51 @@ proxy-groups:
   - Github DE 15 ATSRSD
   - Github DE 16 ATSRSD
   - Github DE 17 ATSRSD
+  - Github DE 18 ATSRSD
+  - Github DE 19 ATSRSD
+  - Github DE 20 ATSRSD
+  - Github DE 21 ATSRSD
+  - Github DE 22 ATSRSD
+  - Github DE 23 ATSRSD
+  - Github DE 24 ATSRSD
+  - Github DE 25 ATSRSD
+  - Github DE 26 ATSRSD
+  - Github DE 27 ATSRSD
+  - Github DE 28 ATSRSD
+  - Github DE 29 ATSRSD
+  - Github DE 30 ATSRSD
+  - Github DE 31 ATSRSD
+  - Github DE 32 ATSRSD
+  - Github DE 33 ATSRSD
+  - Github DE 34 ATSRSD
+  - Github DE 35 ATSRSD
+  - Github DE 36 ATSRSD
+  - Github DE 37 ATSRSD
+  - Github DE 38 ATSRSD
+  - Github DE 39 ATSRSD
+  - Github DE 40 ATSRSD
+  - Github DE 41 ATSRSD
+  - Github DE 42 ATSRSD
+  - Github DE 43 ATSRSD
+  - Github DE 44 ATSRSD
+  - Github DE 45 ATSRSD
+  - Github DE 46 ATSRSD
+  - Github DE 47 ATSRSD
+  - Github DE 48 ATSRSD
+  - Github DE 49 ATSRSD
+  - Github DE 50 ATSRSD
+  - Github DE 51 ATSRSD
+  - Github DE 52 ATSRSD
+  - Github DE 53 ATSRSD
+  - Github DE 54 ATSRSD
+  - Github DE 55 ATSRSD
+  - Github DE 56 ATSRSD
+  - Github DE 57 ATSRSD
+  - Github DE 58 ATSRSD
+  - Github DE 59 ATSRSD
+  - Github DE 60 ATSRSD
+  - Github DE 61 ATSRSD
+  - Github DE 62 ATSRSD
+  - Github DE 63 ATSRSD
 rules:
 - MATCH,PROXIES

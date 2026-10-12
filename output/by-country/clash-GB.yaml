@@ -17,18 +17,27 @@ proxies:
   servername: www.apple.com
   client-fingerprint: random
 - name: Github GB 02 ATSRSD
-  type: vless
-  server: 46.250.240.80
-  port: 2053
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  type: ss
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: Github GB 03 ATSRSD
+  type: ss
+  server: 51.77.225.200
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: zRZNBszYyWo5
+  udp: true
+- name: Github GB 04 ATSRSD
+  type: ss
+  server: 149.102.132.184
+  port: 443
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 05 ATSRSD
   type: vless
   server: 46.250.250.149
   port: 2053
@@ -40,108 +49,58 @@ proxies:
     public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
   servername: www.apple.com
   client-fingerprint: firefox
-- name: Github GB 04 ATSRSD
+- name: Github GB 06 ATSRSD
   type: vless
-  server: 51.38.71.147
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: Github GB 05 ATSRSD
-  type: vless
-  server: 159.65.51.189
+  server: 188.114.98.134
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: o94yv7LiF0-AnxIsd9EFehVvs7mXn6bh.z-UlE-ikA-d-e-nE-k-E.WorkeRs.dEv
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
-      Host: ccc.010304.xyz
-- name: Github GB 06 ATSRSD
-  type: ss
-  server: 149.102.132.184
-  port: 443
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
+      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
 - name: Github GB 07 ATSRSD
-  type: ss
-  server: 149.102.149.207
-  port: 80
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: Github GB 08 ATSRSD
-  type: ss
-  server: 149.102.149.207
+  type: vless
+  server: 186.190.211.188
   port: 443
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-  udp: true
-- name: Github GB 09 ATSRSD
-  type: vless
-  server: 51.38.71.147
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: Github GB 10 ATSRSD
-  type: vless
-  server: node-uk.connectsuite.org
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: Github GB 11 ATSRSD
+  servername: 186.190.211.188
+- name: Github GB 08 ATSRSD
   type: ss
   server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: Github GB 12 ATSRSD
+- name: Github GB 09 ATSRSD
   type: ss
-  server: 149.102.132.184
-  port: 80
+  server: 149.102.149.207
+  port: 443
   cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
+  password: LXchLsIwtCeUAUgu
   udp: true
-- name: Github GB 13 ATSRSD
-  type: vless
-  server: 186.190.211.188
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 186.190.211.188
-- name: Github GB 14 ATSRSD
-  type: vless
-  server: 186.190.211.188
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 186.190.211.188
-- name: Github GB 15 ATSRSD
+- name: Github GB 10 ATSRSD
   type: ss
   server: 51.77.225.200
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: zRZNBszYyWo5
   udp: true
-- name: Github GB 16 ATSRSD
+- name: Github GB 11 ATSRSD
+  type: ss
+  server: 149.102.132.184
+  port: 80
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 12 ATSRSD
   type: vless
   server: 186.190.211.188
   port: 443
@@ -150,7 +109,40 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 186.190.211.188
-- name: Github GB 17 ATSRSD
+- name: Github GB 13 ATSRSD
+  type: vless
+  server: 188.114.96.7
+  port: 443
+  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+- name: Github GB 14 ATSRSD
+  type: vless
+  server: 46.250.240.80
+  port: 2053
+  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: Github GB 15 ATSRSD
+  type: ss
+  server: 149.102.132.184
+  port: 80
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 16 ATSRSD
   type: vless
   server: 159.65.51.189
   port: 443
@@ -164,56 +156,6 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github GB 18 ATSRSD
-  type: ss
-  server: 149.102.132.184
-  port: 443
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
-- name: Github GB 19 ATSRSD
-  type: vless
-  server: 186.190.211.188
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 186.190.211.188
-- name: Github GB 20 ATSRSD
-  type: vless
-  server: 46.250.240.80
-  port: 2053
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github GB 21 ATSRSD
-  type: vmess
-  server: 57.129.132.223
-  port: 80
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: google.com
-- name: Github GB 22 ATSRSD
-  type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -235,12 +177,6 @@ proxy-groups:
   - Github GB 14 ATSRSD
   - Github GB 15 ATSRSD
   - Github GB 16 ATSRSD
-  - Github GB 17 ATSRSD
-  - Github GB 18 ATSRSD
-  - Github GB 19 ATSRSD
-  - Github GB 20 ATSRSD
-  - Github GB 21 ATSRSD
-  - Github GB 22 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -262,11 +198,5 @@ proxy-groups:
   - Github GB 14 ATSRSD
   - Github GB 15 ATSRSD
   - Github GB 16 ATSRSD
-  - Github GB 17 ATSRSD
-  - Github GB 18 ATSRSD
-  - Github GB 19 ATSRSD
-  - Github GB 20 ATSRSD
-  - Github GB 21 ATSRSD
-  - Github GB 22 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -17,7 +17,7 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
+      Host: 60.248.219.78
 - name: Github TW 02 (家宽) ATSRSD
   type: vmess
   server: 24864168545164.d6f54hd1j.cc
@@ -50,7 +50,14 @@ proxies:
     path: ''
     headers:
       Host: ''
-- name: Github HK 04 (家宽) ATSRSD
+- name: Github KR 04 (家宽) ATSRSD
+  type: ss
+  server: ce1fc2d8.krkt.hkssip.com
+  port: 49642
+  cipher: aes-256-gcm
+  password: ac9c0a7b
+  udp: true
+- name: Github HK 05 (家宽) ATSRSD
   type: vless
   server: 103.148.73.173
   port: 8443
@@ -64,7 +71,7 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 103.148.73.173
-- name: Github HK 05 (家宽) ATSRSD
+- name: Github HK 06 (家宽) ATSRSD
   type: vless
   server: 103.180.20.108
   port: 8443
@@ -78,13 +85,18 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 103.180.20.108
-- name: Github KR 06 (家宽) ATSRSD
-  type: ss
-  server: ce1fc2d8.krkt.hkssip.com
-  port: 49642
-  cipher: aes-256-gcm
-  password: ac9c0a7b
+- name: Github TW 07 (家宽) ATSRSD
+  type: vless
+  server: 118.167.248.243
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -93,9 +105,10 @@ proxy-groups:
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
   - Github TW 03 (家宽) ATSRSD
-  - Github HK 04 (家宽) ATSRSD
+  - Github KR 04 (家宽) ATSRSD
   - Github HK 05 (家宽) ATSRSD
-  - Github KR 06 (家宽) ATSRSD
+  - Github HK 06 (家宽) ATSRSD
+  - Github TW 07 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -104,8 +117,9 @@ proxy-groups:
   - Github TW 01 (家宽) ATSRSD
   - Github TW 02 (家宽) ATSRSD
   - Github TW 03 (家宽) ATSRSD
-  - Github HK 04 (家宽) ATSRSD
+  - Github KR 04 (家宽) ATSRSD
   - Github HK 05 (家宽) ATSRSD
-  - Github KR 06 (家宽) ATSRSD
+  - Github HK 06 (家宽) ATSRSD
+  - Github TW 07 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
