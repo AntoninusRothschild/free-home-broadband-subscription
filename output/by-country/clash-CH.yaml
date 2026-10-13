@@ -6,54 +6,24 @@ log-level: info
 proxies:
 - name: Github CH 01 ATSRSD
   type: vless
-  server: 185.18.250.245
-  port: 443
-  uuid: f77299ea-e13d-417d-8cdc-ce5566dfc94b
+  server: 138.124.96.88
+  port: 41826
+  uuid: 2eb3f6a0-df6e-49b6-994c-177acdd50a97
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: edu.ruangguru.com.r3xxe.eu.cc
-  network: ws
-  ws-opts:
-    path: /nl-tw
-    headers:
-      Host: edu.ruangguru.com.r3xxe.eu.cc
-- name: Github CH 02 ATSRSD
-  type: vless
-  server: 38.47.96.220
-  port: 11424
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
-  network: ws
-  ws-opts:
-    path: Telegram-WangCai2🇨🇳
-    headers:
-      Host: notls.lukongtou.eu.org
-- name: Github CH 03 ATSRSD
-  type: ss
-  server: 132.243.175.144
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-  udp: true
+  servername: sweden.homyak.app
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github CH 01 ATSRSD
-  - Github CH 02 ATSRSD
-  - Github CH 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github CH 01 ATSRSD
-  - Github CH 02 ATSRSD
-  - Github CH 03 ATSRSD
 rules:
 - MATCH,PROXIES
