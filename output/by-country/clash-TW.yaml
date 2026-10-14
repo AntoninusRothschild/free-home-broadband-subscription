@@ -5,19 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TW 01 ATSRSD
-  type: vless
-  server: 59.125.69.24
+  type: vmess
+  server: fujrdt.d6f54hd1j.cc
   port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ty986gfazs.cainiaohub.xyz
+  servername: fujrdt.d6f54hd1j.cc
   network: ws
   ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    path: /
     headers:
-      Host: 59.125.69.24
+      Host: fujrdt.d6f54hd1j.cc
 - name: Github TW 02 ATSRSD
   type: vless
   server: 60.248.219.78
@@ -31,10 +33,10 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.78
+      Host: ty986gfazs.cainiaohub.xyz
 - name: Github TW 03 ATSRSD
   type: vless
-  server: 60.248.219.54
+  server: 59.125.69.24
   port: 443
   uuid: 06e177f7-240d-4687-bd85-235505801a5e
   udp: true
@@ -45,8 +47,24 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.54
+      Host: 59.125.69.24
 - name: Github TW 04 ATSRSD
+  type: vmess
+  server: fujrdt.d6f54hd1j.cc
+  port: 443
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: Github TW 05 ATSRSD
   type: vless
   server: 60.248.219.53
   port: 443
@@ -60,7 +78,7 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 60.248.219.53
-- name: Github TW 05 ATSRSD
+- name: Github TW 06 ATSRSD
   type: vless
   server: 59.125.69.23
   port: 443
@@ -74,7 +92,23 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 59.125.69.23
-- name: Github TW 06 ATSRSD
+- name: Github TW 07 ATSRSD
+  type: vmess
+  server: fujrdt.d6f54hd1j.cc
+  port: 443
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: Github TW 08 ATSRSD
   type: vmess
   server: 165.154.195.38
   port: 35034
@@ -95,6 +129,8 @@ proxy-groups:
   - Github TW 04 ATSRSD
   - Github TW 05 ATSRSD
   - Github TW 06 ATSRSD
+  - Github TW 07 ATSRSD
+  - Github TW 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -106,5 +142,7 @@ proxy-groups:
   - Github TW 04 ATSRSD
   - Github TW 05 ATSRSD
   - Github TW 06 ATSRSD
+  - Github TW 07 ATSRSD
+  - Github TW 08 ATSRSD
 rules:
 - MATCH,PROXIES
