@@ -8,7 +8,9 @@
         "auto",
         "Github KZ 01 ATSRSD",
         "Github KZ 02 ATSRSD",
-        "Github KZ 03 ATSRSD"
+        "Github KZ 03 ATSRSD",
+        "Github KZ 04 ATSRSD",
+        "Github KZ 05 ATSRSD"
       ]
     },
     {
@@ -17,7 +19,9 @@
       "outbounds": [
         "Github KZ 01 ATSRSD",
         "Github KZ 02 ATSRSD",
-        "Github KZ 03 ATSRSD"
+        "Github KZ 03 ATSRSD",
+        "Github KZ 04 ATSRSD",
+        "Github KZ 05 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
