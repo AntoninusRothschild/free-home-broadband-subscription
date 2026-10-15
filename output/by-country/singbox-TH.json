@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "Github TH 01 ATSRSD",
+        "Github TH 02 ATSRSD",
+        "Github TH 03 ATSRSD",
+        "Github TH 04 ATSRSD",
+        "Github TH 05 ATSRSD",
+        "Github TH 06 ATSRSD",
+        "Github TH 07 ATSRSD",
+        "Github TH 08 ATSRSD",
+        "Github TH 09 ATSRSD",
+        "Github TH 10 ATSRSD",
+        "Github TH 11 ATSRSD"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "Github TH 01 ATSRSD",
+        "Github TH 02 ATSRSD",
+        "Github TH 03 ATSRSD",
+        "Github TH 04 ATSRSD",
+        "Github TH 05 ATSRSD",
+        "Github TH 06 ATSRSD",
+        "Github TH 07 ATSRSD",
+        "Github TH 08 ATSRSD",
+        "Github TH 09 ATSRSD",
+        "Github TH 10 ATSRSD",
+        "Github TH 11 ATSRSD"
+      ],
+      "url": "https://www.google.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

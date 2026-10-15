@@ -6,14 +6,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Github UA 01 ATSRSD"
+        "Github UA 01 ATSRSD",
+        "Github UA 02 ATSRSD",
+        "Github UA 03 ATSRSD",
+        "Github UA 04 ATSRSD",
+        "Github UA 05 ATSRSD"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Github UA 01 ATSRSD"
+        "Github UA 01 ATSRSD",
+        "Github UA 02 ATSRSD",
+        "Github UA 03 ATSRSD",
+        "Github UA 04 ATSRSD",
+        "Github UA 05 ATSRSD"
       ],
       "url": "https://www.google.com/generate_204"
     },
