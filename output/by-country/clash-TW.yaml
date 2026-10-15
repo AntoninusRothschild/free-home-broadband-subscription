@@ -6,73 +6,29 @@ log-level: info
 proxies:
 - name: Github TW 01 ATSRSD
   type: vless
-  server: zs.giannaycs.com
-  port: 12943
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
+  server: hinet1.2yly.com
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: zs.giannaycs.com
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: qq
 - name: Github TW 02 ATSRSD
-  type: vmess
-  server: fujrdt.d6f54hd1j.cc
-  port: 443
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: hinet1.2yly.com
+  port: 24215
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fujrdt.d6f54hd1j.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
 - name: Github TW 03 ATSRSD
-  type: vless
-  server: tw.giannaycs.com
-  port: 12943
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tw.giannaycs.com
-- name: Github TW 04 ATSRSD
-  type: vmess
-  server: fujrdt.d6f54hd1j.cc
-  port: 443
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fujrdt.d6f54hd1j.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
-- name: Github TW 05 ATSRSD
-  type: vless
-  server: tw.giannaycs.com
-  port: 12943
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tw.giannaycs.com
-- name: Github TW 06 ATSRSD
-  type: vless
-  server: zs.giannaycs.com
-  port: 12943
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: zs.giannaycs.com
-- name: Github TW 07 ATSRSD
   type: vmess
   server: 165.154.195.38
   port: 35034
@@ -90,10 +46,6 @@ proxy-groups:
   - Github TW 01 ATSRSD
   - Github TW 02 ATSRSD
   - Github TW 03 ATSRSD
-  - Github TW 04 ATSRSD
-  - Github TW 05 ATSRSD
-  - Github TW 06 ATSRSD
-  - Github TW 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -102,9 +54,5 @@ proxy-groups:
   - Github TW 01 ATSRSD
   - Github TW 02 ATSRSD
   - Github TW 03 ATSRSD
-  - Github TW 04 ATSRSD
-  - Github TW 05 ATSRSD
-  - Github TW 06 ATSRSD
-  - Github TW 07 ATSRSD
 rules:
 - MATCH,PROXIES

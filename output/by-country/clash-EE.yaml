@@ -20,33 +20,17 @@ proxies:
     path: /aiaiai
     headers:
       Host: server40.9966338.xyz
-- name: Github EE 02 ATSRSD
-  type: vless
-  server: 5.189.254.168
-  port: 2053
-  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cf3.schzyc.cc.cd
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
-    headers:
-      Host: cf3.schzyc.cc.cd
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github EE 01 ATSRSD
-  - Github EE 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github EE 01 ATSRSD
-  - Github EE 02 ATSRSD
 rules:
 - MATCH,PROXIES

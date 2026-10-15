@@ -5,124 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github GB 01 ATSRSD
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github GB 02 ATSRSD
-  type: vless
-  server: 159.65.51.189
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github GB 03 ATSRSD
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github GB 04 ATSRSD
-  type: vless
-  server: 159.65.51.189
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github GB 05 ATSRSD
   type: ss
-  server: 149.102.132.184
-  port: 80
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
-- name: Github GB 06 ATSRSD
-  type: vless
-  server: zs.giannaycs.com
-  port: 12972
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: zs.giannaycs.com
-- name: Github GB 07 ATSRSD
-  type: vless
-  server: zs.giannaycs.com
-  port: 12972
-  uuid: d68fbc96-5187-4b8f-965e-eecd7a699e81
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: zs.giannaycs.com
-- name: Github GB 08 ATSRSD
-  type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github GB 09 ATSRSD
-  type: ss
-  server: 141.98.101.181
+  server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: Github GB 10 ATSRSD
-  type: vless
-  server: 159.65.51.189
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github GB 11 ATSRSD
-  type: vless
-  server: 57.129.132.223
-  port: 80
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: google.com
-- name: Github GB 12 ATSRSD
+- name: Github GB 02 ATSRSD
   type: vless
   server: 186.190.211.188
   port: 443
@@ -131,16 +20,14 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 186.190.211.188
-- name: Github GB 13 ATSRSD
-  type: vless
-  server: 186.190.211.188
+- name: Github GB 03 ATSRSD
+  type: ss
+  server: 149.102.132.184
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 186.190.211.188
-- name: Github GB 14 ATSRSD
+- name: Github GB 04 ATSRSD
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -155,19 +42,137 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: Github GB 15 ATSRSD
-  type: ss
-  server: 149.102.132.184
-  port: 443
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
+- name: Github GB 05 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
   udp: true
-- name: Github GB 16 ATSRSD
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github GB 06 ATSRSD
   type: ss
   server: 149.102.132.184
   port: 80
   cipher: aes-256-gcm
   password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 07 ATSRSD
+  type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github GB 08 ATSRSD
+  type: ss
+  server: 149.102.132.184
+  port: 80
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+  udp: true
+- name: Github GB 09 ATSRSD
+  type: vless
+  server: 159.65.51.189
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github GB 10 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github GB 11 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github GB 12 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github GB 13 ATSRSD
+  type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github GB 14 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github GB 15 ATSRSD
+  type: vless
+  server: 57.129.132.223
+  port: 80
+  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: google.com
+- name: Github GB 16 ATSRSD
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
 - name: Github GB 17 ATSRSD
   type: vless
@@ -180,33 +185,30 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - name: Github GB 18 ATSRSD
   type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  server: 159.65.51.189
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
 - name: Github GB 19 ATSRSD
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  type: ss
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
 - name: Github GB 20 ATSRSD
   type: vless
   server: 51.89.194.151
@@ -221,20 +223,6 @@ proxies:
   client-fingerprint: chrome
 - name: Github GB 21 ATSRSD
   type: vless
-  server: 172.67.130.187
-  port: 2053
-  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: FaNs.livErpoOl.qZZ.io
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZXlpMnFWRURmWkp5ZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: fans.liverpool.qzz.io
-- name: Github GB 22 ATSRSD
-  type: vless
   server: 51.89.194.151
   port: 2053
   uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
@@ -245,6 +233,20 @@ proxies:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
   servername: www.apple.com
   client-fingerprint: chrome
+- name: Github GB 22 ATSRSD
+  type: vless
+  server: 159.65.51.189
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: PROXIES
   type: select
