@@ -24,17 +24,23 @@ proxies:
   servername: pl.flen-vpn.xyz
 - name: Github PL 03 ATSRSD
   type: vless
-  server: pl4.h1cloud.net
-  port: 25080
-  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  server: 2.26.225.89
+  port: 8443
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
-  servername: www.ceneo.pl
-  client-fingerprint: random
+  servername: pl.flen-vpn.xyz
 - name: Github PL 04 ATSRSD
+  type: vless
+  server: 2.26.225.89
+  port: 8443
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: pl.flen-vpn.xyz
+- name: Github PL 05 ATSRSD
   type: vless
   server: pl4.h1cloud.net
   port: 25080
@@ -46,7 +52,7 @@ proxies:
     public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
   servername: www.ceneo.pl
   client-fingerprint: random
-- name: Github PL 05 ATSRSD
+- name: Github PL 06 ATSRSD
   type: vless
   server: pl4.h1cloud.net
   port: 25080
@@ -58,24 +64,30 @@ proxies:
     public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
   servername: www.ceneo.pl
   client-fingerprint: chrome
-- name: Github PL 06 ATSRSD
-  type: vless
-  server: 2.26.225.89
-  port: 8443
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: pl.flen-vpn.xyz
 - name: Github PL 07 ATSRSD
   type: vless
-  server: 2.26.225.89
-  port: 8443
-  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
+  server: pl4.h1cloud.net
+  port: 25080
+  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: pl.flen-vpn.xyz
+  reality-opts:
+    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
+  servername: www.ceneo.pl
+  client-fingerprint: random
+- name: Github PL 08 ATSRSD
+  type: vless
+  server: pl4.h1cloud.net
+  port: 25080
+  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
+  servername: www.ceneo.pl
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,6 +100,7 @@ proxy-groups:
   - Github PL 05 ATSRSD
   - Github PL 06 ATSRSD
   - Github PL 07 ATSRSD
+  - Github PL 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -100,5 +113,6 @@ proxy-groups:
   - Github PL 05 ATSRSD
   - Github PL 06 ATSRSD
   - Github PL 07 ATSRSD
+  - Github PL 08 ATSRSD
 rules:
 - MATCH,PROXIES

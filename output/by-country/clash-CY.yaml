@@ -12,17 +12,47 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github CY 02 ATSRSD
+  type: vless
+  server: 5.253.29.254
+  port: 14430
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
+- name: Github CY 03 ATSRSD
+  type: vless
+  server: 5.253.29.254
+  port: 14430
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github CY 01 ATSRSD
+  - Github CY 02 ATSRSD
+  - Github CY 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github CY 01 ATSRSD
+  - Github CY 02 ATSRSD
+  - Github CY 03 ATSRSD
 rules:
 - MATCH,PROXIES
