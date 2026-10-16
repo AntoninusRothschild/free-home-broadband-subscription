@@ -58,6 +58,29 @@ proxies:
   client-fingerprint: firefox
 - name: Github TR 05 ATSRSD
   type: vless
+  server: test.keoplentuio.xyz
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github TR 06 ATSRSD
+  type: vless
+  server: test.keoplentuio.xyz
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github TR 07 ATSRSD
+  type: ss
+  server: api.apira98.org
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: CM-_ISRcHPz4cetu7grgSEv0VpT5MTRE
+  udp: true
+- name: Github TR 08 ATSRSD
+  type: vless
   server: 151.241.226.201
   port: 2053
   uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
@@ -78,6 +101,9 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
+  - Github TR 06 ATSRSD
+  - Github TR 07 ATSRSD
+  - Github TR 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -88,5 +114,8 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
+  - Github TR 06 ATSRSD
+  - Github TR 07 ATSRSD
+  - Github TR 08 ATSRSD
 rules:
 - MATCH,PROXIES
