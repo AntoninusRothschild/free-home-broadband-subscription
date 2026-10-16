@@ -20,22 +20,6 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github AT 03 ATSRSD
-  type: vless
-  server: 138.124.90.177
-  port: 10443
-  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github AT 04 ATSRSD
-  type: vless
-  server: 138.124.90.177
-  port: 10443
-  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github AT 05 ATSRSD
   type: ss
   server: 82.110.60.9
   port: 19999
@@ -50,8 +34,6 @@ proxy-groups:
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
   - Github AT 03 ATSRSD
-  - Github AT 04 ATSRSD
-  - Github AT 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -60,7 +42,5 @@ proxy-groups:
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
   - Github AT 03 ATSRSD
-  - Github AT 04 ATSRSD
-  - Github AT 05 ATSRSD
 rules:
 - MATCH,PROXIES

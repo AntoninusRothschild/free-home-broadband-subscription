@@ -18,16 +18,16 @@ proxies:
   client-fingerprint: chrome
 - name: Github KZ 02 ATSRSD
   type: vless
-  server: 77.73.232.61
-  port: 19747
-  uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac
+  server: 109.248.170.119
+  port: 13447
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
+    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
   servername: yahoo.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: Github KZ 03 ATSRSD
   type: vless
   server: 109.248.170.119
@@ -40,30 +40,6 @@ proxies:
     public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
   servername: yahoo.com
   client-fingerprint: chrome
-- name: Github KZ 04 ATSRSD
-  type: vless
-  server: 109.248.170.119
-  port: 13447
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: Github KZ 05 ATSRSD
-  type: vless
-  server: 109.248.170.119
-  port: 13447
-  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: _0wM2ep44eAcrgf5PflKaBivknCWT6kMvQBQUoScCkE
-  servername: yahoo.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,8 +48,6 @@ proxy-groups:
   - Github KZ 01 ATSRSD
   - Github KZ 02 ATSRSD
   - Github KZ 03 ATSRSD
-  - Github KZ 04 ATSRSD
-  - Github KZ 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -82,7 +56,5 @@ proxy-groups:
   - Github KZ 01 ATSRSD
   - Github KZ 02 ATSRSD
   - Github KZ 03 ATSRSD
-  - Github KZ 04 ATSRSD
-  - Github KZ 05 ATSRSD
 rules:
 - MATCH,PROXIES
