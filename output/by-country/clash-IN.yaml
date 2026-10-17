@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github IN 01 ATSRSD
-  type: ss
-  server: 139.84.166.47
-  port: 8388
-  cipher: aes-256-gcm
-  password: GEdoeeqLZtkJRgSa
-  udp: true
-- name: Github IN 02 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -26,26 +19,48 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: Github IN 03 ATSRSD
-  type: ss
-  server: 172.105.39.124
-  port: 7002
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-- name: Github IN 04 ATSRSD
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+- name: Github IN 02 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vless
+    path: ''
     headers:
-      Host: 13.140.56.100
+      Host: ''
+- name: Github IN 03 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github IN 04 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
 - name: Github IN 05 ATSRSD
   type: vless
   server: 13.140.56.100
@@ -61,30 +76,6 @@ proxies:
       Host: 13.140.56.100
 - name: Github IN 06 ATSRSD
   type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github IN 07 ATSRSD
-  type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github IN 08 ATSRSD
-  type: vless
   server: 13.140.56.100
   port: 14430
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
@@ -96,6 +87,33 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- name: Github IN 07 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: Github IN 08 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: random
 - name: Github IN 09 ATSRSD
   type: vless
   server: 13.140.56.100
@@ -111,32 +129,18 @@ proxies:
       Host: 13.140.56.100
 - name: Github IN 10 ATSRSD
   type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: Github IN 11 ATSRSD
-  type: vmess
-  server: 152.67.8.205
-  port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: ''
-- name: Github IN 12 ATSRSD
+      Host: 13.140.56.100
+- name: Github IN 11 ATSRSD
   type: vless
   server: 13.140.56.100
   port: 14430
@@ -149,6 +153,18 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
+- name: Github IN 12 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

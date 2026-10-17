@@ -11,58 +11,17 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: j3PKOCj7wHl5Pk6thI9HyXtCa6JU180IlBpWANgFjkY=
   udp: true
-- name: Github RU 02 ATSRSD
-  type: vless
-  server: s3-ge.videocdnpink.video
-  port: 443
-  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: s3-ge.videocdnpink.video
-  network: ws
-  ws-opts:
-    path: /api/53d53ac3/a7fa61/096357bebc62
-    headers:
-      Host: s3-ge.videocdnpink.video
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 188.225.25.71
-  port: 443
-  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: s3-ge.videocdnpink.video
-  network: ws
-  ws-opts:
-    path: /api/53d53ac3/a7fa61/096357bebc62
-    headers:
-      Host: s3-ge.videocdnpink.video
-- name: Github RU 04 ATSRSD
-  type: ss
-  server: 194.87.196.107
-  port: 18443
-  cipher: aes-256-gcm
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES
