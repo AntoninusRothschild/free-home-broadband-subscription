@@ -33,30 +33,6 @@ proxies:
   servername: pl.flen-vpn.xyz
 - name: Github PL 04 ATSRSD
   type: vless
-  server: 38.244.186.167
-  port: 8445
-  uuid: f3b8d5f8-cbe9-4aca-ab34-005c51262d5e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: -s2SHiKfXMJRYizNuu8URrx6MgyoQtBJ0QAj33qMog0
-  servername: www.samsung.com
-  client-fingerprint: firefox
-- name: Github PL 05 ATSRSD
-  type: vless
-  server: 38.244.186.167
-  port: 8445
-  uuid: f3b8d5f8-cbe9-4aca-ab34-005c51262d5e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: -s2SHiKfXMJRYizNuu8URrx6MgyoQtBJ0QAj33qMog0
-  servername: www.samsung.com
-  client-fingerprint: safari
-- name: Github PL 06 ATSRSD
-  type: vless
   server: 2.26.225.89
   port: 8443
   uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
@@ -73,8 +49,6 @@ proxy-groups:
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
   - Github PL 04 ATSRSD
-  - Github PL 05 ATSRSD
-  - Github PL 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -84,7 +58,5 @@ proxy-groups:
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
   - Github PL 04 ATSRSD
-  - Github PL 05 ATSRSD
-  - Github PL 06 ATSRSD
 rules:
 - MATCH,PROXIES
