@@ -15,7 +15,7 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chromefp=chrome
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - name: Github TR 02 ATSRSD
@@ -29,41 +29,9 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: test.keoplentuio.xyz
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github TR 04 ATSRSD
-  type: vless
-  server: test.keoplentuio.xyz
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github TR 05 ATSRSD
-  type: vless
-  server: 136.148.64.229
-  port: 2083
-  uuid: 0f32f9e7-d83c-4052-9a5e-103ed967b11c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github TR 06 ATSRSD
-  type: vless
-  server: test.keoplentuio.xyz
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -71,10 +39,6 @@ proxy-groups:
   - AUTO
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
-  - Github TR 05 ATSRSD
-  - Github TR 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -82,9 +46,5 @@ proxy-groups:
   proxies:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
-  - Github TR 05 ATSRSD
-  - Github TR 06 ATSRSD
 rules:
 - MATCH,PROXIES

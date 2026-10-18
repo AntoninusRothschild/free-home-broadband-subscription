@@ -5,6 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
+  type: vless
+  server: 185.141.227.223
+  port: 443
+  uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: z1q3pv4g78.rucdncomp.pro
+  network: ws
+  ws-opts:
+    path: /useraction/events/b892639b7195/
+    headers:
+      Host: z1q3pv4g78.rucdncomp.pro
+- name: Github RU 02 ATSRSD
   type: ss
   server: 130.49.189.158
   port: 43558
@@ -17,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
+  - Github RU 02 ATSRSD
 rules:
 - MATCH,PROXIES
