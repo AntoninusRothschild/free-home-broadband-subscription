@@ -6,6 +6,18 @@ log-level: info
 proxies:
 - name: Github ES 01 ATSRSD
   type: vless
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github ES 02 ATSRSD
+  type: vless
   server: 196.245.52.149
   port: 25535
   uuid: c379d8e4-c67d-42ec-a3ed-ca99d1ad0546
@@ -16,7 +28,19 @@ proxies:
     public-key: Jh7CocBJSA55VZcLfXwXwoQ_Hi5pV-L1vv1SY-IrSh4
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: Github ES 02 ATSRSD
+- name: Github ES 03 ATSRSD
+  type: vless
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github ES 04 ATSRSD
   type: vless
   server: 212.227.235.66
   port: 2053
@@ -28,7 +52,7 @@ proxies:
     public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
   servername: www.apple.com
   client-fingerprint: chrome
-- name: Github ES 03 ATSRSD
+- name: Github ES 05 ATSRSD
   type: vless
   server: 212.227.235.66
   port: 2053
@@ -48,6 +72,8 @@ proxy-groups:
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
+  - Github ES 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -56,5 +82,7 @@ proxy-groups:
   - Github ES 01 ATSRSD
   - Github ES 02 ATSRSD
   - Github ES 03 ATSRSD
+  - Github ES 04 ATSRSD
+  - Github ES 05 ATSRSD
 rules:
 - MATCH,PROXIES

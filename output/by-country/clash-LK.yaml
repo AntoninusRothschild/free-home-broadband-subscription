@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github LK 01 ATSRSD
   type: vless
-  server: 104.17.73.206
+  server: 104.17.72.206
   port: 8443
   uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: free.sahanwickramasinghe.me
 - name: Github LK 02 ATSRSD
   type: vless
-  server: 104.17.70.206
+  server: 104.17.74.206
   port: 8443
   uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
   udp: true
@@ -34,7 +34,7 @@ proxies:
       Host: free.sahanwickramasinghe.me
 - name: Github LK 03 ATSRSD
   type: vless
-  server: 104.17.72.206
+  server: 104.17.71.206
   port: 8443
   uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
   udp: true
@@ -62,6 +62,34 @@ proxies:
       Host: free.sahanwickramasinghe.me
 - name: Github LK 05 ATSRSD
   type: vless
+  server: 104.17.74.206
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 06 ATSRSD
+  type: vless
+  server: 104.17.73.206
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 07 ATSRSD
+  type: vless
   server: free.sahanwickramasinghe.me
   port: 80
   uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
@@ -73,9 +101,104 @@ proxies:
     path: /
     headers:
       Host: free.sahanwickramasinghe.me
-- name: Github LK 06 ATSRSD
+- name: Github LK 08 ATSRSD
   type: vless
-  server: 104.17.74.206
+  server: free.sahanwickramasinghe.me
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 09 ATSRSD
+  type: vless
+  server: free.sahanwickramasinghe.me
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 10 ATSRSD
+  type: vless
+  server: free.sahanwickramasinghe.me
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 11 ATSRSD
+  type: vless
+  server: 51.75.67.209
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 12 ATSRSD
+  type: vless
+  server: 104.17.70.206
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 13 ATSRSD
+  type: vless
+  server: support.zoom.us
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 14 ATSRSD
+  type: vless
+  server: 51.75.67.209
+  port: 8443
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: free.sahanwickramasinghe.me
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github LK 15 ATSRSD
+  type: vless
+  server: 104.17.70.206
   port: 8443
   uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
   udp: true
@@ -98,6 +221,15 @@ proxy-groups:
   - Github LK 04 ATSRSD
   - Github LK 05 ATSRSD
   - Github LK 06 ATSRSD
+  - Github LK 07 ATSRSD
+  - Github LK 08 ATSRSD
+  - Github LK 09 ATSRSD
+  - Github LK 10 ATSRSD
+  - Github LK 11 ATSRSD
+  - Github LK 12 ATSRSD
+  - Github LK 13 ATSRSD
+  - Github LK 14 ATSRSD
+  - Github LK 15 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -109,5 +241,14 @@ proxy-groups:
   - Github LK 04 ATSRSD
   - Github LK 05 ATSRSD
   - Github LK 06 ATSRSD
+  - Github LK 07 ATSRSD
+  - Github LK 08 ATSRSD
+  - Github LK 09 ATSRSD
+  - Github LK 10 ATSRSD
+  - Github LK 11 ATSRSD
+  - Github LK 12 ATSRSD
+  - Github LK 13 ATSRSD
+  - Github LK 14 ATSRSD
+  - Github LK 15 ATSRSD
 rules:
 - MATCH,PROXIES
