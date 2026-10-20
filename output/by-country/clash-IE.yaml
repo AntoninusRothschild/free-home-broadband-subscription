@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github IE 01 ATSRSD
   type: ss
-  server: 20.223.172.81
+  server: 4.210.68.244
   port: 443
   cipher: chacha20-ietf-poly1305
   password: UUjphkQAh5BkOdbf

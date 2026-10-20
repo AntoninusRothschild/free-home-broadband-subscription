@@ -6,6 +6,14 @@ log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
   type: vless
+  server: 206.1.103.26
+  port: 443
+  uuid: 0ad58d97-922c-4e85-b820-9d04dab5b8ec
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github TR 02 ATSRSD
+  type: vless
   server: 151.241.226.201
   port: 2053
   uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
@@ -16,7 +24,7 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
   servername: www.apple.com
   client-fingerprint: chrome
-- name: Github TR 02 ATSRSD
+- name: Github TR 03 ATSRSD
   type: vless
   server: 155.103.71.142
   port: 443
@@ -30,21 +38,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: tutua.azad0namah.ir
-  port: 8080
-  uuid: f079a440-e5f6-46cc-bcaf-273c8cf4417d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github TR 04 ATSRSD
-  type: ss
-  server: tutua.azad0namah.ir
-  port: 5566
-  cipher: 2022-blake3-aes-128-gcm
-  password: 8NwabdWBXK1q1QaBhF69rw==:yPBUkgz9Y6Ad20RTktufkQ==
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,7 +46,6 @@ proxy-groups:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
   - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -62,6 +54,5 @@ proxy-groups:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
   - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 rules:
 - MATCH,PROXIES
