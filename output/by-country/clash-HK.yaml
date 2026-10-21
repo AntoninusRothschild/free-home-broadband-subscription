@@ -20,24 +20,10 @@ proxies:
     headers:
       Host: ''
 - name: Github HK 02 ATSRSD
-  type: vless
-  server: 156.224.76.205
-  port: 443
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vp10.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vp10.pages.dev
-- name: Github HK 03 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  port: 23026
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   udp: true
@@ -47,7 +33,21 @@ proxies:
   ws-opts:
     path: /arki
     headers:
-      Host: google.com
+      Host: 47.244.120.197
+- name: Github HK 03 ATSRSD
+  type: vless
+  server: 43.129.80.179
+  port: 8443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: Github HK 04 ATSRSD
   type: vless
   server: 47.238.210.5
@@ -60,22 +60,6 @@ proxies:
     public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
   servername: tesla.com
   client-fingerprint: chrome
-- name: Github HK 05 ATSRSD
-  type: vless
-  server: 195.58.144.56
-  port: 11907
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 195.58.144.56
-- name: Github HK 06 ATSRSD
-  type: ss
-  server: ruot.ayucloudservices.nl
-  port: 40015
-  cipher: aes-128-gcm
-  password: 585f0e10-7b51-4f2e-a13d-479b045171bd
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -85,8 +69,6 @@ proxy-groups:
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
   - Github HK 04 ATSRSD
-  - Github HK 05 ATSRSD
-  - Github HK 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -96,7 +78,5 @@ proxy-groups:
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
   - Github HK 04 ATSRSD
-  - Github HK 05 ATSRSD
-  - Github HK 06 ATSRSD
 rules:
 - MATCH,PROXIES

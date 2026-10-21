@@ -19,21 +19,20 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 02 ATSRSD
   type: vless
-  server: 31.57.190.50
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp
+    path: /
     headers:
-      Host: ccc.010304.xyz
+      Host: uae.unixzone.us
 - name: Github AE 03 ATSRSD
   type: vless
-  server: 84.235.244.108
+  server: uae.unixzone.us
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -46,17 +45,17 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 04 ATSRSD
   type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 185.253.116.33
+  port: 14430
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: uae.unixzone.us
+      Host: 185.253.116.33
 - name: Github AE 05 ATSRSD
   type: vless
   server: uae.unixzone.us
@@ -72,7 +71,35 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 06 ATSRSD
   type: vless
-  server: 31.57.190.50
+  server: 31.57.190.89
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github AE 07 ATSRSD
+  type: vless
+  server: 31.57.190.15
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- name: Github AE 08 ATSRSD
+  type: vless
+  server: 31.57.190.89
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -84,32 +111,6 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github AE 07 ATSRSD
-  type: vless
-  server: 84.235.244.108
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 08 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
 - name: Github AE 09 ATSRSD
   type: vless
   server: uae.unixzone.us
@@ -125,75 +126,6 @@ proxies:
       Host: uae.unixzone.us
 - name: Github AE 10 ATSRSD
   type: vless
-  server: 162.159.153.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: Github AE 11 ATSRSD
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 12 ATSRSD
-  type: vless
-  server: 31.57.190.15
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: ccc.010304.xyz
-- name: Github AE 13 ATSRSD
-  type: vless
-  server: 31.57.190.15
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github AE 14 ATSRSD
-  type: vless
-  server: 31.57.190.89
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github AE 15 ATSRSD
-  type: vless
   server: 84.235.244.108
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
@@ -205,22 +137,9 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: Github AE 16 ATSRSD
+- name: Github AE 11 ATSRSD
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: Github AE 17 ATSRSD
-  type: vless
-  server: 31.57.190.89
+  server: 31.57.190.15
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -248,12 +167,6 @@ proxy-groups:
   - Github AE 09 ATSRSD
   - Github AE 10 ATSRSD
   - Github AE 11 ATSRSD
-  - Github AE 12 ATSRSD
-  - Github AE 13 ATSRSD
-  - Github AE 14 ATSRSD
-  - Github AE 15 ATSRSD
-  - Github AE 16 ATSRSD
-  - Github AE 17 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -270,11 +183,5 @@ proxy-groups:
   - Github AE 09 ATSRSD
   - Github AE 10 ATSRSD
   - Github AE 11 ATSRSD
-  - Github AE 12 ATSRSD
-  - Github AE 13 ATSRSD
-  - Github AE 14 ATSRSD
-  - Github AE 15 ATSRSD
-  - Github AE 16 ATSRSD
-  - Github AE 17 ATSRSD
 rules:
 - MATCH,PROXIES
