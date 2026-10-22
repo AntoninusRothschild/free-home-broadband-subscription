@@ -6,22 +6,6 @@ log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
   type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github PL 02 ATSRSD
-  type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github PL 03 ATSRSD
-  type: vless
   server: 2.26.225.89
   port: 8443
   uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
@@ -35,15 +19,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github PL 01 ATSRSD
-  - Github PL 02 ATSRSD
-  - Github PL 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github PL 01 ATSRSD
-  - Github PL 02 ATSRSD
-  - Github PL 03 ATSRSD
 rules:
 - MATCH,PROXIES
