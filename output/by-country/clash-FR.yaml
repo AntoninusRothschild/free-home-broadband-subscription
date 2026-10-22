@@ -6,6 +6,28 @@ log-level: info
 proxies:
 - name: Github FR 01 ATSRSD
   type: vmess
+  server: 141.95.65.9
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 02 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 03 ATSRSD
+  type: vmess
   server: 57.128.164.21
   port: 80
   uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
@@ -19,34 +41,7 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
-- name: Github FR 02 ATSRSD
-  type: vless
-  server: 35.180.246.59
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github FR 03 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
 - name: Github FR 04 ATSRSD
-  type: vless
-  server: 35.180.246.59
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github FR 05 ATSRSD
   type: vmess
   server: 145.239.55.210
   port: 80
@@ -61,7 +56,7 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: Github FR 06 ATSRSD
+- name: Github FR 05 ATSRSD
   type: vmess
   server: 162.19.204.71
   port: 1234
@@ -72,17 +67,32 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: ''
-- name: Github FR 07 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+- name: Github FR 06 ATSRSD
+  type: vless
+  server: fr2.downbala.com
+  port: 443
+  uuid: 1252717c-393b-4ab7-96f7-7f49cf77e9e3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
+  servername: t0.m.awsstatic.com
+  network: ws
+  ws-opts:
+    path: /timer/?ed=2560
+    headers:
+      Host: fr2.downbala.com
+- name: Github FR 07 ATSRSD
+  type: vless
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github FR 08 ATSRSD
   type: vmess
   server: 54.37.131.126
@@ -98,58 +108,6 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: Github FR 09 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 10 ATSRSD
-  type: vless
-  server: 13.37.186.150
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github FR 11 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 12 ATSRSD
-  type: vless
-  server: fr2.downbala.com
-  port: 443
-  uuid: 1252717c-393b-4ab7-96f7-7f49cf77e9e3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: t0.m.awsstatic.com
-  network: ws
-  ws-opts:
-    path: /timer/?ed=2560
-    headers:
-      Host: fr2.downbala.com
-- name: Github FR 13 ATSRSD
-  type: vless
-  server: 13.37.186.150
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -163,11 +121,6 @@ proxy-groups:
   - Github FR 06 ATSRSD
   - Github FR 07 ATSRSD
   - Github FR 08 ATSRSD
-  - Github FR 09 ATSRSD
-  - Github FR 10 ATSRSD
-  - Github FR 11 ATSRSD
-  - Github FR 12 ATSRSD
-  - Github FR 13 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -181,10 +134,5 @@ proxy-groups:
   - Github FR 06 ATSRSD
   - Github FR 07 ATSRSD
   - Github FR 08 ATSRSD
-  - Github FR 09 ATSRSD
-  - Github FR 10 ATSRSD
-  - Github FR 11 ATSRSD
-  - Github FR 12 ATSRSD
-  - Github FR 13 ATSRSD
 rules:
 - MATCH,PROXIES

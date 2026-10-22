@@ -12,7 +12,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 2.26.225.89
+  servername: pl.flen-vpn.xyz
 - name: Github PL 02 ATSRSD
   type: vless
   server: site.teslamotor.site
@@ -29,7 +29,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: pl.flen-vpn.xyz
+  servername: 2.26.225.89
 proxy-groups:
 - name: PROXIES
   type: select
