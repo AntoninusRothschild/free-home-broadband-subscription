@@ -7,30 +7,11 @@ proxies:
 - name: Github KR 01 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 9090
+  port: 6679
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  password: TEzjfAYq2IjtuoS
   udp: true
 - name: Github KR 02 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 5498
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-  udp: true
-- name: Github KR 03 ATSRSD
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github KR 04 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -42,21 +23,53 @@ proxies:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github KR 05 ATSRSD
+- name: Github KR 03 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9090
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: Github KR 04 ATSRSD
   type: vmess
-  server: 132.145.80.230
-  port: 80
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  server: seoul02.zgjok.com
+  port: 443
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: ''
   network: ws
   ws-opts:
-    path: /cctv13.m3u8
+    path: ''
     headers:
-      Host: 132.145.80.230
+      Host: ''
+- name: Github KR 05 ATSRSD
+  type: vless
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github KR 06 ATSRSD
+  type: vless
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +80,7 @@ proxy-groups:
   - Github KR 03 ATSRSD
   - Github KR 04 ATSRSD
   - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -77,5 +91,6 @@ proxy-groups:
   - Github KR 03 ATSRSD
   - Github KR 04 ATSRSD
   - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
 rules:
 - MATCH,PROXIES
