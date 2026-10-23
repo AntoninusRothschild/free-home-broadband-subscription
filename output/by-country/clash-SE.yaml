@@ -44,6 +44,20 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
+- name: Github SE 04 ATSRSD
+  type: vless
+  server: 94.143.231.146
+  port: 443
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sub.merky.top
+  network: ws
+  ws-opts:
+    path: /merky-connect/de6/
+    headers:
+      Host: sub.merky.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,6 +66,7 @@ proxy-groups:
   - Github SE 01 ATSRSD
   - Github SE 02 ATSRSD
   - Github SE 03 ATSRSD
+  - Github SE 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -60,5 +75,6 @@ proxy-groups:
   - Github SE 01 ATSRSD
   - Github SE 02 ATSRSD
   - Github SE 03 ATSRSD
+  - Github SE 04 ATSRSD
 rules:
 - MATCH,PROXIES
