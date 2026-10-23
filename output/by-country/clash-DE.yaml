@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github DE 01 ATSRSD
-  type: ss
-  server: 31.76.11.83
-  port: 15731
-  cipher: chacha20-ietf-poly1305
-  password: xAYXtB+XMdfWWOlmL8PWcOZEPfKHKVv7NcTY6jpcL/A=
-  udp: true
-- name: Github DE 02 ATSRSD
   type: vless
   server: 91.107.247.173
   port: 2083
@@ -25,49 +18,63 @@ proxies:
     path: /
     headers:
       Host: 91.107.247.173
-- name: Github DE 03 ATSRSD
-  type: vless
-  server: 172.66.44.124
-  port: 8443
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-- name: Github DE 04 ATSRSD
+- name: Github DE 02 ATSRSD
   type: ss
   server: 185.176.204.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github DE 05 ATSRSD
-  type: vless
-  server: 94.143.231.146
-  port: 443
-  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: sub.merky.top
-  network: ws
-  ws-opts:
-    path: /merky-connect/de6/
-    headers:
-      Host: sub.merky.top
-- name: Github DE 06 ATSRSD
+- name: Github DE 03 ATSRSD
   type: ss
   server: 185.226.172.8
   port: 8008
   cipher: aes-256-gcm
   password: XKFKl2rULjIp74
   udp: true
+- name: Github DE 04 ATSRSD
+  type: vless
+  server: free.sahanwickramasinghe.me
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
+- name: Github DE 05 ATSRSD
+  type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: Github DE 06 ATSRSD
+  type: vless
+  server: 91.107.188.129
+  port: 2083
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: site.check-looks.space
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 91.107.188.129
 - name: Github DE 07 ATSRSD
+  type: vless
+  server: test.wecantos.site
+  port: 20000
+  uuid: ca59a503-db23-44af-9879-49747d8da98f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github DE 08 ATSRSD
   type: vless
   server: 91.107.247.173
   port: 2083
@@ -81,45 +88,7 @@ proxies:
     path: /
     headers:
       Host: sino.bestsellers1.site
-- name: Github DE 08 ATSRSD
-  type: vless
-  server: 57.129.41.216
-  port: 80
-  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: OV-Germany1.09vpn.com
 - name: Github DE 09 ATSRSD
-  type: vless
-  server: 172.67.133.118
-  port: 2053
-  uuid: 26769ac3-b34c-430a-87f8-e1de14619d25
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: uwu.blueknightnet.qzz.io
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- name: Github DE 10 ATSRSD
-  type: vmess
-  server: 45.131.153.149
-  port: 443
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: de.zhou-yufan.com
-- name: Github DE 11 ATSRSD
   type: vless
   server: p2real22.greewebservices.ir
   port: 1320
@@ -131,28 +100,20 @@ proxies:
     public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
   servername: play.googleapis.com
   client-fingerprint: ios
-- name: Github DE 12 ATSRSD
+- name: Github DE 10 ATSRSD
   type: ss
   server: 213.202.208.199
-  port: 7001
+  port: 5000
   cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
+  password: Y6R9pAtvxxzmGC
   udp: true
-- name: Github DE 13 ATSRSD
+- name: Github DE 11 ATSRSD
   type: ss
-  server: 185.226.172.8
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
+  server: 31.76.11.83
+  port: 15731
+  cipher: chacha20-ietf-poly1305
+  password: xAYXtB+XMdfWWOlmL8PWcOZEPfKHKVv7NcTY6jpcL/A=
   udp: true
-- name: Github DE 14 ATSRSD
-  type: vless
-  server: connect.wecantos.site
-  port: 10000
-  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -169,9 +130,6 @@ proxy-groups:
   - Github DE 09 ATSRSD
   - Github DE 10 ATSRSD
   - Github DE 11 ATSRSD
-  - Github DE 12 ATSRSD
-  - Github DE 13 ATSRSD
-  - Github DE 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -188,8 +146,5 @@ proxy-groups:
   - Github DE 09 ATSRSD
   - Github DE 10 ATSRSD
   - Github DE 11 ATSRSD
-  - Github DE 12 ATSRSD
-  - Github DE 13 ATSRSD
-  - Github DE 14 ATSRSD
 rules:
 - MATCH,PROXIES
