@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github IT 01 ATSRSD
   type: ss
-  server: 202.50.253.72
+  server: 202.50.253.90
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -20,71 +20,80 @@ proxies:
   udp: true
 - name: Github IT 03 ATSRSD
   type: ss
-  server: 202.50.253.81
+  server: 202.50.253.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 04 ATSRSD
   type: ss
-  server: 202.50.253.18
-  port: 19999
+  server: 57.131.48.45
+  port: 8388
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  password: itzvpn@321
   udp: true
 - name: Github IT 05 ATSRSD
   type: vless
-  server: 204.216.216.23
-  port: 10086
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github IT 06 ATSRSD
-  type: ss
-  server: 202.50.253.45
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github IT 07 ATSRSD
   type: ss
-  server: 202.50.253.63
+  server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 08 ATSRSD
   type: ss
-  server: 202.50.253.81
+  server: 202.50.253.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 09 ATSRSD
   type: ss
-  server: 202.50.253.36
+  server: 202.50.253.99
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 10 ATSRSD
   type: ss
-  server: 202.50.253.90
+  server: 202.50.253.45
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 11 ATSRSD
   type: ss
-  server: 202.50.253.27
+  server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 12 ATSRSD
   type: ss
-  server: 202.50.253.63
+  server: 202.50.253.45
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -98,52 +107,26 @@ proxies:
   udp: true
 - name: Github IT 14 ATSRSD
   type: ss
-  server: 202.50.253.90
+  server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 15 ATSRSD
   type: ss
-  server: 185.164.175.81
+  server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github IT 16 ATSRSD
-  type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  type: ss
+  server: 185.164.175.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-  servername: www.apple.com
-  client-fingerprint: random
 - name: Github IT 17 ATSRSD
-  type: ss
-  server: 57.131.48.45
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
-- name: Github IT 18 ATSRSD
-  type: ss
-  server: 202.50.253.54
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github IT 19 ATSRSD
-  type: ss
-  server: 202.50.253.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github IT 20 ATSRSD
   type: vless
   server: 57.131.38.163
   port: 2053
@@ -155,9 +138,35 @@ proxies:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
   servername: www.apple.com
   client-fingerprint: chrome
+- name: Github IT 18 ATSRSD
+  type: vless
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github IT 19 ATSRSD
+  type: ss
+  server: 202.50.253.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github IT 20 ATSRSD
+  type: ss
+  server: 185.164.175.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: Github IT 21 ATSRSD
   type: ss
-  server: 202.50.253.63
+  server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -171,27 +180,69 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github IT 23 ATSRSD
-  type: ss
-  server: 202.50.253.45
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  server: itly.yandex-api.store
+  port: 8443
+  uuid: 78559873-84ef-4cab-a0b2-46d4cd20de4a
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: itly.yandex-api.store
+  network: ws
+  ws-opts:
+    path: /assets
+    headers:
+      Host: itly.yandex-api.store
 - name: Github IT 24 ATSRSD
+  type: vless
+  server: 179.255.190.43
+  port: 8443
+  uuid: 78559873-84ef-4cab-a0b2-46d4cd20de4a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: itly.yandex-api.store
+  network: ws
+  ws-opts:
+    path: /assets
+    headers:
+      Host: 179.255.190.43
+- name: Github IT 25 ATSRSD
   type: ss
   server: 202.50.253.99
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github IT 25 ATSRSD
+- name: Github IT 26 ATSRSD
   type: ss
-  server: 202.50.253.18
+  server: 202.50.253.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github IT 26 ATSRSD
+- name: Github IT 27 ATSRSD
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github IT 28 ATSRSD
+  type: ss
+  server: 202.50.253.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github IT 29 ATSRSD
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github IT 30 ATSRSD
   type: vless
   server: 57.131.38.163
   port: 2053
@@ -202,14 +253,29 @@ proxies:
   reality-opts:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
   servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github IT 27 ATSRSD
+  client-fingerprint: random
+- name: Github IT 31 ATSRSD
   type: ss
-  server: 202.50.253.27
+  server: 202.50.253.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: Github IT 32 ATSRSD
+  type: ss
+  server: 202.50.253.90
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github IT 33 ATSRSD
+  type: vless
+  server: 204.216.216.23
+  port: 10086
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -242,6 +308,12 @@ proxy-groups:
   - Github IT 25 ATSRSD
   - Github IT 26 ATSRSD
   - Github IT 27 ATSRSD
+  - Github IT 28 ATSRSD
+  - Github IT 29 ATSRSD
+  - Github IT 30 ATSRSD
+  - Github IT 31 ATSRSD
+  - Github IT 32 ATSRSD
+  - Github IT 33 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -274,5 +346,11 @@ proxy-groups:
   - Github IT 25 ATSRSD
   - Github IT 26 ATSRSD
   - Github IT 27 ATSRSD
+  - Github IT 28 ATSRSD
+  - Github IT 29 ATSRSD
+  - Github IT 30 ATSRSD
+  - Github IT 31 ATSRSD
+  - Github IT 32 ATSRSD
+  - Github IT 33 ATSRSD
 rules:
 - MATCH,PROXIES
