@@ -6,20 +6,94 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vmess
-  server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  server: 8.218.195.61
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: EX1oGt73NzPQKAc2.v.3dns.vip
   network: ws
   ws-opts:
-    path: /arki
+    path: /ws-vmess
     headers:
-      Host: 47.244.120.197
+      Host: EX1oGt73NzPQKAc2.v.3dns.vip
 - name: Github HK 02 ATSRSD
+  type: vmess
+  server: 47.243.65.243
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lcv8v9l7oyamxxfz.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: lcv8v9l7oyamxxfz.v.3dns.vip
+- name: Github HK 03 ATSRSD
+  type: vmess
+  server: 8.217.254.88
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 2b9hwY8oCx7Q74NM.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
+- name: Github HK 04 ATSRSD
+  type: vmess
+  server: 47.243.65.243
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lcv8v9l7oyamxxfz.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: lcv8v9l7oyamxxfz.v.3dns.vip
+- name: Github HK 05 ATSRSD
+  type: vmess
+  server: 8.218.195.61
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: EX1oGt73NzPQKAc2.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: EX1oGt73NzPQKAc2.v.3dns.vip
+- name: Github HK 06 ATSRSD
+  type: vless
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 195.58.144.56
+- name: Github HK 07 ATSRSD
   type: vless
   server: 103.180.20.108
   port: 8443
@@ -32,22 +106,7 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
-- name: Github HK 03 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki
-    headers:
-      Host: ''
+      Host: 103.180.20.108
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,6 +115,10 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
+  - Github HK 06 ATSRSD
+  - Github HK 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -64,5 +127,9 @@ proxy-groups:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
   - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
+  - Github HK 06 ATSRSD
+  - Github HK 07 ATSRSD
 rules:
 - MATCH,PROXIES
