@@ -20,6 +20,19 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github MY 02 ATSRSD
   type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.halalkhor.info
+- name: Github MY 03 ATSRSD
+  type: vless
   server: 111.90.143.184
   port: 61111
   uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - Github MY 01 ATSRSD
   - Github MY 02 ATSRSD
+  - Github MY 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - Github MY 01 ATSRSD
   - Github MY 02 ATSRSD
+  - Github MY 03 ATSRSD
 rules:
 - MATCH,PROXIES

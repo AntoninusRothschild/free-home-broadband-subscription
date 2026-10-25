@@ -6,16 +6,17 @@ log-level: info
 proxies:
 - name: Github IN 01 ATSRSD
   type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 - name: Github IN 02 ATSRSD
   type: vless
   server: 13.140.56.100
@@ -45,43 +46,13 @@ proxies:
     headers:
       Host: 152.67.8.205
 - name: Github IN 04 ATSRSD
-  type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  type: ss
+  server: 139.84.166.47
+  port: 8388
+  cipher: aes-256-gcm
+  password: GEdoeeqLZtkJRgSa
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: firefox
 - name: Github IN 05 ATSRSD
-  type: vless
-  server: 194.61.31.126
-  port: 2053
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github IN 06 ATSRSD
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: Github IN 07 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -96,7 +67,7 @@ proxies:
     path: ''
     headers:
       Host: ''
-- name: Github IN 08 ATSRSD
+- name: Github IN 06 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -111,6 +82,33 @@ proxies:
     path: /
     headers:
       Host: in-152.67.8.205-0204
+- name: Github IN 07 ATSRSD
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: in-152.67.8.205-0179
+- name: Github IN 08 ATSRSD
+  type: vless
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: Github IN 09 ATSRSD
   type: vless
   server: 13.140.56.100
@@ -125,21 +123,6 @@ proxies:
     headers:
       Host: 13.140.56.100
 - name: Github IN 10 ATSRSD
-  type: vmess
-  server: 152.67.8.205
-  port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: in-152.67.8.205-0250
-- name: Github IN 11 ATSRSD
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -151,7 +134,7 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
   client-fingerprint: random
-- name: Github IN 12 ATSRSD
+- name: Github IN 11 ATSRSD
   type: vmess
   server: 152.67.8.205
   port: 80
@@ -165,21 +148,8 @@ proxies:
   ws-opts:
     path: ''
     headers:
-      Host: in-152.67.8.205-0202
-- name: Github IN 13 ATSRSD
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: Github IN 14 ATSRSD
+      Host: in-152.67.8.205-0250
+- name: Github IN 12 ATSRSD
   type: vless
   server: 13.140.56.100
   port: 14430
@@ -209,8 +179,6 @@ proxy-groups:
   - Github IN 10 ATSRSD
   - Github IN 11 ATSRSD
   - Github IN 12 ATSRSD
-  - Github IN 13 ATSRSD
-  - Github IN 14 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -228,7 +196,5 @@ proxy-groups:
   - Github IN 10 ATSRSD
   - Github IN 11 ATSRSD
   - Github IN 12 ATSRSD
-  - Github IN 13 ATSRSD
-  - Github IN 14 ATSRSD
 rules:
 - MATCH,PROXIES
