@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
   type: vless
-  server: 5.22.221.127
-  port: 443
-  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
+  server: site.teslamotor.site
+  port: 20001
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
   tls: false
   skip-cert-verify: true
@@ -22,12 +22,13 @@ proxies:
   skip-cert-verify: true
 - name: Github PL 03 ATSRSD
   type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: 2.26.6.1
 - name: Github PL 04 ATSRSD
   type: vless
   server: 2.26.6.1
@@ -39,18 +40,12 @@ proxies:
   servername: 2.26.6.1
 - name: Github PL 05 ATSRSD
   type: vless
-  server: tr2.soft10.ir
-  port: 2053
-  uuid: 480b4042-f713-43d7-b24b-b4064c97f841
+  server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: tr2.soft10.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: tr2.soft10.ir
 - name: Github PL 06 ATSRSD
   type: vless
   server: 2.26.6.1
@@ -62,9 +57,9 @@ proxies:
   servername: 2.26.6.1
 - name: Github PL 07 ATSRSD
   type: vless
-  server: 5.22.221.127
-  port: 443
-  uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
+  server: site.teslamotor.site
+  port: 20001
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
   tls: false
   skip-cert-verify: true
@@ -84,6 +79,24 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github PL 10 ATSRSD
+  type: vless
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 2.26.6.1
+- name: Github PL 11 ATSRSD
+  type: vless
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 2.26.6.1
 proxy-groups:
 - name: PROXIES
   type: select
@@ -98,6 +111,8 @@ proxy-groups:
   - Github PL 07 ATSRSD
   - Github PL 08 ATSRSD
   - Github PL 09 ATSRSD
+  - Github PL 10 ATSRSD
+  - Github PL 11 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -112,5 +127,7 @@ proxy-groups:
   - Github PL 07 ATSRSD
   - Github PL 08 ATSRSD
   - Github PL 09 ATSRSD
+  - Github PL 10 ATSRSD
+  - Github PL 11 ATSRSD
 rules:
 - MATCH,PROXIES

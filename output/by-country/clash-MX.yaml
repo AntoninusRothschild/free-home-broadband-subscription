@@ -15,18 +15,38 @@ proxies:
   servername: mx001.zestapp778.com
 - name: Github MX 02 ATSRSD
   type: vless
-  server: 131.196.253.141
-  port: 443
-  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
+  server: 149.104.90.21
+  port: 19167
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: kclx.eu.org
-  network: ws
-  ws-opts:
-    path: /154.16.10.34-8080
-    headers:
-      Host: kclx.eu.org
+  servername: mx001.zestapp778.com
+- name: Github MX 03 ATSRSD
+  type: vless
+  server: mx001.zestapp778.com
+  port: 19167
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: mx001.zestapp778.com
+- name: Github MX 04 ATSRSD
+  type: ss
+  server: 64.177.90.30
+  port: 8388
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+  udp: true
+- name: Github MX 05 ATSRSD
+  type: vless
+  server: 149.104.90.21
+  port: 19167
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: mx001.zestapp778.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -34,6 +54,9 @@ proxy-groups:
   - AUTO
   - Github MX 01 ATSRSD
   - Github MX 02 ATSRSD
+  - Github MX 03 ATSRSD
+  - Github MX 04 ATSRSD
+  - Github MX 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -41,5 +64,8 @@ proxy-groups:
   proxies:
   - Github MX 01 ATSRSD
   - Github MX 02 ATSRSD
+  - Github MX 03 ATSRSD
+  - Github MX 04 ATSRSD
+  - Github MX 05 ATSRSD
 rules:
 - MATCH,PROXIES
