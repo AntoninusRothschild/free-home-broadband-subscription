@@ -6,6 +6,13 @@ log-level: info
 proxies:
 - name: Github UA 01 ATSRSD
   type: ss
+  server: staging.lastilhame.monster
+  port: 49917
+  cipher: chacha20-ietf-poly1305
+  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+  udp: true
+- name: Github UA 02 ATSRSD
+  type: ss
   server: 104.253.216.227
   port: 49917
   cipher: chacha20-ietf-poly1305
@@ -17,11 +24,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github UA 01 ATSRSD
+  - Github UA 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github UA 01 ATSRSD
+  - Github UA 02 ATSRSD
 rules:
 - MATCH,PROXIES

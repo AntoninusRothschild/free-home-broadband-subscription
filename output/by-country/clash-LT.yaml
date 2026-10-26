@@ -32,20 +32,6 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github LT 03 ATSRSD
-  type: vless
-  server: 88.216.69.253
-  port: 443
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: a.cwvps.eu.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,7 +39,6 @@ proxy-groups:
   - AUTO
   - Github LT 01 ATSRSD
   - Github LT 02 ATSRSD
-  - Github LT 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -61,6 +46,5 @@ proxy-groups:
   proxies:
   - Github LT 01 ATSRSD
   - Github LT 02 ATSRSD
-  - Github LT 03 ATSRSD
 rules:
 - MATCH,PROXIES
