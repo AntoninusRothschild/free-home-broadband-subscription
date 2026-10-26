@@ -5,60 +5,41 @@ mode: rule
 log-level: info
 proxies:
 - name: Github GB 01 ATSRSD
-  type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github GB 02 ATSRSD
-  type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-  servername: www.apple.com
-  client-fingerprint: random
-- name: Github GB 03 ATSRSD
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github GB 04 ATSRSD
   type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
+  server: 82.38.31.198
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
   udp: true
-- name: Github GB 05 ATSRSD
+- name: Github GB 02 ATSRSD
+  type: ss
+  server: 82.38.31.17
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 03 ATSRSD
+  type: ss
+  server: 82.38.31.16
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 04 ATSRSD
   type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  server: connect.hondamotor.site
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-  servername: www.apple.com
-  client-fingerprint: firefox
+- name: Github GB 05 ATSRSD
+  type: ss
+  server: 82.38.31.28
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
 - name: Github GB 06 ATSRSD
   type: vless
   server: 46.250.250.149
@@ -72,64 +53,29 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: Github GB 07 ATSRSD
-  type: vless
-  server: 46.250.240.80
-  port: 2053
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  type: ss
+  server: 87.236.166.178
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-  servername: www.cloudflare.com
-  client-fingerprint: random
 - name: Github GB 08 ATSRSD
   type: vless
-  server: 46.250.240.80
-  port: 2053
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  server: 168.222.43.53
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: Github GB 09 ATSRSD
   type: vless
-  server: 51.38.71.147
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  server: connect.hondamotor.site
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: node-uk.connectsuite.org
 - name: Github GB 10 ATSRSD
-  type: vless
-  server: node-uk.connectsuite.org
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: Github GB 11 ATSRSD
-  type: vless
-  server: connect.hondamotor.site
-  port: 10002
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 12 ATSRSD
-  type: vless
-  server: connect.hondamotor.site
-  port: 10002
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github GB 13 ATSRSD
   type: vless
   server: 51.89.194.151
   port: 2053
@@ -140,8 +86,200 @@ proxies:
   reality-opts:
     public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: Github GB 11 ATSRSD
+  type: ss
+  server: sql.popmintxo.cc
+  port: 43385
+  cipher: chacha20-ietf-poly1305
+  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
+  udp: true
+- name: Github GB 12 ATSRSD
+  type: ss
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: Github GB 13 ATSRSD
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 - name: Github GB 14 ATSRSD
+  type: ss
+  server: 82.38.31.194
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 15 ATSRSD
+  type: ss
+  server: 82.38.31.210
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 16 ATSRSD
+  type: ss
+  server: 82.38.31.48
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 17 ATSRSD
+  type: ss
+  server: 82.38.31.201
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 18 ATSRSD
+  type: ss
+  server: 82.38.31.46
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 19 ATSRSD
+  type: ss
+  server: location15.cpanel-host16.ir
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+- name: Github GB 20 ATSRSD
+  type: vless
+  server: tr.pad-sservice.lat
+  port: 8443
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tr.pad-sservice.lat
+  network: ws
+  ws-opts:
+    path: /TR1
+    headers:
+      Host: tr.pad-service.com
+- name: Github GB 21 ATSRSD
+  type: ss
+  server: 82.38.31.7
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 22 ATSRSD
+  type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github GB 23 ATSRSD
+  type: ss
+  server: 82.38.31.39
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 24 ATSRSD
+  type: ss
+  server: 82.38.31.199
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 25 ATSRSD
+  type: ss
+  server: 82.38.31.13
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 26 ATSRSD
+  type: ss
+  server: 82.38.31.42
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 27 ATSRSD
+  type: ss
+  server: 82.38.31.200
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 28 ATSRSD
+  type: ss
+  server: 177.202.111.18
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+- name: Github GB 29 ATSRSD
+  type: vless
+  server: 178.83.45.226
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 30 ATSRSD
+  type: ss
+  server: 82.38.31.11
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 31 ATSRSD
+  type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github GB 32 ATSRSD
+  type: vless
+  server: 46.250.240.80
+  port: 2053
+  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: Github GB 33 ATSRSD
+  type: ss
+  server: 82.38.31.69
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 34 ATSRSD
+  type: vless
+  server: 168.222.49.164
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 35 ATSRSD
   type: vless
   server: 46.250.240.80
   port: 2053
@@ -153,56 +291,42 @@ proxies:
     public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github GB 15 ATSRSD
+- name: Github GB 36 ATSRSD
   type: vless
-  server: uk1.connectsuite.org
-  port: 443
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  server: tr.pad-sservice.lat
+  port: 8443
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: uk1.connectsuite.org
+  servername: tr.pad-sservice.lat
   network: ws
   ws-opts:
-    path: /cdn-cgi/ws
+    path: /TR1
     headers:
-      Host: uk1.connectsuite.org
-- name: Github GB 16 ATSRSD
-  type: vless
-  server: 51.38.71.147
-  port: 443
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: uk1.connectsuite.org
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: 51.38.71.147
-- name: Github GB 17 ATSRSD
+      Host: tr.pad-service.com
+- name: Github GB 37 ATSRSD
   type: ss
-  server: 82.38.31.199
+  server: 82.38.31.192
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
   udp: true
-- name: Github GB 18 ATSRSD
+- name: Github GB 38 ATSRSD
   type: ss
-  server: 37.153.158.136
-  port: 56137
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github GB 39 ATSRSD
+  type: ss
+  server: 82.38.31.149
+  port: 443
   cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: Github GB 19 ATSRSD
-  type: ss
-  server: 185.176.206.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github GB 20 ATSRSD
+- name: Github GB 40 ATSRSD
   type: vless
   server: 159.65.51.189
   port: 443
@@ -216,22 +340,21 @@ proxies:
     path: /fp#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: ccc.010304.xyz
-- name: Github GB 21 ATSRSD
+- name: Github GB 41 ATSRSD
   type: vless
-  server: connect.hondamotor.site
-  port: 10002
-  uuid: c6362720-0931-4b91-b187-d8ecf3149734
+  server: 51.38.71.147
+  port: 443
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-- name: Github GB 22 ATSRSD
-  type: ss
-  server: sql.popmintxo.cc
-  port: 43385
-  cipher: chacha20-ietf-poly1305
-  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-  udp: true
-- name: Github GB 23 ATSRSD
+  servername: uk1.connectsuite.org
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+    headers:
+      Host: 51.38.71.147
+- name: Github GB 42 ATSRSD
   type: vless
   server: 46.250.250.149
   port: 2053
@@ -242,8 +365,148 @@ proxies:
   reality-opts:
     public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
   servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github GB 43 ATSRSD
+  type: ss
+  server: 82.38.31.186
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 44 ATSRSD
+  type: vless
+  server: 51.89.194.151
+  port: 2053
+  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
+  servername: www.apple.com
   client-fingerprint: random
-- name: Github GB 24 ATSRSD
+- name: Github GB 45 ATSRSD
+  type: vless
+  server: 46.250.250.149
+  port: 2053
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: Github GB 46 ATSRSD
+  type: vless
+  server: 51.38.71.147
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: node-uk.connectsuite.org
+- name: Github GB 47 ATSRSD
+  type: ss
+  server: 82.38.31.18
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 48 ATSRSD
+  type: ss
+  server: 82.38.31.26
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 49 ATSRSD
+  type: ss
+  server: 158.173.24.73
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github GB 50 ATSRSD
+  type: ss
+  server: 177.202.111.22
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+- name: Github GB 51 ATSRSD
+  type: ss
+  server: sql.popmintxo.cc
+  port: 43385
+  cipher: chacha20-ietf-poly1305
+  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
+  udp: true
+- name: Github GB 52 ATSRSD
+  type: vless
+  server: 46.250.240.80
+  port: 2053
+  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github GB 53 ATSRSD
+  type: vless
+  server: node-uk.connectsuite.org
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: node-uk.connectsuite.org
+- name: Github GB 54 ATSRSD
+  type: vless
+  server: 51.38.71.147
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: node-uk.connectsuite.org
+- name: Github GB 55 ATSRSD
+  type: ss
+  server: 82.38.31.175
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 56 ATSRSD
+  type: ss
+  server: 87.236.166.100
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+- name: Github GB 57 ATSRSD
+  type: ss
+  server: 82.38.31.2
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 58 ATSRSD
+  type: ss
+  server: 82.38.31.9
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: Github GB 59 ATSRSD
+  type: ss
+  server: 82.38.31.216
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: Github GB 60 ATSRSD
   type: vless
   server: connect.hondamotor.site
   port: 10002
@@ -251,14 +514,22 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github GB 25 ATSRSD
-  type: ss
-  server: 185.176.206.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: Github GB 61 ATSRSD
+  type: vless
+  server: connect.hondamotor.site
+  port: 10002
+  uuid: c6362720-0931-4b91-b187-d8ecf3149734
   udp: true
-- name: Github GB 26 ATSRSD
+  tls: false
+  skip-cert-verify: true
+- name: Github GB 62 ATSRSD
+  type: ss
+  server: 87.236.166.166
+  port: 56137
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+- name: Github GB 63 ATSRSD
   type: vless
   server: 46.250.240.80
   port: 2053
@@ -270,25 +541,6 @@ proxies:
     public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: Github GB 27 ATSRSD
-  type: vless
-  server: 51.89.194.151
-  port: 2053
-  uuid: 8e790f25-1d71-4601-9fb0-d503931dcfca
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github GB 28 ATSRSD
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -322,6 +574,41 @@ proxy-groups:
   - Github GB 26 ATSRSD
   - Github GB 27 ATSRSD
   - Github GB 28 ATSRSD
+  - Github GB 29 ATSRSD
+  - Github GB 30 ATSRSD
+  - Github GB 31 ATSRSD
+  - Github GB 32 ATSRSD
+  - Github GB 33 ATSRSD
+  - Github GB 34 ATSRSD
+  - Github GB 35 ATSRSD
+  - Github GB 36 ATSRSD
+  - Github GB 37 ATSRSD
+  - Github GB 38 ATSRSD
+  - Github GB 39 ATSRSD
+  - Github GB 40 ATSRSD
+  - Github GB 41 ATSRSD
+  - Github GB 42 ATSRSD
+  - Github GB 43 ATSRSD
+  - Github GB 44 ATSRSD
+  - Github GB 45 ATSRSD
+  - Github GB 46 ATSRSD
+  - Github GB 47 ATSRSD
+  - Github GB 48 ATSRSD
+  - Github GB 49 ATSRSD
+  - Github GB 50 ATSRSD
+  - Github GB 51 ATSRSD
+  - Github GB 52 ATSRSD
+  - Github GB 53 ATSRSD
+  - Github GB 54 ATSRSD
+  - Github GB 55 ATSRSD
+  - Github GB 56 ATSRSD
+  - Github GB 57 ATSRSD
+  - Github GB 58 ATSRSD
+  - Github GB 59 ATSRSD
+  - Github GB 60 ATSRSD
+  - Github GB 61 ATSRSD
+  - Github GB 62 ATSRSD
+  - Github GB 63 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -355,5 +642,40 @@ proxy-groups:
   - Github GB 26 ATSRSD
   - Github GB 27 ATSRSD
   - Github GB 28 ATSRSD
+  - Github GB 29 ATSRSD
+  - Github GB 30 ATSRSD
+  - Github GB 31 ATSRSD
+  - Github GB 32 ATSRSD
+  - Github GB 33 ATSRSD
+  - Github GB 34 ATSRSD
+  - Github GB 35 ATSRSD
+  - Github GB 36 ATSRSD
+  - Github GB 37 ATSRSD
+  - Github GB 38 ATSRSD
+  - Github GB 39 ATSRSD
+  - Github GB 40 ATSRSD
+  - Github GB 41 ATSRSD
+  - Github GB 42 ATSRSD
+  - Github GB 43 ATSRSD
+  - Github GB 44 ATSRSD
+  - Github GB 45 ATSRSD
+  - Github GB 46 ATSRSD
+  - Github GB 47 ATSRSD
+  - Github GB 48 ATSRSD
+  - Github GB 49 ATSRSD
+  - Github GB 50 ATSRSD
+  - Github GB 51 ATSRSD
+  - Github GB 52 ATSRSD
+  - Github GB 53 ATSRSD
+  - Github GB 54 ATSRSD
+  - Github GB 55 ATSRSD
+  - Github GB 56 ATSRSD
+  - Github GB 57 ATSRSD
+  - Github GB 58 ATSRSD
+  - Github GB 59 ATSRSD
+  - Github GB 60 ATSRSD
+  - Github GB 61 ATSRSD
+  - Github GB 62 ATSRSD
+  - Github GB 63 ATSRSD
 rules:
 - MATCH,PROXIES
