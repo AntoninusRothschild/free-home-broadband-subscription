@@ -29,6 +29,35 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: Github KR 03 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9090
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: Github KR 04 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 5498
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  udp: true
+- name: Github KR 05 ATSRSD
+  type: vmess
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr02.a0a.xyz
+- name: Github KR 06 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -40,7 +69,7 @@ proxies:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: Github KR 04 ATSRSD
+- name: Github KR 07 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -52,12 +81,12 @@ proxies:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: Github KR 05 ATSRSD
+- name: Github KR 08 ATSRSD
   type: ss
-  server: 52.78.45.69
-  port: 8443
-  cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  server: 141.164.45.187
+  port: 6697
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -69,6 +98,9 @@ proxy-groups:
   - Github KR 03 ATSRSD
   - Github KR 04 ATSRSD
   - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
+  - Github KR 07 ATSRSD
+  - Github KR 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -79,5 +111,8 @@ proxy-groups:
   - Github KR 03 ATSRSD
   - Github KR 04 ATSRSD
   - Github KR 05 ATSRSD
+  - Github KR 06 ATSRSD
+  - Github KR 07 ATSRSD
+  - Github KR 08 ATSRSD
 rules:
 - MATCH,PROXIES
