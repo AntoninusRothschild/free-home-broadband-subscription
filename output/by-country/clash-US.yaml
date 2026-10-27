@@ -5,19 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: Github US 01 ATSRSD
-  type: vless
-  server: 146.75.59.186
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
 - name: Github US 02 ATSRSD
   type: vless
   server: 146.75.59.186
@@ -33,18 +29,8 @@ proxies:
     headers:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
 - name: Github US 03 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 04 ATSRSD
   type: vless
-  server: 8.35.211.169
+  server: 104.18.35.42
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -53,10 +39,69 @@ proxies:
   servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 04 ATSRSD
+  type: vless
+  server: 104.17.210.8
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
 - name: Github US 05 ATSRSD
+  type: vless
+  server: 104.17.103.187
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 06 ATSRSD
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 07 ATSRSD
+  type: vless
+  server: 188.164.248.248
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 08 ATSRSD
+  type: ss
+  server: 37.19.198.160
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 09 ATSRSD
   type: vless
   server: 104.17.97.13
   port: 443
@@ -70,158 +115,7 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 06 ATSRSD
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 07 ATSRSD
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 08 ATSRSD
-  type: vless
-  server: 8.35.211.169
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 09 ATSRSD
-  type: vless
-  server: 162.159.152.34
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
 - name: Github US 10 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 11 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 12 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 13 ATSRSD
-  type: vless
-  server: 188.164.248.246
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 14 ATSRSD
-  type: vless
-  server: 188.164.248.91
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 15 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 16 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 17 ATSRSD
-  type: vless
-  server: 104.19.35.64
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 18 ATSRSD
-  type: ss
-  server: 156.146.38.167
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 19 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 20 ATSRSD
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -236,9 +130,37 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: ''
-- name: Github US 21 ATSRSD
+- name: Github US 11 ATSRSD
   type: vless
-  server: 199.232.237.79
+  server: 104.17.184.104
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 12 ATSRSD
+  type: vless
+  server: 146.75.59.186
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 13 ATSRSD
+  type: vless
+  server: wwww.qarvian.ir
   port: 443
   uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
   udp: true
@@ -247,295 +169,10 @@ proxies:
   servername: cdn.akamai.steamstatic.com
   network: ws
   ws-opts:
-    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    path: /
     headers:
       Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 22 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 23 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 24 ATSRSD
-  type: vless
-  server: 104.19.145.193
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 25 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 26 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 27 ATSRSD
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 28 ATSRSD
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 29 ATSRSD
-  type: vmess
-  server: 43.130.35.53
-  port: 10087
-  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 30 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 10443
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 31 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 14430
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.138.100.248
-- name: Github US 32 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 10443
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 33 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 14430
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.138.100.248
-- name: Github US 34 ATSRSD
-  type: vless
-  server: 104.18.33.209
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 35 ATSRSD
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: Github US 36 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 37 ATSRSD
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 38 ATSRSD
-  type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: v2ray1.dozapp.xyz
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: Github US 39 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 10443
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 40 ATSRSD
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 41 ATSRSD
-  type: vless
-  server: 104.19.144.137
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 42 ATSRSD
-  type: vless
-  server: 104.19.35.46
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 43 ATSRSD
-  type: vmess
-  server: 172.67.167.78
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: v2ray1.dozapp.xyz
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: Github US 44 ATSRSD
-  type: vless
-  server: 104.16.205.233
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 45 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 46 ATSRSD
-  type: vless
-  server: 172.67.77.54
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 47 ATSRSD
+- name: Github US 14 ATSRSD
   type: vless
   server: 199.232.78.160
   port: 443
@@ -549,46 +186,7 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- name: Github US 48 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-- name: Github US 49 ATSRSD
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: Github US 50 ATSRSD
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 51 ATSRSD
+- name: Github US 15 ATSRSD
   type: vless
   server: 199.232.78.159
   port: 443
@@ -602,82 +200,7 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-- name: Github US 52 ATSRSD
-  type: vless
-  server: 199.232.78.160
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- name: Github US 53 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-- name: Github US 54 ATSRSD
-  type: vless
-  server: 172.66.1.36
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github US 55 ATSRSD
-  type: vless
-  server: 188.164.248.91
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 56 ATSRSD
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 57 ATSRSD
-  type: vless
-  server: p11real3.greewebservices.ir
-  port: 2202
-  uuid: f234330e-f9df-46e3-8f60-b2af5173c147
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-  servername: play.googleapis.com
-  client-fingerprint: ios
-- name: Github US 58 ATSRSD
+- name: Github US 16 ATSRSD
   type: vless
   server: wwww.qarvian.ir
   port: 443
@@ -691,25 +214,23 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 59 ATSRSD
-  type: vmess
-  server: rib9jxayoqjgn2kw.v.3dns.vip
-  port: 443
-  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
-  alterId: 0
-  cipher: auto
+- name: Github US 17 ATSRSD
+  type: ss
+  server: 45.86.51.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: ''
-- name: Github US 60 ATSRSD
+- name: Github US 18 ATSRSD
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 19 ATSRSD
   type: vless
-  server: 104.18.33.100
+  server: 104.17.209.75
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -721,19 +242,9 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 61 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 62 ATSRSD
+- name: Github US 20 ATSRSD
   type: vless
-  server: 172.64.146.204
+  server: 104.19.59.237
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -745,17 +256,7 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 63 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 64 ATSRSD
+- name: Github US 21 ATSRSD
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -765,7 +266,47 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 65 ATSRSD
+- name: Github US 22 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 23 ATSRSD
+  type: vmess
+  server: 169.197.142.22
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 24 ATSRSD
+  type: vmess
+  server: 169.197.142.22
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 25 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 26 ATSRSD
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -779,10 +320,71 @@ proxies:
   ws-opts:
     path: /cctv13.m3u8
     headers:
-      Host: ''
-- name: Github US 66 ATSRSD
+      Host: 129.146.77.248
+- name: Github US 27 ATSRSD
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 28 ATSRSD
+  type: vmess
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 29 ATSRSD
+  type: vmess
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 30 ATSRSD
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 31 ATSRSD
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 32 ATSRSD
+  type: vmess
+  server: 43.130.35.53
+  port: 10087
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 33 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 34 ATSRSD
   type: vless
-  server: 172.64.159.104
+  server: 162.159.152.4
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -794,21 +396,21 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 67 ATSRSD
-  type: ss
-  server: 156.146.38.168
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 68 ATSRSD
+- name: Github US 35 ATSRSD
   type: ss
   server: 15.204.246.132
   port: 7307
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
   udp: true
-- name: Github US 69 ATSRSD
+- name: Github US 36 ATSRSD
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 37 ATSRSD
   type: vmess
   server: 47.88.79.34
   port: 443
@@ -824,7 +426,44 @@ proxies:
     path: /ws-vmess
     headers:
       Host: rib9jxayoqjgn2kw.v.3dns.vip
-- name: Github US 70 ATSRSD
+- name: Github US 38 ATSRSD
+  type: vless
+  server: p11real3.greewebservices.ir
+  port: 2202
+  uuid: f234330e-f9df-46e3-8f60-b2af5173c147
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+  servername: play.googleapis.com
+  client-fingerprint: ios
+- name: Github US 39 ATSRSD
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: ''
+- name: Github US 40 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 41 ATSRSD
   type: vmess
   server: 67.220.95.3
   port: 18000
@@ -834,40 +473,30 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 71 ATSRSD
+- name: Github US 42 ATSRSD
   type: vless
-  server: 8.35.211.169
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 72 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  server: 45.138.100.248
+  port: 14430
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 73 ATSRSD
-  type: ss
-  server: 173.244.56.6
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 74 ATSRSD
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.138.100.248
+- name: Github US 43 ATSRSD
   type: vless
-  server: 172.66.208.197
+  server: 45.138.100.248
+  port: 10443
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 44 ATSRSD
+  type: vless
+  server: 172.66.3.157
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -876,26 +505,12 @@ proxies:
   servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68fp=chrome
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 75 ATSRSD
+- name: Github US 45 ATSRSD
   type: vless
-  server: 188.164.248.181
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 76 ATSRSD
-  type: vless
-  server: www.qarvian.ir
+  server: wwww.qarvian.ir
   port: 443
   uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
   udp: true
@@ -904,41 +519,10 @@ proxies:
   servername: cdn.akamai.steamstatic.com
   network: ws
   ws-opts:
-    path: /?TELEGRAM--FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE-FaraGATE--TELEGRAMfp=chrome
-    headers:
-      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 77 ATSRSD
-  type: vless
-  server: 104.18.0.1
-  port: 443
-  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: all.speedtest03.ccwu.cc
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: all.speedtest03.ccwu.cc
-- name: Github US 78 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 79 ATSRSD
-  type: ss
-  server: 156.146.38.169
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 80 ATSRSD
+      Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
+- name: Github US 46 ATSRSD
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -948,14 +532,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 81 ATSRSD
-  type: ss
-  server: 185.230.230.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 82 ATSRSD
+- name: Github US 47 ATSRSD
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -965,37 +542,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 83 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 84 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 85 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 86 ATSRSD
+- name: Github US 48 ATSRSD
   type: vless
   server: 146.75.59.186
   port: 443
@@ -1009,9 +556,467 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 49 ATSRSD
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 50 ATSRSD
+  type: vless
+  server: wwww.qarvian.ir
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+- name: Github US 51 ATSRSD
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: 129.146.77.248
+- name: Github US 52 ATSRSD
+  type: vless
+  server: 104.17.136.76
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 53 ATSRSD
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 54 ATSRSD
+  type: vless
+  server: wwww.qarvian.ir
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+- name: Github US 55 ATSRSD
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 56 ATSRSD
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+- name: Github US 57 ATSRSD
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github US 58 ATSRSD
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 59 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 60 ATSRSD
+  type: vless
+  server: 172.66.208.197
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 61 ATSRSD
+  type: vless
+  server: 146.75.59.186
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 62 ATSRSD
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 63 ATSRSD
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github US 64 ATSRSD
+  type: vless
+  server: 104.19.146.205
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 65 ATSRSD
+  type: vless
+  server: 104.18.33.3
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 66 ATSRSD
+  type: vless
+  server: 104.16.205.233
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 67 ATSRSD
+  type: vless
+  server: 172.67.77.54
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 68 ATSRSD
+  type: vless
+  server: 104.17.213.151
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 69 ATSRSD
+  type: vless
+  server: 146.75.59.186
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 70 ATSRSD
+  type: vless
+  server: 8.35.211.169
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /@Net2ray
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 71 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 72 ATSRSD
+  type: vless
+  server: 104.17.172.92
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 73 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 74 ATSRSD
+  type: vless
+  server: 104.17.181.223
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 75 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 76 ATSRSD
+  type: vless
+  server: 188.164.248.246
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 77 ATSRSD
+  type: vless
+  server: 188.164.248.181
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 78 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 10443
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 79 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 10443
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 80 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 14430
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.138.100.248
+- name: Github US 81 ATSRSD
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 82 ATSRSD
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+- name: Github US 83 ATSRSD
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
+- name: Github US 84 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 85 ATSRSD
+  type: vless
+  server: wwww.qarvian.ir
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+- name: Github US 86 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 14430
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.138.100.248
 - name: Github US 87 ATSRSD
   type: vless
-  server: 172.66.1.65
+  server: 104.17.117.248
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1025,21 +1030,20 @@ proxies:
       Host: tamoai.ccwu.cc
 - name: Github US 88 ATSRSD
   type: vless
-  server: 104.17.210.8
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  server: 208.84.100.209
+  port: 8080
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    path: /
     headers:
-      Host: tamoai.ccwu.cc
+      Host: 208.84.100.209
 - name: Github US 89 ATSRSD
   type: vmess
-  server: 84.17.41.2
+  server: 38.91.107.49
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -1048,31 +1052,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github US 90 ATSRSD
-  type: ss
-  server: 216.9.225.189
-  port: 443
-  cipher: 2022-blake3-aes-256-gcm
-  password: Q2YsIzc5YkchSFjsqUZWrQAFtsSpqf7XxYxkG4+Jbsk=:zT1SecPttPY/XPW6NwjK5Wql+/6zbcGSDJK21Jk8uLo=
-  udp: true
-- name: Github US 91 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 10443
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 92 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 93 ATSRSD
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -1082,9 +1061,45 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github US 91 ATSRSD
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: ''
+- name: Github US 92 ATSRSD
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 93 ATSRSD
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
 - name: Github US 94 ATSRSD
   type: vless
-  server: 104.18.33.3
+  server: 188.164.248.246
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1093,7 +1108,7 @@ proxies:
   servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: tamoai.ccwu.cc
 - name: Github US 95 ATSRSD
@@ -1111,8 +1126,15 @@ proxies:
     headers:
       Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
 - name: Github US 96 ATSRSD
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github US 97 ATSRSD
   type: vless
-  server: 104.17.209.75
+  server: 188.164.248.246
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1124,28 +1146,7 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 97 ATSRSD
-  type: ss
-  server: 37.19.198.236
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
 - name: Github US 98 ATSRSD
-  type: vless
-  server: 172.66.1.36
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github US 99 ATSRSD
   type: vless
   server: 188.164.248.181
   port: 443
@@ -1159,16 +1160,23 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 100 ATSRSD
-  type: ss
-  server: 173.244.56.9
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 101 ATSRSD
+- name: Github US 99 ATSRSD
   type: vless
-  server: 104.18.33.8
+  server: 188.164.248.246
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 100 ATSRSD
+  type: vless
+  server: 104.19.149.231
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1180,6 +1188,16 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
+- name: Github US 101 ATSRSD
+  type: vmess
+  server: 169.197.142.22
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github US 102 ATSRSD
   type: vmess
   server: 67.220.95.3
@@ -1191,111 +1209,20 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github US 103 ATSRSD
-  type: ss
-  server: 95.215.201.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  server: 188.164.248.246
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /@Net2ray
+    headers:
+      Host: tamoai.ccwu.cc
 - name: Github US 104 ATSRSD
-  type: vless
-  server: 172.66.208.218
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 105 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 106 ATSRSD
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: Github US 107 ATSRSD
-  type: vless
-  server: 104.17.60.109
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 108 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 109 ATSRSD
-  type: vless
-  server: 38.107.236.166
-  port: 8443
-  uuid: 48572af1-d091-457b-a86e-4a457e99927f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 3h-unitedstates3.09vpn.com
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: 3h-unitedstates3.09vpn.com
-- name: Github US 110 ATSRSD
-  type: ss
-  server: 156.146.38.167
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 111 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 112 ATSRSD
   type: vless
   server: 172.64.153.116
   port: 443
@@ -1309,30 +1236,26 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 113 ATSRSD
+- name: Github US 105 ATSRSD
   type: ss
-  server: 37.19.198.243
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github US 114 ATSRSD
-  type: vless
-  server: 146.75.59.186
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+- name: Github US 106 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-- name: Github US 115 ATSRSD
+- name: Github US 107 ATSRSD
   type: vless
-  server: 172.64.156.156
+  server: 172.67.154.168
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1344,17 +1267,14 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 116 ATSRSD
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+- name: Github US 108 ATSRSD
+  type: ss
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 117 ATSRSD
+- name: Github US 109 ATSRSD
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -1364,79 +1284,21 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 118 ATSRSD
+- name: Github US 110 ATSRSD
   type: vless
-  server: 45.138.100.248
-  port: 14430
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  server: 8.35.211.169
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /vless
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
-      Host: 45.138.100.248
-- name: Github US 119 ATSRSD
-  type: vless
-  server: 45.138.100.248
-  port: 10443
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 120 ATSRSD
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 121 ATSRSD
-  type: ss
-  server: 15.204.233.41
-  port: 8882
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  udp: true
-- name: Github US 122 ATSRSD
-  type: ss
-  server: 15.204.246.107
-  port: 8888
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: Github US 123 ATSRSD
-  type: ss
-  server: 15.204.247.124
-  port: 2375
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: Github US 124 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 125 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 126 ATSRSD
+      Host: tamoai.ccwu.cc
+- name: Github US 111 ATSRSD
   type: vless
   server: 199.232.78.159
   port: 443
@@ -1450,22 +1312,121 @@ proxies:
     path: /
     headers:
       Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-- name: Github US 127 ATSRSD
+- name: Github US 112 ATSRSD
   type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  server: 43.130.35.53
+  port: 10087
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github US 113 ATSRSD
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
   network: ws
   ws-opts:
-    path: /cctv13.m3u8
+    path: /
     headers:
-      Host: ''
-- name: Github US 128 ATSRSD
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+- name: Github US 114 ATSRSD
+  type: vmess
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 115 ATSRSD
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 116 ATSRSD
+  type: vless
+  server: 104.19.145.193
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 117 ATSRSD
+  type: vless
+  server: 172.64.67.85
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 118 ATSRSD
+  type: vless
+  server: 188.164.248.91
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 119 ATSRSD
+  type: vless
+  server: 104.17.97.13
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 120 ATSRSD
+  type: vless
+  server: 199.232.237.79
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    headers:
+      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+- name: Github US 121 ATSRSD
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -1475,9 +1436,103 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github US 122 ATSRSD
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+- name: Github US 123 ATSRSD
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdn.akamai.steamstatic.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
+- name: Github US 124 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 125 ATSRSD
+  type: vless
+  server: 104.19.147.230
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 126 ATSRSD
+  type: vless
+  server: 172.64.151.190
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 127 ATSRSD
+  type: vless
+  server: 172.66.1.65
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 128 ATSRSD
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
 - name: Github US 129 ATSRSD
   type: vless
-  server: 104.17.97.13
+  server: 162.159.152.34
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1501,7 +1556,17 @@ proxies:
   skip-cert-verify: true
 - name: Github US 131 ATSRSD
   type: vmess
-  server: 67.220.95.3
+  server: 43.130.35.53
+  port: 10087
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 132 ATSRSD
+  type: vmess
+  server: 169.197.142.22
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -1509,23 +1574,9 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 132 ATSRSD
-  type: vless
-  server: 199.232.78.160
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
 - name: Github US 133 ATSRSD
   type: vmess
-  server: 67.220.95.3
+  server: 169.197.142.22
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -1534,281 +1585,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github US 134 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 135 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 136 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 137 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 138 ATSRSD
-  type: vless
-  server: 104.17.189.202
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 139 ATSRSD
-  type: vless
-  server: 146.75.59.186
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-- name: Github US 140 ATSRSD
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 141 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-- name: Github US 142 ATSRSD
-  type: ss
-  server: 37.19.198.244
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 143 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 144 ATSRSD
-  type: vless
-  server: 104.17.103.187
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 145 ATSRSD
-  type: vless
-  server: 104.17.215.106
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 146 ATSRSD
-  type: ss
-  server: 156.146.38.169
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 147 ATSRSD
-  type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 148 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 149 ATSRSD
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-- name: Github US 150 ATSRSD
-  type: ss
-  server: 37.19.198.160
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 151 ATSRSD
-  type: vmess
-  server: 38.91.107.49
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 152 ATSRSD
-  type: vmess
-  server: 67.220.95.3
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 153 ATSRSD
-  type: vless
-  server: 188.164.248.246
-  port: 443
-  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tamoai.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: tamoai.ccwu.cc
-- name: Github US 154 ATSRSD
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-- name: Github US 155 ATSRSD
-  type: ss
-  server: 95.215.201.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github US 156 ATSRSD
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 157 ATSRSD
-  type: vless
-  server: 199.232.78.160
-  port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- name: Github US 158 ATSRSD
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github US 159 ATSRSD
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -1823,9 +1599,135 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: ''
-- name: Github US 160 ATSRSD
+- name: Github US 135 ATSRSD
   type: vless
-  server: 199.232.78.160
+  server: 104.17.16.95
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 136 ATSRSD
+  type: vless
+  server: 172.64.153.116
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 137 ATSRSD
+  type: vless
+  server: 8.35.211.34
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 138 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 10443
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 139 ATSRSD
+  type: vless
+  server: 45.138.100.248
+  port: 14430
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.138.100.248
+- name: Github US 140 ATSRSD
+  type: vless
+  server: 104.17.216.31
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 141 ATSRSD
+  type: ss
+  server: 15.204.247.206
+  port: 4444
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  udp: true
+- name: Github US 142 ATSRSD
+  type: vless
+  server: 172.66.3.157
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 143 ATSRSD
+  type: vless
+  server: 172.64.67.148
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 144 ATSRSD
+  type: vless
+  server: 104.17.151.165
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 145 ATSRSD
+  type: vless
+  server: 146.75.59.186
   port: 443
   uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
   udp: true
@@ -1836,100 +1738,10 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- name: Github US 161 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 162 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 163 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github US 164 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: 172.66.0.251
-- name: Github US 165 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 166 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /870ao26f
-    headers:
-      Host: 172.66.0.251
-- name: Github US 167 ATSRSD
+      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 146 ATSRSD
   type: vless
-  server: 172.64.146.113
+  server: 8.35.211.169
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -1938,94 +1750,12 @@ proxies:
   servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 168 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /870ao26f
-    headers:
-      Host: ''
-- name: Github US 169 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: 172.66.0.251
-- name: Github US 170 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 171 ATSRSD
-  type: ss
-  server: 156.146.38.168
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github US 172 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 173 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 174 ATSRSD
+- name: Github US 147 ATSRSD
   type: vless
-  server: 104.17.181.223
+  server: 104.16.205.233
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -2034,55 +1764,10 @@ proxies:
   servername: tamoai.ccwu.cc
   network: ws
   ws-opts:
-    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 175 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 176 ATSRSD
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: Github US 177 ATSRSD
-  type: vmess
-  server: 23.158.72.131
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: Github US 178 ATSRSD
+- name: Github US 148 ATSRSD
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -2092,17 +1777,21 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 179 ATSRSD
-  type: vmess
-  server: 43.130.35.53
-  port: 10087
-  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
-  alterId: 0
-  cipher: auto
+- name: Github US 149 ATSRSD
+  type: vless
+  server: 172.66.1.36
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-- name: Github US 180 ATSRSD
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github US 150 ATSRSD
   type: vmess
   server: 67.220.95.3
   port: 18000
@@ -2112,23 +1801,16 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 181 ATSRSD
-  type: vless
-  server: wwww.qarvian.ir
+- name: Github US 151 ATSRSD
+  type: ss
+  server: 156.146.38.169
   port: 443
-  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-- name: Github US 182 ATSRSD
+- name: Github US 152 ATSRSD
   type: vmess
-  server: 84.17.41.2
+  server: 38.91.107.49
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -2136,9 +1818,19 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 183 ATSRSD
+- name: Github US 153 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 154 ATSRSD
   type: vless
-  server: 104.17.172.92
+  server: 104.19.58.97
   port: 443
   uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
   udp: true
@@ -2150,7 +1842,169 @@ proxies:
     path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
     headers:
       Host: tamoai.ccwu.cc
-- name: Github US 184 ATSRSD
+- name: Github US 155 ATSRSD
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: ''
+- name: Github US 156 ATSRSD
+  type: ss
+  server: 185.230.230.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github US 157 ATSRSD
+  type: vless
+  server: 172.66.1.36
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github US 158 ATSRSD
+  type: ss
+  server: 37.19.198.243
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 159 ATSRSD
+  type: vless
+  server: 104.18.33.209
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68fp=chrome
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 160 ATSRSD
+  type: vless
+  server: 8.35.211.169
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 161 ATSRSD
+  type: vmess
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 162 ATSRSD
+  type: vmess
+  server: 43.130.35.53
+  port: 10087
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 163 ATSRSD
+  type: vless
+  server: 188.164.248.91
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 164 ATSRSD
+  type: vmess
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: v2ray1.dozapp.xyz
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- name: Github US 165 ATSRSD
+  type: vless
+  server: 146.75.59.186
+  port: 443
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
+- name: Github US 166 ATSRSD
+  type: vmess
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 167 ATSRSD
+  type: ss
+  server: 37.19.198.236
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 168 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 169 ATSRSD
   type: vmess
   server: 38.91.107.49
   port: 18000
@@ -2160,7 +2014,69 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 185 ATSRSD
+- name: Github US 170 ATSRSD
+  type: vless
+  server: 104.18.33.134
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 171 ATSRSD
+  type: ss
+  server: 45.86.51.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github US 172 ATSRSD
+  type: vless
+  server: 172.67.251.64
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 173 ATSRSD
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 174 ATSRSD
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github US 175 ATSRSD
+  type: vmess
+  server: 84.17.41.2
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github US 176 ATSRSD
   type: vless
   server: 45.138.100.248
   port: 10443
@@ -2168,16 +2084,104 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github US 186 ATSRSD
+- name: Github US 177 ATSRSD
+  type: vless
+  server: 104.17.60.109
+  port: 443
+  uuid: 45ceaca9-30f4-4035-85b7-8f83493911d8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tamoai.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /proxyip=163.192.47.40,47.57.181.17,34.83.245.149,4.155.83.212,64.227.62.172,24.144.68.139,161.35.232.123,107.170.248.68
+    headers:
+      Host: tamoai.ccwu.cc
+- name: Github US 178 ATSRSD
+  type: vless
+  server: 38.107.236.166
+  port: 8443
+  uuid: 48572af1-d091-457b-a86e-4a457e99927f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 3h-unitedstates3.09vpn.com
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates3.09vpn.com
+- name: Github US 179 ATSRSD
+  type: vmess
+  server: us-23.hihu.net
+  port: 80
+  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 172.66.0.251
+- name: Github US 180 ATSRSD
+  type: vmess
+  server: 23.158.72.131
+  port: 80
+  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /870ao26f
+    headers:
+      Host: 172.66.0.251
+- name: Github US 181 ATSRSD
+  type: vmess
+  server: us-23.hihu.net
+  port: 80
+  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: Github US 182 ATSRSD
+  type: vmess
+  server: 23.158.72.131
+  port: 80
+  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: Github US 183 ATSRSD
   type: ss
-  server: 193.151.160.18
+  server: 193.151.160.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github US 187 ATSRSD
+- name: Github US 184 ATSRSD
   type: ss
-  server: 193.151.160.9
+  server: 193.151.160.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -2371,9 +2375,6 @@ proxy-groups:
   - Github US 182 ATSRSD
   - Github US 183 ATSRSD
   - Github US 184 ATSRSD
-  - Github US 185 ATSRSD
-  - Github US 186 ATSRSD
-  - Github US 187 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -2563,8 +2564,5 @@ proxy-groups:
   - Github US 182 ATSRSD
   - Github US 183 ATSRSD
   - Github US 184 ATSRSD
-  - Github US 185 ATSRSD
-  - Github US 186 ATSRSD
-  - Github US 187 ATSRSD
 rules:
 - MATCH,PROXIES

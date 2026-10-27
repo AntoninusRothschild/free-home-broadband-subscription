@@ -4,32 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github SC 01 ATSRSD
-  type: vmess
-  server: 156.239.224.107
-  port: 57278
-  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
-  alterId: 0
-  cipher: auto
+- name: Github CY 01 ATSRSD
+  type: vless
+  server: 171.22.119.74
+  port: 8447
+  uuid: 6aed42ba-cd2d-4671-87d9-c949b6876888
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github SC 01 ATSRSD
+  - Github CY 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github SC 01 ATSRSD
+  - Github CY 01 ATSRSD
 rules:
 - MATCH,PROXIES
