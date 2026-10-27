@@ -4,25 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github US 01 (家宽) ATSRSD
+- name: Github AU 01 ATSRSD
   type: vless
-  server: 169.128.83.4
-  port: 57259
-  uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
+  server: 104.18.155.229
+  port: 443
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: www.genflix.co.id.r3xxe.eu.cc
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: www.genflix.co.id.r3xxe.eu.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github US 01 (家宽) ATSRSD
+  - Github AU 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github US 01 (家宽) ATSRSD
+  - Github AU 01 ATSRSD
 rules:
 - MATCH,PROXIES

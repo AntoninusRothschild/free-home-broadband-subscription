@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github MX 01 ATSRSD
   type: vless
-  server: mx001.zestapp778.com
+  server: 149.104.90.21
   port: 19167
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
@@ -15,16 +15,16 @@ proxies:
   servername: mx001.zestapp778.com
 - name: Github MX 02 ATSRSD
   type: vless
-  server: 149.104.90.21
+  server: mx001.zestapp778.com
   port: 19167
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 149.104.90.21
+  servername: mx001.zestapp778.com
 - name: Github MX 03 ATSRSD
   type: vless
-  server: mx001.zestapp778.com
+  server: 149.104.90.21
   port: 19167
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
@@ -33,7 +33,7 @@ proxies:
   servername: mx001.zestapp778.com
 - name: Github MX 04 ATSRSD
   type: vless
-  server: 149.104.90.21
+  server: mx001.zestapp778.com
   port: 19167
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
@@ -42,34 +42,7 @@ proxies:
   servername: mx001.zestapp778.com
 - name: Github MX 05 ATSRSD
   type: vless
-  server: 149.104.90.21
-  port: 19167
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mx001.zestapp778.com
-- name: Github MX 06 ATSRSD
-  type: vless
   server: mx001.zestapp778.com
-  port: 19167
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mx001.zestapp778.com
-- name: Github MX 07 ATSRSD
-  type: vless
-  server: mx001.zestapp778.com
-  port: 19167
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: mx001.zestapp778.com
-- name: Github MX 08 ATSRSD
-  type: vless
-  server: 149.104.90.21
   port: 19167
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   udp: true
@@ -86,9 +59,6 @@ proxy-groups:
   - Github MX 03 ATSRSD
   - Github MX 04 ATSRSD
   - Github MX 05 ATSRSD
-  - Github MX 06 ATSRSD
-  - Github MX 07 ATSRSD
-  - Github MX 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -99,8 +69,5 @@ proxy-groups:
   - Github MX 03 ATSRSD
   - Github MX 04 ATSRSD
   - Github MX 05 ATSRSD
-  - Github MX 06 ATSRSD
-  - Github MX 07 ATSRSD
-  - Github MX 08 ATSRSD
 rules:
 - MATCH,PROXIES

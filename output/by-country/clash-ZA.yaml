@@ -6,39 +6,32 @@ log-level: info
 proxies:
 - name: Github ZA 01 ATSRSD
   type: ss
-  server: 102.133.165.160
-  port: 16233
-  cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-  udp: true
-- name: Github ZA 02 ATSRSD
-  type: ss
-  server: 20.164.41.194
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: UQFMIrjfuCgElfpl
-  udp: true
-- name: Github ZA 03 ATSRSD
-  type: ss
-  server: 20.164.41.194
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: UQFMIrjfuCgElfpl
-  udp: true
-- name: Github ZA 04 ATSRSD
-  type: ss
   server: 102.37.156.224
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
   udp: true
-- name: Github ZA 05 ATSRSD
+- name: Github ZA 02 ATSRSD
   type: ss
-  server: 20.164.41.194
-  port: 443
+  server: 102.133.165.160
+  port: 16233
   cipher: chacha20-ietf-poly1305
-  password: UQFMIrjfuCgElfpl
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
   udp: true
+- name: Github ZA 03 ATSRSD
+  type: vless
+  server: 139.84.242.103
+  port: 443
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vlso5.1d.mom
+  network: ws
+  ws-opts:
+    path: /socks5=888:888@hkip.1d.mom:1080fp=chrome
+    headers:
+      Host: vlso5.1d.mom
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,8 +40,6 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
-  - Github ZA 04 ATSRSD
-  - Github ZA 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -57,7 +48,5 @@ proxy-groups:
   - Github ZA 01 ATSRSD
   - Github ZA 02 ATSRSD
   - Github ZA 03 ATSRSD
-  - Github ZA 04 ATSRSD
-  - Github ZA 05 ATSRSD
 rules:
 - MATCH,PROXIES
