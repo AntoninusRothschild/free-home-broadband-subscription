@@ -18,19 +18,6 @@ proxies:
   client-fingerprint: random
 - name: Github IN 02 ATSRSD
   type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: Github IN 03 ATSRSD
-  type: vless
   server: 194.61.31.126
   port: 2053
   uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
@@ -41,7 +28,7 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
   client-fingerprint: firefox
-- name: Github IN 04 ATSRSD
+- name: Github IN 03 ATSRSD
   type: vless
   server: 13.140.56.100
   port: 14430
@@ -54,9 +41,9 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- name: Github IN 05 ATSRSD
+- name: Github IN 04 ATSRSD
   type: vless
-  server: in.smrtai.top
+  server: 178.212.35.198
   port: 443
   uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
   udp: true
@@ -65,7 +52,20 @@ proxies:
   reality-opts:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: Github IN 05 ATSRSD
+  type: vless
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 - name: Github IN 06 ATSRSD
   type: vless
   server: 194.61.31.126
@@ -80,6 +80,31 @@ proxies:
   client-fingerprint: chrome
 - name: Github IN 07 ATSRSD
   type: vless
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
+- name: Github IN 08 ATSRSD
+  type: vless
+  server: 178.212.35.198
+  port: 443
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github IN 09 ATSRSD
+  type: vless
   server: 122.176.216.52
   port: 443
   uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
@@ -92,19 +117,19 @@ proxies:
     path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
     headers:
       Host: app-6ada5023.deploy.meerasolution.com
-- name: Github IN 08 ATSRSD
+- name: Github IN 10 ATSRSD
   type: vless
-  server: 178.212.35.198
-  port: 443
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  server: 194.61.31.126
+  port: 2053
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: Github IN 09 ATSRSD
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: Github IN 11 ATSRSD
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -116,7 +141,7 @@ proxies:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
   client-fingerprint: random
-- name: Github IN 10 ATSRSD
+- name: Github IN 12 ATSRSD
   type: vless
   server: in.smrtai.top
   port: 443
@@ -128,32 +153,6 @@ proxies:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github IN 11 ATSRSD
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: Github IN 12 ATSRSD
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
 - name: Github IN 13 ATSRSD
   type: vless
   server: in002.zestapp778.com
@@ -165,16 +164,17 @@ proxies:
   servername: in002.zestapp778.com
 - name: Github IN 14 ATSRSD
   type: vless
-  server: 178.212.35.198
-  port: 443
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 13.140.56.100
 - name: Github IN 15 ATSRSD
   type: vless
   server: 13.140.56.100
@@ -189,6 +189,18 @@ proxies:
     headers:
       Host: 13.140.56.100
 - name: Github IN 16 ATSRSD
+  type: vless
+  server: in.smrtai.top
+  port: 443
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github IN 17 ATSRSD
   type: vless
   server: 122.176.216.52
   port: 443
@@ -223,6 +235,7 @@ proxy-groups:
   - Github IN 14 ATSRSD
   - Github IN 15 ATSRSD
   - Github IN 16 ATSRSD
+  - Github IN 17 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -244,5 +257,6 @@ proxy-groups:
   - Github IN 14 ATSRSD
   - Github IN 15 ATSRSD
   - Github IN 16 ATSRSD
+  - Github IN 17 ATSRSD
 rules:
 - MATCH,PROXIES

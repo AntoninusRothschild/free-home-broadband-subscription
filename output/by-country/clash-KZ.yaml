@@ -6,6 +6,18 @@ log-level: info
 proxies:
 - name: Github KZ 01 ATSRSD
   type: vless
+  server: kz-central.v8x2b.lol
+  port: 443
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: firefox
+- name: Github KZ 02 ATSRSD
+  type: vless
   server: 46.8.43.125
   port: 443
   uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
@@ -22,11 +34,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github KZ 01 ATSRSD
+  - Github KZ 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github KZ 01 ATSRSD
+  - Github KZ 02 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -18,33 +18,17 @@ proxies:
   client-fingerprint: firefox
 - name: Github TR 02 ATSRSD
   type: vless
-  server: 155.103.71.142
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  server: 151.241.226.201
+  port: 2053
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github TR 03 ATSRSD
-  type: vless
-  server: 155.103.71.142
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github TR 04 ATSRSD
   type: vless
   server: 177.3.208.65
   port: 443
@@ -58,20 +42,58 @@ proxies:
     path: /vless-tr
     headers:
       Host: 177.3.208.65
-- name: Github TR 05 ATSRSD
+- name: Github TR 04 ATSRSD
   type: vless
-  server: 206.1.101.85
-  port: 42654
-  uuid: ab9e2cf5-b5f5-45d1-bddf-8ea9b6fcc48f
+  server: 155.103.71.142
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 206.1.101.85
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /fp=chrome
     headers:
-      Host: 206.1.101.85
+      Host: ccc.010304.xyz
+- name: Github TR 05 ATSRSD
+  type: vless
+  server: 155.103.71.142
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github TR 06 ATSRSD
+  type: vless
+  server: 151.241.226.201
+  port: 2053
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+  servername: www.apple.com
+  client-fingerprint: random
+- name: Github TR 07 ATSRSD
+  type: vless
+  server: 151.241.226.201
+  port: 2053
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,6 +104,8 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
+  - Github TR 06 ATSRSD
+  - Github TR 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -92,5 +116,7 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
+  - Github TR 06 ATSRSD
+  - Github TR 07 ATSRSD
 rules:
 - MATCH,PROXIES
