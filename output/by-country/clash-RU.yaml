@@ -18,35 +18,17 @@ proxies:
     path: /wsru
     headers:
       Host: xsru2.freeddns.org
-- name: Github RU 02 ATSRSD
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
-  udp: true
-- name: Github RU 03 ATSRSD
-  type: ss
-  server: alb.rvpn.app
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: hTTg7lwQMzpaF7KXpY3A8w
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
 rules:
 - MATCH,PROXIES
