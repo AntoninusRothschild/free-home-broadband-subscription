@@ -13,15 +13,24 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github RO 02 ATSRSD
-  type: ss
-  server: 194.68.44.42
-  port: 64546
-  cipher: chacha20-ietf-poly1305
-  password: U83u9OGpvSatIUW7LsWffr
+  type: vless
+  server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github RO 03 ATSRSD
   type: vless
   server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github RO 04 ATSRSD
+  type: vless
+  server: 178.83.45.226
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
@@ -35,6 +44,7 @@ proxy-groups:
   - Github RO 01 ATSRSD
   - Github RO 02 ATSRSD
   - Github RO 03 ATSRSD
+  - Github RO 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -43,5 +53,6 @@ proxy-groups:
   - Github RO 01 ATSRSD
   - Github RO 02 ATSRSD
   - Github RO 03 ATSRSD
+  - Github RO 04 ATSRSD
 rules:
 - MATCH,PROXIES
