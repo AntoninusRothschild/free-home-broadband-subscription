@@ -6,19 +6,6 @@ log-level: info
 proxies:
 - name: Github LK 01 ATSRSD
   type: vless
-  server: support.zoom.us
-  port: 8080
-  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Free.nadun.store
-- name: Github LK 02 ATSRSD
-  type: vless
   server: 170.114.46.6
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
@@ -30,9 +17,22 @@ proxies:
     path: /
     headers:
       Host: free.nadun.store
+- name: Github LK 02 ATSRSD
+  type: vless
+  server: support.zoom.us
+  port: 8080
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Free.nadun.store
 - name: Github LK 03 ATSRSD
   type: vless
-  server: 170.114.46.6
+  server: support.zoom.us
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -45,7 +45,7 @@ proxies:
       Host: free.nadun.store
 - name: Github LK 04 ATSRSD
   type: vless
-  server: support.zoom.us
+  server: 170.114.45.6
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -71,7 +71,7 @@ proxies:
       Host: free.nadun.store
 - name: Github LK 06 ATSRSD
   type: vless
-  server: 170.114.45.6
+  server: support.zoom.us
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -84,7 +84,7 @@ proxies:
       Host: free.nadun.store
 - name: Github LK 07 ATSRSD
   type: vless
-  server: support.zoom.us
+  server: 170.114.46.6
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
