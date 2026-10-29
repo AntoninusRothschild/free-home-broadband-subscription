@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IQ 01 ATSRSD
+- name: Github TW 01 ATSRSD
   type: vless
-  server: 172.67.208.235
-  port: 2096
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
+  server: 60.248.219.78
+  port: 443
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: courses.mftplus.qzz.io
+  servername: 60.248.219.78
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: courses.mftplus.qzz.io
+      Host: 60.248.219.78
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IQ 01 ATSRSD
+  - Github TW 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IQ 01 ATSRSD
+  - Github TW 01 ATSRSD
 rules:
 - MATCH,PROXIES

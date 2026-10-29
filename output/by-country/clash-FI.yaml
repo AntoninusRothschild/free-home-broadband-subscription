@@ -6,17 +6,18 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 65.109.210.221
+  port: 465
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: hw3.divarkhaghazi.com.
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
-      Host: 45.144.234.157
+      Host: hw3.divarkhaghazi.com.
 - name: Github FI 02 ATSRSD
   type: vless
   server: hw3.divarkhaghazi.com
@@ -33,21 +34,19 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 03 ATSRSD
   type: vless
-  server: 199.232.239.239
-  port: 443
-  uuid: 36805edb-1e85-4199-a59f-117010b70017
+  server: 95.216.27.15
+  port: 2053
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
-    headers:
-      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+  servername: www.google.com
+  client-fingerprint: firefox
 - name: Github FI 04 ATSRSD
   type: vless
-  server: hw3.divarkhaghazi.com
+  server: 65.109.210.221
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -61,31 +60,19 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 05 ATSRSD
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 65.109.211.81
+  port: 465
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: hw6.divarkhaghazi.com.
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
-      Host: 45.144.234.157
+      Host: hw6.divarkhaghazi.com.
 - name: Github FI 06 ATSRSD
-  type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
-- name: Github FI 07 ATSRSD
   type: vless
   server: 95.216.27.15
   port: 2053
@@ -97,6 +84,33 @@ proxies:
     public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
   servername: www.google.com
   client-fingerprint: chrome
+- name: Github FI 07 ATSRSD
+  type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: Github FI 08 ATSRSD
+  type: vless
+  server: hw3.divarkhaghazi.com
+  port: 465
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hw3.divarkhaghazi.com.
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw3.divarkhaghazi.com.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -109,6 +123,7 @@ proxy-groups:
   - Github FI 05 ATSRSD
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
+  - Github FI 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -121,5 +136,6 @@ proxy-groups:
   - Github FI 05 ATSRSD
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
+  - Github FI 08 ATSRSD
 rules:
 - MATCH,PROXIES

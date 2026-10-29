@@ -16,10 +16,10 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: free.nadun.store
+      Host: Free.nadun.store
 - name: Github LK 02 ATSRSD
   type: vless
-  server: support.zoom.us
+  server: 170.114.46.6
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -32,7 +32,7 @@ proxies:
       Host: free.nadun.store
 - name: Github LK 03 ATSRSD
   type: vless
-  server: 170.114.45.6
+  server: 170.114.46.6
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -55,10 +55,36 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Free.nadun.store
+      Host: free.nadun.store
 - name: Github LK 05 ATSRSD
   type: vless
-  server: 170.114.46.6
+  server: 170.114.45.6
+  port: 8080
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.nadun.store
+- name: Github LK 06 ATSRSD
+  type: vless
+  server: 170.114.45.6
+  port: 8080
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free.nadun.store
+- name: Github LK 07 ATSRSD
+  type: vless
+  server: support.zoom.us
   port: 8080
   uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   udp: true
@@ -79,6 +105,8 @@ proxy-groups:
   - Github LK 03 ATSRSD
   - Github LK 04 ATSRSD
   - Github LK 05 ATSRSD
+  - Github LK 06 ATSRSD
+  - Github LK 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -89,5 +117,7 @@ proxy-groups:
   - Github LK 03 ATSRSD
   - Github LK 04 ATSRSD
   - Github LK 05 ATSRSD
+  - Github LK 06 ATSRSD
+  - Github LK 07 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -34,7 +34,7 @@ proxies:
       Host: vpn.cintaku.qzz.io
 - name: Github CN 03 ATSRSD
   type: vless
-  server: 8.35.211.242
+  server: vpn.cintaku.qzz.io
   port: 443
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   udp: true
@@ -48,21 +48,7 @@ proxies:
       Host: vpn.cintaku.qzz.io
 - name: Github CN 04 ATSRSD
   type: vless
-  server: 104.21.91.49
-  port: 443
-  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: vpn.cintaku.qzz.io
-  network: ws
-  ws-opts:
-    path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
-- name: Github CN 05 ATSRSD
-  type: vless
-  server: 172.67.166.188
+  server: 8.35.211.242
   port: 443
   uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   udp: true
@@ -83,7 +69,6 @@ proxy-groups:
   - Github CN 02 ATSRSD
   - Github CN 03 ATSRSD
   - Github CN 04 ATSRSD
-  - Github CN 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -93,6 +78,5 @@ proxy-groups:
   - Github CN 02 ATSRSD
   - Github CN 03 ATSRSD
   - Github CN 04 ATSRSD
-  - Github CN 05 ATSRSD
 rules:
 - MATCH,PROXIES
