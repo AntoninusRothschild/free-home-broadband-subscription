@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: ss
-  server: 130.49.189.54
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: hTTg7lwQMzpaF7KXpY3A8w
-  udp: true
-- name: Github RU 02 ATSRSD
   type: vless
   server: 194.87.143.165
   port: 8443
@@ -25,18 +18,86 @@ proxies:
     path: /
     headers:
       Host: 194.87.143.165
+- name: Github RU 02 ATSRSD
+  type: vless
+  server: lvi.su
+  port: 443
+  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lvi.su
+  network: ws
+  ws-opts:
+    path: /vpn-relay?token=27fede42482b3c29d4c1c9640876c250&pool=whitelist2
+    headers:
+      Host: lvi.su
 - name: Github RU 03 ATSRSD
   type: vless
-  server: 186.246.9.29
+  server: 194.87.143.165
+  port: 8443
+  uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 194.87.143.165
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 194.87.143.165
+- name: Github RU 04 ATSRSD
+  type: ss
+  server: msk2.rvpn.app
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: MODziWLa9qMuW-4yPa0rfw
+  udp: true
+- name: Github RU 05 ATSRSD
+  type: vless
+  server: 87.120.166.160
   port: 443
-  uuid: b2847c3b-5278-4b06-9c66-bc919d2dfec7
+  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lvi.su
+  network: ws
+  ws-opts:
+    path: /vpn-relay?token=27fede42482b3c29d4c1c9640876c250&pool=whitelist2
+    headers:
+      Host: lvi.su
+- name: Github RU 06 ATSRSD
+  type: vless
+  server: 46.254.19.164
+  port: 443
+  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA
-  servername: wordpress.com
+    public-key: 3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM
+  servername: wtb.tems.bet
   client-fingerprint: firefox
+- name: Github RU 07 ATSRSD
+  type: vless
+  server: 45.133.151.170
+  port: 443
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
+  servername: a0688bt.us4.h1clayd.click
+  client-fingerprint: firefox
+- name: Github RU 08 ATSRSD
+  type: ss
+  server: 130.49.189.54
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: hTTg7lwQMzpaF7KXpY3A8w
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +106,11 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
+  - Github RU 08 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -53,5 +119,10 @@ proxy-groups:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
   - Github RU 03 ATSRSD
+  - Github RU 04 ATSRSD
+  - Github RU 05 ATSRSD
+  - Github RU 06 ATSRSD
+  - Github RU 07 ATSRSD
+  - Github RU 08 ATSRSD
 rules:
 - MATCH,PROXIES
