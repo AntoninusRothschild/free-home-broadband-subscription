@@ -6,28 +6,32 @@ log-level: info
 proxies:
 - name: Github CH 01 ATSRSD
   type: vless
-  server: 208.69.78.217
-  port: 2053
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  server: 199.232.78.159
+  port: 443
+  uuid: c1a3a6ee-34d3-4fcd-8763-c2231adabed6
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-  servername: www.apple.com
-  client-fingerprint: random
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lofinlaoijji.global.ssl.fastly.net
 - name: Github CH 02 ATSRSD
   type: vless
-  server: 208.69.78.217
-  port: 2053
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  server: 199.232.78.159
+  port: 443
+  uuid: c1a3a6ee-34d3-4fcd-8763-c2231adabed6
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-  servername: www.apple.com
-  client-fingerprint: random
+  servername: firefox.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lofinlaoijji.global.ssl.fastly.net
 - name: Github CH 03 ATSRSD
   type: vless
   server: 208.69.78.217
@@ -39,16 +43,19 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: Github CH 04 ATSRSD
   type: vless
-  server: 149.33.15.213
-  port: 443
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: swz.proxyplankton.ru
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github CH 05 ATSRSD
   type: vless
   server: 208.69.78.217
@@ -60,7 +67,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: Github CH 06 ATSRSD
   type: ss
   server: 132.243.175.144
@@ -70,18 +77,16 @@ proxies:
   udp: true
 - name: Github CH 07 ATSRSD
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: c1a3a6ee-34d3-4fcd-8763-c2231adabed6
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lofinlaoijji.global.ssl.fastly.net
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: Github CH 08 ATSRSD
   type: vless
   server: 208.69.78.217
@@ -93,8 +98,17 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: Github CH 09 ATSRSD
+  type: vless
+  server: 149.33.15.213
+  port: 443
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: swz.proxyplankton.ru
+- name: Github CH 10 ATSRSD
   type: vless
   server: 208.69.78.217
   port: 2053
@@ -106,20 +120,15 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
   client-fingerprint: chrome
-- name: Github CH 10 ATSRSD
+- name: Github CH 11 ATSRSD
   type: vless
-  server: 199.232.78.159
+  server: 149.33.15.213
   port: 443
-  uuid: c1a3a6ee-34d3-4fcd-8763-c2231adabed6
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: firefox.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lofinlaoijji.global.ssl.fastly.net
+  servername: swz.proxyplankton.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -135,6 +144,7 @@ proxy-groups:
   - Github CH 08 ATSRSD
   - Github CH 09 ATSRSD
   - Github CH 10 ATSRSD
+  - Github CH 11 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -150,5 +160,6 @@ proxy-groups:
   - Github CH 08 ATSRSD
   - Github CH 09 ATSRSD
   - Github CH 10 ATSRSD
+  - Github CH 11 ATSRSD
 rules:
 - MATCH,PROXIES

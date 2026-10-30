@@ -5,21 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: Github KR 01 ATSRSD
-  type: vmess
-  server: nickgus.cc.cd
-  port: 443
-  uuid: 56eee791-99e8-4e11-9d27-539b46c14368
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: ''
   network: ws
   ws-opts:
-    path: /photos
+    path: /
     headers:
-      Host: ''
+      Host: 152.69.226.63
 - name: Github KR 02 ATSRSD
   type: vless
   server: 152.69.226.63
@@ -47,6 +44,20 @@ proxies:
     headers:
       Host: 152.69.226.63
 - name: Github KR 04 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 9090
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: Github KR 05 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 5498
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
+  udp: true
+- name: Github KR 06 ATSRSD
   type: vless
   server: 152.69.226.63
   port: 25555
@@ -59,47 +70,13 @@ proxies:
     path: /
     headers:
       Host: 152.69.226.63
-- name: Github KR 05 ATSRSD
-  type: vmess
-  server: 140.238.2.250
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github KR 06 ATSRSD
-  type: vmess
-  server: nickgus.cc.cd
-  port: 443
-  uuid: 56eee791-99e8-4e11-9d27-539b46c14368
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: /photos
-    headers:
-      Host: ''
 - name: Github KR 07 ATSRSD
-  type: vmess
-  server: 132.145.80.230
-  port: 80
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
+  type: ss
+  server: 141.164.45.187
+  port: 6679
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: None
 - name: Github KR 08 ATSRSD
   type: vless
   server: 151.245.106.49
@@ -114,6 +91,18 @@ proxies:
   client-fingerprint: random
 - name: Github KR 09 ATSRSD
   type: vless
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github KR 10 ATSRSD
+  type: vless
   server: 152.69.226.63
   port: 25555
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
@@ -125,39 +114,28 @@ proxies:
     path: /
     headers:
       Host: 152.69.226.63
-- name: Github KR 10 ATSRSD
+- name: Github KR 11 ATSRSD
   type: ss
   server: 141.164.45.187
-  port: 7002
+  port: 7001
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
   udp: true
-- name: Github KR 11 ATSRSD
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
 - name: Github KR 12 ATSRSD
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  type: vmess
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /cctv13.m3u8
     headers:
-      Host: 152.69.226.63
+      Host: None
 - name: Github KR 13 ATSRSD
   type: vless
   server: 151.245.106.49
@@ -169,42 +147,30 @@ proxies:
   reality-opts:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: Github KR 14 ATSRSD
   type: vmess
-  server: nickgus.cc.cd
+  server: 140.238.2.250
   port: 443
-  uuid: 56eee791-99e8-4e11-9d27-539b46c14368
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: nickgus.cc.cd
-  network: ws
-  ws-opts:
-    path: /photos
-    headers:
-      Host: nickgus.cc.cd
 - name: Github KR 15 ATSRSD
   type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github KR 16 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 9090
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
 proxy-groups:
 - name: PROXIES
   type: select
@@ -225,7 +191,6 @@ proxy-groups:
   - Github KR 13 ATSRSD
   - Github KR 14 ATSRSD
   - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -246,6 +211,5 @@ proxy-groups:
   - Github KR 13 ATSRSD
   - Github KR 14 ATSRSD
   - Github KR 15 ATSRSD
-  - Github KR 16 ATSRSD
 rules:
 - MATCH,PROXIES

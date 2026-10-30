@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: vless
-  server: hw3.divarkhaghazi.com.
+  server: hw3.divarkhaghazi.com
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 02 ATSRSD
   type: vless
-  server: 65.109.210.221
+  server: hw3.divarkhaghazi.com.
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -48,7 +48,7 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 04 ATSRSD
   type: vless
-  server: hw3.divarkhaghazi.com
+  server: 65.109.210.221
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -62,17 +62,18 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 05 ATSRSD
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 65.109.211.81
+  port: 465
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: hw6.divarkhaghazi.com.
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
-      Host: 45.144.234.157
+      Host: hw6.divarkhaghazi.com.
 - name: Github FI 06 ATSRSD
   type: vless
   server: 45.144.234.157
@@ -113,6 +114,19 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: Github FI 09 ATSRSD
+  type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -126,6 +140,7 @@ proxy-groups:
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
   - Github FI 08 ATSRSD
+  - Github FI 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -139,5 +154,6 @@ proxy-groups:
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
   - Github FI 08 ATSRSD
+  - Github FI 09 ATSRSD
 rules:
 - MATCH,PROXIES
