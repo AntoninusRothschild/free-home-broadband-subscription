@@ -6,13 +6,12 @@ log-level: info
 proxies:
 - name: Github PL 01 ATSRSD
   type: vless
-  server: 2.26.6.1
-  port: 2087
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  server: site.teslamotor.site
+  port: 20001
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: 2.26.6.1
 - name: Github PL 02 ATSRSD
   type: vless
   server: 2.26.6.1
@@ -24,33 +23,34 @@ proxies:
   servername: 2.26.6.1
 - name: Github PL 03 ATSRSD
   type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: 2.26.6.1
 - name: Github PL 04 ATSRSD
   type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  server: 168.222.43.53
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Github PL 05 ATSRSD
   type: vless
-  server: 168.222.43.53
-  port: 2052
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  server: site.teslamotor.site
+  port: 20001
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Github PL 06 ATSRSD
   type: vless
-  server: 168.222.43.53
-  port: 2052
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  server: site.teslamotor.site
+  port: 20001
+  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
   tls: false
   skip-cert-verify: true
@@ -74,7 +74,7 @@ proxies:
   servername: 2.26.6.1
 - name: Github PL 09 ATSRSD
   type: vless
-  server: site.teslamotor.site
+  server: 155.117.5.208
   port: 20001
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
   udp: true
@@ -85,30 +85,6 @@ proxies:
   server: site.teslamotor.site
   port: 20001
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github PL 11 ATSRSD
-  type: vless
-  server: site.teslamotor.site
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github PL 12 ATSRSD
-  type: vless
-  server: 155.117.5.208
-  port: 20001
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github PL 13 ATSRSD
-  type: vless
-  server: edge10.cyrionflare.com
-  port: 2052
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
   tls: false
   skip-cert-verify: true
@@ -127,9 +103,6 @@ proxy-groups:
   - Github PL 08 ATSRSD
   - Github PL 09 ATSRSD
   - Github PL 10 ATSRSD
-  - Github PL 11 ATSRSD
-  - Github PL 12 ATSRSD
-  - Github PL 13 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -145,8 +118,5 @@ proxy-groups:
   - Github PL 08 ATSRSD
   - Github PL 09 ATSRSD
   - Github PL 10 ATSRSD
-  - Github PL 11 ATSRSD
-  - Github PL 12 ATSRSD
-  - Github PL 13 ATSRSD
 rules:
 - MATCH,PROXIES

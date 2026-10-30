@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github RO 01 ATSRSD
   type: vless
-  server: edge10.cyrionflare.com
+  server: 155.117.5.208
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
@@ -22,27 +22,12 @@ proxies:
   skip-cert-verify: true
 - name: Github RO 03 ATSRSD
   type: vless
-  server: 178.83.45.226
+  server: edge10.cyrionflare.com
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github RO 04 ATSRSD
-  type: vless
-  server: 155.117.5.208
-  port: 2052
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github RO 05 ATSRSD
-  type: ss
-  server: 154.46.31.106
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,8 +36,6 @@ proxy-groups:
   - Github RO 01 ATSRSD
   - Github RO 02 ATSRSD
   - Github RO 03 ATSRSD
-  - Github RO 04 ATSRSD
-  - Github RO 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -61,7 +44,5 @@ proxy-groups:
   - Github RO 01 ATSRSD
   - Github RO 02 ATSRSD
   - Github RO 03 ATSRSD
-  - Github RO 04 ATSRSD
-  - Github RO 05 ATSRSD
 rules:
 - MATCH,PROXIES
