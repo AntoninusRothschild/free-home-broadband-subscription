@@ -15,36 +15,10 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
 - name: Github TR 02 ATSRSD
-  type: vless
-  server: 177.3.208.65
-  port: 443
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tgmansion.site
-  network: ws
-  ws-opts:
-    path: /vless-tr
-    headers:
-      Host: 177.3.208.65
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: 151.241.226.201
-  port: 2053
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: Github TR 04 ATSRSD
   type: vless
   server: 155.103.71.142
   port: 443
@@ -55,10 +29,10 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chromefp=chrome
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github TR 05 ATSRSD
+- name: Github TR 03 ATSRSD
   type: vless
   server: 206.1.101.85
   port: 42654
@@ -72,19 +46,21 @@ proxies:
     path: /
     headers:
       Host: 206.1.101.85
-- name: Github TR 06 ATSRSD
+- name: Github TR 04 ATSRSD
   type: vless
-  server: 151.241.226.201
-  port: 2053
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  server: 177.3.208.65
+  port: 443
+  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: Github TR 07 ATSRSD
+  servername: tgmansion.site
+  network: ws
+  ws-opts:
+    path: /vless-tr
+    headers:
+      Host: 177.3.208.65
+- name: Github TR 05 ATSRSD
   type: vmess
   server: free.ertebatgoostar.ir
   port: 443
@@ -104,8 +80,6 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
-  - Github TR 06 ATSRSD
-  - Github TR 07 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -116,7 +90,5 @@ proxy-groups:
   - Github TR 03 ATSRSD
   - Github TR 04 ATSRSD
   - Github TR 05 ATSRSD
-  - Github TR 06 ATSRSD
-  - Github TR 07 ATSRSD
 rules:
 - MATCH,PROXIES

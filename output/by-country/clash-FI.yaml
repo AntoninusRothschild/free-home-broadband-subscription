@@ -34,18 +34,18 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 03 ATSRSD
   type: vless
-  server: 65.109.210.221
+  server: 65.109.211.81
   port: 465
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: hw3.divarkhaghazi.com.
+  servername: hw6.divarkhaghazi.com.
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: hw3.divarkhaghazi.com.
+      Host: hw6.divarkhaghazi.com.
 - name: Github FI 04 ATSRSD
   type: vless
   server: 65.109.210.221
@@ -62,18 +62,18 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 05 ATSRSD
   type: vless
-  server: 65.109.211.81
+  server: 65.109.210.221
   port: 465
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: hw6.divarkhaghazi.com.
+  servername: hw3.divarkhaghazi.com.
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: hw6.divarkhaghazi.com.
+      Host: hw3.divarkhaghazi.com.
 - name: Github FI 06 ATSRSD
   type: vless
   server: 45.144.234.157
