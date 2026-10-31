@@ -6,21 +6,7 @@ log-level: info
 proxies:
 - name: Github OTHER 01 ATSRSD
   type: vless
-  server: 172.67.160.192
-  port: 443
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nuclear.us.kg
-  network: ws
-  ws-opts:
-    path: /free/1.226.227.169:50001
-    headers:
-      Host: nuclear.us.kg
-- name: Github OTHER 02 ATSRSD
-  type: vless
-  server: 104.21.221.158
+  server: 104.18.35.15
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -29,40 +15,53 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=unsafe
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 02 ATSRSD
+  type: vless
+  server: 172.64.152.241
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - name: Github OTHER 03 ATSRSD
   type: vless
-  server: 104.16.10.2
+  server: www.speedtest.net
   port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: ec23f217-23a1-4f62-b98d-ba56070de89c
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jp3.yohototo.top
+  servername: wallweb4.pages.dev
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /fp=chrome
     headers:
-      Host: jp3.yohototo.top
+      Host: wallweb4.pages.dev
 - name: Github OTHER 04 ATSRSD
   type: vless
-  server: 104.18.45.38
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  server: 104.19.95.153
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    path: /
     headers:
-      Host: ccc.010304.xyz
+      Host: hhlfy.twiladaphne.ndjp.net
 - name: Github OTHER 05 ATSRSD
   type: vless
-  server: 104.19.164.155
+  server: 104.19.48.107
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -76,63 +75,21 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github OTHER 06 ATSRSD
   type: vless
-  server: 172.66.44.124
-  port: 8443
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  server: www.speedtest.net
+  port: 443
+  uuid: ec23f217-23a1-4f62-b98d-ba56070de89c
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  servername: wallweb4.pages.dev
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+      Host: wallweb4.pages.dev
 - name: Github OTHER 07 ATSRSD
   type: vless
-  server: 172.64.153.153
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 08 ATSRSD
-  type: vless
-  server: 188.114.96.25
-  port: 443
-  uuid: b15f187e-9b34-437c-8243-8651a8ada76c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: tepar-k4j9.jounet.workers.dev
-  network: ws
-  ws-opts:
-    path: /stream/DEVCOP/8651a8ada76c/loc-0
-    headers:
-      Host: tepar-k4j9.jounet.workers.dev
-- name: Github OTHER 09 ATSRSD
-  type: vless
-  server: 104.18.45.38
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 10 ATSRSD
-  type: vless
-  server: 104.19.33.25
+  server: 104.16.111.102
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -144,9 +101,23 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github OTHER 11 ATSRSD
+- name: Github OTHER 08 ATSRSD
   type: vless
-  server: cf.877774.xyz
+  server: 104.16.10.135
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 09 ATSRSD
+  type: vless
+  server: 104.21.221.158
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -155,40 +126,71 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 12 ATSRSD
-  type: vless
-  server: 172.64.146.66
-  port: 443
-  uuid: 16e80f38-e97e-4b14-ba89-77d87a3e637f
+- name: Github OTHER 10 ATSRSD
+  type: vmess
+  server: chatgpt.com
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ex3r.qzz.io
+  servername: v2ray1.dozapp.xyz
   network: ws
   ws-opts:
-    path: /sg-orcl
+    path: /lMnsZUN4/
     headers:
-      Host: ex3r.qzz.io
-- name: Github OTHER 13 ATSRSD
+      Host: v2ray1.dozapp.xyz
+- name: Github OTHER 11 ATSRSD
+  type: vmess
+  server: 172.67.187.145
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: Github OTHER 12 ATSRSD
   type: vless
-  server: 188.114.97.6
-  port: 2053
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
+  server: 104.18.37.247
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: levikoconfig.levikogjgfdd.ir
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: levikoconfig.levikogjgfdd.ir
+      Host: ccc.010304.xyz
+- name: Github OTHER 13 ATSRSD
+  type: vless
+  server: 104.21.0.87
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: Github OTHER 14 ATSRSD
   type: vless
-  server: 104.19.90.35
+  server: 104.16.122.227
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -202,18 +204,18 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github OTHER 15 ATSRSD
   type: vless
-  server: 188.114.97.6
+  server: 104.20.17.210
   port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jp3.yohototo.top
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /
     headers:
-      Host: jp3.yohototo.top
+      Host: ccc.010304.xyz
 - name: Github OTHER 16 ATSRSD
   type: vless
   server: 8.6.112.86
@@ -229,62 +231,6 @@ proxies:
       Host: hhlfy.twiladaphne.ndjp.net
 - name: Github OTHER 17 ATSRSD
   type: vless
-  server: 104.18.41.190
-  port: 443
-  uuid: 16e80f38-e97e-4b14-ba89-77d87a3e637f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ex3r.qzz.io
-  network: ws
-  ws-opts:
-    path: /sg-orcl
-    headers:
-      Host: ex3r.qzz.io
-- name: Github OTHER 18 ATSRSD
-  type: vless
-  server: 104.21.221.158
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=unsafefp=unsafe
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 19 ATSRSD
-  type: vless
-  server: cf.090227.xyz
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 20 ATSRSD
-  type: vless
-  server: 104.18.35.15
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 21 ATSRSD
-  type: vless
   server: 104.21.221.158
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -297,272 +243,7 @@ proxies:
     path: /fp=chromefp=unsafe
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 22 ATSRSD
-  type: vless
-  server: 104.16.122.227
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 23 ATSRSD
-  type: vless
-  server: 104.18.41.190
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 24 ATSRSD
-  type: vless
-  server: 104.21.221.158
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 25 ATSRSD
-  type: vless
-  server: www.speedtest.net
-  port: 443
-  uuid: ec23f217-23a1-4f62-b98d-ba56070de89c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wallweb4.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: wallweb4.pages.dev
-- name: Github OTHER 26 ATSRSD
-  type: vless
-  server: 104.18.47.73
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 27 ATSRSD
-  type: vless
-  server: 172.64.152.241
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 28 ATSRSD
-  type: vless
-  server: 172.67.141.182
-  port: 443
-  uuid: ce440dcf-e570-4a50-af37-bf588ee8a988
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-  network: ws
-  ws-opts:
-    path: /vl/KSPdmco70dfoXFS292o2Nv6yPt?ed=2560#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-- name: Github OTHER 29 ATSRSD
-  type: vless
-  server: 104.21.221.158
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 30 ATSRSD
-  type: vless
-  server: 104.24.0.1
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 31 ATSRSD
-  type: vless
-  server: 104.19.95.153
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: Github OTHER 32 ATSRSD
-  type: vless
-  server: 172.67.76.40
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 33 ATSRSD
-  type: vless
-  server: 172.64.152.241
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 34 ATSRSD
-  type: vless
-  server: 104.21.14.232
-  port: 443
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nuclear.us.kg
-  network: ws
-  ws-opts:
-    path: /free/1.226.227.169:50001
-    headers:
-      Host: nuclear.us.kg
-- name: Github OTHER 35 ATSRSD
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 36 ATSRSD
-  type: vless
-  server: 172.66.154.57
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 37 ATSRSD
-  type: vless
-  server: cf.877774.xyz
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 38 ATSRSD
-  type: vless
-  server: 104.16.10.48
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 39 ATSRSD
-  type: vless
-  server: 172.64.146.66
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 40 ATSRSD
-  type: vless
-  server: 172.64.152.241
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 41 ATSRSD
+- name: Github OTHER 18 ATSRSD
   type: vless
   server: 8.47.69.60
   port: 443
@@ -576,7 +257,7 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 42 ATSRSD
+- name: Github OTHER 19 ATSRSD
   type: vless
   server: 104.18.35.15
   port: 443
@@ -590,9 +271,9 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 43 ATSRSD
+- name: Github OTHER 20 ATSRSD
   type: vless
-  server: 172.64.152.241
+  server: 172.66.154.57
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -601,24 +282,24 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 44 ATSRSD
+- name: Github OTHER 21 ATSRSD
   type: vless
-  server: 172.67.160.192
+  server: chatgpt.com
   port: 443
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: nuclear.us.kg
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /free/103.101.153.32:443
+    path: /
     headers:
-      Host: nuclear.us.kg
-- name: Github OTHER 45 ATSRSD
+      Host: ccc.010304.xyz
+- name: Github OTHER 22 ATSRSD
   type: vless
   server: 104.18.41.86
   port: 443
@@ -632,23 +313,9 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 46 ATSRSD
+- name: Github OTHER 23 ATSRSD
   type: vless
-  server: cf.090227.xyz
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 47 ATSRSD
-  type: vless
-  server: 172.64.158.170
+  server: 172.64.146.66
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -660,9 +327,9 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 48 ATSRSD
+- name: Github OTHER 24 ATSRSD
   type: vless
-  server: 104.19.48.107
+  server: 104.21.219.160
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -674,7 +341,21 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github OTHER 49 ATSRSD
+- name: Github OTHER 25 ATSRSD
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 26 ATSRSD
   type: vless
   server: 104.18.40.100
   port: 443
@@ -688,6 +369,327 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
+- name: Github OTHER 27 ATSRSD
+  type: vless
+  server: 104.18.41.190
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 28 ATSRSD
+  type: vless
+  server: 104.21.221.158
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 29 ATSRSD
+  type: vless
+  server: 104.17.210.74
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 30 ATSRSD
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 31 ATSRSD
+  type: vless
+  server: 104.16.111.195
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 32 ATSRSD
+  type: vless
+  server: 104.21.34.106
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 33 ATSRSD
+  type: vless
+  server: 172.64.158.170
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 34 ATSRSD
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: Github OTHER 35 ATSRSD
+  type: vless
+  server: 104.16.10.56
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 36 ATSRSD
+  type: vless
+  server: cf.090227.xyz
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 37 ATSRSD
+  type: vless
+  server: 172.64.152.241
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 38 ATSRSD
+  type: vless
+  server: 172.66.154.57
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 39 ATSRSD
+  type: vless
+  server: 172.64.153.153
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 40 ATSRSD
+  type: vless
+  server: 104.16.10.104
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 41 ATSRSD
+  type: vless
+  server: 104.18.47.73
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 42 ATSRSD
+  type: vless
+  server: 172.64.158.170
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 43 ATSRSD
+  type: vless
+  server: 8.47.69.60
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 44 ATSRSD
+  type: vless
+  server: 104.21.221.158
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=unsafefp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 45 ATSRSD
+  type: vless
+  server: 104.21.0.87
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 46 ATSRSD
+  type: vless
+  server: 104.21.221.158
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=unsafe
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 47 ATSRSD
+  type: vless
+  server: 172.64.152.241
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 48 ATSRSD
+  type: vless
+  server: 104.19.90.35
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 49 ATSRSD
+  type: vless
+  server: 104.27.46.35
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: Github OTHER 50 ATSRSD
   type: vless
   server: 104.18.35.15
@@ -704,21 +706,21 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github OTHER 51 ATSRSD
   type: vless
-  server: 188.114.97.6
-  port: 2087
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
+  server: 104.24.31.89
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: levikoconfig.levikogjgfdd.ir
+  servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /
+    path: /tyxyws
     headers:
-      Host: levikoconfig.levikogjgfdd.ir
+      Host: jp3.yohototo.top
 - name: Github OTHER 52 ATSRSD
   type: vless
-  server: www.5199dy.com
+  server: cf.877774.xyz
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -727,12 +729,12 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /fp
     headers:
       Host: ccc.010304.xyz
 - name: Github OTHER 53 ATSRSD
   type: vless
-  server: 104.20.17.210
+  server: 172.67.76.40
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
@@ -746,6 +748,118 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github OTHER 54 ATSRSD
   type: vless
+  server: 104.18.45.38
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 55 ATSRSD
+  type: vless
+  server: 162.159.254.3
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 56 ATSRSD
+  type: vless
+  server: 104.24.0.1
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 57 ATSRSD
+  type: vless
+  server: 172.64.152.241
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 58 ATSRSD
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: px2.5ibtc.cn
+  network: ws
+  ws-opts:
+    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
+    headers:
+      Host: px2.5ibtc.cn
+- name: Github OTHER 59 ATSRSD
+  type: vless
+  server: 104.19.48.107
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 60 ATSRSD
+  type: vless
+  server: 162.159.254.3
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 61 ATSRSD
+  type: vless
+  server: n04.jinggai.online
+  port: 8443
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: n04.jinggai.online
+  network: ws
+  ws-opts:
+    path: /nvl-n04-ws/e0577fe8fd7c8823
+    headers:
+      Host: n04.jinggai.online
+- name: Github OTHER 62 ATSRSD
+  type: vless
   server: 172.67.217.240
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -758,7 +872,49 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github OTHER 55 ATSRSD
+- name: Github OTHER 63 ATSRSD
+  type: vless
+  server: 104.18.45.38
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 64 ATSRSD
+  type: vless
+  server: www.5199dy.com
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 65 ATSRSD
+  type: vless
+  server: cf.090227.xyz
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: Github OTHER 66 ATSRSD
   type: vless
   server: 104.18.47.73
   port: 443
@@ -772,117 +928,36 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: Github OTHER 56 ATSRSD
+- name: Github OTHER 67 ATSRSD
   type: vless
-  server: 172.64.158.170
+  server: 104.21.70.21
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /
+    path: /tyxyws
     headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 57 ATSRSD
-  type: vless
-  server: 104.21.29.202
-  port: 443
-  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+      Host: jp3.yohototo.top
+- name: Github OTHER 68 ATSRSD
+  type: vmess
+  server: 188.114.96.3
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: px2.5ibtc.cn
+  servername: v2ray1.dozapp.xyz
   network: ws
   ws-opts:
-    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
+    path: /lMnsZUN4/
     headers:
-      Host: px2.5ibtc.cn
-- name: Github OTHER 58 ATSRSD
-  type: vless
-  server: 8.47.69.60
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 59 ATSRSD
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: Github OTHER 60 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 2096
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: levikoconfig.levikogjgfdd.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: levikoconfig.levikogjgfdd.ir
-- name: Github OTHER 61 ATSRSD
-  type: vless
-  server: 172.66.154.57
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 62 ATSRSD
-  type: vless
-  server: 104.18.37.247
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
-- name: Github OTHER 63 ATSRSD
-  type: vless
-  server: chatgpt.com
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ccc.010304.xyz
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
+      Host: v2ray1.dozapp.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -951,6 +1026,11 @@ proxy-groups:
   - Github OTHER 61 ATSRSD
   - Github OTHER 62 ATSRSD
   - Github OTHER 63 ATSRSD
+  - Github OTHER 64 ATSRSD
+  - Github OTHER 65 ATSRSD
+  - Github OTHER 66 ATSRSD
+  - Github OTHER 67 ATSRSD
+  - Github OTHER 68 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -1019,5 +1099,10 @@ proxy-groups:
   - Github OTHER 61 ATSRSD
   - Github OTHER 62 ATSRSD
   - Github OTHER 63 ATSRSD
+  - Github OTHER 64 ATSRSD
+  - Github OTHER 65 ATSRSD
+  - Github OTHER 66 ATSRSD
+  - Github OTHER 67 ATSRSD
+  - Github OTHER 68 ATSRSD
 rules:
 - MATCH,PROXIES
