@@ -20,7 +20,7 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 02 ATSRSD
   type: vless
-  server: hw3.divarkhaghazi.com.
+  server: 65.109.210.221
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -34,33 +34,18 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 03 ATSRSD
   type: vless
-  server: hw3.divarkhaghazi.com
-  port: 465
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: hw3.divarkhaghazi.com.
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: hw3.divarkhaghazi.com.
+      Host: 45.144.234.157
 - name: Github FI 04 ATSRSD
-  type: vless
-  server: 65.109.210.221
-  port: 465
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: hw3.divarkhaghazi.com.
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: Github FI 05 ATSRSD
   type: vless
   server: 65.109.211.81
   port: 465
@@ -74,6 +59,20 @@ proxies:
     path: /
     headers:
       Host: hw6.divarkhaghazi.com.
+- name: Github FI 05 ATSRSD
+  type: vless
+  server: hw3.divarkhaghazi.com
+  port: 465
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hw3.divarkhaghazi.com.
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw3.divarkhaghazi.com.
 - name: Github FI 06 ATSRSD
   type: vless
   server: 45.144.234.157
@@ -89,7 +88,7 @@ proxies:
       Host: 45.144.234.157
 - name: Github FI 07 ATSRSD
   type: vless
-  server: 65.109.210.221
+  server: hw3.divarkhaghazi.com.
   port: 465
   uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
@@ -103,17 +102,18 @@ proxies:
       Host: hw3.divarkhaghazi.com.
 - name: Github FI 08 ATSRSD
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 65.109.210.221
+  port: 465
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: hw3.divarkhaghazi.com.
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
-      Host: 45.144.234.157
+      Host: hw3.divarkhaghazi.com.
 - name: Github FI 09 ATSRSD
   type: vless
   server: 45.144.234.157
