@@ -33,6 +33,20 @@ proxies:
       Host: 45.144.234.157
 - name: Github FI 03 ATSRSD
   type: vless
+  server: 65.109.211.81
+  port: 465
+  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hw6.divarkhaghazi.com.
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw6.divarkhaghazi.com.
+- name: Github FI 04 ATSRSD
+  type: vless
   server: 45.144.234.157
   port: 14430
   uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
@@ -52,6 +66,7 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -60,5 +75,6 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
+  - Github FI 04 ATSRSD
 rules:
 - MATCH,PROXIES
