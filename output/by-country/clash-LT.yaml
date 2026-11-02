@@ -20,20 +20,6 @@ proxies:
       Host: ccc.010304.xyz
 - name: Github LT 02 ATSRSD
   type: vless
-  server: 185.178.208.167
-  port: 443
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lorettmay.top
-  network: ws
-  ws-opts:
-    path: /blog/posts
-    headers:
-      Host: lorettmay.top
-- name: Github LT 03 ATSRSD
-  type: vless
   server: 88.216.69.253
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -43,10 +29,10 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /fp
     headers:
       Host: ccc.010304.xyz
-- name: Github LT 04 ATSRSD
+- name: Github LT 03 ATSRSD
   type: vless
   server: 88.216.69.253
   port: 443
@@ -60,20 +46,34 @@ proxies:
     path: /fp
     headers:
       Host: ccc.010304.xyz
-- name: Github LT 05 ATSRSD
+- name: Github LT 04 ATSRSD
   type: vless
-  server: 185.178.208.167
+  server: 88.216.69.253
   port: 443
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lorettmay.top
+  servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /blog/posts
+    path: /fp=chrome
     headers:
-      Host: lorettmay.top
+      Host: ccc.010304.xyz
+- name: Github LT 05 ATSRSD
+  type: vless
+  server: 88.216.69.253
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: PROXIES
   type: select
