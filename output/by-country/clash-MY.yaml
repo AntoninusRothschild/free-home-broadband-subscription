@@ -18,35 +18,17 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: Github MY 02 ATSRSD
-  type: ss
-  server: xunlinknode.csdjhajkshdjkas.com
-  port: 40006
-  cipher: chacha20-ietf-poly1305
-  password: 28789988-887e-4e41-83cd-27bbfb7999ad
-  udp: true
-- name: Github MY 03 ATSRSD
-  type: ss
-  server: 58.152.58.193
-  port: 40006
-  cipher: chacha20-ietf-poly1305
-  password: 28789988-887e-4e41-83cd-27bbfb7999ad
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github MY 01 ATSRSD
-  - Github MY 02 ATSRSD
-  - Github MY 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github MY 01 ATSRSD
-  - Github MY 02 ATSRSD
-  - Github MY 03 ATSRSD
 rules:
 - MATCH,PROXIES
