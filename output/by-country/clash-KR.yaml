@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github KR 01 ATSRSD
+  type: ss
+  server: 141.164.45.187
+  port: 8000
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+  udp: true
+- name: Github KR 02 ATSRSD
   type: vless
   server: 152.69.226.63
   port: 25555
@@ -17,7 +24,7 @@ proxies:
     path: /
     headers:
       Host: 152.69.226.63
-- name: Github KR 02 ATSRSD
+- name: Github KR 03 ATSRSD
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -29,32 +36,18 @@ proxies:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: Github KR 03 ATSRSD
-  type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
 - name: Github KR 04 ATSRSD
   type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github KR 05 ATSRSD
   type: vless
   server: 152.69.226.63
@@ -69,40 +62,44 @@ proxies:
     headers:
       Host: 152.69.226.63
 - name: Github KR 06 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 9090
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  type: vless
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
 - name: Github KR 07 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 5498
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
+  type: vless
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.226.63
 - name: Github KR 08 ATSRSD
   type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 152.69.226.63
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github KR 09 ATSRSD
-  type: ss
-  server: 141.164.45.187
-  port: 6679
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  udp: true
-- name: Github KR 10 ATSRSD
   type: vless
   server: 152.69.226.63
   port: 25555
@@ -115,30 +112,6 @@ proxies:
     path: /
     headers:
       Host: 152.69.226.63
-- name: Github KR 11 ATSRSD
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github KR 12 ATSRSD
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -153,9 +126,6 @@ proxy-groups:
   - Github KR 07 ATSRSD
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
-  - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -170,8 +140,5 @@ proxy-groups:
   - Github KR 07 ATSRSD
   - Github KR 08 ATSRSD
   - Github KR 09 ATSRSD
-  - Github KR 10 ATSRSD
-  - Github KR 11 ATSRSD
-  - Github KR 12 ATSRSD
 rules:
 - MATCH,PROXIES
