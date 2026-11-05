@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IN 01 (家宽) ATSRSD
+- name: Github CN 01 ATSRSD
   type: vless
-  server: 122.176.216.52
+  server: 104.21.91.49
   port: 443
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: app-6ada5023.deploy.meerasolution.com
+  servername: vpn.cintaku.qzz.io
   network: ws
   ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    path: /vlessws
     headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+      Host: vpn.cintaku.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IN 01 (家宽) ATSRSD
+  - Github CN 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IN 01 (家宽) ATSRSD
+  - Github CN 01 ATSRSD
 rules:
 - MATCH,PROXIES
