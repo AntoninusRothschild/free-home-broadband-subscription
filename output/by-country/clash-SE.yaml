@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github SE 01 ATSRSD
   type: vless
-  server: se3.shtil.io
+  server: 194.104.94.141
   port: 443
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
   udp: true
@@ -15,7 +15,7 @@ proxies:
   servername: se3.shtil.io
 - name: Github SE 02 ATSRSD
   type: vless
-  server: 194.104.94.141
+  server: se3.shtil.io
   port: 443
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
   udp: true
