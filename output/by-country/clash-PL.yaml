@@ -24,6 +24,76 @@ proxies:
   servername: 2.26.6.1
 - name: Github PL 03 ATSRSD
   type: vless
+  server: 129.101.100.126
+  port: 8443
+  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lte-v2-ws.gacvpn.site
+  network: ws
+  ws-opts:
+    path: /static/js/runtime.9d03c7.js
+    headers:
+      Host: 129.101.100.126
+- name: Github PL 04 ATSRSD
+  type: vless
+  server: 145.63.143.205
+  port: 8444
+  uuid: 35c9f200-7520-4005-b78e-f8a2fb9f68f7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: pl1.meshbeat.online
+  network: ws
+  ws-opts:
+    path: /api/v1/devices/10be32b380/telemetry
+    headers:
+      Host: pl1.meshbeat.online
+- name: Github PL 05 ATSRSD
+  type: vless
+  server: 129.101.100.126
+  port: 8443
+  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lte-v2-ws.gacvpn.site
+  network: ws
+  ws-opts:
+    path: /static/js/runtime.9d03c7.js
+    headers:
+      Host: lte-v2-ws.gacvpn.site
+- name: Github PL 06 ATSRSD
+  type: vless
+  server: 212.119.43.76
+  port: 443
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: u.srilankangrill.online
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
+- name: Github PL 07 ATSRSD
+  type: vless
+  server: 129.101.100.126
+  port: 8443
+  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lte-v2-ws.gacvpn.site
+  network: ws
+  ws-opts:
+    path: /static/js/runtime.9d03c7.js
+    headers:
+      Host: 129.101.100.126
+- name: Github PL 08 ATSRSD
+  type: vless
   server: 2.26.6.1
   port: 2087
   uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
@@ -31,6 +101,20 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 2.26.6.1
+- name: Github PL 09 ATSRSD
+  type: vless
+  server: lte-v2-ws.gacvpn.site
+  port: 8443
+  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lte-v2-ws.gacvpn.site
+  network: ws
+  ws-opts:
+    path: /static/js/runtime.9d03c7.js
+    headers:
+      Host: lte-v2-ws.gacvpn.site
 proxy-groups:
 - name: PROXIES
   type: select
@@ -39,6 +123,12 @@ proxy-groups:
   - Github PL 01 ATSRSD
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
+  - Github PL 04 ATSRSD
+  - Github PL 05 ATSRSD
+  - Github PL 06 ATSRSD
+  - Github PL 07 ATSRSD
+  - Github PL 08 ATSRSD
+  - Github PL 09 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -47,5 +137,11 @@ proxy-groups:
   - Github PL 01 ATSRSD
   - Github PL 02 ATSRSD
   - Github PL 03 ATSRSD
+  - Github PL 04 ATSRSD
+  - Github PL 05 ATSRSD
+  - Github PL 06 ATSRSD
+  - Github PL 07 ATSRSD
+  - Github PL 08 ATSRSD
+  - Github PL 09 ATSRSD
 rules:
 - MATCH,PROXIES
