@@ -7,8 +7,8 @@ proxies:
 - name: Github HK 01 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   udp: true
@@ -22,8 +22,8 @@ proxies:
 - name: Github HK 02 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  port: 23026
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   udp: true
@@ -33,12 +33,12 @@ proxies:
   ws-opts:
     path: /arki
     headers:
-      Host: ''
+      Host: 47.244.120.197
 - name: Github HK 03 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   udp: true
@@ -67,8 +67,8 @@ proxies:
 - name: Github HK 05 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   udp: true
@@ -78,12 +78,12 @@ proxies:
   ws-opts:
     path: /arki
     headers:
-      Host: 47.244.120.197
+      Host: ''
 - name: Github HK 06 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   alterId: 0
   cipher: auto
   udp: true
@@ -112,8 +112,8 @@ proxies:
 - name: Github HK 08 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  port: 23026
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   alterId: 0
   cipher: auto
   udp: true
@@ -127,8 +127,8 @@ proxies:
 - name: Github HK 09 ATSRSD
   type: vmess
   server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   alterId: 0
   cipher: auto
   udp: true
