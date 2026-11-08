@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
-  udp: true
-- name: Github RU 02 ATSRSD
   type: vless
   server: 185.86.147.175
   port: 443
@@ -25,6 +18,13 @@ proxies:
     path: /service/telemetry/045d381f1166/
     headers:
       Host: bhjolq0d0l.flowersgood.top
+- name: Github RU 02 ATSRSD
+  type: ss
+  server: 38.60.223.125
+  port: 13108
+  cipher: aes-128-gcm
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+  udp: true
 - name: Github RU 03 ATSRSD
   type: vless
   server: 185.86.147.175
@@ -40,39 +40,18 @@ proxies:
     headers:
       Host: bhjolq0d0l.flowersgood.top
 - name: Github RU 04 ATSRSD
-  type: vless
-  server: 177.202.73.151
-  port: 443
-  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lvi.su
-  network: ws
-  ws-opts:
-    path: /vpn-relay?token=27fede42482b3c29d4c1c9640876c250&pool=whitelist2
-    headers:
-      Host: lvi.su
-- name: Github RU 05 ATSRSD
-  type: vless
-  server: xsru2.freeddns.org
-  port: 443
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xsru2.freeddns.org
-  network: ws
-  ws-opts:
-    path: /wsru
-    headers:
-      Host: xsru2.freeddns.org
-- name: Github RU 06 ATSRSD
   type: ss
-  server: 38.60.223.125
-  port: 13108
-  cipher: aes-128-gcm
-  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
+  udp: true
+- name: Github RU 05 ATSRSD
+  type: ss
+  server: 46.17.47.58
+  port: 18443
+  cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -84,7 +63,6 @@ proxy-groups:
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
   - Github RU 05 ATSRSD
-  - Github RU 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -95,6 +73,5 @@ proxy-groups:
   - Github RU 03 ATSRSD
   - Github RU 04 ATSRSD
   - Github RU 05 ATSRSD
-  - Github RU 06 ATSRSD
 rules:
 - MATCH,PROXIES
