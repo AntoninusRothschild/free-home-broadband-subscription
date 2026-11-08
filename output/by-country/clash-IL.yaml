@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github IN 01 (家宽) ATSRSD
+- name: Github IL 01 ATSRSD
   type: vless
-  server: 122.176.216.52
-  port: 443
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+  server: 64.177.66.9
+  port: 8443
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: app-6ada5023.deploy.meerasolution.com
+  servername: vp7.1145678.xyz
   network: ws
   ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    path: /events/classfp
     headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+      Host: vp7.1145678.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github IN 01 (家宽) ATSRSD
+  - Github IL 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github IN 01 (家宽) ATSRSD
+  - Github IL 01 ATSRSD
 rules:
 - MATCH,PROXIES
