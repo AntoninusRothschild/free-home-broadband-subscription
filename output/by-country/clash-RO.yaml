@@ -6,24 +6,10 @@ log-level: info
 proxies:
 - name: Github RO 01 ATSRSD
   type: ss
-  server: 82.152.132.211
-  port: 8044
-  cipher: chacha20-ietf-poly1305
-  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
-  udp: true
-- name: Github RO 02 ATSRSD
-  type: ss
   server: 194.68.44.42
   port: 64546
   cipher: chacha20-ietf-poly1305
   password: U83u9OGpvSatIUW7LsWffr
-  udp: true
-- name: Github RO 03 ATSRSD
-  type: ss
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -31,15 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github RO 01 ATSRSD
-  - Github RO 02 ATSRSD
-  - Github RO 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RO 01 ATSRSD
-  - Github RO 02 ATSRSD
-  - Github RO 03 ATSRSD
 rules:
 - MATCH,PROXIES
