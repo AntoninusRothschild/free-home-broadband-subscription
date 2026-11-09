@@ -34,30 +34,6 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: Github HK 03 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki
-    headers:
-      Host: 47.244.120.197
-- name: Github HK 04 ATSRSD
-  type: vless
-  server: 152.175.6.229
-  port: 31884
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: hk010.zestapp778.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,8 +41,6 @@ proxy-groups:
   - AUTO
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
-  - Github HK 03 ATSRSD
-  - Github HK 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -74,7 +48,5 @@ proxy-groups:
   proxies:
   - Github HK 01 ATSRSD
   - Github HK 02 ATSRSD
-  - Github HK 03 ATSRSD
-  - Github HK 04 ATSRSD
 rules:
 - MATCH,PROXIES
