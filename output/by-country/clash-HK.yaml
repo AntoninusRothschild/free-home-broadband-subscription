@@ -5,21 +5,32 @@ mode: rule
 log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 23026
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 213.176.92.168
+  port: 14430
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /arki
+    path: /vless
     headers:
-      Host: 47.244.120.197
+      Host: 213.176.92.168
 - name: Github HK 02 ATSRSD
+  type: vless
+  server: 213.176.92.168
+  port: 14430
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: Github HK 03 ATSRSD
   type: vmess
   server: 47.244.120.197
   port: 44867
@@ -34,19 +45,6 @@ proxies:
     path: /arki
     headers:
       Host: ''
-- name: Github HK 03 ATSRSD
-  type: vless
-  server: 213.176.92.168
-  port: 14430
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 213.176.92.168
 proxy-groups:
 - name: PROXIES
   type: select
