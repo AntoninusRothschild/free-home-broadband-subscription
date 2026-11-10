@@ -6,28 +6,19 @@ log-level: info
 proxies:
 - name: Github FI 01 ATSRSD
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 146.103.118.189
+  port: 443
+  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: nl2.574ck.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /574ck-finland
     headers:
-      Host: 45.144.234.157
+      Host: nl2.574ck.xyz
 - name: Github FI 02 ATSRSD
-  type: vmess
-  server: 65.108.240.210
-  port: 39018
-  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github FI 03 ATSRSD
   type: vless
   server: 109.120.134.181
   port: 443
@@ -41,7 +32,43 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
+- name: Github FI 03 ATSRSD
+  type: vmess
+  server: 65.108.240.210
+  port: 39018
+  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github FI 04 ATSRSD
+  type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: Github FI 05 ATSRSD
+  type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: Github FI 06 ATSRSD
   type: vless
   server: 138.124.49.108
   port: 8443
@@ -55,49 +82,8 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- name: Github FI 05 ATSRSD
-  type: vless
-  server: 8.6.112.0
-  port: 8443
-  uuid: 8eb92a78-ec8d-4ff6-8a2d-8b801367be87
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: KAmraN02-3rpN9m-2.KAMran-02.WORKErS.dEV
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: KAmraN02-3rpN9m-2.KAMran-02.WORKErS.dEV
-- name: Github FI 06 ATSRSD
-  type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.144.234.157
 - name: Github FI 07 ATSRSD
   type: vless
-  server: 138.124.124.157
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fs.qicai99.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: Github FI 08 ATSRSD
-  type: vless
   server: 146.103.118.189
   port: 443
   uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
@@ -110,7 +96,7 @@ proxies:
     path: /574ck-finland
     headers:
       Host: nl2.574ck.xyz
-- name: Github FI 09 ATSRSD
+- name: Github FI 08 ATSRSD
   type: vless
   server: 45.144.234.157
   port: 14430
@@ -123,20 +109,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: Github FI 10 ATSRSD
-  type: vless
-  server: 146.103.118.189
-  port: 443
-  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nl2.574ck.xyz
-  network: ws
-  ws-opts:
-    path: /574ck-finland
-    headers:
-      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -150,8 +122,6 @@ proxy-groups:
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
   - Github FI 08 ATSRSD
-  - Github FI 09 ATSRSD
-  - Github FI 10 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -165,7 +135,5 @@ proxy-groups:
   - Github FI 06 ATSRSD
   - Github FI 07 ATSRSD
   - Github FI 08 ATSRSD
-  - Github FI 09 ATSRSD
-  - Github FI 10 ATSRSD
 rules:
 - MATCH,PROXIES
