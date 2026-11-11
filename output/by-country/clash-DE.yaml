@@ -6,63 +6,31 @@ log-level: info
 proxies:
 - name: Github DE 01 ATSRSD
   type: vless
-  server: 57.129.41.216
-  port: 80
-  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: OV-Germany1.09vpn.com
-- name: Github DE 02 ATSRSD
-  type: vless
-  server: 172.67.110.86
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  server: 91.107.247.173
+  port: 2083
+  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: Github DE 03 ATSRSD
-  type: vless
-  server: 162.159.152.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rayan-007.maxima.dpdns.org
+  servername: sino.bestsellers1.site
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: rayan-007.maxima.dpdns.org
-- name: Github DE 04 ATSRSD
+      Host: 91.107.247.173
+- name: Github DE 02 ATSRSD
   type: vless
-  server: lvi.su
+  server: base.hosamobenl.co.uk
   port: 443
-  uuid: 7b91b2c3-8af3-449b-a555-00c9460989f4
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lvi.su
-  network: ws
-  ws-opts:
-    path: /vpn-relay?token=27fede42482b3c29d4c1c9640876c250&pool=whitelist2
-    headers:
-      Host: lvi.su
-- name: Github DE 05 ATSRSD
+  servername: base.hosamobenl.co.uk
+- name: Github DE 03 ATSRSD
   type: vless
-  server: 159.223.20.232
-  port: 443
+  server: 188.137.178.174
+  port: 8443
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
   tls: true
@@ -73,63 +41,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- name: Github DE 06 ATSRSD
-  type: ss
-  server: 185.226.172.8
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: Github DE 07 ATSRSD
-  type: vless
-  server: 103.31.4.75
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: Github DE 08 ATSRSD
-  type: ss
-  server: 193.108.119.2
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github DE 09 ATSRSD
-  type: vless
-  server: 103.31.4.160
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: Github DE 10 ATSRSD
-  type: vless
-  server: 188.114.99.157
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
-- name: Github DE 11 ATSRSD
+- name: Github DE 04 ATSRSD
   type: vless
   server: 85.192.27.171
   port: 2053
@@ -143,87 +55,163 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
-- name: Github DE 12 ATSRSD
+- name: Github DE 05 ATSRSD
+  type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: Github DE 06 ATSRSD
   type: vless
-  server: 104.24.21.163
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  server: 159.223.20.232
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: moz.ar-marz.fun
+  servername: fs.qicai99.com
   network: ws
   ws-opts:
-    path: /man
+    path: /fp=chrome
     headers:
-      Host: moz.ar-marz.fun
+      Host: fs.qicai99.com
+- name: Github DE 07 ATSRSD
+  type: vless
+  server: 159.223.20.232
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: fs.qicai99.com
+- name: Github DE 08 ATSRSD
+  type: vless
+  server: 57.129.41.216
+  port: 80
+  uuid: 18535741-e8b3-4b43-9348-785b55936751
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: ov-germany1.09vpn.com
+- name: Github DE 09 ATSRSD
+  type: vless
+  server: 87.248.149.50
+  port: 443
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: base.hosamobenl.co.uk
+- name: Github DE 10 ATSRSD
+  type: vless
+  server: s1.berluno.ir
+  port: 1155
+  uuid: 4e55449f-dcdd-41b4-a31e-dad1e3d420db
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+  servername: tgju.org
+  client-fingerprint: edge
+- name: Github DE 11 ATSRSD
+  type: vless
+  server: 91.107.247.173
+  port: 2083
+  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sino.bestsellers1.site
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 91.107.247.173
+- name: Github DE 12 ATSRSD
+  type: ss
+  server: 23.157.88.43
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: Github DE 13 ATSRSD
   type: vless
-  server: 190.93.244.47
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  server: s1.berluno.ir
+  port: 1155
+  uuid: d07acc1a-c51d-4a1e-93d9-4753d29ae24b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
+  reality-opts:
+    public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
+  servername: tgju.org
+  client-fingerprint: edge
 - name: Github DE 14 ATSRSD
   type: vless
-  server: 87.248.149.50
-  port: 443
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  server: 57.129.41.216
+  port: 80
+  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: base.hosamobenl.co.uk
-- name: Github DE 15 ATSRSD
-  type: vless
-  server: 87.248.149.50
-  port: 443
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: base.hosamobenl.co.uk
-- name: Github DE 16 ATSRSD
-  type: vless
-  server: 162.159.236.61
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
   network: ws
   ws-opts:
-    path: /man
+    path: /vless/
     headers:
-      Host: moz.ar-marz.fun
+      Host: OV-Germany1.09vpn.com
+- name: Github DE 15 ATSRSD
+  type: ss
+  server: 57.129.83.85
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github DE 16 ATSRSD
+  type: vless
+  server: 85.234.100.32
+  port: 443
+  uuid: c1208c5a-2350-0003-affd-fc41b4319286
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: decdn-28.nome-rkp.net
+  network: ws
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: decdn-28.nome-rkp.net
 - name: Github DE 17 ATSRSD
   type: ss
-  server: 156.67.120.205
-  port: 51628
-  cipher: chacha20-ietf-poly1305
-  password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
+  server: 193.108.119.3
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github DE 18 ATSRSD
   type: vless
-  server: 172.67.110.86
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  server: 159.223.20.232
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: moz.ar-marz.fun
+  servername: fs.qicai99.com
   network: ws
   ws-opts:
-    path: /man
+    path: /fp=chrome
     headers:
-      Host: moz.ar-marz.fun
+      Host: fs.qicai99.com
 - name: Github DE 19 ATSRSD
   type: vless
   server: 159.223.20.232
@@ -239,55 +227,20 @@ proxies:
     headers:
       Host: fs.qicai99.com
 - name: Github DE 20 ATSRSD
-  type: vless
-  server: 188.114.96.246
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  type: ss
+  server: 193.108.119.2
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
-  network: ws
-  ws-opts:
-    path: /man
-    headers:
-      Host: moz.ar-marz.fun
 - name: Github DE 21 ATSRSD
-  type: vless
-  server: 159.223.20.232
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fs.qicai99.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: Github DE 22 ATSRSD
-  type: vless
-  server: 51.75.67.209
-  port: 2096
-  uuid: d3532059-294f-4ecf-873d-acf296dc0bad
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: microsoft.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 51.75.67.209
-- name: Github DE 23 ATSRSD
   type: ss
   server: 185.176.204.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github DE 24 ATSRSD
+- name: Github DE 22 ATSRSD
   type: vless
   server: 87.248.149.50
   port: 443
@@ -296,147 +249,50 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: base.hosamobenl.co.uk
+- name: Github DE 23 ATSRSD
+  type: vless
+  server: 87.248.149.50
+  port: 443
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: base.hosamobenl.co.uk
+- name: Github DE 24 ATSRSD
+  type: ss
+  server: 156.67.120.205
+  port: 51628
+  cipher: chacha20-ietf-poly1305
+  password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
+  udp: true
 - name: Github DE 25 ATSRSD
   type: vless
-  server: 190.93.247.95
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  server: 146.103.118.189
+  port: 443
+  uuid: 82382a00-3784-41e3-85d6-37f626263944
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: moz.ar-marz.fun
+  servername: vpn.574ck.xyz
   network: ws
   ws-opts:
-    path: /man
+    path: /ws
     headers:
-      Host: moz.ar-marz.fun
+      Host: vpn.574ck.xyz
 - name: Github DE 26 ATSRSD
   type: vless
-  server: 5.42.107.38
-  port: 14443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: germ.onlineai.pro
-  network: ws
-  ws-opts:
-    path: /api/generate
-    headers:
-      Host: germ.onlineai.pro
-- name: Github DE 27 ATSRSD
-  type: vless
-  server: germ.onlineai.pro
-  port: 14443
-  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: germ.onlineai.pro
-  network: ws
-  ws-opts:
-    path: /api/generate
-    headers:
-      Host: germ.onlineai.pro
-- name: Github DE 28 ATSRSD
-  type: ss
-  server: 193.108.119.3
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github DE 29 ATSRSD
-  type: vless
-  server: 57.129.41.216
-  port: 80
-  uuid: 18535741-e8b3-4b43-9348-785b55936751
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: ov-germany1.09vpn.com
-- name: Github DE 30 ATSRSD
-  type: ss
-  server: 23.157.88.43
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github DE 31 ATSRSD
-  type: vless
-  server: 87.248.149.50
+  server: 146.103.118.189
   port: 443
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  uuid: 82382a00-3784-41e3-85d6-37f626263944
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: base.hosamobenl.co.uk
-- name: Github DE 32 ATSRSD
-  type: vless
-  server: 173.245.49.114
-  port: 8443
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: moz.ar-marz.fun
+  servername: vpn.574ck.xyz
   network: ws
   ws-opts:
-    path: /man
+    path: /ws
     headers:
-      Host: moz.ar-marz.fun
-- name: Github DE 33 ATSRSD
-  type: ss
-  server: 57.129.83.85
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github DE 34 ATSRSD
-  type: vless
-  server: 91.107.247.173
-  port: 2083
-  uuid: 0386df1b-7abd-4676-f3c6-d65d691023b9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: sino.bestsellers1.site
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 91.107.247.173
-- name: Github DE 35 ATSRSD
-  type: vless
-  server: 159.223.20.232
-  port: 443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fs.qicai99.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: Github DE 36 ATSRSD
-  type: vless
-  server: 172.66.44.124
-  port: 8443
-  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+      Host: vpn.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -468,16 +324,6 @@ proxy-groups:
   - Github DE 24 ATSRSD
   - Github DE 25 ATSRSD
   - Github DE 26 ATSRSD
-  - Github DE 27 ATSRSD
-  - Github DE 28 ATSRSD
-  - Github DE 29 ATSRSD
-  - Github DE 30 ATSRSD
-  - Github DE 31 ATSRSD
-  - Github DE 32 ATSRSD
-  - Github DE 33 ATSRSD
-  - Github DE 34 ATSRSD
-  - Github DE 35 ATSRSD
-  - Github DE 36 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -509,15 +355,5 @@ proxy-groups:
   - Github DE 24 ATSRSD
   - Github DE 25 ATSRSD
   - Github DE 26 ATSRSD
-  - Github DE 27 ATSRSD
-  - Github DE 28 ATSRSD
-  - Github DE 29 ATSRSD
-  - Github DE 30 ATSRSD
-  - Github DE 31 ATSRSD
-  - Github DE 32 ATSRSD
-  - Github DE 33 ATSRSD
-  - Github DE 34 ATSRSD
-  - Github DE 35 ATSRSD
-  - Github DE 36 ATSRSD
 rules:
 - MATCH,PROXIES

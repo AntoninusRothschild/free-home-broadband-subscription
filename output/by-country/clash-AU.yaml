@@ -4,10 +4,10 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github HU 01 ATSRSD
+- name: Github AU 01 ATSRSD
   type: vless
-  server: 38.180.225.247
-  port: 2053
+  server: 46.250.242.104
+  port: 443
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   udp: true
   tls: true
@@ -23,12 +23,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github HU 01 ATSRSD
+  - Github AU 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github HU 01 ATSRSD
+  - Github AU 01 ATSRSD
 rules:
 - MATCH,PROXIES
