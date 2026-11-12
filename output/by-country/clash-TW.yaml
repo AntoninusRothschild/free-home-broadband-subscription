@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TW 01 ATSRSD
+  type: ss
+  server: amasoid.ddns.net
+  port: 14514
+  cipher: 2022-blake3-aes-128-gcm
+  password: b7I6g7l7fJhBaMInJ+zkzw==
+  udp: true
+- name: Github TW 02 ATSRSD
   type: vless
   server: 60.248.219.53
   port: 443
@@ -24,11 +31,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
 rules:
 - MATCH,PROXIES
