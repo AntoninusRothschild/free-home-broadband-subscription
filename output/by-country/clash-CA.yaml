@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github CA 01 ATSRSD
-  type: ss
-  server: 51.222.136.236
-  port: 8882
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  udp: true
-- name: Github CA 02 ATSRSD
   type: vless
   server: 66.70.179.198
   port: 2053
@@ -23,16 +16,25 @@ proxies:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: Github CA 03 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+- name: Github CA 02 ATSRSD
+  type: ss
+  server: 51.222.155.113
+  port: 5601
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
   udp: true
-  tls: false
+- name: Github CA 03 ATSRSD
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  udp: true
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: Github CA 04 ATSRSD
   type: vmess
   server: 23.162.200.198
@@ -45,7 +47,7 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 05 ATSRSD
   type: vmess
-  server: 134.195.196.211
+  server: 23.162.200.198
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -55,7 +57,7 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 06 ATSRSD
   type: vmess
-  server: 134.195.196.211
+  server: 23.162.200.198
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -64,13 +66,93 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 07 ATSRSD
-  type: ss
-  server: 51.222.155.32
-  port: 5003
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github CA 08 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 09 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 10 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 11 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 12 ATSRSD
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 13 ATSRSD
+  type: ss
+  server: 51.222.136.236
+  port: 8882
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  udp: true
+- name: Github CA 14 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 15 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 16 ATSRSD
   type: vless
   server: 148.113.196.75
   port: 8443
@@ -84,97 +166,13 @@ proxies:
     path: /vless/
     headers:
       Host: 148.113.196.75
-- name: Github CA 09 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 10 ATSRSD
-  type: ss
-  server: 51.222.155.113
-  port: 5601
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: Github CA 11 ATSRSD
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 12 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 13 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 14 ATSRSD
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 15 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github CA 16 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github CA 17 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  type: ss
+  server: 51.222.141.125
+  port: 445
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: Github CA 18 ATSRSD
   type: vmess
   server: 134.195.196.211
@@ -196,18 +194,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 20 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: Github CA 21 ATSRSD
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -217,26 +203,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 22 ATSRSD
-  type: ss
-  server: 51.222.141.125
-  port: 445
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  udp: true
-- name: Github CA 23 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: Github CA 24 ATSRSD
+- name: Github CA 21 ATSRSD
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -246,6 +213,30 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github CA 22 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 23 ATSRSD
+  type: ss
+  server: 51.222.155.32
+  port: 5003
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+  udp: true
+- name: Github CA 24 ATSRSD
+  type: ss
+  server: 51.79.64.198
+  port: 8119
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+  udp: true
 - name: Github CA 25 ATSRSD
   type: vmess
   server: 134.195.196.211
@@ -257,17 +248,15 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 26 ATSRSD
-  type: vless
-  server: 66.70.179.198
-  port: 2053
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
 - name: Github CA 27 ATSRSD
   type: vmess
   server: 134.195.196.211
@@ -279,32 +268,36 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 28 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 29 ATSRSD
   type: ss
-  server: 51.79.85.185
-  port: 8118
+  server: 51.222.200.165
+  port: 5000
   cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
+  password: Y6R9pAtvxxzmGC
   udp: true
-- name: Github CA 30 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+- name: Github CA 29 ATSRSD
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: Github CA 30 ATSRSD
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github CA 31 ATSRSD
   type: ss
   server: 158.51.121.221
@@ -313,15 +306,20 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github CA 32 ATSRSD
-  type: ss
-  server: 54.39.96.233
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 2cvhpvdg4x7mvbps
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: Github CA 33 ATSRSD
   type: vmess
-  server: 23.162.200.198
+  server: 134.195.196.211
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -330,8 +328,15 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 34 ATSRSD
+  type: ss
+  server: 51.222.12.127
+  port: 445
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+  udp: true
+- name: Github CA 35 ATSRSD
   type: vmess
-  server: 134.195.196.211
+  server: 23.162.200.198
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -339,34 +344,28 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 35 ATSRSD
+- name: Github CA 36 ATSRSD
+  type: ss
+  server: 51.79.85.185
+  port: 8118
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+  udp: true
+- name: Github CA 37 ATSRSD
   type: ss
   server: 15.235.57.6
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: kxhnt5jtykd328cg
   udp: true
-- name: Github CA 36 ATSRSD
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github CA 37 ATSRSD
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github CA 38 ATSRSD
+  type: ss
+  server: 54.39.96.233
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 2cvhpvdg4x7mvbps
+  udp: true
+- name: Github CA 39 ATSRSD
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -376,7 +375,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 39 ATSRSD
+- name: Github CA 40 ATSRSD
   type: vless
   server: 66.70.179.198
   port: 2053
@@ -388,19 +387,9 @@ proxies:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: Github CA 40 ATSRSD
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: Github CA 41 ATSRSD
   type: vmess
-  server: 23.162.200.198
+  server: 134.195.196.211
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -410,7 +399,7 @@ proxies:
   skip-cert-verify: true
 - name: Github CA 42 ATSRSD
   type: vmess
-  server: 23.162.200.198
+  server: 134.195.196.211
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -419,6 +408,18 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 43 ATSRSD
+  type: vless
+  server: 66.70.179.198
+  port: 2053
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: Github CA 44 ATSRSD
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -428,7 +429,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 44 ATSRSD
+- name: Github CA 45 ATSRSD
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -438,13 +439,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Github CA 45 ATSRSD
-  type: ss
-  server: 51.222.12.127
-  port: 445
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-  udp: true
 - name: Github CA 46 ATSRSD
   type: vmess
   server: 134.195.196.211
@@ -456,13 +450,26 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: Github CA 47 ATSRSD
-  type: ss
-  server: 51.222.200.165
-  port: 5000
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
+  tls: false
+  skip-cert-verify: true
 - name: Github CA 48 ATSRSD
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Github CA 49 ATSRSD
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -525,6 +532,7 @@ proxy-groups:
   - Github CA 46 ATSRSD
   - Github CA 47 ATSRSD
   - Github CA 48 ATSRSD
+  - Github CA 49 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -578,5 +586,6 @@ proxy-groups:
   - Github CA 46 ATSRSD
   - Github CA 47 ATSRSD
   - Github CA 48 ATSRSD
+  - Github CA 49 ATSRSD
 rules:
 - MATCH,PROXIES
