@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github CZ 01 ATSRSD
+- name: Github KZ 01 ATSRSD
   type: vless
-  server: 188.137.178.174
+  server: 38.107.234.57
   port: 8443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  uuid: 2424febb-43cb-488d-bdd1-401e923c8e48
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fs.qicai99.com
+  servername: 3h-kazakhstan1.09vpn.com
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /vless/
     headers:
-      Host: fs.qicai99.com
+      Host: 38.107.234.57
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github CZ 01 ATSRSD
+  - Github KZ 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github CZ 01 ATSRSD
+  - Github KZ 01 ATSRSD
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TW 01 ATSRSD
+  type: vless
+  server: 83.147.13.74
+  port: 8443
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
+  servername: github.githubassets.com
+  client-fingerprint: chrome
+- name: Github TW 02 ATSRSD
   type: ss
   server: amasoid.ddns.net
   port: 14514
@@ -17,11 +29,13 @@ proxy-groups:
   proxies:
   - AUTO
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
 rules:
 - MATCH,PROXIES
