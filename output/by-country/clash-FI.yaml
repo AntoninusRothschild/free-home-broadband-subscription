@@ -43,20 +43,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: Github FI 04 ATSRSD
-  type: vless
-  server: 146.103.118.189
-  port: 443
-  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nl2.574ck.xyz
-  network: ws
-  ws-opts:
-    path: /574ck-finland
-    headers:
-      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -65,7 +51,6 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -74,6 +59,5 @@ proxy-groups:
   - Github FI 01 ATSRSD
   - Github FI 02 ATSRSD
   - Github FI 03 ATSRSD
-  - Github FI 04 ATSRSD
 rules:
 - MATCH,PROXIES

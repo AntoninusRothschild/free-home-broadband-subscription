@@ -28,34 +28,6 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
   servername: www.apple.com
   client-fingerprint: random
-- name: Github TR 03 ATSRSD
-  type: vless
-  server: 188.225.37.43
-  port: 443
-  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: torvani.cyou
-  network: ws
-  ws-opts:
-    path: /api/boards/live
-    headers:
-      Host: torvani.cyou
-- name: Github TR 04 ATSRSD
-  type: vless
-  server: 188.225.37.43
-  port: 443
-  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: torvani.cyou
-  network: ws
-  ws-opts:
-    path: /api/boards/live
-    headers:
-      Host: torvani.cyou
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,8 +35,6 @@ proxy-groups:
   - AUTO
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -72,7 +42,5 @@ proxy-groups:
   proxies:
   - Github TR 01 ATSRSD
   - Github TR 02 ATSRSD
-  - Github TR 03 ATSRSD
-  - Github TR 04 ATSRSD
 rules:
 - MATCH,PROXIES
