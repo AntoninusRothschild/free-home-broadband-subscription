@@ -19,12 +19,34 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github AT 03 ATSRSD
+  type: vmess
+  server: 154.47.19.225
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: xmfhlpy.com
+- name: Github AT 04 ATSRSD
   type: ss
   server: 152.53.1.57
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
   udp: true
+- name: Github AT 05 ATSRSD
+  type: vmess
+  server: 154.47.19.225
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -33,6 +55,8 @@ proxy-groups:
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
   - Github AT 03 ATSRSD
+  - Github AT 04 ATSRSD
+  - Github AT 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -41,5 +65,7 @@ proxy-groups:
   - Github AT 01 ATSRSD
   - Github AT 02 ATSRSD
   - Github AT 03 ATSRSD
+  - Github AT 04 ATSRSD
+  - Github AT 05 ATSRSD
 rules:
 - MATCH,PROXIES

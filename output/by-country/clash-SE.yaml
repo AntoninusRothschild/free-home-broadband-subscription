@@ -18,41 +18,13 @@ proxies:
     headers:
       Host: 193.188.21.253
 - name: Github SE 02 ATSRSD
-  type: vless
-  server: 138.124.49.108
-  port: 8443
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fs.qicai99.com
-  network: ws
-  ws-opts:
-    path: /fp=chromefp=chrome
-    headers:
-      Host: fs.qicai99.com
-- name: Github SE 03 ATSRSD
-  type: ss
-  server: 70.34.212.124
-  port: 8388
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-  udp: true
-- name: Github SE 04 ATSRSD
-  type: ss
-  server: 62.182.193.228
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
-  udp: true
-- name: Github SE 05 ATSRSD
   type: ss
   server: 138.199.55.243
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github SE 06 ATSRSD
+- name: Github SE 03 ATSRSD
   type: vless
   server: 5.178.109.174
   port: 14430
@@ -73,9 +45,6 @@ proxy-groups:
   - Github SE 01 ATSRSD
   - Github SE 02 ATSRSD
   - Github SE 03 ATSRSD
-  - Github SE 04 ATSRSD
-  - Github SE 05 ATSRSD
-  - Github SE 06 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -84,8 +53,5 @@ proxy-groups:
   - Github SE 01 ATSRSD
   - Github SE 02 ATSRSD
   - Github SE 03 ATSRSD
-  - Github SE 04 ATSRSD
-  - Github SE 05 ATSRSD
-  - Github SE 06 ATSRSD
 rules:
 - MATCH,PROXIES
