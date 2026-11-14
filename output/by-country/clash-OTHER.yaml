@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: Github OTHER 01 ATSRSD
   type: vless
-  server: 104.16.111.102
+  server: 104.17.210.74
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -19,24 +19,22 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - name: Github OTHER 02 ATSRSD
-  type: vmess
-  server: 104.21.91.53
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 104.21.70.21
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: v2ray1.dozapp.xyz
+  servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /lMnsZUN4/
+    path: /tyxyws
     headers:
-      Host: v2ray1.dozapp.xyz
+      Host: jp3.yohototo.top
 - name: Github OTHER 03 ATSRSD
   type: vless
-  server: 104.16.10.56
+  server: 104.16.111.102
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -49,24 +47,22 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - name: Github OTHER 04 ATSRSD
-  type: vmess
-  server: 104.21.0.1
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 104.19.164.155
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: or3.sfacg.uk
+  servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /or3
+    path: /tyxyws
     headers:
-      Host: or3.sfacg.uk
+      Host: jp3.yohototo.top
 - name: Github OTHER 05 ATSRSD
   type: vless
-  server: 104.16.111.102
+  server: 104.21.0.87
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -80,7 +76,7 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github OTHER 06 ATSRSD
   type: vless
-  server: 172.67.156.147
+  server: 104.16.10.2
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -94,61 +90,19 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github OTHER 07 ATSRSD
   type: vless
-  server: www.speedtest.net
+  server: 172.67.217.240
   port: 443
-  uuid: ec23f217-23a1-4f62-b98d-ba56070de89c
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: wallweb4.pages.dev
+  servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /tyxyws
     headers:
-      Host: wallweb4.pages.dev
+      Host: jp3.yohototo.top
 - name: Github OTHER 08 ATSRSD
-  type: vless
-  server: 104.21.219.160
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 09 ATSRSD
-  type: vless
-  server: 104.16.10.2
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 10 ATSRSD
-  type: vless
-  server: 104.16.111.102
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 11 ATSRSD
   type: vmess
   server: 104.17.77.77
   port: 8443
@@ -164,65 +118,51 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
+- name: Github OTHER 09 ATSRSD
+  type: vless
+  server: 104.16.111.202
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 10 ATSRSD
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github OTHER 11 ATSRSD
+  type: vless
+  server: 104.16.10.135
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: Github OTHER 12 ATSRSD
-  type: vless
-  server: 172.67.217.240
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 13 ATSRSD
-  type: vless
-  server: 104.19.164.155
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 14 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 15 ATSRSD
-  type: vless
-  server: 104.21.0.87
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 16 ATSRSD
   type: vmess
-  server: chatgpt.com
+  server: 104.21.91.53
   port: 8443
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
@@ -236,81 +176,25 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: Github OTHER 17 ATSRSD
+- name: Github OTHER 13 ATSRSD
   type: vmess
-  server: 104.21.80.180
+  server: US122201.ssgreen.org
   port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  uuid: 7a8f7391-1711-4fcc-b29b-562a00f357f3
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: vmess.lbw666.dpdns.org
+  servername: US122201.ssgreen.org
   network: ws
   ws-opts:
-    path: /ws
+    path: /wes
     headers:
-      Host: vmess.lbw666.dpdns.org
-- name: Github OTHER 18 ATSRSD
-  type: vless
-  server: 172.67.217.240
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 19 ATSRSD
+      Host: US122201.ssgreen.org
+- name: Github OTHER 14 ATSRSD
   type: vless
   server: 104.18.42.98
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 20 ATSRSD
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 21 ATSRSD
-  type: vless
-  server: 104.19.164.155
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github OTHER 22 ATSRSD
-  type: vless
-  server: 172.67.217.240
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -341,14 +225,6 @@ proxy-groups:
   - Github OTHER 12 ATSRSD
   - Github OTHER 13 ATSRSD
   - Github OTHER 14 ATSRSD
-  - Github OTHER 15 ATSRSD
-  - Github OTHER 16 ATSRSD
-  - Github OTHER 17 ATSRSD
-  - Github OTHER 18 ATSRSD
-  - Github OTHER 19 ATSRSD
-  - Github OTHER 20 ATSRSD
-  - Github OTHER 21 ATSRSD
-  - Github OTHER 22 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -368,13 +244,5 @@ proxy-groups:
   - Github OTHER 12 ATSRSD
   - Github OTHER 13 ATSRSD
   - Github OTHER 14 ATSRSD
-  - Github OTHER 15 ATSRSD
-  - Github OTHER 16 ATSRSD
-  - Github OTHER 17 ATSRSD
-  - Github OTHER 18 ATSRSD
-  - Github OTHER 19 ATSRSD
-  - Github OTHER 20 ATSRSD
-  - Github OTHER 21 ATSRSD
-  - Github OTHER 22 ATSRSD
 rules:
 - MATCH,PROXIES
