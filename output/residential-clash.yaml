@@ -4,7 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github TW 01 (家宽) ATSRSD
+- name: Github KR 01 (家宽) ATSRSD
+  type: ss
+  server: 115.161.136.145
+  port: 10099
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+  udp: true
+- name: Github TW 02 (家宽) ATSRSD
   type: vless
   server: 60.248.219.78
   port: 443
@@ -23,12 +30,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - Github TW 01 (家宽) ATSRSD
+  - Github KR 01 (家宽) ATSRSD
+  - Github TW 02 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github TW 01 (家宽) ATSRSD
+  - Github KR 01 (家宽) ATSRSD
+  - Github TW 02 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES
