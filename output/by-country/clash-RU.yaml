@@ -5,27 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
-  udp: true
-- name: Github RU 02 ATSRSD
   type: vless
-  server: 185.178.208.167
+  server: 185.197.193.137
   port: 443
-  uuid: 4eebdec5-08eb-4772-a0e6-35fec4c91cb0
+  uuid: 313b84fa-b922-500f-9b65-acb67c040cc0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: uwugirl.dev
+  servername: us2.v2less.site
   network: ws
   ws-opts:
-    path: /player/collect/9c8514f9552d/
+    path: /vless
     headers:
-      Host: speakpro.lol
-- name: Github RU 03 ATSRSD
+      Host: us2.v2less.site
+- name: Github RU 02 ATSRSD
   type: ss
   server: 185.22.153.117
   port: 18443
@@ -39,7 +32,6 @@ proxy-groups:
   - AUTO
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -47,6 +39,5 @@ proxy-groups:
   proxies:
   - Github RU 01 ATSRSD
   - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
 rules:
 - MATCH,PROXIES
