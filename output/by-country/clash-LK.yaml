@@ -15,34 +15,6 @@ proxies:
   servername: pcloud.z-tas.com
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2048
-    headers:
-      Host: pcloud.z-tas.com
-- name: Github LK 02 ATSRSD
-  type: vless
-  server: 170.114.45.6
-  port: 2096
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: pcloud.z-tas.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pcloud.z-tas.com
-- name: Github LK 03 ATSRSD
-  type: vless
-  server: 170.114.45.6
-  port: 2096
-  uuid: efd11a89-7506-44ce-95b6-6654859f155b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: pcloud.z-tas.com
-  network: ws
-  ws-opts:
     path: /
     headers:
       Host: pcloud.z-tas.com
@@ -52,15 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - Github LK 01 ATSRSD
-  - Github LK 02 ATSRSD
-  - Github LK 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github LK 01 ATSRSD
-  - Github LK 02 ATSRSD
-  - Github LK 03 ATSRSD
 rules:
 - MATCH,PROXIES
