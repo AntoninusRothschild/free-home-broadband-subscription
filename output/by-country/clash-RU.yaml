@@ -5,78 +5,23 @@ mode: rule
 log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
-  type: vless
-  server: 5.129.243.162
-  port: 443
-  uuid: 80a06811-f74b-4b82-ac99-7e66c2a98e1c
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: reedbed.filnex.baby
-  network: ws
-  ws-opts:
-    path: /api/de6/stream
-    headers:
-      Host: reedbed.filnex.baby
-- name: Github RU 02 ATSRSD
-  type: vless
-  server: 193.233.219.98
-  port: 443
-  uuid: 265ecca2-4733-49de-b2c9-ed7f0e999655
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: daily-author.ru
-  network: ws
-  ws-opts:
-    path: /api/vless
-    headers:
-      Host: vpn-rating.space
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 31.177.111.134
-  port: 443
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: k6t8wxun3s.schoolbag.top
-  network: ws
-  ws-opts:
-    path: /static/metrics/86d07ea17ea1/
-    headers:
-      Host: ns4pmajwas.flowersgood.top
-- name: Github RU 04 ATSRSD
-  type: vless
-  server: 31.177.111.134
-  port: 443
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: k6t8wxun3s.schoolbag.top
-  network: ws
-  ws-opts:
-    path: /static/metrics/86d07ea17ea1/
-    headers:
-      Host: ns4pmajwas.flowersgood.top
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github RU 01 ATSRSD
-  - Github RU 02 ATSRSD
-  - Github RU 03 ATSRSD
-  - Github RU 04 ATSRSD
 rules:
 - MATCH,PROXIES
