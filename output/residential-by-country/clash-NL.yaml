@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github LU 01 ATSRSD
+- name: Github NL 01 (家宽) ATSRSD
   type: vless
-  server: subgift.gcorecdn.com
+  server: 162.159.152.4
   port: 443
-  uuid: 740b2630-b42d-425c-bacd-37e7e30d78f1
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: subgift.gcorecdn.com
+  servername: rayan-007.maxima.dpdns.org
   network: ws
   ws-opts:
-    path: /t.me-SubGift
+    path: /
     headers:
-      Host: subgift.gcorecdn.com
+      Host: rayan-007.maxima.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github LU 01 ATSRSD
+  - Github NL 01 (家宽) ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github LU 01 ATSRSD
+  - Github NL 01 (家宽) ATSRSD
 rules:
 - MATCH,PROXIES

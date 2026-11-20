@@ -5,6 +5,64 @@ mode: rule
 log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
+  type: vless
+  server: 103.219.195.65
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github HK 02 ATSRSD
+  type: vless
+  server: skk.moe
+  port: 443
+  uuid: a25a71d1-10ed-4383-855a-f269a34ca691
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ave-qualifications-choices-populations.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: /a8b8606819ef
+    headers:
+      Host: ave-qualifications-choices-populations.trycloudflare.com
+- name: Github HK 03 ATSRSD
+  type: vmess
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: ''
+- name: Github HK 04 ATSRSD
+  type: vmess
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- name: Github HK 05 ATSRSD
   type: ss
   server: 213.176.92.148
   port: 40647
@@ -17,11 +75,19 @@ proxy-groups:
   proxies:
   - AUTO
   - Github HK 01 ATSRSD
+  - Github HK 02 ATSRSD
+  - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github HK 01 ATSRSD
+  - Github HK 02 ATSRSD
+  - Github HK 03 ATSRSD
+  - Github HK 04 ATSRSD
+  - Github HK 05 ATSRSD
 rules:
 - MATCH,PROXIES
