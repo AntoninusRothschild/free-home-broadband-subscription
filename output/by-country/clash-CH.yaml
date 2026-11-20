@@ -20,6 +20,13 @@ proxies:
   udp: true
 - name: Github CH 03 ATSRSD
   type: ss
+  server: 208.69.78.133
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: ncIkubmoDGsl
+  udp: true
+- name: Github CH 04 ATSRSD
+  type: ss
   server: 186.190.215.251
   port: 19999
   cipher: aes-256-gcm
@@ -33,6 +40,7 @@ proxy-groups:
   - Github CH 01 ATSRSD
   - Github CH 02 ATSRSD
   - Github CH 03 ATSRSD
+  - Github CH 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -41,5 +49,6 @@ proxy-groups:
   - Github CH 01 ATSRSD
   - Github CH 02 ATSRSD
   - Github CH 03 ATSRSD
+  - Github CH 04 ATSRSD
 rules:
 - MATCH,PROXIES
