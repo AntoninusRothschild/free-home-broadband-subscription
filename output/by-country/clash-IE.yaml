@@ -6,26 +6,12 @@ log-level: info
 proxies:
 - name: Github IE 01 ATSRSD
   type: ss
-  server: 20.238.32.201
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: FJRApmfuC3F14cFF
-  udp: true
-- name: Github IE 02 ATSRSD
-  type: ss
-  server: 20.238.32.201
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: FJRApmfuC3F14cFF
-  udp: true
-- name: Github IE 03 ATSRSD
-  type: ss
   server: 20.223.233.64
   port: 443
   cipher: chacha20-ietf-poly1305
   password: wb1pAoZ9Q354JdSs
   udp: true
-- name: Github IE 04 ATSRSD
+- name: Github IE 02 ATSRSD
   type: ss
   server: 20.223.233.64
   port: 443
@@ -39,8 +25,6 @@ proxy-groups:
   - AUTO
   - Github IE 01 ATSRSD
   - Github IE 02 ATSRSD
-  - Github IE 03 ATSRSD
-  - Github IE 04 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -48,7 +32,5 @@ proxy-groups:
   proxies:
   - Github IE 01 ATSRSD
   - Github IE 02 ATSRSD
-  - Github IE 03 ATSRSD
-  - Github IE 04 ATSRSD
 rules:
 - MATCH,PROXIES
