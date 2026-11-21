@@ -12,102 +12,13 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: Github FR 02 ATSRSD
-  type: vmess
-  server: 91.134.35.72
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 03 ATSRSD
-  type: vmess
-  server: 141.95.65.9
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 04 ATSRSD
-  type: vless
-  server: ov-france1.09vpn.com
-  port: 80
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: ov-france1.09vpn.com
-- name: Github FR 05 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 06 ATSRSD
-  type: ss
-  server: 23.162.152.22
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github FR 07 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 08 ATSRSD
-  type: ss
-  server: 167.17.64.22
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github FR 09 ATSRSD
-  type: ss
-  server: 167.17.64.27
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github FR 10 ATSRSD
-  type: vmess
-  server: 162.19.204.71
-  port: 1234
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-- name: Github FR 11 ATSRSD
   type: ss
   server: 172.99.189.142
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github FR 12 ATSRSD
+- name: Github FR 03 ATSRSD
   type: vmess
   server: 46.105.222.155
   port: 1270
@@ -118,7 +29,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: None
-- name: Github FR 13 ATSRSD
+- name: Github FR 04 ATSRSD
   type: vmess
   server: 141.95.65.9
   port: 1234
@@ -129,16 +40,16 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: ''
-- name: Github FR 14 ATSRSD
+- name: Github FR 05 ATSRSD
   type: ss
-  server: 167.17.64.175
+  server: 23.162.152.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github FR 15 ATSRSD
+- name: Github FR 06 ATSRSD
   type: vmess
-  server: 141.95.65.9
+  server: 162.19.204.71
   port: 1234
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -147,7 +58,14 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: ''
-- name: Github FR 16 ATSRSD
+- name: Github FR 07 ATSRSD
+  type: ss
+  server: 167.17.64.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github FR 08 ATSRSD
   type: vmess
   server: 145.239.55.210
   port: 80
@@ -162,6 +80,75 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: Github FR 09 ATSRSD
+  type: ss
+  server: 167.17.64.22
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github FR 10 ATSRSD
+  type: vmess
+  server: 91.134.35.72
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 11 ATSRSD
+  type: vmess
+  server: 141.95.65.9
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 12 ATSRSD
+  type: ss
+  server: 167.17.64.175
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github FR 13 ATSRSD
+  type: vmess
+  server: 141.95.65.9
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 14 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github FR 15 ATSRSD
+  type: vmess
+  server: 162.19.204.71
+  port: 1234
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -182,7 +169,6 @@ proxy-groups:
   - Github FR 13 ATSRSD
   - Github FR 14 ATSRSD
   - Github FR 15 ATSRSD
-  - Github FR 16 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -203,6 +189,5 @@ proxy-groups:
   - Github FR 13 ATSRSD
   - Github FR 14 ATSRSD
   - Github FR 15 ATSRSD
-  - Github FR 16 ATSRSD
 rules:
 - MATCH,PROXIES

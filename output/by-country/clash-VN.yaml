@@ -4,31 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github FI 01 ATSRSD
+- name: Github VN 01 ATSRSD
   type: vless
-  server: 104.17.145.145
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  server: 150.95.109.109
+  port: 2086
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: vipfree.dr-ping.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github FI 01 ATSRSD
+  - Github VN 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github FI 01 ATSRSD
+  - Github VN 01 ATSRSD
 rules:
 - MATCH,PROXIES

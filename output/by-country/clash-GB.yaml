@@ -5,54 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: Github GB 01 ATSRSD
-  type: ss
-  server: 198.244.201.129
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github GB 02 ATSRSD
-  type: ss
-  server: 198.244.202.215
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github GB 03 ATSRSD
-  type: ss
-  server: 185.176.206.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github GB 04 ATSRSD
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github GB 05 ATSRSD
-  type: vless
-  server: 57.129.132.223
-  port: 80
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: google.com
-- name: Github GB 06 ATSRSD
-  type: ss
-  server: 158.173.24.73
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github GB 07 ATSRSD
   type: vless
   server: 51.38.71.147
   port: 443
@@ -66,7 +18,48 @@ proxies:
     path: /cdn-cgi/ws
     headers:
       Host: uk1.connectsuite.org
-- name: Github GB 08 ATSRSD
+- name: Github GB 02 ATSRSD
+  type: ss
+  server: 185.176.206.9
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github GB 03 ATSRSD
+  type: vless
+  server: 57.129.132.223
+  port: 80
+  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: google.com
+- name: Github GB 04 ATSRSD
+  type: ss
+  server: 198.244.201.129
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github GB 05 ATSRSD
+  type: ss
+  server: 158.173.24.73
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github GB 06 ATSRSD
+  type: ss
+  server: 142.202.51.22
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github GB 07 ATSRSD
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -81,9 +74,16 @@ proxies:
     path: /vmess/
     headers:
       Host: viber.com
+- name: Github GB 08 ATSRSD
+  type: ss
+  server: 141.98.101.178
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 - name: Github GB 09 ATSRSD
   type: ss
-  server: 185.176.206.9
+  server: 38.114.120.221
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -100,19 +100,10 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /vmess/
     headers:
       Host: google.com
 - name: Github GB 11 ATSRSD
-  type: vless
-  server: node-uk.connectsuite.org
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: Github GB 12 ATSRSD
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -124,24 +115,17 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vmess/
+    path: /vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: google.com
-- name: Github GB 13 ATSRSD
+- name: Github GB 12 ATSRSD
   type: ss
-  server: 142.202.51.22
-  port: 19999
+  server: 94.156.250.148
+  port: 7001
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  password: RexnBgU7EV5ADxG
   udp: true
-- name: Github GB 14 ATSRSD
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github GB 15 ATSRSD
+- name: Github GB 13 ATSRSD
   type: vless
   server: 51.38.71.147
   port: 8443
@@ -150,26 +134,42 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: node-uk.connectsuite.org
+- name: Github GB 14 ATSRSD
+  type: ss
+  server: 185.176.206.9
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github GB 15 ATSRSD
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
 - name: Github GB 16 ATSRSD
   type: ss
-  server: 141.98.101.178
+  server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
 - name: Github GB 17 ATSRSD
+  type: vless
+  server: node-uk.connectsuite.org
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: node-uk.connectsuite.org
+- name: Github GB 18 ATSRSD
   type: ss
-  server: 38.114.120.221
+  server: 198.244.202.215
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: Github GB 18 ATSRSD
-  type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
   udp: true
 proxy-groups:
 - name: PROXIES
