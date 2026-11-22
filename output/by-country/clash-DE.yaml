@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: Github DE 01 ATSRSD
-  type: vless
-  server: o685y.save-node.com
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  type: ss
+  server: 193.108.119.83
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: o685y.save-node.com
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      Host: o685y.save-node.com
 - name: Github DE 02 ATSRSD
   type: vless
   server: 88.216.70.125
@@ -34,14 +27,21 @@ proxies:
       Host: o685y.save-node.com
 - name: Github DE 03 ATSRSD
   type: ss
+  server: 185.226.172.8
+  port: 8008
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+  udp: true
+- name: Github DE 04 ATSRSD
+  type: ss
   server: 57.129.83.85
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github DE 04 ATSRSD
+- name: Github DE 05 ATSRSD
   type: vless
-  server: 172.67.197.170
+  server: 88.216.70.125
   port: 443
   uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
   udp: true
@@ -53,7 +53,32 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
       Host: o685y.save-node.com
-- name: Github DE 05 ATSRSD
+- name: Github DE 06 ATSRSD
+  type: ss
+  server: 193.108.118.247
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github DE 07 ATSRSD
+  type: vmess
+  server: 193.108.117.61
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+- name: Github DE 08 ATSRSD
+  type: ss
+  server: 193.108.117.111
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github DE 09 ATSRSD
   type: vless
   server: 188.114.98.0
   port: 443
@@ -67,7 +92,7 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
       Host: o685y.save-node.com
-- name: Github DE 06 ATSRSD
+- name: Github DE 10 ATSRSD
   type: vless
   server: 88.216.70.125
   port: 443
@@ -81,51 +106,56 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
       Host: o685y.save-node.com
-- name: Github DE 07 ATSRSD
+- name: Github DE 11 ATSRSD
   type: vless
-  server: 152.53.120.90
-  port: 50955
-  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
+  server: o685y.save-node.com
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
-- name: Github DE 08 ATSRSD
-  type: vless
-  server: 152.53.120.90
-  port: 50955
-  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Github DE 09 ATSRSD
+  servername: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      Host: o685y.save-node.com
+- name: Github DE 12 ATSRSD
   type: ss
-  server: 185.226.172.8
-  port: 8008
+  server: 213.202.208.199
+  port: 7001
   cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
+  password: RexnBgU7EV5ADxG
   udp: true
-- name: Github DE 10 ATSRSD
+- name: Github DE 13 ATSRSD
+  type: vless
+  server: cabinet.filnex.baby
+  port: 443
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: claywick.elvano.website
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      Host: cabinet.filnex.baby
+- name: Github DE 14 ATSRSD
   type: ss
   server: 185.176.204.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github DE 11 ATSRSD
-  type: vless
-  server: 91.107.188.129
-  port: 2083
-  uuid: bd6c11e0-0233-4fb1-ba97-8d5f16d7155f
+- name: Github DE 15 ATSRSD
+  type: ss
+  server: static.28.210.29.2.clients.your-server.de
+  port: 25565
+  cipher: chacha20-ietf-poly1305
+  password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: site.check-looks.space
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 91.107.188.129
-- name: Github DE 12 ATSRSD
+- name: Github DE 16 ATSRSD
   type: vless
   server: 88.216.70.125
   port: 443
@@ -139,7 +169,21 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
       Host: 88.216.70.125
-- name: Github DE 13 ATSRSD
+- name: Github DE 17 ATSRSD
+  type: vless
+  server: 172.67.197.170
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      Host: o685y.save-node.com
+- name: Github DE 18 ATSRSD
   type: vless
   server: 88.216.70.125
   port: 443
@@ -153,41 +197,57 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     headers:
       Host: o685y.save-node.com
-- name: Github DE 14 ATSRSD
+- name: Github DE 19 ATSRSD
   type: vless
-  server: 57.129.41.216
-  port: 80
-  uuid: 18535741-e8b3-4b43-9348-785b55936751
+  server: 152.53.120.90
+  port: 50955
+  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Github DE 20 ATSRSD
+  type: vless
+  server: 91.107.188.129
+  port: 2083
+  uuid: bd6c11e0-0233-4fb1-ba97-8d5f16d7155f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: site.check-looks.space
   network: ws
   ws-opts:
-    path: /vless/
+    path: /
     headers:
-      Host: ov-germany1.09vpn.com
-- name: Github DE 15 ATSRSD
+      Host: 91.107.188.129
+- name: Github DE 21 ATSRSD
   type: ss
-  server: static.28.210.29.2.clients.your-server.de
-  port: 25565
-  cipher: chacha20-ietf-poly1305
-  password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
-  udp: true
-- name: Github DE 16 ATSRSD
-  type: ss
-  server: 185.176.204.18
-  port: 19999
+  server: 178.162.254.38
+  port: 8388
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  password: itzvpn@321
   udp: true
-- name: Github DE 17 ATSRSD
+- name: Github DE 22 ATSRSD
   type: ss
   server: 156.67.120.205
   port: 51628
   cipher: chacha20-ietf-poly1305
   password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
   udp: true
-- name: Github DE 18 ATSRSD
+- name: Github DE 23 ATSRSD
+  type: vless
+  server: 172.67.197.170
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      Host: o685y.save-node.com
+- name: Github DE 24 ATSRSD
   type: vless
   server: 57.129.41.216
   port: 80
@@ -199,43 +259,50 @@ proxies:
   ws-opts:
     path: /vless/
     headers:
-      Host: 57.129.41.216
-- name: Github DE 19 ATSRSD
+      Host: OV-Germany1.09vpn.com
+- name: Github DE 25 ATSRSD
+  type: vless
+  server: o685y.save-node.com
+  port: 443
+  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: o685y.save-node.com
+  network: ws
+  ws-opts:
+    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
+    headers:
+      Host: o685y.save-node.com
+- name: Github DE 26 ATSRSD
   type: ss
-  server: 213.202.208.199
-  port: 7001
+  server: 185.176.204.18
+  port: 19999
   cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: Github DE 20 ATSRSD
-  type: vless
-  server: 88.216.70.125
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+- name: Github DE 27 ATSRSD
+  type: ss
+  server: 193.108.117.84
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: o685y.save-node.com
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      Host: o685y.save-node.com
-- name: Github DE 21 ATSRSD
-  type: vless
-  server: 88.216.70.125
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+- name: Github DE 28 ATSRSD
+  type: ss
+  server: 193.108.116.98
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: o685y.save-node.com
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      Host: o685y.save-node.com
-- name: Github DE 22 ATSRSD
+- name: Github DE 29 ATSRSD
+  type: ss
+  server: 23.157.88.43
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: Github DE 30 ATSRSD
   type: vless
   server: 94.103.168.62
   port: 2087
@@ -244,7 +311,25 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: uuyjnfbv.localip.ir
-- name: Github DE 23 ATSRSD
+- name: Github DE 31 ATSRSD
+  type: vless
+  server: 94.103.168.62
+  port: 2087
+  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: uuyjnfbv.localip.ir
+- name: Github DE 32 ATSRSD
+  type: vless
+  server: uuyjnfbv.localip.ir
+  port: 2087
+  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: uuyjnfbv.localip.ir
+- name: Github DE 33 ATSRSD
   type: vless
   server: 94.103.168.62
   port: 2087
@@ -281,6 +366,16 @@ proxy-groups:
   - Github DE 21 ATSRSD
   - Github DE 22 ATSRSD
   - Github DE 23 ATSRSD
+  - Github DE 24 ATSRSD
+  - Github DE 25 ATSRSD
+  - Github DE 26 ATSRSD
+  - Github DE 27 ATSRSD
+  - Github DE 28 ATSRSD
+  - Github DE 29 ATSRSD
+  - Github DE 30 ATSRSD
+  - Github DE 31 ATSRSD
+  - Github DE 32 ATSRSD
+  - Github DE 33 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -309,5 +404,15 @@ proxy-groups:
   - Github DE 21 ATSRSD
   - Github DE 22 ATSRSD
   - Github DE 23 ATSRSD
+  - Github DE 24 ATSRSD
+  - Github DE 25 ATSRSD
+  - Github DE 26 ATSRSD
+  - Github DE 27 ATSRSD
+  - Github DE 28 ATSRSD
+  - Github DE 29 ATSRSD
+  - Github DE 30 ATSRSD
+  - Github DE 31 ATSRSD
+  - Github DE 32 ATSRSD
+  - Github DE 33 ATSRSD
 rules:
 - MATCH,PROXIES
