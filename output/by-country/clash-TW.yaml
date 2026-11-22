@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: Github TW 01 ATSRSD
+  type: vmess
+  server: 162.19.192.89
+  port: 16616
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+- name: Github TW 02 ATSRSD
+  type: vmess
+  server: afzuv.xiaoyan.io
+  port: 16616
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+- name: Github TW 03 ATSRSD
   type: vless
   server: 59.125.69.22
   port: 443
@@ -24,11 +54,15 @@ proxy-groups:
   proxies:
   - AUTO
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
+  - Github TW 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TW 01 ATSRSD
+  - Github TW 02 ATSRSD
+  - Github TW 03 ATSRSD
 rules:
 - MATCH,PROXIES
