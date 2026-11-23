@@ -6,21 +6,21 @@ log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
   type: vless
-  server: chatgpt.com
-  port: 443
-  uuid: c2425034-91ef-44bf-9fd4-f2be9c1e989a
+  server: 194.135.34.118
+  port: 8443
+  uuid: 020f7f86-a559-4366-8d2d-c6f81d6bbe5f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: sinavm3.soft10.ir
+  servername: web.hosttcp.fun
   network: ws
   ws-opts:
-    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
+    path: /api/v4/media/session
     headers:
-      Host: sinavm3.soft10.ir
+      Host: 194.135.34.118
 - name: Github TR 02 ATSRSD
   type: vless
-  server: 104.18.32.47
+  server: chatgpt.com
   port: 443
   uuid: c2425034-91ef-44bf-9fd4-f2be9c1e989a
   udp: true
@@ -34,18 +34,18 @@ proxies:
       Host: sinavm3.soft10.ir
 - name: Github TR 03 ATSRSD
   type: vless
-  server: 194.135.34.118
-  port: 8443
-  uuid: 020f7f86-a559-4366-8d2d-c6f81d6bbe5f
+  server: 104.18.32.47
+  port: 443
+  uuid: c2425034-91ef-44bf-9fd4-f2be9c1e989a
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: web.hosttcp.fun
+  servername: sinavm3.soft10.ir
   network: ws
   ws-opts:
-    path: /api/v4/media/session
+    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
     headers:
-      Host: 194.135.34.118
+      Host: sinavm3.soft10.ir
 proxy-groups:
 - name: PROXIES
   type: select
