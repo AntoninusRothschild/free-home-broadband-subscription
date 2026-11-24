@@ -6,46 +6,31 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: vless
-  server: paperclip.filnex.baby
+  server: 136.148.83.69
   port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: candlebark.gerqix.online
-  network: ws
-  ws-opts:
-    path: /api/de3/stream
-    headers:
-      Host: paperclip.filnex.baby
+  servername: szqbx-ru-77dc.my-fade.cloud
 - name: Github RU 02 ATSRSD
   type: vless
-  server: 72.56.238.135
+  server: 136.148.83.69
   port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: inlay.merlano.monster
-  network: ws
-  ws-opts:
-    path: /api/de3/stream
-    headers:
-      Host: inlay.merlano.monster
+  servername: szqbx-ru-77dc.my-fade.cloud
 - name: Github RU 03 ATSRSD
   type: vless
-  server: parchment.merlano.monster
+  server: 136.148.83.71
   port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: 00000000-0000-0001-0000-000000000000
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: parchment.merlano.monster
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      Host: parchment.merlano.monster
+  servername: wccfu-ru-79dc.my-fade.cloud
 - name: Github RU 04 ATSRSD
   type: vless
   server: 136.148.83.69
@@ -56,19 +41,12 @@ proxies:
   skip-cert-verify: true
   servername: szqbx-ru-77dc.my-fade.cloud
 - name: Github RU 05 ATSRSD
-  type: vless
-  server: cabinet.filnex.baby
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: claywick.elvano.website
-  network: ws
-  ws-opts:
-    path: /api/de7/stream
-    headers:
-      Host: cabinet.filnex.baby
 - name: Github RU 06 ATSRSD
   type: vless
   server: 136.148.83.69
@@ -82,64 +60,25 @@ proxies:
   type: vless
   server: 136.148.83.69
   port: 443
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
   udp: true
   tls: true
   skip-cert-verify: true
   servername: szqbx-ru-77dc.my-fade.cloud
 - name: Github RU 08 ATSRSD
   type: vless
-  server: 95.129.236.117
+  server: 147.45.175.81
   port: 443
-  uuid: 77998cc6-8a4d-4251-b974-ebff48a84c4d
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: cdn.dash.gearmonster.org
+  servername: xsru2.freeddns.org
   network: ws
   ws-opts:
-    path: /edge/node8/push
+    path: wsru
     headers:
-      Host: cdn.dash.gearmonster.org
-- name: Github RU 09 ATSRSD
-  type: vless
-  server: inlay.merlano.monster
-  port: 443
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: inlay.merlano.monster
-  network: ws
-  ws-opts:
-    path: /api/de3/stream
-    headers:
-      Host: inlay.merlano.monster
-- name: Github RU 10 ATSRSD
-  type: vless
-  server: 136.148.83.69
-  port: 443
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-- name: Github RU 11 ATSRSD
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
-  udp: true
-- name: Github RU 12 ATSRSD
-  type: vless
-  server: 136.148.83.69
-  port: 443
-  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+      Host: xsru2.freeddns.org
 proxy-groups:
 - name: PROXIES
   type: select
@@ -153,10 +92,6 @@ proxy-groups:
   - Github RU 06 ATSRSD
   - Github RU 07 ATSRSD
   - Github RU 08 ATSRSD
-  - Github RU 09 ATSRSD
-  - Github RU 10 ATSRSD
-  - Github RU 11 ATSRSD
-  - Github RU 12 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -170,9 +105,5 @@ proxy-groups:
   - Github RU 06 ATSRSD
   - Github RU 07 ATSRSD
   - Github RU 08 ATSRSD
-  - Github RU 09 ATSRSD
-  - Github RU 10 ATSRSD
-  - Github RU 11 ATSRSD
-  - Github RU 12 ATSRSD
 rules:
 - MATCH,PROXIES
