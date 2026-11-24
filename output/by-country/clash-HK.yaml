@@ -6,6 +6,21 @@ log-level: info
 proxies:
 - name: Github HK 01 ATSRSD
   type: vmess
+  server: 47.244.120.197
+  port: 23026
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- name: Github HK 02 ATSRSD
+  type: vmess
   server: 47.86.90.31
   port: 443
   uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
@@ -20,28 +35,13 @@ proxies:
     path: /ws-vmess
     headers:
       Host: bywxdhirqkjj8xaz.v.3dns.vip
-- name: Github HK 02 ATSRSD
+- name: Github HK 03 ATSRSD
   type: ss
   server: 27.124.5.86
   port: 8388
   cipher: 2022-blake3-aes-256-gcm
   password: j4DddfVh3zON1s3Wfbmdn2WWhLCWAaOJyKqdeKvxh4A=
   udp: true
-- name: Github HK 03 ATSRSD
-  type: vmess
-  server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /arki?ed=2048
-    headers:
-      Host: ''
 - name: Github HK 04 ATSRSD
   type: ss
   server: 213.176.92.148
