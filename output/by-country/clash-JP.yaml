@@ -5,22 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: Github JP 01 ATSRSD
-  type: vless
-  server: 104.16.10.48
+  type: ss
+  server: 149.22.87.204
   port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
 - name: Github JP 02 ATSRSD
+  type: ss
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 03 ATSRSD
+  type: ss
+  server: 149.22.87.240
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 04 ATSRSD
   type: vless
-  server: 104.21.70.21
+  server: 131.143.214.224
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -29,24 +36,10 @@ proxies:
   servername: jp3.yohototo.top
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /tyxyws#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: jp3.yohototo.top
-- name: Github JP 03 ATSRSD
-  type: vless
-  server: 154.31.114.162
-  port: 8443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 04 ATSRSD
+- name: Github JP 05 ATSRSD
   type: vless
   server: 172.67.217.240
   port: 443
@@ -60,9 +53,16 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github JP 05 ATSRSD
+- name: Github JP 06 ATSRSD
+  type: ss
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 07 ATSRSD
   type: vless
-  server: 104.21.6.186
+  server: 104.21.70.21
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -74,28 +74,9 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github JP 06 ATSRSD
-  type: vless
-  server: 156.231.117.190
-  port: 443
-  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-  servername: navi.bankrate.com
-  client-fingerprint: chrome
-- name: Github JP 07 ATSRSD
-  type: ss
-  server: 149.22.87.204
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
 - name: Github JP 08 ATSRSD
   type: vless
-  server: 185.200.66.193
+  server: 104.24.0.1
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -109,8 +90,8 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github JP 09 ATSRSD
   type: vless
-  server: 154.31.114.162
-  port: 8443
+  server: 185.200.66.193
+  port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
@@ -136,43 +117,45 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - name: Github JP 11 ATSRSD
-  type: vless
-  server: 172.64.190.13
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 12 ATSRSD
-  type: vless
-  server: 104.16.10.72
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 13 ATSRSD
   type: ss
-  server: 149.22.87.241
+  server: 149.22.87.204
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
+- name: Github JP 12 ATSRSD
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: None
+- name: Github JP 13 ATSRSD
+  type: vmess
+  server: 168.110.63.247
+  port: 8081
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: ''
 - name: Github JP 14 ATSRSD
   type: vless
-  server: 104.21.0.87
+  server: 104.21.70.21
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -185,300 +168,12 @@ proxies:
     headers:
       Host: jp3.yohototo.top
 - name: Github JP 15 ATSRSD
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 16 ATSRSD
-  type: vmess
-  server: 161.33.20.255
-  port: 8880
-  uuid: e0856508-d693-450a-a099-455091dc4f25
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /e0856508-d693-450a-a099-455091dc4f25-vm
-    headers:
-      Host: ''
-- name: Github JP 17 ATSRSD
-  type: vless
-  server: 43.156.62.218
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 18 ATSRSD
-  type: vless
-  server: 213.183.41.31
-  port: 8463
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: share.plumstatic.com
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: 213.183.41.31
-- name: Github JP 19 ATSRSD
-  type: vless
-  server: 104.16.0.1
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 20 ATSRSD
-  type: vless
-  server: 172.67.217.240
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 21 ATSRSD
   type: ss
   server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: Github JP 22 ATSRSD
-  type: vless
-  server: 104.24.0.1
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 23 ATSRSD
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 24 ATSRSD
-  type: vless
-  server: 104.16.10.104
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 25 ATSRSD
-  type: vless
-  server: 104.21.70.228
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 26 ATSRSD
-  type: vless
-  server: 104.16.10.56
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 27 ATSRSD
-  type: vless
-  server: 162.159.254.3
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 28 ATSRSD
-  type: vless
-  server: 104.18.42.98
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 29 ATSRSD
-  type: vless
-  server: 104.16.111.102
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 30 ATSRSD
-  type: ss
-  server: 149.22.87.240
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github JP 31 ATSRSD
-  type: vless
-  server: 104.27.46.35
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 32 ATSRSD
-  type: ss
-  server: 149.22.87.204
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github JP 33 ATSRSD
-  type: vless
-  server: 104.16.10.2
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 34 ATSRSD
-  type: vless
-  server: 172.67.217.240
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 35 ATSRSD
-  type: vless
-  server: 166.88.14.71
-  port: 8443
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: senflarelink-node-71i.pages.dev
-  network: ws
-  ws-opts:
-    path: /flow=
-    headers:
-      Host: senflarelink-node-71i.pages.dev
-- name: Github JP 36 ATSRSD
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github JP 37 ATSRSD
-  type: vless
-  server: 104.24.31.89
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -499,28 +194,6 @@ proxy-groups:
   - Github JP 13 ATSRSD
   - Github JP 14 ATSRSD
   - Github JP 15 ATSRSD
-  - Github JP 16 ATSRSD
-  - Github JP 17 ATSRSD
-  - Github JP 18 ATSRSD
-  - Github JP 19 ATSRSD
-  - Github JP 20 ATSRSD
-  - Github JP 21 ATSRSD
-  - Github JP 22 ATSRSD
-  - Github JP 23 ATSRSD
-  - Github JP 24 ATSRSD
-  - Github JP 25 ATSRSD
-  - Github JP 26 ATSRSD
-  - Github JP 27 ATSRSD
-  - Github JP 28 ATSRSD
-  - Github JP 29 ATSRSD
-  - Github JP 30 ATSRSD
-  - Github JP 31 ATSRSD
-  - Github JP 32 ATSRSD
-  - Github JP 33 ATSRSD
-  - Github JP 34 ATSRSD
-  - Github JP 35 ATSRSD
-  - Github JP 36 ATSRSD
-  - Github JP 37 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -541,27 +214,5 @@ proxy-groups:
   - Github JP 13 ATSRSD
   - Github JP 14 ATSRSD
   - Github JP 15 ATSRSD
-  - Github JP 16 ATSRSD
-  - Github JP 17 ATSRSD
-  - Github JP 18 ATSRSD
-  - Github JP 19 ATSRSD
-  - Github JP 20 ATSRSD
-  - Github JP 21 ATSRSD
-  - Github JP 22 ATSRSD
-  - Github JP 23 ATSRSD
-  - Github JP 24 ATSRSD
-  - Github JP 25 ATSRSD
-  - Github JP 26 ATSRSD
-  - Github JP 27 ATSRSD
-  - Github JP 28 ATSRSD
-  - Github JP 29 ATSRSD
-  - Github JP 30 ATSRSD
-  - Github JP 31 ATSRSD
-  - Github JP 32 ATSRSD
-  - Github JP 33 ATSRSD
-  - Github JP 34 ATSRSD
-  - Github JP 35 ATSRSD
-  - Github JP 36 ATSRSD
-  - Github JP 37 ATSRSD
 rules:
 - MATCH,PROXIES
