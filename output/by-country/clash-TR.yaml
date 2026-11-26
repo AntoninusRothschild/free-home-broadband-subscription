@@ -6,6 +6,29 @@ log-level: info
 proxies:
 - name: Github TR 01 ATSRSD
   type: vless
+  server: 143.246.136.128
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: Github TR 02 ATSRSD
+  type: vless
+  server: 172.64.155.209
+  port: 443
+  uuid: 14eccb4f-ca88-4732-b191-d8daacf63448
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sinavm3.soft10.ir
+  network: ws
+  ws-opts:
+    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
+    headers:
+      Host: sinavm3.soft10.ir
+- name: Github TR 03 ATSRSD
+  type: vless
   server: turkey-ip1.mmdaqaorg.xyz
   port: 50738
   uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
@@ -19,11 +42,15 @@ proxy-groups:
   proxies:
   - AUTO
   - Github TR 01 ATSRSD
+  - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - Github TR 01 ATSRSD
+  - Github TR 02 ATSRSD
+  - Github TR 03 ATSRSD
 rules:
 - MATCH,PROXIES
