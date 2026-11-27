@@ -6,64 +6,6 @@ log-level: info
 proxies:
 - name: Github RU 01 ATSRSD
   type: vless
-  server: 188.225.33.67
-  port: 443
-  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: e2.cdnwh.icu
-  network: ws
-  ws-opts:
-    path: /stream/segment/3078a41dd7eb/
-    headers:
-      Host: e2.cdnwh.icu
-- name: Github RU 02 ATSRSD
-  type: vless
-  server: 194.26.229.207
-  port: 2200
-  uuid: f2d2907c-1d74-43eb-8fd2-fc55dfd92427
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: 194.26.229.207
-- name: Github RU 03 ATSRSD
-  type: vless
-  server: 136.148.83.69
-  port: 443
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-- name: Github RU 04 ATSRSD
-  type: vless
-  server: 136.148.83.70
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: aszbk-ru-78dc.my-fade.cloud
-- name: Github RU 05 ATSRSD
-  type: vless
-  server: 194.26.229.207
-  port: 4100
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-- name: Github RU 06 ATSRSD
-  type: vless
   server: 147.45.221.225
   port: 443
   uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
@@ -76,20 +18,23 @@ proxies:
     path: /media/ws/
     headers:
       Host: 147.45.221.225
-- name: Github RU 07 ATSRSD
-  type: vless
-  server: 194.26.229.207
-  port: 2200
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
+- name: Github RU 02 ATSRSD
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
   udp: true
-  tls: false
+- name: Github RU 03 ATSRSD
+  type: vless
+  server: 136.148.83.71
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-- name: Github RU 08 ATSRSD
+  servername: wccfu-ru-79dc.my-fade.cloud
+- name: Github RU 04 ATSRSD
   type: vless
   server: 194.26.229.207
   port: 2200
@@ -102,36 +47,44 @@ proxies:
     path: /v1
     headers:
       Host: 194.26.229.207
-- name: Github RU 09 ATSRSD
+- name: Github RU 05 ATSRSD
   type: vless
-  server: 194.26.229.207
-  port: 2200
-  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-- name: Github RU 10 ATSRSD
-  type: vless
-  server: 147.45.175.81
+  server: 188.225.33.67
   port: 443
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: xsru2.freeddns.org
+  servername: e2.cdnwh.icu
   network: ws
   ws-opts:
-    path: /wsru
+    path: /stream/segment/3078a41dd7eb/
     headers:
-      Host: xsru2.freeddns.org
-- name: Github RU 11 ATSRSD
+      Host: e2.cdnwh.icu
+- name: Github RU 06 ATSRSD
+  type: ss
+  server: 194.87.69.12
+  port: 18443
+  cipher: aes-256-gcm
+  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  udp: true
+- name: Github RU 07 ATSRSD
   type: vless
-  server: 195.206.235.232
+  server: 172.66.47.45
+  port: 2083
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: wk1.f1w.de5.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wk1.f1w.de5.net
+- name: Github RU 08 ATSRSD
+  type: vless
+  server: 196.196.148.85
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   udp: true
@@ -140,7 +93,39 @@ proxies:
   reality-opts:
     public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
   servername: 5d0319t.nl7.h1clayd.click
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+- name: Github RU 09 ATSRSD
+  type: vless
+  server: 136.148.83.69
+  port: 443
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: szqbx-ru-77dc.my-fade.cloud
+- name: Github RU 10 ATSRSD
+  type: vless
+  server: leviko-al2006.shopingggg.ir
+  port: 443
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nl.lucheeebezlimitnoekino.stream
+  network: ws
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: leviko-al2006.shopingggg.ir
+- name: Github RU 11 ATSRSD
+  type: vless
+  server: 136.148.83.71
+  port: 443
+  uuid: 00000000-0000-0001-0000-000000000000
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: wccfu-ru-79dc.my-fade.cloud
 - name: Github RU 12 ATSRSD
   type: vless
   server: 194.26.229.207
@@ -156,47 +141,38 @@ proxies:
       Host: live.ok.ru
 - name: Github RU 13 ATSRSD
   type: vless
-  server: 136.148.83.70
+  server: 147.45.175.81
   port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: aszbk-ru-78dc.my-fade.cloud
+  servername: xsru2.freeddns.org
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      Host: xsru2.freeddns.org
 - name: Github RU 14 ATSRSD
-  type: vless
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-- name: Github RU 15 ATSRSD
-  type: vless
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-- name: Github RU 16 ATSRSD
-  type: vless
-  server: 136.148.83.71
-  port: 443
-  uuid: 00000000-0000-0001-0000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wccfu-ru-79dc.my-fade.cloud
-- name: Github RU 17 ATSRSD
   type: ss
-  server: 194.87.69.12
+  server: 185.22.152.168
   port: 18443
   cipher: aes-256-gcm
-  password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
   udp: true
+- name: Github RU 15 ATSRSD
+  type: vless
+  server: 194.26.229.207
+  port: 2200
+  uuid: 026ecbd6-2838-40f6-b530-d2c303c4f629
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /v1
+    headers:
+      Host: rzd.ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -217,8 +193,6 @@ proxy-groups:
   - Github RU 13 ATSRSD
   - Github RU 14 ATSRSD
   - Github RU 15 ATSRSD
-  - Github RU 16 ATSRSD
-  - Github RU 17 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -239,7 +213,5 @@ proxy-groups:
   - Github RU 13 ATSRSD
   - Github RU 14 ATSRSD
   - Github RU 15 ATSRSD
-  - Github RU 16 ATSRSD
-  - Github RU 17 ATSRSD
 rules:
 - MATCH,PROXIES

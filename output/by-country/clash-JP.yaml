@@ -6,42 +6,49 @@ log-level: info
 proxies:
 - name: Github JP 01 ATSRSD
   type: ss
-  server: 149.22.87.204
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 47.74.18.249
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
   udp: true
 - name: Github JP 02 ATSRSD
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: Github JP 03 ATSRSD
   type: ss
   server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
+- name: Github JP 03 ATSRSD
+  type: ss
+  server: 8.216.9.151
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
 - name: Github JP 04 ATSRSD
+  type: ss
+  server: 8.211.174.60
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 05 ATSRSD
   type: vless
-  server: 131.143.214.224
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  server: 45.32.57.15
+  port: 8443
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jp3.yohototo.top
+  servername: senflarelink-node-nwz76h.pages.dev
   network: ws
   ws-opts:
-    path: /tyxyws#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    path: /flow=
     headers:
-      Host: jp3.yohototo.top
-- name: Github JP 05 ATSRSD
+      Host: senflarelink-node-nwz76h.pages.dev
+- name: Github JP 06 ATSRSD
   type: vless
-  server: 172.67.217.240
+  server: 104.18.42.98
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -53,17 +60,10 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github JP 06 ATSRSD
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
 - name: Github JP 07 ATSRSD
   type: vless
-  server: 104.21.70.21
-  port: 443
+  server: 154.31.114.162
+  port: 8443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
   tls: true
@@ -76,7 +76,7 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github JP 08 ATSRSD
   type: vless
-  server: 104.24.0.1
+  server: 43.170.8.95
   port: 443
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   udp: true
@@ -90,19 +90,33 @@ proxies:
       Host: jp3.yohototo.top
 - name: Github JP 09 ATSRSD
   type: vless
-  server: 185.200.66.193
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  server: 213.183.41.31
+  port: 8463
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: jp3.yohototo.top
+  servername: share.plumstatic.com
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /ws
     headers:
-      Host: jp3.yohototo.top
+      Host: 213.183.41.31
 - name: Github JP 10 ATSRSD
+  type: ss
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 11 ATSRSD
+  type: ss
+  server: 149.22.87.204
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 12 ATSRSD
   type: vless
   server: 152.69.200.216
   port: 443
@@ -116,14 +130,70 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: Github JP 11 ATSRSD
-  type: ss
-  server: 149.22.87.204
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: Github JP 13 ATSRSD
+  type: vless
+  server: 213.183.41.31
+  port: 8463
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   udp: true
-- name: Github JP 12 ATSRSD
+  tls: true
+  skip-cert-verify: true
+  servername: share.plumstatic.com
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: 213.183.41.31
+- name: Github JP 14 ATSRSD
+  type: ss
+  server: 8.216.18.189
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 15 ATSRSD
+  type: ss
+  server: 47.91.16.50
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 16 ATSRSD
+  type: vless
+  server: 43.170.8.95
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: Github JP 17 ATSRSD
+  type: ss
+  server: 8.216.9.41
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 18 ATSRSD
+  type: vless
+  server: 131.143.214.224
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: jp3.yohototo.top
+- name: Github JP 19 ATSRSD
   type: vmess
   server: 168.138.43.75
   port: 80
@@ -138,11 +208,25 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: None
-- name: Github JP 13 ATSRSD
+- name: Github JP 20 ATSRSD
+  type: ss
+  server: 8.216.8.185
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 21 ATSRSD
+  type: ss
+  server: 149.22.87.240
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 22 ATSRSD
   type: vmess
-  server: 168.110.63.247
-  port: 8081
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  server: 156.239.224.107
+  port: 57278
+  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
   alterId: 0
   cipher: auto
   udp: true
@@ -150,29 +234,80 @@ proxies:
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vless
+    path: /
     headers:
       Host: ''
-- name: Github JP 14 ATSRSD
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: Github JP 15 ATSRSD
+- name: Github JP 23 ATSRSD
   type: ss
-  server: 149.22.87.240
+  server: 149.22.87.204
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
+  udp: true
+- name: Github JP 24 ATSRSD
+  type: vmess
+  server: 161.33.20.255
+  port: 8880
+  uuid: e0856508-d693-450a-a099-455091dc4f25
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /e0856508-d693-450a-a099-455091dc4f25-vm
+    headers:
+      Host: ''
+- name: Github JP 25 ATSRSD
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: jp01.a0a.xyz
+- name: Github JP 26 ATSRSD
+  type: ss
+  server: 8.216.9.154
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 27 ATSRSD
+  type: ss
+  server: 8.209.249.205
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 28 ATSRSD
+  type: ss
+  server: 47.91.2.13
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+  udp: true
+- name: Github JP 29 ATSRSD
+  type: ss
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: Github JP 30 ATSRSD
+  type: ss
+  server: 8.216.9.190
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
   udp: true
 proxy-groups:
 - name: PROXIES
@@ -194,6 +329,21 @@ proxy-groups:
   - Github JP 13 ATSRSD
   - Github JP 14 ATSRSD
   - Github JP 15 ATSRSD
+  - Github JP 16 ATSRSD
+  - Github JP 17 ATSRSD
+  - Github JP 18 ATSRSD
+  - Github JP 19 ATSRSD
+  - Github JP 20 ATSRSD
+  - Github JP 21 ATSRSD
+  - Github JP 22 ATSRSD
+  - Github JP 23 ATSRSD
+  - Github JP 24 ATSRSD
+  - Github JP 25 ATSRSD
+  - Github JP 26 ATSRSD
+  - Github JP 27 ATSRSD
+  - Github JP 28 ATSRSD
+  - Github JP 29 ATSRSD
+  - Github JP 30 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -214,5 +364,20 @@ proxy-groups:
   - Github JP 13 ATSRSD
   - Github JP 14 ATSRSD
   - Github JP 15 ATSRSD
+  - Github JP 16 ATSRSD
+  - Github JP 17 ATSRSD
+  - Github JP 18 ATSRSD
+  - Github JP 19 ATSRSD
+  - Github JP 20 ATSRSD
+  - Github JP 21 ATSRSD
+  - Github JP 22 ATSRSD
+  - Github JP 23 ATSRSD
+  - Github JP 24 ATSRSD
+  - Github JP 25 ATSRSD
+  - Github JP 26 ATSRSD
+  - Github JP 27 ATSRSD
+  - Github JP 28 ATSRSD
+  - Github JP 29 ATSRSD
+  - Github JP 30 ATSRSD
 rules:
 - MATCH,PROXIES
