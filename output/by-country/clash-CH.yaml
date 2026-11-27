@@ -17,7 +17,7 @@ proxies:
   servername: ''
 - name: Github CH 02 ATSRSD
   type: ss
-  server: 186.190.215.251
+  server: 23.166.88.189
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -36,6 +36,13 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: Github CH 05 ATSRSD
+  type: ss
+  server: 186.190.215.251
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +52,7 @@ proxy-groups:
   - Github CH 02 ATSRSD
   - Github CH 03 ATSRSD
   - Github CH 04 ATSRSD
+  - Github CH 05 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -54,5 +62,6 @@ proxy-groups:
   - Github CH 02 ATSRSD
   - Github CH 03 ATSRSD
   - Github CH 04 ATSRSD
+  - Github CH 05 ATSRSD
 rules:
 - MATCH,PROXIES
