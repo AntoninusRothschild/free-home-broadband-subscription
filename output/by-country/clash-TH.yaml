@@ -4,31 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: Github AU 01 ATSRSD
+- name: Github TH 01 ATSRSD
   type: vless
-  server: 104.18.155.229
+  server: 130.94.25.12
   port: 443
-  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: www.genflix.co.id.r3xxe.eu.cc
-  network: ws
-  ws-opts:
-    path: /au-do
-    headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - Github AU 01 ATSRSD
+  - Github TH 01 ATSRSD
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - Github AU 01 ATSRSD
+  - Github TH 01 ATSRSD
 rules:
 - MATCH,PROXIES
